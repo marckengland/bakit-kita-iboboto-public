@@ -37,6 +37,9 @@ jobs:
       - name: Verify release scope and approved test bytes
         run: node scripts/verify-source-only.mjs --populated-release --allow-git-checkout
 
+      - name: Verify approved Senate refresh
+        run: npx --no-install tsx scripts/verify-senate-refresh.ts
+
       # Prisma Client types are required for type-check and tests to compile.
       - name: Generate Prisma client
         run: npx prisma generate
@@ -76,3 +79,10 @@ jobs:
           DATA_PIPELINE_ENABLED: "false"
           AI_RESEARCH_ENABLED: "false"
           REDIS_DISABLED: "true"
+
+      - name: Verify refreshed Senate records in a disposable browser environment
+        run: node --import tsx scripts/verify-senate-refresh-browser.ts
+        env:
+          DOTENV_CONFIG_PATH: /dev/null
+          __NEXT_PROCESSED_ENV: "true"
+          PRIVATE_CONTACT_ENABLED: "false"

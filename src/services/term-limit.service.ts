@@ -526,7 +526,7 @@ export async function getTermLimitStatus(politicianId: string): Promise<TermLimi
     return null;
   }
 
-  const reviewedBatch = getReleasedProfile(politicianId);
+  const reviewedBatch = getReleasedProfile(politicianId, politician.fullName);
   if (reviewedBatch) {
     return {
       politicianId,

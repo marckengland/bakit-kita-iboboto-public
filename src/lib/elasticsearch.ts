@@ -14,7 +14,7 @@ const globalForElasticsearch = globalThis as unknown as {
  * Uses singleton pattern to prevent multiple connections in development
  */
 function createElasticsearchClient(): Client {
-  const elasticsearchUrl = process.env.ELASTICSEARCH_URL || "http://localhost:59201";
+  const elasticsearchUrl = process.env.ELASTICSEARCH_URL || "http://localhost:59202";
 
   const client = new Client({
     node: elasticsearchUrl,

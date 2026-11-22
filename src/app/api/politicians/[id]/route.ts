@@ -24,7 +24,7 @@ export async function GET(_request: NextRequest, { params }: { params: Promise<{
     if (!profile) {
       return NextResponse.json({ error: "Profile not found" }, { status: 404, headers });
     }
-    const reviewedBatch = getReleasedProfile(profile.id);
+    const reviewedBatch = getReleasedProfile(profile.id, profile.fullName);
     return NextResponse.json(
       {
         politician: {

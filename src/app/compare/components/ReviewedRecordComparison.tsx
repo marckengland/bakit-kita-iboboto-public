@@ -1,3 +1,4 @@
+import { FilingRefreshEvidence } from "@/app/components/evidence/FilingRefreshEvidence";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import type { ComparisonResult } from "@/services/comparison.service";
@@ -31,6 +32,7 @@ export function ReviewedRecordComparison({ result }: { result: ComparisonResult 
               </h4>
               {profile.reviewedBatch && (
                 <ReviewedMembership
+                  showEvidence
                   batch={profile.reviewedBatch}
                   className="mt-2 text-sm text-neutral-600 dark:text-neutral-400"
                 />
@@ -56,6 +58,14 @@ export function ReviewedRecordComparison({ result }: { result: ComparisonResult 
                             t("unknown")
                           )}
                         </p>
+                        {filing.refresh && (
+                          <details>
+                            <summary className="min-h-11 cursor-pointer py-2 font-medium">
+                              Dated bill history
+                            </summary>
+                            <FilingRefreshEvidence refresh={filing.refresh} />
+                          </details>
+                        )}
                         <div className="flex flex-wrap gap-x-4 gap-y-2">
                           <a
                             href={filing.sourceUrl}

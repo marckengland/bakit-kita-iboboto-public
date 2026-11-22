@@ -1,38 +1,128 @@
 # Release status
 
-Updated November 22, 2026. This is a separate populated release candidate. The maintainer approved integration of the reviewed Senate batch. Public publication, deployment, and changes to existing databases remain unauthorized.
+Updated November 22, 2026. This source version includes the approved Senate
+evidence refresh. The maintainer authorized the public repository update in the
+[publication record](../publication/refreshed-publication.json). Every earlier
+local copy remains unchanged. Source publication does not authorize deployment or
+changes to an existing database.
 
-## Before publication
+| Item               | State                                                                                                                            |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| Base data          | The sealed 24-profile, 45-filing batch is retained unchanged.                                                                    |
+| New evidence       | Qualified elected terms, 24 separate dated membership observations and 41 dated history entries for 31 bills are integrated.     |
+| Held additions     | Fourteen bills receive no new history. Unverified current offices, original-bill current statuses and enactments remain unknown. |
+| Tests              | All 107 inherited test files retain their original bytes and assertions. New coverage is additive.                               |
+| Public publication | Authorized for this repository update. Frozen integration approvals retain their earlier scope.                                  |
+| Deployment         | Not authorized. Local verification is not proof of hosted readiness.                                                             |
 
-| Item                       | State                                                                                                                          | Next action                                                                                                                                  |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Reviewed data              | 24 dated profiles and 45 selected filings are integrated, with unknowns, citations, and source differences retained.           | Review the exact candidate and its [coverage](../public/data/senate-20/INDEX.md). Future batches need their own approval.                    |
-| Dependency advisory        | The approved scoped Effect fix is installed and verified. Both fresh audits report zero findings. Picomatch remains withdrawn. | Keep the [raw reports and dated history](DEPENDENCY_SECURITY.md) visible. Refresh audits for the exact candidate before publication.         |
-| Publication                | No new commit, push, public repository, or deployment was authorized or performed for this candidate.                          | Identify the exact archive and destination, then obtain publication authorization.                                                           |
-| Private security reporting | The app contact form is disabled; Resend delivery was not verified.                                                            | Enable and verify GitHub private vulnerability reporting when creating a public repository. This does not require exposing an inbox address. |
-| Hosted CI                  | The earlier private staging attempt stopped before running any step.                                                           | Run the updated workflow after publication is authorized; do not count it as passed beforehand.                                              |
-
-The final documentation corrections are verified: the security summary reflects
-the current audits, contributor checks run in a configured checkout, and the
-license-documentation link resolves. The
-[testing guide](TESTING.md#verify-a-prepared-release-artifact) defines the separate
-clean-artifact procedure. The remaining publication steps are destination and
-archive approval, private vulnerability reporting, and inspection of public CI.
-
-The [verification record](OPEN_SOURCE.md) distinguishes local checks from hosted results. Publishing source and the approved fact files is separate from operating a public website.
-
-## What remains unknown
-
-The batch is a selected, dated Senate cohort. It does not establish current office, complete legislative output, enacted outcomes, cases, family relationships, dynasty classifications, financial records, elections, attendance, or votes. Missing values do not mean zero or clearance. The case reader remains withheld by default.
-
-Three candidate filings remain out, and SBN-142 has no canonical filing date. The [source review notes](../public/data/senate-20/REVIEW_NOTES.md) explain these decisions. The rest of the original research has not been published, deleted, or declared false.
-
-## Preserved preparation
-
-The original repository and earlier source-only copy remain intact. All 98 inherited test files retain their exact bytes and assertions. The four synthetic case fixtures remain test-only; the real Senate batch is separate. Internal project plans, legal working papers, credentials, and database storage are outside the candidate.
-
-Code remains MIT licensed. The approved structured facts and original summaries use CC0 1.0; linked source documents retain their own rights. Geist and Heroicons notices remain included. See [publication scope](../PUBLICATION.md).
+Read the [refresh scope and sources](../public/data/senate-20-refresh-2026-11-22/INDEX.md),
+[data workflow](DATA.md) and [verification procedure](TESTING.md#verify-the-senate-refresh).
+Integration approval does not turn a scheduled elected term into actual tenure or
+a substitute's enactment into enactment of its original bill.
 
 ## Before hosting
 
-Keep background jobs, AI research, public case reads, administration, and private contact at their defaults until separately configured and reviewed. Hosting also needs authentication, abuse controls, private correction reporting, backups, retention choices, and operational checks. This integration does not enable them.
+A public site still needs a protected database, backups and a tested restore,
+monitoring, suitable abuse controls, a working private correction route and
+public-facing privacy information. The Resend form remains disabled and delivery
+unverified. Production administration and identity verification remain unavailable.
+Cases and background research stay at their safe defaults. See the
+[security policy](../SECURITY.md) and [configuration reference](CONFIGURATION.md).
+
+The data remains incomplete. Current office and complete legislative histories
+need further source review. Cases, family relationships, finances, elections,
+attendance totals, recorded votes and impact ratings are not established by this
+refresh. Missing values are not zero or clearance.
+
+Code remains MIT licensed. Approved structured facts and original wording use
+CC0 1.0. Source documents retain their own rights; source PDFs and private review
+packets are excluded. Required font and icon notices remain included.
+
+## Local verification of this copy
+
+Checked November 22, 2026 with Node.js 22.23.5 and npm 11.21.2.
+
+| Check                                           | Result                                                                                                                                                                               |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `npm run check`                                 | Passed: lint with zero warnings, typecheck and 2,170 tests in 111 files.                                                                                                             |
+| `npm run build`                                 | Passed. Next.js still warns about the existing custom static-asset Cache-Control header.                                                                                             |
+| `npm run format:check` and `npm run docs:check` | Passed.                                                                                                                                                                              |
+| Release integrity and Senate refresh verifiers  | Passed: all 107 inherited test files, the sealed batch, 24 qualified terms, 31 histories and 41 events.                                                                              |
+| `npm run data:verify`                           | Passed on an owned disposable PostgreSQL database: import, exact repeat, refusals and rollback.                                                                                      |
+| `scripts/verify-case-review.ts`                 | Passed: schema, ownership, transactions, HTTP, reviewed chat, offline invalidation and feature rollback.                                                                             |
+| Refreshed-record API and browser checks         | Passed against a separate disposable database and a localhost production server: profiles, bill modal, comparison, chat, export citations and withholding after stored data changes. |
+| `npm audit --json`                              | Zero findings. Dependencies and the lockfile are unchanged.                                                                                                                          |
+
+The browser check also tested horizontal reflow at a 390-pixel viewport with
+125% CSS zoom. This is not verification of native browser zoom, all devices or
+assistive technology. Early browser runs timed out; the passing check waits for
+specific records and interactions rather than requiring background navigation
+requests to stop. It keeps the same content and citation checks.
+
+New tests cover cached timestamps, stale author names, modified stored records,
+noninteractive profile cards, export source-access notes and mixed availability.
+No existing test assertion was changed. The original repository, earlier copies,
+their archives and the published baseline were checked against saved hashes.
+
+No hosted CI, live reporting email, production database or deployment was tested
+for this version. Private delivery remains unverified, and no additional data
+outside the approved refresh was imported. See the hosting requirements above.
+
+## Release-record and browser-check corrections
+
+The Heroicons inventory now pins the current ProfileHeader component bytes and
+SVG line. Its prior digest is retained in the record. The icon path and both
+license files are unchanged. The source verifier now rejects stale component,
+path, line or license metadata. The publication introduction and script catalog
+also describe the refreshed copy and its verification commands.
+
+The private Puppeteer helper intermittently timed out while its failure snapshot
+contained the expected term text. Small and instrumented navigation probes did
+not isolate a specific upstream defect. This correction replaces that private
+verification path with the existing Playwright runner and publishes a portable
+`verify-senate-refresh-browser.ts` command. It keeps all earlier API, citation,
+stored-data conflict and UI assertions. It uses the same installed Chrome and a
+30-second maximum for readiness. No dependency or application behavior changed.
+
+The new checker includes missing-label, changed-label and navigation controls.
+A no-op readiness check failed those controls before implementation. The corrected
+check passes them and reports success only after its owned database, browser and
+server are removed. CI now runs the same portable browser command. The earlier
+failed private runs remain in the maintainer's evidence, not in the archive.
+
+All 111 current test files remain byte-identical, including the 107 inherited
+files. Approved research files, package versions, the lockfile and migrations are
+unchanged. The correction approval covered preparation only; the later source
+publication decision is recorded separately above. Deployment remains excluded.
+Local results below do not establish hosted CI success or live Resend delivery.
+
+The final verifier checks the complete law identifier in the visible history or
+chat region and the exact term label in the profile or comparison evidence.
+A separate ownership check confirms the randomly named database and its marker
+before migrations. Caller dotenv files cannot replace the target. SIGINT and
+SIGTERM use the same idempotent cleanup as normal completion, and success is
+recorded only after cleanup. The direct Node entrypoint avoids an extra launcher
+process in the signal path. SIGKILL remains outside process-level cleanup.
+
+| Correction check   | Recorded result                                                                                                                                                           |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test integrity     | All 111 test files are byte-identical. All 28 assertions from the earlier private browser command remain in the portable command.                                         |
+| Readiness controls | Missing, changed and similar-looking labels fail. Evidence in an unrelated region cannot satisfy the check. The original DOM text assertion and 30-second maximum remain. |
+| Database isolation | The complete verifier passed with a conflicting dotenv file, override mode and a synthetic vault key. The connected database identity was checked before migration.       |
+| Cleanup            | An already-signalled child is handled. SIGINT and SIGTERM exit unsuccessfully and remove the verifier's own container.                                                    |
+| Full browser flow  | Three consecutive fresh-database runs passed, followed by another complete run after the review corrections. No failed run was retried into a pass.                       |
+| Project checks     | All 2,170 tests, typecheck, zero-warning lint, build, formatting, both existing disposable-database verifiers and the new browser command passed.                         |
+| Dependency audits  | Full and production audits both reported zero findings. Package and lock bytes are unchanged.                                                                             |
+
+The new verifier and asset checks received an independent review. Its material
+findings were reproduced and corrected with focused failure and success checks.
+The original private Puppeteer failures remain historical evidence; these results
+do not claim that its underlying implementation was patched.
+
+## Public CI
+
+Check the [public CI runs](https://github.com/marckengland/bakit-kita-iboboto-public/actions/workflows/ci.yml)
+for the exact repository commit. A local result is not a result from GitHub's
+runner. The workflow checks source integrity, both data versions, tests, lint,
+typecheck, build, and disposable database and browser behavior. It contains no
+site deployment step.

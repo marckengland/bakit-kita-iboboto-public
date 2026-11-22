@@ -16,7 +16,7 @@ let redisAvailable = globalForRedis.redisAvailable ?? true;
  * Gracefully handles missing Redis server
  */
 function createRedisClient(): Redis | null {
-  const redisUrl = process.env.REDIS_URL || "redis://localhost:56380";
+  const redisUrl = process.env.REDIS_URL || "redis://localhost:56381";
 
   // Skip Redis in development if REDIS_DISABLED is set
   if (process.env.REDIS_DISABLED === "true") {

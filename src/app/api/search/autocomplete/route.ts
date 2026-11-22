@@ -41,7 +41,7 @@ async function prismaFallback(query: string, limit: number) {
   });
 
   return politicians.map((p) => {
-    const reviewedBatch = getReleasedProfile(p.id);
+    const reviewedBatch = getReleasedProfile(p.id, p.fullName);
     const position = p.Position[0];
     const party = p.PartyAffiliation[0]?.PoliticalParty;
     return {

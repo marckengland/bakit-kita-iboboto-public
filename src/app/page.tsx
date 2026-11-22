@@ -50,7 +50,7 @@ async function getHomePageData() {
       count,
       profiles: profiles.map((profile) => ({
         ...profile,
-        reviewedBatch: getReleasedProfile(profile.id),
+        reviewedBatch: getReleasedProfile(profile.id, profile.fullName),
       })),
       researchUnavailable,
     };

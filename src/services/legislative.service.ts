@@ -17,6 +17,7 @@ import {
 } from "@prisma/client";
 import prisma from "@/lib/prisma";
 import {
+  releaseData,
   getReleasedFiling,
   getReleasedProfile,
   type ReleasedFilingContext,
@@ -28,6 +29,7 @@ import {
   getPrismaPageOptions,
   createPaginatedResult,
 } from "@/lib/pagination";
+import { getVerifiedSenateFilings, matchesApprovedSenateFiling } from "./senate-chat.service";
 import { DataSourceAttribution } from "./politician.service";
 import { enhancedCache, cacheKeyGenerators, EXTENDED_CACHE_TTL } from "@/lib/cache-service";
 
@@ -224,7 +226,7 @@ export async function getBills(
     ...(filters.session && { session: filters.session }),
   };
 
-  const reviewedBatch = getReleasedProfile(politicianId);
+  const reviewedBatch = getReleasedProfile(politicianId, null);
   const order = sort?.order === "asc" ? "asc" : "desc";
   const unknownsLast = { sort: order, nulls: "last" } as const;
   let orderBy: Prisma.BillOrderByWithRelationInput | Prisma.BillOrderByWithRelationInput[];
@@ -257,9 +259,25 @@ export async function getBills(
     }),
   ]);
 
+  // Read the same live, identity-checked rows used by reviewed-record chat.
+  const verified = await getVerifiedSenateFilings(
+    bills.filter((bill) => getReleasedFiling(bill.id)?.refresh).map((bill) => bill.id)
+  );
+
   // Transform to summary format
   const items: BillSummary[] = bills.map((bill) => {
-    const reviewedBatch = getReleasedFiling(bill.id);
+    const approved = verified.get(bill.id);
+    const reviewedBatch =
+      approved &&
+      matchesApprovedSenateFiling(
+        {
+          ...bill,
+          BillAuthor: bill.BillAuthor.map((author) => ({ politicianId, role: author.role })),
+        },
+        approved
+      )
+        ? approved
+        : getReleasedFiling(bill.id, false);
     return {
       id: bill.id,
       billNumber: bill.billNumber,
@@ -290,7 +308,7 @@ export async function getBills(
 export async function getBillById(billId: string): Promise<BillDetails | null> {
   const cacheKey = cacheKeyGenerators.bill(billId);
 
-  return enhancedCache.getOrFetch<BillDetails | null>(
+  const detail = await enhancedCache.getOrFetch<BillDetails | null>(
     cacheKey,
     async () => {
       const bill = await prisma.bill.findUnique({
@@ -320,7 +338,7 @@ export async function getBillById(billId: string): Promise<BillDetails | null> {
 
       // Transform sources
       const sources = bill.SourceAttribution.map(transformSourceAttribution);
-      const reviewedBatch = getReleasedFiling(bill.id);
+      const reviewedBatch = getReleasedFiling(bill.id, false);
 
       return {
         id: bill.id,
@@ -342,6 +360,35 @@ export async function getBillById(billId: string): Promise<BillDetails | null> {
     },
     EXTENDED_CACHE_TTL.BILL_DATA
   );
+  if (!detail) {
+    return null;
+  }
+  const approved = getReleasedFiling(billId);
+  if (!approved) {
+    return detail;
+  }
+  // Reproject cached values: a previous cache entry may contain now-stale evidence.
+  let reviewedBatch = getReleasedFiling(billId, false)!;
+  if (
+    approved.refresh &&
+    detail.authors[0]?.politicianName ===
+      releaseData.profiles.find((profile) => profile.id === approved.introducedBy.profileId)
+        ?.displayName &&
+    matchesApprovedSenateFiling(
+      {
+        ...detail,
+        BillAuthor: detail.authors.map((author) => ({
+          politicianId: author.politicianId,
+          role: author.role,
+        })),
+      },
+      approved
+    )
+  ) {
+    const history = await getVerifiedSenateFilings([billId]);
+    reviewedBatch = history.get(billId) ?? reviewedBatch;
+  }
+  return { ...detail, reviewedBatch };
 }
 
 /**

@@ -1,3 +1,9 @@
+import {
+  getProfileRefresh,
+  getFilingRefresh,
+  type ProfileRefresh,
+  type FilingRefresh,
+} from "./senate-refresh";
 import data from "../../public/data/senate-20/data.json";
 import sourceManifest from "../../public/data/senate-20/sources.json";
 
@@ -13,6 +19,7 @@ export const releaseIntegrationApproval = {
 export type ReleaseSource = (typeof releaseSources)[number];
 export type ReleasedFilingContext = (typeof releaseData.filings)[number] & {
   sources: ReleaseSource[];
+  refresh?: FilingRefresh;
   integrationApproval: typeof releaseIntegrationApproval;
 };
 export interface ReleasedProfileContext {
@@ -27,13 +34,17 @@ export interface ReleasedProfileContext {
   termStart: null;
   termEnd: null;
   limitations: string[];
+  refresh?: ProfileRefresh;
 }
 
 const profiles = new Map(releaseData.profiles.map((profile) => [profile.id, profile]));
 const filings = new Map(releaseData.filings.map((filing) => [filing.id, filing]));
 const sources = new Map(releaseSources.map((source) => [source.id, source]));
 
-export function getReleasedProfile(id: string): ReleasedProfileContext | null {
+export function getReleasedProfile(
+  id: string,
+  storedName?: string | null
+): ReleasedProfileContext | null {
   const profile = profiles.get(id);
   if (!profile) {
     return null;
@@ -46,6 +57,9 @@ export function getReleasedProfile(id: string): ReleasedProfileContext | null {
     selectedFilingCount: profile.selectedFilingIds.length,
     sourceUrl: sources.get(profile.membership.sourceIds[0]!)!.url,
     datasetUrl: "/data/senate-20/INDEX.md",
+    ...(storedName === undefined || storedName === profile.displayName
+      ? { refresh: getProfileRefresh(id) }
+      : {}),
     currentOffice: null,
     termStart: null,
     termEnd: null,
@@ -57,13 +71,14 @@ export function getReleasedProfile(id: string): ReleasedProfileContext | null {
   };
 }
 
-export function getReleasedFiling(id: string): ReleasedFilingContext | null {
+export function getReleasedFiling(id: string, includeRefresh = true): ReleasedFilingContext | null {
   const filing = filings.get(id);
   if (!filing) {
     return null;
   }
   return {
     ...filing,
+    ...(includeRefresh && getFilingRefresh(id) && { refresh: getFilingRefresh(id) }),
     integrationApproval: releaseIntegrationApproval,
     sources: filing.sourceIds.map((sourceId) => {
       const source = sources.get(sourceId);

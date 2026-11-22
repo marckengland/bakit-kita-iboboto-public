@@ -1,0 +1,3591 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "ph-senate-20-evidence-refresh-2026-11-22",
+  "approvedOn": "2026-11-22",
+  "baselineDatasetId": "ph-senate-20-opening-cohort-v0.1-proposed",
+  "baselineDataSha256": "94cbbdbbc3fc19897b6fc753d21b9bbf2292ccc9d5cb21b057fe5b4d988e98cc",
+  "scope": "Qualified elected terms, dated membership and office observations, and dated history for selected original Senate filings. Current office and original-bill current status and enactment remain unverified.",
+  "coverage": {
+    "profiles": 24,
+    "baseFilings": 45,
+    "filingsWithAdditions": 31,
+    "filingsWithoutAdditions": 14,
+    "historyEvents": 41,
+    "historicalListingEvents": 22
+  },
+  "profiles": [
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0HM",
+      "electedTerm": {
+        "start": "2025-06-30",
+        "scheduledEnd": "2031-06-30",
+        "startScope": "Constitutional commencement of the elected 2025 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "philstar-election-2025",
+          "pna-election-2025"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Aquino, B."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Aquino, B.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2025",
+          "url": "https://www.pna.gov.ph/photos/76846",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2025-05-17",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Proclaimed 12 Senators elect by the NBOC, Avito Dalan, photo caption; named winner: Bam Aquino",
+          "excerpt": "Eleven of the 12 winning senators of the midterm elections attend their proclamation",
+          "accessMethod": "Official government newswire photo-caption text through web search index. Direct web open returned 404.",
+          "independence": "Government photo reporting from an institution separate from Senate and COMELEC. It reports the proclamation event; it is not the signed COMELEC resolution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "philstar-election-2025",
+          "url": "https://www.philstar.com/headlines/2025/05/18/2443908/comelec-proclaims-winning-senators",
+          "accessUrl": null,
+          "publisher": "The Philippine Star",
+          "documentDate": "2025-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims winning senators, Mayen Jaymalin; opening and new senators term paragraph",
+          "excerpt": "six-year term starting June 30, 2025 until June 30, 2031",
+          "accessMethod": "Independent newspaper article text via web search index.",
+          "independence": "Editorially separate newspaper report of the same COMELEC proclamation event; not a second election authority.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0HS",
+      "electedTerm": {
+        "start": "2022-06-30",
+        "scheduledEnd": "2028-06-30",
+        "startScope": "Constitutional commencement of the elected 2022 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "pna-election-2022",
+          "senate-directory-2023",
+          "senate-primer-2022"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Cayetano, A. P. S."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Cayetano, A. P. S.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2022",
+          "url": "https://www.pna.gov.ph/articles/1174805",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2022-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims 12 new senators, Ferdinand Patinio; opening and named winners paragraphs; named winner: Alan Peter Cayetano",
+          "excerpt": "fresh 6-year term that will end in June 2028",
+          "accessMethod": "Official government newswire text retrieved through web search index, including all twelve names. Direct web open returned 404.",
+          "independence": "Different government institution from Senate; firsthand reporting of COMELEC proclamation, not an independently issued proclamation or certification.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-directory-2023",
+          "url": "https://legacy.senate.gov.ph/The%20Senators%27%20Directory_v04.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2023-06-29",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "The Senators' Directory_06.29.2023; TERMS OF OFFICE, subsection 2022 - 2028",
+          "excerpt": "TERMS OF OFFICE ... 2022 - 2028",
+          "accessMethod": "Official PDF text through web search index. Direct web open and HTTPS download returned 403; no local PDF bytes.",
+          "independence": "Primary institutional term roster; same institution as the 2022 primer, not independent institutional corroboration.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-primer-2022",
+          "url": "https://legacy.senate.gov.ph/publications/STSRO/STSRO%20Primer%202022_Printed%20in%20July%202022.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines, Senate Tax Study and Research Office",
+          "documentDate": "2022-07",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "MEMBERS OF THE SENATE, 19th Congress; Term (2022-2028); imprint Printed in July 2022",
+          "excerpt": "MEMBERS OF THE SENATE ... Term (2022-2028)",
+          "accessMethod": "Official PDF text through web search index. Direct web open returned 403; no local PDF bytes.",
+          "independence": "Separate Senate publication, same institution as the senators' directory.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0HT",
+      "electedTerm": {
+        "start": "2025-06-30",
+        "scheduledEnd": "2031-06-30",
+        "startScope": "Constitutional commencement of the elected 2025 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "philstar-election-2025",
+          "pna-election-2025"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Cayetano, P. S."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Cayetano, P. S.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2025",
+          "url": "https://www.pna.gov.ph/photos/76846",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2025-05-17",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Proclaimed 12 Senators elect by the NBOC, Avito Dalan, photo caption; named winner: Pia Cayetano",
+          "excerpt": "Eleven of the 12 winning senators of the midterm elections attend their proclamation",
+          "accessMethod": "Official government newswire photo-caption text through web search index. Direct web open returned 404.",
+          "independence": "Government photo reporting from an institution separate from Senate and COMELEC. It reports the proclamation event; it is not the signed COMELEC resolution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "philstar-election-2025",
+          "url": "https://www.philstar.com/headlines/2025/05/18/2443908/comelec-proclaims-winning-senators",
+          "accessUrl": null,
+          "publisher": "The Philippine Star",
+          "documentDate": "2025-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims winning senators, Mayen Jaymalin; opening and new senators term paragraph",
+          "excerpt": "six-year term starting June 30, 2025 until June 30, 2031",
+          "accessMethod": "Independent newspaper article text via web search index.",
+          "independence": "Editorially separate newspaper report of the same COMELEC proclamation event; not a second election authority.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0HX",
+      "electedTerm": {
+        "start": "2025-06-30",
+        "scheduledEnd": "2031-06-30",
+        "startScope": "Constitutional commencement of the elected 2025 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "philstar-election-2025",
+          "pna-election-2025"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Senator Dela Rosa"
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Senator Dela Rosa",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2025",
+          "url": "https://www.pna.gov.ph/photos/76846",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2025-05-17",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Proclaimed 12 Senators elect by the NBOC, Avito Dalan, photo caption; named winner: Ronald Dela Rosa",
+          "excerpt": "Eleven of the 12 winning senators of the midterm elections attend their proclamation",
+          "accessMethod": "Official government newswire photo-caption text through web search index. Direct web open returned 404.",
+          "independence": "Government photo reporting from an institution separate from Senate and COMELEC. It reports the proclamation event; it is not the signed COMELEC resolution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "philstar-election-2025",
+          "url": "https://www.philstar.com/headlines/2025/05/18/2443908/comelec-proclaims-winning-senators",
+          "accessUrl": null,
+          "publisher": "The Philippine Star",
+          "documentDate": "2025-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims winning senators, Mayen Jaymalin; opening and new senators term paragraph",
+          "excerpt": "six-year term starting June 30, 2025 until June 30, 2031",
+          "accessMethod": "Independent newspaper article text via web search index.",
+          "independence": "Editorially separate newspaper report of the same COMELEC proclamation event; not a second election authority.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0J0",
+      "electedTerm": {
+        "start": "2022-06-30",
+        "scheduledEnd": "2028-06-30",
+        "startScope": "Constitutional commencement of the elected 2022 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "pna-election-2022",
+          "senate-directory-2023",
+          "senate-primer-2022"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Ejercito, J. V."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Ejercito, J. V.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2022",
+          "url": "https://www.pna.gov.ph/articles/1174805",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2022-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims 12 new senators, Ferdinand Patinio; opening and named winners paragraphs; named winner: JV Ejercito",
+          "excerpt": "fresh 6-year term that will end in June 2028",
+          "accessMethod": "Official government newswire text retrieved through web search index, including all twelve names. Direct web open returned 404.",
+          "independence": "Different government institution from Senate; firsthand reporting of COMELEC proclamation, not an independently issued proclamation or certification.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-directory-2023",
+          "url": "https://legacy.senate.gov.ph/The%20Senators%27%20Directory_v04.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2023-06-29",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "The Senators' Directory_06.29.2023; TERMS OF OFFICE, subsection 2022 - 2028",
+          "excerpt": "TERMS OF OFFICE ... 2022 - 2028",
+          "accessMethod": "Official PDF text through web search index. Direct web open and HTTPS download returned 403; no local PDF bytes.",
+          "independence": "Primary institutional term roster; same institution as the 2022 primer, not independent institutional corroboration.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-primer-2022",
+          "url": "https://legacy.senate.gov.ph/publications/STSRO/STSRO%20Primer%202022_Printed%20in%20July%202022.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines, Senate Tax Study and Research Office",
+          "documentDate": "2022-07",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "MEMBERS OF THE SENATE, 19th Congress; Term (2022-2028); imprint Printed in July 2022",
+          "excerpt": "MEMBERS OF THE SENATE ... Term (2022-2028)",
+          "accessMethod": "Official PDF text through web search index. Direct web open returned 403; no local PDF bytes.",
+          "independence": "Separate Senate publication, same institution as the senators' directory.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0HZ",
+      "electedTerm": {
+        "start": "2022-06-30",
+        "scheduledEnd": "2028-06-30",
+        "startScope": "Constitutional commencement of the elected 2022 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "pna-election-2022",
+          "senate-directory-2023",
+          "senate-primer-2022"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Estrada, J. E."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Estrada, J. E.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2022",
+          "url": "https://www.pna.gov.ph/articles/1174805",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2022-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims 12 new senators, Ferdinand Patinio; opening and named winners paragraphs; named winner: Jinggoy Estrada",
+          "excerpt": "fresh 6-year term that will end in June 2028",
+          "accessMethod": "Official government newswire text retrieved through web search index, including all twelve names. Direct web open returned 404.",
+          "independence": "Different government institution from Senate; firsthand reporting of COMELEC proclamation, not an independently issued proclamation or certification.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-directory-2023",
+          "url": "https://legacy.senate.gov.ph/The%20Senators%27%20Directory_v04.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2023-06-29",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "The Senators' Directory_06.29.2023; TERMS OF OFFICE, subsection 2022 - 2028",
+          "excerpt": "TERMS OF OFFICE ... 2022 - 2028",
+          "accessMethod": "Official PDF text through web search index. Direct web open and HTTPS download returned 403; no local PDF bytes.",
+          "independence": "Primary institutional term roster; same institution as the 2022 primer, not independent institutional corroboration.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-primer-2022",
+          "url": "https://legacy.senate.gov.ph/publications/STSRO/STSRO%20Primer%202022_Printed%20in%20July%202022.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines, Senate Tax Study and Research Office",
+          "documentDate": "2022-07",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "MEMBERS OF THE SENATE, 19th Congress; Term (2022-2028); imprint Printed in July 2022",
+          "excerpt": "MEMBERS OF THE SENATE ... Term (2022-2028)",
+          "accessMethod": "Official PDF text through web search index. Direct web open returned 403; no local PDF bytes.",
+          "independence": "Separate Senate publication, same institution as the senators' directory.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0HY",
+      "electedTerm": {
+        "start": "2022-06-30",
+        "scheduledEnd": "2028-06-30",
+        "startScope": "Constitutional commencement of the elected 2022 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "pna-election-2022",
+          "senate-directory-2023",
+          "senate-primer-2022"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Escudero, F. G."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Escudero, F. G.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2022",
+          "url": "https://www.pna.gov.ph/articles/1174805",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2022-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims 12 new senators, Ferdinand Patinio; opening and named winners paragraphs; named winner: Chiz Escudero",
+          "excerpt": "fresh 6-year term that will end in June 2028",
+          "accessMethod": "Official government newswire text retrieved through web search index, including all twelve names. Direct web open returned 404.",
+          "independence": "Different government institution from Senate; firsthand reporting of COMELEC proclamation, not an independently issued proclamation or certification.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-directory-2023",
+          "url": "https://legacy.senate.gov.ph/The%20Senators%27%20Directory_v04.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2023-06-29",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "The Senators' Directory_06.29.2023; TERMS OF OFFICE, subsection 2022 - 2028",
+          "excerpt": "TERMS OF OFFICE ... 2022 - 2028",
+          "accessMethod": "Official PDF text through web search index. Direct web open and HTTPS download returned 403; no local PDF bytes.",
+          "independence": "Primary institutional term roster; same institution as the 2022 primer, not independent institutional corroboration.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-primer-2022",
+          "url": "https://legacy.senate.gov.ph/publications/STSRO/STSRO%20Primer%202022_Printed%20in%20July%202022.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines, Senate Tax Study and Research Office",
+          "documentDate": "2022-07",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "MEMBERS OF THE SENATE, 19th Congress; Term (2022-2028); imprint Printed in July 2022",
+          "excerpt": "MEMBERS OF THE SENATE ... Term (2022-2028)",
+          "accessMethod": "Official PDF text through web search index. Direct web open returned 403; no local PDF bytes.",
+          "independence": "Separate Senate publication, same institution as the senators' directory.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0J6",
+      "electedTerm": {
+        "start": "2022-06-30",
+        "scheduledEnd": "2028-06-30",
+        "startScope": "Constitutional commencement of the elected 2022 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "pna-election-2022",
+          "senate-directory-2023",
+          "senate-primer-2022"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Gatchalian, W. T."
+        }
+      ],
+      "officeObservations": [
+        {
+          "office": "Senate President",
+          "asOf": "2026-06-17",
+          "scope": "Dated election event; does not establish uninterrupted tenure to cutoff.",
+          "sourceIds": [
+            "pna-gatchalian-election-2026",
+            "house-gatchalian-election-2026"
+          ]
+        },
+        {
+          "office": "Senate President",
+          "asOf": "2026-09",
+          "datePrecision": "month",
+          "scope": "The official homepage describes Senate Monitor Issue 01, September 2026 using this title. Document month, not homepage clock, bounds the claim.",
+          "sourceIds": [
+            "senate-home-monitor-2026-09"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Gatchalian, W. T.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2022",
+          "url": "https://www.pna.gov.ph/articles/1174805",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2022-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims 12 new senators, Ferdinand Patinio; opening and named winners paragraphs; named winner: Sherwin Gatchalian",
+          "excerpt": "fresh 6-year term that will end in June 2028",
+          "accessMethod": "Official government newswire text retrieved through web search index, including all twelve names. Direct web open returned 404.",
+          "independence": "Different government institution from Senate; firsthand reporting of COMELEC proclamation, not an independently issued proclamation or certification.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-directory-2023",
+          "url": "https://legacy.senate.gov.ph/The%20Senators%27%20Directory_v04.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2023-06-29",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "The Senators' Directory_06.29.2023; TERMS OF OFFICE, subsection 2022 - 2028",
+          "excerpt": "TERMS OF OFFICE ... 2022 - 2028",
+          "accessMethod": "Official PDF text through web search index. Direct web open and HTTPS download returned 403; no local PDF bytes.",
+          "independence": "Primary institutional term roster; same institution as the 2022 primer, not independent institutional corroboration.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-primer-2022",
+          "url": "https://legacy.senate.gov.ph/publications/STSRO/STSRO%20Primer%202022_Printed%20in%20July%202022.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines, Senate Tax Study and Research Office",
+          "documentDate": "2022-07",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "MEMBERS OF THE SENATE, 19th Congress; Term (2022-2028); imprint Printed in July 2022",
+          "excerpt": "MEMBERS OF THE SENATE ... Term (2022-2028)",
+          "accessMethod": "Official PDF text through web search index. Direct web open returned 403; no local PDF bytes.",
+          "independence": "Separate Senate publication, same institution as the senators' directory.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-home-monitor-2026-09",
+          "url": "https://senate.gov.ph/",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2026-09",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Publications & Resources > The Senate Monitor > Issue 01, September 2026 > A Senate President for the People",
+          "excerpt": "For Senate President Win Gatchalian, public service has always been measured by its impact on ordinary Filipino families.",
+          "accessMethod": "Official homepage text through web search index on November 22. Direct web open returned zero readable lines and direct HTTP access was blocked by site protection.",
+          "independence": "Primary institutional publication description, same Senate institution. Homepage clock and crawl date are not the document publication date.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-gatchalian-election-2026",
+          "url": "https://www.pna.gov.ph/index.php/articles/1277405",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2026-06-17",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Gatchalian formally elected as Senate President, Wilnard Bacelonia; opening paragraph",
+          "excerpt": "formally elected Senator Sherwin Gatchalian as Senate President",
+          "accessMethod": "Official government newswire article through web search index; direct open returned 404 in parent review.",
+          "independence": "Different government institution reporting the Senate election event; distinct from Senate publication description.",
+          "dateMeaning": null
+        },
+        {
+          "id": "house-gatchalian-election-2026",
+          "url": "https://www.congress.gov.ph/media/press-releases/9847",
+          "accessUrl": null,
+          "publisher": "House of Representatives, Press and Public Affairs Bureau",
+          "documentDate": "2026-06-17",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Press release dated June 17, 2026, 10:20 AM; Speaker congratulates Sherwin Gatchalian",
+          "excerpt": "formal election as Senate President",
+          "accessMethod": "Official House press-release text through web search index.",
+          "independence": "Separate chamber's official acknowledgment of the same Senate election event; corroborates event, not November incumbency.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0J4",
+      "electedTerm": {
+        "start": "2025-06-30",
+        "scheduledEnd": "2031-06-30",
+        "startScope": "Constitutional commencement of the elected 2025 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "philstar-election-2025",
+          "pna-election-2025"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Go, C. L. T."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Go, C. L. T.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2025",
+          "url": "https://www.pna.gov.ph/photos/76846",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2025-05-17",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Proclaimed 12 Senators elect by the NBOC, Avito Dalan, photo caption; named winner: Christopher Go",
+          "excerpt": "Eleven of the 12 winning senators of the midterm elections attend their proclamation",
+          "accessMethod": "Official government newswire photo-caption text through web search index. Direct web open returned 404.",
+          "independence": "Government photo reporting from an institution separate from Senate and COMELEC. It reports the proclamation event; it is not the signed COMELEC resolution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "philstar-election-2025",
+          "url": "https://www.philstar.com/headlines/2025/05/18/2443908/comelec-proclaims-winning-senators",
+          "accessUrl": null,
+          "publisher": "The Philippine Star",
+          "documentDate": "2025-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims winning senators, Mayen Jaymalin; opening and new senators term paragraph",
+          "excerpt": "six-year term starting June 30, 2025 until June 30, 2031",
+          "accessMethod": "Independent newspaper article text via web search index.",
+          "independence": "Editorially separate newspaper report of the same COMELEC proclamation event; not a second election authority.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0J8",
+      "electedTerm": {
+        "start": "2022-06-30",
+        "scheduledEnd": "2028-06-30",
+        "startScope": "Constitutional commencement of the elected 2022 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "pna-election-2022",
+          "senate-directory-2023",
+          "senate-primer-2022"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Hontiveros, R."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Hontiveros, R.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2022",
+          "url": "https://www.pna.gov.ph/articles/1174805",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2022-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims 12 new senators, Ferdinand Patinio; opening and named winners paragraphs; named winner: Risa Hontiveros",
+          "excerpt": "fresh 6-year term that will end in June 2028",
+          "accessMethod": "Official government newswire text retrieved through web search index, including all twelve names. Direct web open returned 404.",
+          "independence": "Different government institution from Senate; firsthand reporting of COMELEC proclamation, not an independently issued proclamation or certification.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-directory-2023",
+          "url": "https://legacy.senate.gov.ph/The%20Senators%27%20Directory_v04.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2023-06-29",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "The Senators' Directory_06.29.2023; TERMS OF OFFICE, subsection 2022 - 2028",
+          "excerpt": "TERMS OF OFFICE ... 2022 - 2028",
+          "accessMethod": "Official PDF text through web search index. Direct web open and HTTPS download returned 403; no local PDF bytes.",
+          "independence": "Primary institutional term roster; same institution as the 2022 primer, not independent institutional corroboration.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-primer-2022",
+          "url": "https://legacy.senate.gov.ph/publications/STSRO/STSRO%20Primer%202022_Printed%20in%20July%202022.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines, Senate Tax Study and Research Office",
+          "documentDate": "2022-07",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "MEMBERS OF THE SENATE, 19th Congress; Term (2022-2028); imprint Printed in July 2022",
+          "excerpt": "MEMBERS OF THE SENATE ... Term (2022-2028)",
+          "accessMethod": "Official PDF text through web search index. Direct web open returned 403; no local PDF bytes.",
+          "independence": "Separate Senate publication, same institution as the senators' directory.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0JE",
+      "electedTerm": {
+        "start": "2025-06-30",
+        "scheduledEnd": "2031-06-30",
+        "startScope": "Constitutional commencement of the elected 2025 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "philstar-election-2025",
+          "pna-election-2025"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Lacson, P. M."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Lacson, P. M.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2025",
+          "url": "https://www.pna.gov.ph/photos/76846",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2025-05-17",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Proclaimed 12 Senators elect by the NBOC, Avito Dalan, photo caption; named winner: Panfilo Lacson",
+          "excerpt": "Eleven of the 12 winning senators of the midterm elections attend their proclamation",
+          "accessMethod": "Official government newswire photo-caption text through web search index. Direct web open returned 404.",
+          "independence": "Government photo reporting from an institution separate from Senate and COMELEC. It reports the proclamation event; it is not the signed COMELEC resolution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "philstar-election-2025",
+          "url": "https://www.philstar.com/headlines/2025/05/18/2443908/comelec-proclaims-winning-senators",
+          "accessUrl": null,
+          "publisher": "The Philippine Star",
+          "documentDate": "2025-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims winning senators, Mayen Jaymalin; opening and new senators term paragraph",
+          "excerpt": "six-year term starting June 30, 2025 until June 30, 2031",
+          "accessMethod": "Independent newspaper article text via web search index.",
+          "independence": "Editorially separate newspaper report of the same COMELEC proclamation event; not a second election authority.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0JD",
+      "electedTerm": {
+        "start": "2025-06-30",
+        "scheduledEnd": "2031-06-30",
+        "startScope": "Constitutional commencement of the elected 2025 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "philstar-election-2025",
+          "pna-election-2025"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Lapid, M. M."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Lapid, M. M.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2025",
+          "url": "https://www.pna.gov.ph/photos/76846",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2025-05-17",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Proclaimed 12 Senators elect by the NBOC, Avito Dalan, photo caption; named winner: Lito Lapid",
+          "excerpt": "Eleven of the 12 winning senators of the midterm elections attend their proclamation",
+          "accessMethod": "Official government newswire photo-caption text through web search index. Direct web open returned 404.",
+          "independence": "Government photo reporting from an institution separate from Senate and COMELEC. It reports the proclamation event; it is not the signed COMELEC resolution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "philstar-election-2025",
+          "url": "https://www.philstar.com/headlines/2025/05/18/2443908/comelec-proclaims-winning-senators",
+          "accessUrl": null,
+          "publisher": "The Philippine Star",
+          "documentDate": "2025-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims winning senators, Mayen Jaymalin; opening and new senators term paragraph",
+          "excerpt": "six-year term starting June 30, 2025 until June 30, 2031",
+          "accessMethod": "Independent newspaper article text via web search index.",
+          "independence": "Editorially separate newspaper report of the same COMELEC proclamation event; not a second election authority.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0JC",
+      "electedTerm": {
+        "start": "2022-06-30",
+        "scheduledEnd": "2028-06-30",
+        "startScope": "Constitutional commencement of the elected 2022 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "pna-election-2022",
+          "senate-directory-2023",
+          "senate-primer-2022"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Legarda, L."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Legarda, L.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2022",
+          "url": "https://www.pna.gov.ph/articles/1174805",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2022-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims 12 new senators, Ferdinand Patinio; opening and named winners paragraphs; named winner: Loren Legarda",
+          "excerpt": "fresh 6-year term that will end in June 2028",
+          "accessMethod": "Official government newswire text retrieved through web search index, including all twelve names. Direct web open returned 404.",
+          "independence": "Different government institution from Senate; firsthand reporting of COMELEC proclamation, not an independently issued proclamation or certification.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-directory-2023",
+          "url": "https://legacy.senate.gov.ph/The%20Senators%27%20Directory_v04.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2023-06-29",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "The Senators' Directory_06.29.2023; TERMS OF OFFICE, subsection 2022 - 2028",
+          "excerpt": "TERMS OF OFFICE ... 2022 - 2028",
+          "accessMethod": "Official PDF text through web search index. Direct web open and HTTPS download returned 403; no local PDF bytes.",
+          "independence": "Primary institutional term roster; same institution as the 2022 primer, not independent institutional corroboration.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-primer-2022",
+          "url": "https://legacy.senate.gov.ph/publications/STSRO/STSRO%20Primer%202022_Printed%20in%20July%202022.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines, Senate Tax Study and Research Office",
+          "documentDate": "2022-07",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "MEMBERS OF THE SENATE, 19th Congress; Term (2022-2028); imprint Printed in July 2022",
+          "excerpt": "MEMBERS OF THE SENATE ... Term (2022-2028)",
+          "accessMethod": "Official PDF text through web search index. Direct web open returned 403; no local PDF bytes.",
+          "independence": "Separate Senate publication, same institution as the senators' directory.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0JG",
+      "electedTerm": {
+        "start": "2025-06-30",
+        "scheduledEnd": "2031-06-30",
+        "startScope": "Constitutional commencement of the elected 2025 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "philstar-election-2025",
+          "pna-election-2025"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Marcos, I. R."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Marcos, I. R.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2025",
+          "url": "https://www.pna.gov.ph/photos/76846",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2025-05-17",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Proclaimed 12 Senators elect by the NBOC, Avito Dalan, photo caption; named winner: Imee Marcos",
+          "excerpt": "Eleven of the 12 winning senators of the midterm elections attend their proclamation",
+          "accessMethod": "Official government newswire photo-caption text through web search index. Direct web open returned 404.",
+          "independence": "Government photo reporting from an institution separate from Senate and COMELEC. It reports the proclamation event; it is not the signed COMELEC resolution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "philstar-election-2025",
+          "url": "https://www.philstar.com/headlines/2025/05/18/2443908/comelec-proclaims-winning-senators",
+          "accessUrl": null,
+          "publisher": "The Philippine Star",
+          "documentDate": "2025-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims winning senators, Mayen Jaymalin; opening and new senators term paragraph",
+          "excerpt": "six-year term starting June 30, 2025 until June 30, 2031",
+          "accessMethod": "Independent newspaper article text via web search index.",
+          "independence": "Editorially separate newspaper report of the same COMELEC proclamation event; not a second election authority.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0JK",
+      "electedTerm": {
+        "start": "2025-06-30",
+        "scheduledEnd": "2031-06-30",
+        "startScope": "Constitutional commencement of the elected 2025 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "philstar-election-2025",
+          "pna-election-2025"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Marcoleta, R. D."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Marcoleta, R. D.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2025",
+          "url": "https://www.pna.gov.ph/photos/76846",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2025-05-17",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Proclaimed 12 Senators elect by the NBOC, Avito Dalan, photo caption; named winner: Rodante Marcoleta",
+          "excerpt": "Eleven of the 12 winning senators of the midterm elections attend their proclamation",
+          "accessMethod": "Official government newswire photo-caption text through web search index. Direct web open returned 404.",
+          "independence": "Government photo reporting from an institution separate from Senate and COMELEC. It reports the proclamation event; it is not the signed COMELEC resolution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "philstar-election-2025",
+          "url": "https://www.philstar.com/headlines/2025/05/18/2443908/comelec-proclaims-winning-senators",
+          "accessUrl": null,
+          "publisher": "The Philippine Star",
+          "documentDate": "2025-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims winning senators, Mayen Jaymalin; opening and new senators term paragraph",
+          "excerpt": "six-year term starting June 30, 2025 until June 30, 2031",
+          "accessMethod": "Independent newspaper article text via web search index.",
+          "independence": "Editorially separate newspaper report of the same COMELEC proclamation event; not a second election authority.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0JS",
+      "electedTerm": {
+        "start": "2022-06-30",
+        "scheduledEnd": "2028-06-30",
+        "startScope": "Constitutional commencement of the elected 2022 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "pna-election-2022",
+          "senate-directory-2023",
+          "senate-primer-2022"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Padilla, R."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Padilla, R.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2022",
+          "url": "https://www.pna.gov.ph/articles/1174805",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2022-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims 12 new senators, Ferdinand Patinio; opening and named winners paragraphs; named winner: Robin Padilla",
+          "excerpt": "fresh 6-year term that will end in June 2028",
+          "accessMethod": "Official government newswire text retrieved through web search index, including all twelve names. Direct web open returned 404.",
+          "independence": "Different government institution from Senate; firsthand reporting of COMELEC proclamation, not an independently issued proclamation or certification.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-directory-2023",
+          "url": "https://legacy.senate.gov.ph/The%20Senators%27%20Directory_v04.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2023-06-29",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "The Senators' Directory_06.29.2023; TERMS OF OFFICE, subsection 2022 - 2028",
+          "excerpt": "TERMS OF OFFICE ... 2022 - 2028",
+          "accessMethod": "Official PDF text through web search index. Direct web open and HTTPS download returned 403; no local PDF bytes.",
+          "independence": "Primary institutional term roster; same institution as the 2022 primer, not independent institutional corroboration.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-primer-2022",
+          "url": "https://legacy.senate.gov.ph/publications/STSRO/STSRO%20Primer%202022_Printed%20in%20July%202022.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines, Senate Tax Study and Research Office",
+          "documentDate": "2022-07",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "MEMBERS OF THE SENATE, 19th Congress; Term (2022-2028); imprint Printed in July 2022",
+          "excerpt": "MEMBERS OF THE SENATE ... Term (2022-2028)",
+          "accessMethod": "Official PDF text through web search index. Direct web open returned 403; no local PDF bytes.",
+          "independence": "Separate Senate publication, same institution as the senators' directory.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0JQ",
+      "electedTerm": {
+        "start": "2025-06-30",
+        "scheduledEnd": "2031-06-30",
+        "startScope": "Constitutional commencement of the elected 2025 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "philstar-election-2025",
+          "pna-election-2025"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Pangilinan, F. N."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Pangilinan, F. N.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2025",
+          "url": "https://www.pna.gov.ph/photos/76846",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2025-05-17",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Proclaimed 12 Senators elect by the NBOC, Avito Dalan, photo caption; named winner: Francis Pangilinan",
+          "excerpt": "Eleven of the 12 winning senators of the midterm elections attend their proclamation",
+          "accessMethod": "Official government newswire photo-caption text through web search index. Direct web open returned 404.",
+          "independence": "Government photo reporting from an institution separate from Senate and COMELEC. It reports the proclamation event; it is not the signed COMELEC resolution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "philstar-election-2025",
+          "url": "https://www.philstar.com/headlines/2025/05/18/2443908/comelec-proclaims-winning-senators",
+          "accessUrl": null,
+          "publisher": "The Philippine Star",
+          "documentDate": "2025-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims winning senators, Mayen Jaymalin; opening and new senators term paragraph",
+          "excerpt": "six-year term starting June 30, 2025 until June 30, 2031",
+          "accessMethod": "Independent newspaper article text via web search index.",
+          "independence": "Editorially separate newspaper report of the same COMELEC proclamation event; not a second election authority.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0JY",
+      "electedTerm": {
+        "start": "2025-06-30",
+        "scheduledEnd": "2031-06-30",
+        "startScope": "Constitutional commencement of the elected 2025 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "philstar-election-2025",
+          "pna-election-2025"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Sotto III, V. C."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Sotto III, V. C.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2025",
+          "url": "https://www.pna.gov.ph/photos/76846",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2025-05-17",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Proclaimed 12 Senators elect by the NBOC, Avito Dalan, photo caption; named winner: Vicente Sotto III",
+          "excerpt": "Eleven of the 12 winning senators of the midterm elections attend their proclamation",
+          "accessMethod": "Official government newswire photo-caption text through web search index. Direct web open returned 404.",
+          "independence": "Government photo reporting from an institution separate from Senate and COMELEC. It reports the proclamation event; it is not the signed COMELEC resolution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "philstar-election-2025",
+          "url": "https://www.philstar.com/headlines/2025/05/18/2443908/comelec-proclaims-winning-senators",
+          "accessUrl": null,
+          "publisher": "The Philippine Star",
+          "documentDate": "2025-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims winning senators, Mayen Jaymalin; opening and new senators term paragraph",
+          "excerpt": "six-year term starting June 30, 2025 until June 30, 2031",
+          "accessMethod": "Independent newspaper article text via web search index.",
+          "independence": "Editorially separate newspaper report of the same COMELEC proclamation event; not a second election authority.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0K0",
+      "electedTerm": {
+        "start": "2025-06-30",
+        "scheduledEnd": "2031-06-30",
+        "startScope": "Constitutional commencement of the elected 2025 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "philstar-election-2025",
+          "pna-election-2025"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Tulfo, E. T."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Tulfo, E. T.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2025",
+          "url": "https://www.pna.gov.ph/photos/76846",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2025-05-17",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Proclaimed 12 Senators elect by the NBOC, Avito Dalan, photo caption; named winner: Erwin Tulfo",
+          "excerpt": "Eleven of the 12 winning senators of the midterm elections attend their proclamation",
+          "accessMethod": "Official government newswire photo-caption text through web search index. Direct web open returned 404.",
+          "independence": "Government photo reporting from an institution separate from Senate and COMELEC. It reports the proclamation event; it is not the signed COMELEC resolution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "philstar-election-2025",
+          "url": "https://www.philstar.com/headlines/2025/05/18/2443908/comelec-proclaims-winning-senators",
+          "accessUrl": null,
+          "publisher": "The Philippine Star",
+          "documentDate": "2025-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims winning senators, Mayen Jaymalin; opening and new senators term paragraph",
+          "excerpt": "six-year term starting June 30, 2025 until June 30, 2031",
+          "accessMethod": "Independent newspaper article text via web search index.",
+          "independence": "Editorially separate newspaper report of the same COMELEC proclamation event; not a second election authority.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5S6MAZ4YBST5GDJV827A0K2",
+      "electedTerm": {
+        "start": "2022-06-30",
+        "scheduledEnd": "2028-06-30",
+        "startScope": "Constitutional commencement of the elected 2022 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "pna-election-2022",
+          "senate-directory-2023",
+          "senate-primer-2022"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Tulfo, R. T."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Tulfo, R. T.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2022",
+          "url": "https://www.pna.gov.ph/articles/1174805",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2022-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims 12 new senators, Ferdinand Patinio; opening and named winners paragraphs; named winner: Raffy Tulfo",
+          "excerpt": "fresh 6-year term that will end in June 2028",
+          "accessMethod": "Official government newswire text retrieved through web search index, including all twelve names. Direct web open returned 404.",
+          "independence": "Different government institution from Senate; firsthand reporting of COMELEC proclamation, not an independently issued proclamation or certification.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-directory-2023",
+          "url": "https://legacy.senate.gov.ph/The%20Senators%27%20Directory_v04.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2023-06-29",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "The Senators' Directory_06.29.2023; TERMS OF OFFICE, subsection 2022 - 2028",
+          "excerpt": "TERMS OF OFFICE ... 2022 - 2028",
+          "accessMethod": "Official PDF text through web search index. Direct web open and HTTPS download returned 403; no local PDF bytes.",
+          "independence": "Primary institutional term roster; same institution as the 2022 primer, not independent institutional corroboration.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-primer-2022",
+          "url": "https://legacy.senate.gov.ph/publications/STSRO/STSRO%20Primer%202022_Printed%20in%20July%202022.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines, Senate Tax Study and Research Office",
+          "documentDate": "2022-07",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "MEMBERS OF THE SENATE, 19th Congress; Term (2022-2028); imprint Printed in July 2022",
+          "excerpt": "MEMBERS OF THE SENATE ... Term (2022-2028)",
+          "accessMethod": "Official PDF text through web search index. Direct web open returned 403; no local PDF bytes.",
+          "independence": "Separate Senate publication, same institution as the senators' directory.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5ST4GKP8P26VCTY2059AZT6",
+      "electedTerm": {
+        "start": "2022-06-30",
+        "scheduledEnd": "2028-06-30",
+        "startScope": "Constitutional commencement of the elected 2022 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "pna-election-2022",
+          "senate-directory-2023",
+          "senate-primer-2022"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Villanueva, J."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Villanueva, J.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2022",
+          "url": "https://www.pna.gov.ph/articles/1174805",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2022-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims 12 new senators, Ferdinand Patinio; opening and named winners paragraphs; named winner: Joel Villanueva",
+          "excerpt": "fresh 6-year term that will end in June 2028",
+          "accessMethod": "Official government newswire text retrieved through web search index, including all twelve names. Direct web open returned 404.",
+          "independence": "Different government institution from Senate; firsthand reporting of COMELEC proclamation, not an independently issued proclamation or certification.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-directory-2023",
+          "url": "https://legacy.senate.gov.ph/The%20Senators%27%20Directory_v04.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2023-06-29",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "The Senators' Directory_06.29.2023; TERMS OF OFFICE, subsection 2022 - 2028",
+          "excerpt": "TERMS OF OFFICE ... 2022 - 2028",
+          "accessMethod": "Official PDF text through web search index. Direct web open and HTTPS download returned 403; no local PDF bytes.",
+          "independence": "Primary institutional term roster; same institution as the 2022 primer, not independent institutional corroboration.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-primer-2022",
+          "url": "https://legacy.senate.gov.ph/publications/STSRO/STSRO%20Primer%202022_Printed%20in%20July%202022.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines, Senate Tax Study and Research Office",
+          "documentDate": "2022-07",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "MEMBERS OF THE SENATE, 19th Congress; Term (2022-2028); imprint Printed in July 2022",
+          "excerpt": "MEMBERS OF THE SENATE ... Term (2022-2028)",
+          "accessMethod": "Official PDF text through web search index. Direct web open returned 403; no local PDF bytes.",
+          "independence": "Separate Senate publication, same institution as the senators' directory.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5ST4GMSF7PY546KZCR1YS03",
+      "electedTerm": {
+        "start": "2025-06-30",
+        "scheduledEnd": "2031-06-30",
+        "startScope": "Constitutional commencement of the elected 2025 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "philstar-election-2025",
+          "pna-election-2025"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Villar, C. A."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Villar, C. A.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2025",
+          "url": "https://www.pna.gov.ph/photos/76846",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2025-05-17",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Proclaimed 12 Senators elect by the NBOC, Avito Dalan, photo caption; named winner: Camille Villar",
+          "excerpt": "Eleven of the 12 winning senators of the midterm elections attend their proclamation",
+          "accessMethod": "Official government newswire photo-caption text through web search index. Direct web open returned 404.",
+          "independence": "Government photo reporting from an institution separate from Senate and COMELEC. It reports the proclamation event; it is not the signed COMELEC resolution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "philstar-election-2025",
+          "url": "https://www.philstar.com/headlines/2025/05/18/2443908/comelec-proclaims-winning-senators",
+          "accessUrl": null,
+          "publisher": "The Philippine Star",
+          "documentDate": "2025-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims winning senators, Mayen Jaymalin; opening and new senators term paragraph",
+          "excerpt": "six-year term starting June 30, 2025 until June 30, 2031",
+          "accessMethod": "Independent newspaper article text via web search index.",
+          "independence": "Editorially separate newspaper report of the same COMELEC proclamation event; not a second election authority.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5ST4GQDCMHPRF0HNE0H2KKJ",
+      "electedTerm": {
+        "start": "2022-06-30",
+        "scheduledEnd": "2028-06-30",
+        "startScope": "Constitutional commencement of the elected 2022 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "pna-election-2022",
+          "senate-directory-2023",
+          "senate-primer-2022"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Villar, M. A."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Villar, M. A.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2022",
+          "url": "https://www.pna.gov.ph/articles/1174805",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2022-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims 12 new senators, Ferdinand Patinio; opening and named winners paragraphs; named winner: Mark Villar",
+          "excerpt": "fresh 6-year term that will end in June 2028",
+          "accessMethod": "Official government newswire text retrieved through web search index, including all twelve names. Direct web open returned 404.",
+          "independence": "Different government institution from Senate; firsthand reporting of COMELEC proclamation, not an independently issued proclamation or certification.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-directory-2023",
+          "url": "https://legacy.senate.gov.ph/The%20Senators%27%20Directory_v04.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2023-06-29",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "The Senators' Directory_06.29.2023; TERMS OF OFFICE, subsection 2022 - 2028",
+          "excerpt": "TERMS OF OFFICE ... 2022 - 2028",
+          "accessMethod": "Official PDF text through web search index. Direct web open and HTTPS download returned 403; no local PDF bytes.",
+          "independence": "Primary institutional term roster; same institution as the 2022 primer, not independent institutional corroboration.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-primer-2022",
+          "url": "https://legacy.senate.gov.ph/publications/STSRO/STSRO%20Primer%202022_Printed%20in%20July%202022.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines, Senate Tax Study and Research Office",
+          "documentDate": "2022-07",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "MEMBERS OF THE SENATE, 19th Congress; Term (2022-2028); imprint Printed in July 2022",
+          "excerpt": "MEMBERS OF THE SENATE ... Term (2022-2028)",
+          "accessMethod": "Official PDF text through web search index. Direct web open returned 403; no local PDF bytes.",
+          "independence": "Separate Senate publication, same institution as the senators' directory.",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "profileId": "01K5ST4HCY5N9130WESWJH9BSZ",
+      "electedTerm": {
+        "start": "2022-06-30",
+        "scheduledEnd": "2028-06-30",
+        "startScope": "Constitutional commencement of the elected 2022 Senate term. Derived from verified election cohort and Article VI Section 4, not from the July 2025 group photo or oath-taking date.",
+        "endScope": "Scheduled end of the elected six-year term. It does not certify continuous service or determine an actual vacancy, removal, resignation, suspension, or early end of tenure.",
+        "sourceIds": [
+          "constitution-article-vi",
+          "pna-election-2022",
+          "senate-directory-2023",
+          "senate-primer-2022"
+        ]
+      },
+      "membershipObservations": [
+        {
+          "office": "Senator",
+          "congress": 20,
+          "observedOn": "2026-05-06",
+          "scope": "Recognized as a senator in the official Session 61 roll call. This observation is bounded to this proceeding and is not a November 22, 2026 present-office certification.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ],
+          "evidenceName": "Zubiri, J. M. F."
+        }
+      ],
+      "officeObservations": [],
+      "sources": [
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lisdata/4980245657%21.pdf",
+          "accessUrl": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "publisher": "Senate of the Philippines, Legislative Journal Service",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Session 61, 20th Congress, First Regular Session; cover PDF page 1; roll call printed page 2 / PDF page 4; individual entry: Zubiri, J. M. F.",
+          "excerpt": "With 23 senators present, the Chair declared the presence of a quorum. Senator Dela Rosa was absent.",
+          "accessMethod": "Direct HTTPS 200 PDF from current official Senate public archive, 2,181,644 bytes; pypdf extraction and rendered PDF page 4 visually inspected. Legacy URL 403. No claim of binary equality with inaccessible legacy URL.",
+          "independence": "Primary Senate proceedings; independent document/event from opening photo and election proclamation, but the same institution.",
+          "dateMeaning": null
+        },
+        {
+          "id": "pna-election-2022",
+          "url": "https://www.pna.gov.ph/articles/1174805",
+          "accessUrl": null,
+          "publisher": "Philippine News Agency, Philippine government",
+          "documentDate": "2022-05-18",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Comelec proclaims 12 new senators, Ferdinand Patinio; opening and named winners paragraphs; named winner: Miguel Zubiri",
+          "excerpt": "fresh 6-year term that will end in June 2028",
+          "accessMethod": "Official government newswire text retrieved through web search index, including all twelve names. Direct web open returned 404.",
+          "independence": "Different government institution from Senate; firsthand reporting of COMELEC proclamation, not an independently issued proclamation or certification.",
+          "dateMeaning": null
+        },
+        {
+          "id": "constitution-article-vi",
+          "url": "https://www.comelec.gov.ph/?r=References%2FRelatedLaws%2FConstitution%2F1987Constitution%2FArticle6",
+          "accessUrl": null,
+          "publisher": "Commission on Elections; text of the 1987 Constitution",
+          "documentDate": "1987-02-02",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Article VI, Section 4",
+          "excerpt": "The term of office of the Senators shall be six years",
+          "accessMethod": "Official COMELEC legal text through web search index. Direct open of equivalent index.html route returned site shell only; Section 4 text was visible in indexed result.",
+          "independence": "Constitutional rule, independent of person-specific rosters and proclamation reporting.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-directory-2023",
+          "url": "https://legacy.senate.gov.ph/The%20Senators%27%20Directory_v04.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2023-06-29",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "The Senators' Directory_06.29.2023; TERMS OF OFFICE, subsection 2022 - 2028",
+          "excerpt": "TERMS OF OFFICE ... 2022 - 2028",
+          "accessMethod": "Official PDF text through web search index. Direct web open and HTTPS download returned 403; no local PDF bytes.",
+          "independence": "Primary institutional term roster; same institution as the 2022 primer, not independent institutional corroboration.",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-primer-2022",
+          "url": "https://legacy.senate.gov.ph/publications/STSRO/STSRO%20Primer%202022_Printed%20in%20July%202022.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines, Senate Tax Study and Research Office",
+          "documentDate": "2022-07",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "MEMBERS OF THE SENATE, 19th Congress; Term (2022-2028); imprint Printed in July 2022",
+          "excerpt": "MEMBERS OF THE SENATE ... Term (2022-2028)",
+          "accessMethod": "Official PDF text through web search index. Direct web open returned 403; no local PDF bytes.",
+          "independence": "Separate Senate publication, same institution as the senators' directory.",
+          "dateMeaning": null
+        }
+      ]
+    }
+  ],
+  "filings": [
+    {
+      "filingId": "ph-senate-20-sbn-1",
+      "reference": "SBN-1",
+      "events": [
+        {
+          "date": "2025-07-29",
+          "type": "historical_status",
+          "label": "Senate LIS records pending in committee on this date; not verified current.",
+          "sourceIds": [
+            "sbn-1-dated-lis"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-1-dated-lis",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1",
+          "accessUrl": null,
+          "publisher": "Senate Legislative Bills and Index Service",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Overview > 20th Congress > Senate Bill No. 1 > Legislative status",
+          "excerpt": "Pending in the Committee (7/29/2025)",
+          "accessMethod": "search-indexed official text; direct request blocked",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-6",
+      "reference": "SBN-6",
+      "events": [
+        {
+          "date": "2025-09-04",
+          "type": "committee_hearing_agenda",
+          "label": "Listed on official labor committee public-hearing agenda. Official photo release confirms wage hearing occurred; no bill-specific disposition inferred.",
+          "sourceIds": [
+            "senate-labor-2025-09-04-agenda",
+            "senate-labor-2025-09-04-photo"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "senate-labor-2025-09-04-agenda",
+          "url": "https://www.youtube.com/watch?v=uvPy-LuD_yA",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines official verified channel",
+          "documentDate": "2025-09-04",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Video title and description: labor committee, National Minimum Wage / Minimum Wage Increases",
+          "excerpt": "S. Nos. 111 and 373; S. Nos. 6, 12, 141, 175, 209, 273 and 458",
+          "accessMethod": "search-indexed official channel metadata; video not watched",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": "documentDate is the agenda/hearing date explicitly stated in the official video title. The upload publication date is not directly verified and may differ with UTC. No event date is inferred from upload time."
+        },
+        {
+          "id": "senate-labor-2025-09-04-photo",
+          "url": "https://legacy.senate.gov.ph/photo_release/2025/0904_01.asp",
+          "accessUrl": null,
+          "publisher": "Senate Public Relations and Information Bureau",
+          "documentDate": "2025-09-04",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Photo release: Minimum wage increase tackled",
+          "excerpt": "first organizational meeting and public hearing of the Committee on Labor, Employment and Human Resource Development",
+          "accessMethod": "search-indexed official text; direct request blocked",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-11",
+      "reference": "SBN-11",
+      "events": [
+        {
+          "date": "2025-09-16",
+          "type": "committee_hearing",
+          "label": "Cultural Communities and Muslim Affairs hearing tackled SBN11 and SBN860.",
+          "sourceIds": [
+            "senate-ipra-hearing-2025-09-16"
+          ]
+        },
+        {
+          "date": "2025-12-09",
+          "type": "substitute_recommendation",
+          "label": "CR19 on SBN1584 recommends approval in substitution of SBN11 and SBN860; sponsored by Padilla.",
+          "sourceIds": [
+            "senate-journal-2025-12-09"
+          ]
+        },
+        {
+          "date": "2025-12-09",
+          "type": "successor_floor_activity",
+          "instrument": "SBN-1584",
+          "label": "SBN1584 moved to special orders; considered on second reading, sponsored, then consideration suspended. No second-reading approval recorded here.",
+          "sourceIds": [
+            "senate-journal-2025-12-09"
+          ]
+        }
+      ],
+      "successor": {
+        "originalReference": "SBN-11",
+        "successorReference": "SBN-1584",
+        "relationship": "approval recommended in substitution",
+        "committeeReport": 19,
+        "successorEnactment": null,
+        "sourceIds": [
+          "senate-journal-2025-12-09"
+        ]
+      },
+      "sources": [
+        {
+          "id": "senate-ipra-hearing-2025-09-16",
+          "url": "https://legacy.senate.gov.ph/photo_release/2025/0916_04.asp",
+          "accessUrl": null,
+          "publisher": "Senate Public Relations and Information Bureau",
+          "documentDate": "2025-09-16",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Photo release: Upholding Indigenous People’s rights",
+          "excerpt": "The committee tackled Senate Bill Nos. 11 and 860",
+          "accessMethod": "search-indexed official text; direct request blocked",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-journal-2025-12-09",
+          "url": "https://senate.gov.ph/legacy/lis_bills/4862744585%21.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2025-12-09",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Journal printed pp.24-27; PDF pp.26-29; CR19 and SBN1584",
+          "excerpt": "recommending its approval in substitution of Senate Bill Nos. 11 and 860",
+          "accessMethod": "direct PDF bytes retrieved HTTP200; pypdf extraction of relevant full pages",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-12",
+      "reference": "SBN-12",
+      "events": [
+        {
+          "date": "2025-07-29",
+          "type": "historical_status",
+          "label": "Senate LIS records pending in committee on this date; not verified current.",
+          "sourceIds": [
+            "sbn-12-dated-lis"
+          ]
+        },
+        {
+          "date": "2025-09-04",
+          "type": "committee_hearing_agenda",
+          "label": "Listed on official labor committee public-hearing agenda. Official photo release confirms wage hearing occurred; no bill-specific disposition inferred.",
+          "sourceIds": [
+            "senate-labor-2025-09-04-agenda",
+            "senate-labor-2025-09-04-photo"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-12-dated-lis",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-12",
+          "accessUrl": null,
+          "publisher": "Senate Legislative Bills and Index Service",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Overview > 20th Congress > Senate Bill No. 12 > Legislative status",
+          "excerpt": "Pending in the Committee (7/29/2025)",
+          "accessMethod": "search-indexed official text; direct request blocked",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-labor-2025-09-04-agenda",
+          "url": "https://www.youtube.com/watch?v=uvPy-LuD_yA",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines official verified channel",
+          "documentDate": "2025-09-04",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Video title and description: labor committee, National Minimum Wage / Minimum Wage Increases",
+          "excerpt": "S. Nos. 111 and 373; S. Nos. 6, 12, 141, 175, 209, 273 and 458",
+          "accessMethod": "search-indexed official channel metadata; video not watched",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": "documentDate is the agenda/hearing date explicitly stated in the official video title. The upload publication date is not directly verified and may differ with UTC. No event date is inferred from upload time."
+        },
+        {
+          "id": "senate-labor-2025-09-04-photo",
+          "url": "https://legacy.senate.gov.ph/photo_release/2025/0904_01.asp",
+          "accessUrl": null,
+          "publisher": "Senate Public Relations and Information Bureau",
+          "documentDate": "2025-09-04",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Photo release: Minimum wage increase tackled",
+          "excerpt": "first organizational meeting and public hearing of the Committee on Labor, Employment and Human Resource Development",
+          "accessMethod": "search-indexed official text; direct request blocked",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-21",
+      "reference": "SBN-21",
+      "events": [
+        {
+          "date": "2025-07-29",
+          "type": "historical_status",
+          "label": "Senate LIS records pending in committee on this date; not verified current.",
+          "sourceIds": [
+            "sbn-21-dated-lis"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-21-dated-lis",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-21",
+          "accessUrl": null,
+          "publisher": "Senate Legislative Bills and Index Service",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Overview > 20th Congress > Senate Bill No. 21 > Legislative status",
+          "excerpt": "Pending in the Committee (7/29/2025)",
+          "accessMethod": "search-indexed official text; direct request blocked",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-31",
+      "reference": "SBN-31",
+      "events": [
+        {
+          "date": "2025-07-29",
+          "type": "historical_status",
+          "label": "Senate LIS records pending in committee on this date; not verified current.",
+          "sourceIds": [
+            "sbn-31-dated-lis"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-31-dated-lis",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-31",
+          "accessUrl": null,
+          "publisher": "Senate Legislative Bills and Index Service",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Overview > 20th Congress > Senate Bill No. 31 > Legislative status",
+          "excerpt": "Pending in the Committee (7/29/2025)",
+          "accessMethod": "search-indexed official text; direct request blocked",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-32",
+      "reference": "SBN-32",
+      "events": [
+        {
+          "date": "2026-03-17",
+          "type": "committee_hearing_agenda",
+          "label": "SBN32 listed with SBN537/804/1022/1741 on official Finance committee broadcast agenda; metadata establishes agenda, not passage or substantive disposition.",
+          "sourceIds": [
+            "senate-finance-agenda-2026-03-17"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "senate-finance-agenda-2026-03-17",
+          "url": "https://www.youtube.com/watch?v=6TGsPrzJjH8",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines official verified channel",
+          "documentDate": "2026-03-17",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Video title and description: Committee on Finance, March17,2026",
+          "excerpt": "SBNs 32, 537, 804, 1022 and 1741 - People's Participation in the National Budget Process Act",
+          "accessMethod": "search-indexed official channel metadata; video not watched",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": "documentDate is the agenda/hearing date explicitly stated in the official video title. The upload publication date is not directly verified and may differ with UTC. No event date is inferred from upload time."
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-41",
+      "reference": "SBN-41",
+      "events": [
+        {
+          "date": "2025-07-29",
+          "type": "historical_status",
+          "label": "Senate LIS records pending in committee on this date; not verified current.",
+          "sourceIds": [
+            "sbn-41-dated-lis"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-41-dated-lis",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-41",
+          "accessUrl": null,
+          "publisher": "Senate Legislative Bills and Index Service",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Overview > 20th Congress > Senate Bill No. 41 > Legislative status",
+          "excerpt": "Pending in the Committee (7/29/2025)",
+          "accessMethod": "search-indexed official text; direct request blocked",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-42",
+      "reference": "SBN-42",
+      "events": [
+        {
+          "date": "2025-07-29",
+          "type": "historical_status",
+          "label": "Senate LIS records pending in committee on this date; not verified current.",
+          "sourceIds": [
+            "sbn-42-dated-lis"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-42-dated-lis",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-42",
+          "accessUrl": null,
+          "publisher": "Senate Legislative Bills and Index Service",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Overview > 20th Congress > Senate Bill No. 42 > Legislative status",
+          "excerpt": "Pending in the Committee (7/29/2025)",
+          "accessMethod": "search-indexed official text; direct request blocked",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-51",
+      "reference": "SBN-51",
+      "events": [
+        {
+          "date": "2025-07-29",
+          "type": "historical_status",
+          "label": "Senate LIS records pending in committee on this date; not verified current.",
+          "sourceIds": [
+            "sbn-51-dated-lis"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-51-dated-lis",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-51",
+          "accessUrl": null,
+          "publisher": "Senate Legislative Bills and Index Service",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Overview > 20th Congress > Senate Bill No. 51 > Legislative status",
+          "excerpt": "Pending in the Committee (7/29/2025)",
+          "accessMethod": "search-indexed official text; direct request blocked",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-52",
+      "reference": "SBN-52",
+      "events": [
+        {
+          "date": "2026-06-15",
+          "type": "dated_external_government_status",
+          "label": "EDCOM II tracker groups SBN52/308/547 under Teachers Professionalization: Senate In the TWG; no committee-report update as of June15. House passage concerns HBN6738, not SBN52.",
+          "sourceIds": [
+            "edcom-teachers-tracker-2026-06-15"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "edcom-teachers-tracker-2026-06-15",
+          "url": "https://edcom2.gov.ph/tracker/",
+          "accessUrl": null,
+          "publisher": "Second Congressional Commission on Education (EDCOM II)",
+          "documentDate": "2026-06-15",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "RA7836 Amendment — Teachers Professionalization; links SBN52,308,547 and HBN6738",
+          "excerpt": "Senate Status In the TWG; As of June 15, 2026, there are no updates on the committee report",
+          "accessMethod": "search-indexed government tracker; direct HTTPS returned403",
+          "independence": "Distinct congressional commission publisher; may rely on Senate/House reports, not a second independent primary Senate action record",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-61",
+      "reference": "SBN-61",
+      "events": [
+        {
+          "date": "2025-07-29",
+          "type": "historical_status",
+          "label": "Senate LIS records pending in committee on this date; not verified current.",
+          "sourceIds": [
+            "sbn-61-dated-lis"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-61-dated-lis",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-61",
+          "accessUrl": null,
+          "publisher": "Senate Legislative Bills and Index Service",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Overview > 20th Congress > Senate Bill No. 61 > Legislative status",
+          "excerpt": "Pending in the Committee (7/29/2025)",
+          "accessMethod": "search-indexed official text; direct request blocked",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-62",
+      "reference": "SBN-62",
+      "events": [
+        {
+          "date": "2025-07-29",
+          "type": "historical_status",
+          "label": "Senate LIS records pending in committee on this date; not verified current.",
+          "sourceIds": [
+            "sbn-62-dated-lis"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-62-dated-lis",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-62",
+          "accessUrl": null,
+          "publisher": "Senate Legislative Bills and Index Service",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Overview > 20th Congress > Senate Bill No. 62 > Legislative status",
+          "excerpt": "Pending in the Committee (7/29/2025)",
+          "accessMethod": "search-indexed official text; direct request blocked",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-71",
+      "reference": "SBN-71",
+      "events": [
+        {
+          "date": "2025-08-20",
+          "type": "committee_hearing_coverage",
+          "label": "Official Social Justice committee hearing Quick Notes cover SBN71 with universal social-pension proposals. No committee-report or passage inference.",
+          "sourceIds": [
+            "senate-social-quicknotes-2025-08-20"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "senate-social-quicknotes-2025-08-20",
+          "url": "https://web.senate.gov.ph/publications/LRS/Quick%20Notes/QN-Comm.%20on%20Social%20Justice-20%20August%202025.pdf",
+          "accessUrl": null,
+          "publisher": "Senate Legislative Research Service",
+          "documentDate": "2025-08-20",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Organizational Meeting and Public Hearing of the Committee on Social Justice; Highlights of Bills I",
+          "excerpt": "Senate Bill Nos. 71 and 95, filed by Sens. Estrada and Villar (M) respectively",
+          "accessMethod": "search-indexed official Quick Notes PDF; direct archive variant404; original web host redirects",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-82",
+      "reference": "SBN-82",
+      "events": [
+        {
+          "date": "2026-05-06",
+          "type": "substitute_recommendation",
+          "label": "Labor committee CR59 recommends SBN2115 in substitution of SBN82.",
+          "sourceIds": [
+            "senate-cr59-2026-05-06",
+            "senate-journal-2026-05-06"
+          ]
+        },
+        {
+          "date": "2026-05-06",
+          "type": "successor_floor_activity",
+          "instrument": "SBN-2115",
+          "label": "SBN2115 transferred to special orders, considered on second reading and sponsored by Raffy Tulfo; consideration then suspended. No second-reading approval inferred.",
+          "sourceIds": [
+            "senate-journal-2026-05-06"
+          ]
+        }
+      ],
+      "successor": {
+        "originalReference": "SBN-82",
+        "successorReference": "SBN-2115",
+        "relationship": "approval recommended in substitution",
+        "committeeReport": 59,
+        "successorEnactment": null,
+        "sourceIds": [
+          "senate-cr59-2026-05-06",
+          "senate-journal-2026-05-06"
+        ]
+      },
+      "sources": [
+        {
+          "id": "senate-cr59-2026-05-06",
+          "url": "https://legacy.senate.gov.ph/lis/committee_rpt.aspx?congress=20&q=59",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "CR59 > Matters reported out and Remarks",
+          "excerpt": "SBN-2115; SBN-82; Recommending its Approval in Substitution of S. No. 82",
+          "accessMethod": "search-indexed official text; direct request blocked",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-journal-2026-05-06",
+          "url": "https://senate.gov.ph/legacy/lis_bills/4980245657%21.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2026-05-06",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Journal PDFp11 (CR59); printedpp23-27 / PDFpp25-29 (SBN2115 floor activity)",
+          "excerpt": "Committee Report No. 59 ... recommending its approval in substitution of Senate Bill No. 82",
+          "accessMethod": "direct PDF bytes retrieved HTTP200; pypdf extraction of relevant full pages",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-92",
+      "reference": "SBN-92",
+      "events": [
+        {
+          "date": "2025-07-29",
+          "type": "historical_status",
+          "label": "Senate LIS records pending in committee on this date; not verified current.",
+          "sourceIds": [
+            "sbn-92-dated-lis"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-92-dated-lis",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-92",
+          "accessUrl": null,
+          "publisher": "Senate Legislative Bills and Index Service",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Overview > 20th Congress > Senate Bill No. 92 > Legislative status",
+          "excerpt": "Pending in the Committee (7/29/2025)",
+          "accessMethod": "search-indexed official text; direct request blocked",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-111",
+      "reference": "SBN-111",
+      "events": [
+        {
+          "date": "2025-07-30",
+          "type": "historical_status",
+          "label": "Senate LIS records pending in committee on this date; not verified current.",
+          "sourceIds": [
+            "sbn-111-dated-lis"
+          ]
+        },
+        {
+          "date": "2025-09-04",
+          "type": "committee_hearing_agenda",
+          "label": "Listed on official labor committee public-hearing agenda. Official photo release confirms wage hearing occurred; no bill-specific disposition inferred.",
+          "sourceIds": [
+            "senate-labor-2025-09-04-agenda",
+            "senate-labor-2025-09-04-photo"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-111-dated-lis",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-111",
+          "accessUrl": null,
+          "publisher": "Senate Legislative Bills and Index Service",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Overview > 20th Congress > Senate Bill No. 111 > Legislative status",
+          "excerpt": "Pending in the Committee (7/30/2025)",
+          "accessMethod": "search-indexed official text; direct request blocked",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        },
+        {
+          "id": "senate-labor-2025-09-04-agenda",
+          "url": "https://www.youtube.com/watch?v=uvPy-LuD_yA",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines official verified channel",
+          "documentDate": "2025-09-04",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Video title and description: labor committee, National Minimum Wage / Minimum Wage Increases",
+          "excerpt": "S. Nos. 111 and 373; S. Nos. 6, 12, 141, 175, 209, 273 and 458",
+          "accessMethod": "search-indexed official channel metadata; video not watched",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": "documentDate is the agenda/hearing date explicitly stated in the official video title. The upload publication date is not directly verified and may differ with UTC. No event date is inferred from upload time."
+        },
+        {
+          "id": "senate-labor-2025-09-04-photo",
+          "url": "https://legacy.senate.gov.ph/photo_release/2025/0904_01.asp",
+          "accessUrl": null,
+          "publisher": "Senate Public Relations and Information Bureau",
+          "documentDate": "2025-09-04",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Photo release: Minimum wage increase tackled",
+          "excerpt": "first organizational meeting and public hearing of the Committee on Labor, Employment and Human Resource Development",
+          "accessMethod": "search-indexed official text; direct request blocked",
+          "independence": "Senate-origin; not independent of other Senate records",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-123",
+      "reference": "SBN-123",
+      "events": [
+        {
+          "date": "2025-07-30",
+          "type": "historical_status_observation",
+          "label": "Exact official 20th Congress overview records Pending in the Committee (7/30/2025). This records the dated listing only; it is not certified current on November 22, 2026.",
+          "sourceIds": [
+            "sbn-123-legacy-index"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-123-legacy-index",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-123",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "20th Congress overview > Legislative status",
+          "excerpt": "Pending in the Committee (7/30/2025); this is a dated historical listing, not a Nov 22 status certification.",
+          "accessMethod": "web_search_index",
+          "independence": "primary official record",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-131",
+      "reference": "SBN-131",
+      "events": [
+        {
+          "date": "2025-07-30",
+          "type": "historical_status_observation",
+          "label": "Exact official 20th Congress overview records Pending in the Committee (7/30/2025). This records the dated listing only; it is not certified current on November 22, 2026.",
+          "sourceIds": [
+            "sbn-131-legacy-index"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-131-legacy-index",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-131",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "20th Congress overview > Legislative status",
+          "excerpt": "Pending in the Committee (7/30/2025); this is a dated historical listing, not a Nov 22 status certification.",
+          "accessMethod": "web_search_index",
+          "independence": "primary official record",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-132",
+      "reference": "SBN-132",
+      "events": [
+        {
+          "date": "2025-07-30",
+          "type": "historical_status_observation",
+          "label": "Exact official 20th Congress overview records Pending in the Committee (7/30/2025). This records the dated listing only; it is not certified current on November 22, 2026.",
+          "sourceIds": [
+            "sbn-132-legacy-index"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-132-legacy-index",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-132",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "20th Congress overview > Legislative status",
+          "excerpt": "Pending in the Committee (7/30/2025); this is a dated historical listing, not a Nov 22 status certification.",
+          "accessMethod": "web_search_index",
+          "independence": "primary official record",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-142",
+      "reference": "SBN-142",
+      "events": [
+        {
+          "date": "2026-02-11",
+          "type": "committee_hearing_agenda",
+          "label": "Listed on Senate Games and Amusement hearing agenda on anti-online gambling measures.",
+          "sourceIds": [
+            "sbn142-games-20260211"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn142-games-20260211",
+          "url": "https://www.youtube.com/watch?v=fbh8JobjQ48",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines (verified official YouTube channel)",
+          "documentDate": "2026-02-11",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Video title and official agenda description; uploaded Feb 10 UTC, hearing title Feb 11 Philippines",
+          "excerpt": "Games and Amusement hearing agenda includes S. Nos. 30, 47, 142, 508, 686, 708 and 1304.",
+          "accessMethod": "web_search_index_of_official_video_description",
+          "independence": "primary Senate meeting agenda; recording not watched",
+          "dateMeaning": "Hearing or agenda date stated in the official title/description. Upload/publication timestamp is not established and may differ. The video was not watched."
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-151",
+      "reference": "SBN-151",
+      "events": [
+        {
+          "date": "2025-07-30",
+          "type": "historical_status_observation",
+          "label": "Exact official 20th Congress overview records Pending in the Committee (7/30/2025). This records the dated listing only; it is not certified current on November 22, 2026.",
+          "sourceIds": [
+            "sbn-151-legacy-index"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-151-legacy-index",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-151",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "20th Congress overview > Legislative status",
+          "excerpt": "Pending in the Committee (7/30/2025); this is a dated historical listing, not a Nov 22 status certification.",
+          "accessMethod": "web_search_index",
+          "independence": "primary official record",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-152",
+      "reference": "SBN-152",
+      "events": [
+        {
+          "date": "2025-07-30",
+          "type": "historical_status_observation",
+          "label": "Exact official 20th Congress overview records Pending in the Committee (7/30/2025). This records the dated listing only; it is not certified current on November 22, 2026.",
+          "sourceIds": [
+            "sbn-152-legacy-index"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-152-legacy-index",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-152",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "20th Congress overview > Legislative status",
+          "excerpt": "Pending in the Committee (7/30/2025); this is a dated historical listing, not a Nov 22 status certification.",
+          "accessMethod": "web_search_index",
+          "independence": "primary official record",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-169",
+      "reference": "SBN-169",
+      "events": [
+        {
+          "date": "2026-02-23",
+          "type": "committee_report_filed",
+          "label": "CR31 filed, recommending SBN1894 as substitute including SBN169.",
+          "sourceIds": [
+            "cr31-index"
+          ]
+        },
+        {
+          "date": "2026-02-24",
+          "type": "substitution_recommendation_reported",
+          "label": "Journal records CR31 and exact SBN169→SBN1894 substitution recommendation.",
+          "sourceIds": [
+            "journal-20260224"
+          ]
+        },
+        {
+          "date": "2026-06-17",
+          "type": "successor_senate_passage",
+          "label": "Signed-law attestation dates Senate passage of successor SBN1894 on June17,2026.",
+          "sourceIds": [
+            "gazette-ra12325"
+          ]
+        },
+        {
+          "date": "2026-09-04",
+          "type": "successor_enacted",
+          "label": "Successor SBN1894 consolidated with HBN8476 approved as RA12325.",
+          "sourceIds": [
+            "gazette-ra12325",
+            "lrb-ra12325",
+            "sc-ra12325"
+          ]
+        }
+      ],
+      "successor": {
+        "originalReference": "SBN-169",
+        "relationship": "included among bills recommended for substitution by SBN-1894 in CR31",
+        "committeeReport": 31,
+        "successorReference": "SBN-1894",
+        "successorEnactment": {
+          "republicAct": "RA-12325",
+          "approvedOn": "2026-09-04",
+          "houseBill": "HBN-8476",
+          "scope": "successor consolidated instrument; not original SBN169 directly enacted"
+        },
+        "sourceIds": [
+          "cr31-index",
+          "journal-20260224",
+          "gazette-ra12325"
+        ]
+      },
+      "sources": [
+        {
+          "id": "cr31-index",
+          "url": "https://legacy.senate.gov.ph/lis/committee_rpt.aspx?congress=20&q=31",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2026-02-23",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "20th Congress Committee Report 31: matters reported out and remarks",
+          "excerpt": "Committee report recommends SBN1894 in substitution of SBN169 and eight other bills.",
+          "accessMethod": "web_search_index",
+          "independence": "primary official record",
+          "dateMeaning": null
+        },
+        {
+          "id": "journal-20260224",
+          "url": "https://senate.gov.ph/legacy/lis_bills/4923045151%21.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2026-02-24",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Journal Session 48, printed p.6 / PDF p.8; Committee Reports",
+          "excerpt": "SBN1894 recommended in substitution of SBNos26,130,169,503,514,1042,1245,1604,1620.",
+          "accessMethod": "direct_https_200_pdf_pypdf_extract_and_visual_review",
+          "independence": "primary official parliamentary journal",
+          "dateMeaning": null
+        },
+        {
+          "id": "gazette-ra12325",
+          "url": "https://www.officialgazette.gov.ph/downloads/2026/09sep/20260904-RA-12325-FRM.pdf",
+          "accessUrl": null,
+          "publisher": "Official Gazette of the Philippines",
+          "documentDate": "2026-09-04",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Signed law PDF cover and PDF p.7 / printed p.13 attestation; parent visual review",
+          "excerpt": "RA12325 consolidates SBN1894 and HBN8476; Senate passage June17, House June3, approval September4,2026.",
+          "accessMethod": "direct_https_200_pdf_visual_review_by_parent; sha256 ca403efef9c36889e728b1df861faec684c8b9c5479232f64f54f75590d25e36",
+          "independence": "primary signed law",
+          "dateMeaning": null
+        },
+        {
+          "id": "lrb-ra12325",
+          "url": "https://ldr.senate.gov.ph/legislative-issuance/republic-act-no-12325",
+          "accessUrl": null,
+          "publisher": "Senate Legislative Reference Bureau",
+          "documentDate": "2026-09-04",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "20th Congress; Senate Bill 1894; House Bill 8476; date of approval",
+          "excerpt": "LRB identifies RA12325, SBN1894, HBN8476 and September4,2026 approval.",
+          "accessMethod": "web_search_index; direct web open HTTP403",
+          "independence": "same Senate institution; cross-reference",
+          "dateMeaning": null
+        },
+        {
+          "id": "sc-ra12325",
+          "url": "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/102493",
+          "accessUrl": null,
+          "publisher": "Supreme Court E-Library",
+          "documentDate": "2026-09-04",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Full law and closing attestation, verified by parent",
+          "excerpt": "Exact law instrument and bill-number attestation cross-reference.",
+          "accessMethod": "parent_verified_official_source",
+          "independence": "separate official institution; reproduces same instrument",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-180",
+      "reference": "SBN-180",
+      "events": [
+        {
+          "date": "2025-07-30",
+          "type": "historical_status_observation",
+          "label": "Exact official 20th Congress overview records Pending in the Committee (7/30/2025). This records the dated listing only; it is not certified current on November 22, 2026.",
+          "sourceIds": [
+            "sbn-180-legacy-index"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-180-legacy-index",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-180",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "20th Congress overview > Legislative status",
+          "excerpt": "Pending in the Committee (7/30/2025); this is a dated historical listing, not a Nov 22 status certification.",
+          "accessMethod": "web_search_index",
+          "independence": "primary official record",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-189",
+      "reference": "SBN-189",
+      "events": [
+        {
+          "date": "2025-10-01",
+          "type": "historical_status_observation",
+          "label": "Exact official 20th Congress overview records Consolidated/Substituted in the Committee Report (10/1/2025). This records the dated listing only; it is not certified current on November 22, 2026.",
+          "sourceIds": [
+            "sbn-189-legacy-index"
+          ]
+        },
+        {
+          "date": "2025-10-01",
+          "type": "substitution_recommendation_reported",
+          "label": "Journal records CR5 recommending substitute SBN1432 including SBN189.",
+          "sourceIds": [
+            "journal-20251001"
+          ]
+        },
+        {
+          "date": "2026-05-05",
+          "type": "successor_historical_listing",
+          "label": "Successor SBN1432 overview records Pending in House dated May5,2026; not certified current November22.",
+          "sourceIds": [
+            "sbn1432-index"
+          ]
+        }
+      ],
+      "successor": {
+        "originalReference": "SBN-189",
+        "relationship": "recommended for substitution under CR5",
+        "successorReference": "SBN-1432",
+        "committeeReport": 5,
+        "sourceIds": [
+          "journal-20251001"
+        ],
+        "successorEnactment": null
+      },
+      "sources": [
+        {
+          "id": "sbn-189-legacy-index",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-189",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "20th Congress overview > Legislative status",
+          "excerpt": "Consolidated/Substituted in the Committee Report (10/1/2025); this is a dated historical listing, not a Nov 22 status certification.",
+          "accessMethod": "web_search_index",
+          "independence": "primary official record",
+          "dateMeaning": null
+        },
+        {
+          "id": "journal-20251001",
+          "url": "https://senate.gov.ph/legacy/lis_bills/4843644382%21.pdf",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2025-10-01",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Journal printed p.7 / PDF p.9; Committee Report 5",
+          "excerpt": "CR5 recommends SBN1432 in substitution of SBNos49,189,720,770,853,1361.",
+          "accessMethod": "direct_https_200_pdf_pypdf_extract_and_visual_review",
+          "independence": "primary official parliamentary journal",
+          "dateMeaning": null
+        },
+        {
+          "id": "sbn1432-index",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1432",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "20th Congress SBN1432 overview; third-reading copy and legislative status",
+          "excerpt": "Third-reading copy listed May4,2026; overview records Pending in House of Representatives dated May5,2026.",
+          "accessMethod": "web_search_index",
+          "independence": "primary official but legacy site declares information outdated",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-199",
+      "reference": "SBN-199",
+      "events": [
+        {
+          "date": "2025-07-30",
+          "type": "historical_status_observation",
+          "label": "Exact official 20th Congress overview records Pending in the Committee (7/30/2025). This records the dated listing only; it is not certified current on November 22, 2026.",
+          "sourceIds": [
+            "sbn-199-legacy-index"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-199-legacy-index",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-199",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "20th Congress overview > Legislative status",
+          "excerpt": "Pending in the Committee (7/30/2025); this is a dated historical listing, not a Nov 22 status certification.",
+          "accessMethod": "web_search_index",
+          "independence": "primary official record",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-200",
+      "reference": "SBN-200",
+      "events": [
+        {
+          "date": "2025-07-30",
+          "type": "historical_status_observation",
+          "label": "Exact official 20th Congress overview records Pending in the Committee (7/30/2025). This records the dated listing only; it is not certified current on November 22, 2026.",
+          "sourceIds": [
+            "sbn-200-legacy-index"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-200-legacy-index",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-200",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "20th Congress overview > Legislative status",
+          "excerpt": "Pending in the Committee (7/30/2025); this is a dated historical listing, not a Nov 22 status certification.",
+          "accessMethod": "web_search_index",
+          "independence": "primary official record",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-209",
+      "reference": "SBN-209",
+      "events": [
+        {
+          "date": "2025-09-04",
+          "type": "committee_hearing_agenda",
+          "label": "Official Labor committee agenda includes209 among minimum-wage bills. No individual disposition claimed.",
+          "sourceIds": [
+            "labor-agenda-20250904",
+            "labor-photo-20250904"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "labor-agenda-20250904",
+          "url": "https://www.youtube.com/watch?v=uvPy-LuD_yA",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2025-09-04",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Official Labor committee video agenda, exact bill-number list verified by parent and early-bills researcher",
+          "excerpt": "Agenda includes S.Nos6,12,141,175,209,273,458 among minimum-wage measures.",
+          "accessMethod": "parent_and_sibling_verified_official_video_description",
+          "independence": "primary official committee agenda; recording not watched",
+          "dateMeaning": "Hearing or agenda date stated in the official title/description. Upload/publication timestamp is not established and may differ. The video was not watched."
+        },
+        {
+          "id": "labor-photo-20250904",
+          "url": "https://legacy.senate.gov.ph/photo_release/2025/0904_01.asp",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": "2025-09-04",
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "Minimum wage increase hearing photo release, parent/sibling review",
+          "excerpt": "Photo caption corroborates minimum-wage hearing occurrence; does not establish individual bill disposition.",
+          "accessMethod": "parent_and_sibling_verified_official_caption",
+          "independence": "same Senate institution; corroborates meeting occurrence",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-220",
+      "reference": "SBN-220",
+      "events": [
+        {
+          "date": "2025-08-04",
+          "type": "historical_status_observation",
+          "label": "Exact official 20th Congress overview records Pending in the Committee (8/4/2025). This records the dated listing only; it is not certified current on November 22, 2026.",
+          "sourceIds": [
+            "sbn-220-legacy-index"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-220-legacy-index",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-220",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "20th Congress overview > Legislative status",
+          "excerpt": "Pending in the Committee (8/4/2025); this is a dated historical listing, not a Nov 22 status certification.",
+          "accessMethod": "web_search_index",
+          "independence": "primary official record",
+          "dateMeaning": null
+        }
+      ]
+    },
+    {
+      "filingId": "ph-senate-20-sbn-228",
+      "reference": "SBN-228",
+      "events": [
+        {
+          "date": "2025-08-04",
+          "type": "historical_status_observation",
+          "label": "Exact official 20th Congress overview records Pending in the Committee (8/4/2025). This records the dated listing only; it is not certified current on November 22, 2026.",
+          "sourceIds": [
+            "sbn-228-legacy-index"
+          ]
+        }
+      ],
+      "successor": null,
+      "sources": [
+        {
+          "id": "sbn-228-legacy-index",
+          "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-228",
+          "accessUrl": null,
+          "publisher": "Senate of the Philippines",
+          "documentDate": null,
+          "retrievedOn": "2026-11-22",
+          "reviewedOn": null,
+          "locator": "20th Congress overview > Legislative status",
+          "excerpt": "Pending in the Committee (8/4/2025); this is a dated historical listing, not a Nov 22 status certification.",
+          "accessMethod": "web_search_index",
+          "independence": "primary official record",
+          "dateMeaning": null
+        }
+      ]
+    }
+  ]
+}

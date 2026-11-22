@@ -77,6 +77,7 @@ After generation, ordinary checks, and a production build:
 
 ```sh
 npx --no-install tsx scripts/verify-case-review.ts
+node --import tsx scripts/verify-senate-refresh-browser.ts
 ```
 
 Docker and the Puppeteer browser must be available. If the browser is missing,
@@ -139,3 +140,57 @@ Before publishing the reviewed batch, follow the
 retains the original test hashes and dependency assertions, with the exact
 approved Effect override and replacement lock. Keep every existing test and
 behavioral assertion when changing the import path.
+
+## Verify the Senate refresh
+
+The 107 pre-existing test files remain byte-identical to the published baseline.
+New tests cover elected terms, retained unknowns, exact successor chains, held
+records, event sources, UI wording and exports. The release integrity record adds
+these files without replacing the earlier test inventories.
+
+```sh
+node scripts/verify-source-only.mjs --populated-release
+npx --no-install tsx scripts/verify-senate-refresh.ts
+npm run check
+npm run build
+npm run format:check
+npm run docs:check
+npm run data:verify
+npx --no-install tsx scripts/verify-case-review.ts
+node --import tsx scripts/verify-senate-refresh-browser.ts
+```
+
+The refresh verifier opens no database. The database verifiers create and
+remove their own disposable PostgreSQL containers. Neither accepts an existing
+database as its target. Browser verification of the new projection is separate
+from a public deployment.
+
+## Check refreshed records in a browser
+
+After a build, run `node --import tsx scripts/verify-senate-refresh-browser.ts`.
+It uses the installed Playwright package and the pinned Chrome executable managed
+by Puppeteer. To install that executable on a fresh development machine, run
+`npx --no-install puppeteer browsers install chrome`.
+
+The command first tests its readiness checks against an intercepted `.test` page.
+Missing or changed text, similar-looking law numbers, and text outside the expected region must fail. It then creates its own disposable PostgreSQL
+database, imports the sealed batch, starts a localhost server, and checks profile,
+bill, comparison, chat and export results. It also checks that changing a stored
+bill or identity withholds the new evidence. These mutations affect only its own
+disposable database. It does not accept a target database argument.
+
+All existing verification assertions remain. Readiness waits have the same
+30-second maximum, without whole-run success retries. `--self-test` runs only the
+browser readiness controls and needs no Docker database. No test is skipped. The direct Node entrypoint lets termination signals reach the
+process that owns cleanup.
+
+Results and screenshots go to a unique `node_modules/.cache/senate-refresh-browser-*`
+directory. Set `BKIB_BROWSER_EVIDENCE_DIR` to an empty private directory to keep
+evidence elsewhere. The command verifies a unique database name and ownership marker before migrations,
+ignores caller dotenv overrides, and removes its database and server before
+reporting success. SIGINT and SIGTERM enter the same cleanup path; SIGKILL cannot
+be handled by the process. The generated OWNER.json identifies the owned container. Generated evidence does not belong in the source archive.
+
+CI runs this check after installing Chrome and running the existing case verifier.
+The reflow check covers a 390-pixel viewport with 125% CSS zoom. Native browser
+zoom and assistive-technology testing remain separate checks.

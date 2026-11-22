@@ -1,6 +1,6 @@
 # Publication scope
 
-This populated release candidate contains the application and one reviewed Senate data batch. It has no Git history and has not been committed, pushed, or published. The original repository and the earlier source-only copy remain separate and unchanged.
+This public source version contains the application, the reviewed Senate starter batch, and the separate November 22 evidence refresh. The [source-publication record](publication/refreshed-publication.json) records the maintainer's authorization and the verified input archive. The update preserves the existing public history. All earlier local copies remain unchanged; no website deployment is authorized.
 
 ## What is included
 
@@ -41,3 +41,26 @@ The four invented case definitions remain isolated test inputs. Their people, pr
 | `publication/security-exceptions.json` and raw audit files | Current audits, dated risk history, and technical reassessment; no hosting or publication approval                                        |
 
 After extracting the archive, run `shasum -a 256 -c publication/source-files.sha256` on macOS. Checksums detect changed bytes; they do not establish source truth or authorize publication. The [verification record](docs/OPEN_SOURCE.md) lists the checks that actually ran.
+
+## Separate November 22 evidence version
+
+This refreshed copy retains the original reviewed batch unchanged and adds the
+[approved versioned refresh](public/data/senate-20-refresh-2026-11-22/INDEX.md).
+Its [approval record](public/data/senate-20-refresh-2026-11-22/APPROVAL.json) covers
+24 qualified elected terms, separate dated observations and 41 history entries
+across 31 original bills. It does not establish current office or original-bill
+current status or enactment. Fourteen bills have no approved additions.
+
+[publication/senate-refresh.json](publication/senate-refresh.json) pins all 107
+inherited test files, additive tests and the new data files. The earlier manifests
+and their historical counts remain intact. These frozen integration records do
+not record later publication decisions. The separate source-publication record
+above covers this repository update, with deployment still excluded. Private
+proposal packets, plans and source-document copies remain outside the release tree.
+
+The portable `scripts/verify-senate-refresh-browser.ts` command retains the earlier
+profile, citation, comparison, chat, export and stored-data conflict checks.
+Readiness uses the installed Playwright runner with explicit deadlines and negative
+controls. The Heroicons inventory records the refreshed ProfileHeader bytes while
+preserving the unchanged SVG path and license notices. See the
+[browser verification procedure](docs/TESTING.md#check-refreshed-records-in-a-browser).

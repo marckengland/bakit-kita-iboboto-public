@@ -18,7 +18,7 @@ export async function GET(_request: NextRequest, { params }: RouteParams) {
   try {
     const { id: politicianId } = await params;
 
-    const reviewedBatch = getReleasedProfile(politicianId);
+    const reviewedBatch = getReleasedProfile(politicianId, null);
     if (reviewedBatch) {
       return NextResponse.json({ availability: "not_reviewed", stats: null, reviewedBatch });
     }

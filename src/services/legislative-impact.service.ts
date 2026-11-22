@@ -234,7 +234,7 @@ export function calculateImpactScore(
 export async function getLegislativeImpactScore(
   politicianId: string
 ): Promise<LegislativeImpactScore> {
-  const reviewedBatch = getReleasedProfile(politicianId);
+  const reviewedBatch = getReleasedProfile(politicianId, null);
   if (reviewedBatch) {
     return unavailableScore(politicianId, "selected_filings_only", reviewedBatch);
   }

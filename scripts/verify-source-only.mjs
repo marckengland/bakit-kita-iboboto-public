@@ -26,6 +26,53 @@ if (populated) {
     assert.equal(hash(file), digest, `Changed inherited test: ${file}`);
   }
 }
+const refresh = existsSync(path.join(root, "publication/senate-refresh.json"))
+  ? JSON.parse(readFileSync(path.join(root, "publication/senate-refresh.json"), "utf8"))
+  : null;
+if (refresh) {
+  assert.equal(
+    refresh.proposalSha256,
+    "36b8314ff2668569e9de3695dd221346e0cf23ec754690ac591c7f30709d9175"
+  );
+  assert.equal(refresh.publicationAuthorized, false);
+  assert.equal(Object.keys(refresh.existingTestFiles).length, 107);
+  for (const [file, digest] of Object.entries({
+    ...refresh.existingTestFiles,
+    ...refresh.addedTestFiles,
+    ...refresh.approvedDataFiles,
+  })) {
+    assert.equal(hash(file), digest, `Changed Senate refresh record: ${file}`);
+  }
+}
+// A component edit must not leave its recorded icon provenance stale.
+const heroicons = JSON.parse(readFileSync(path.join(root, "publication/heroicons.json"), "utf8"));
+for (const version of heroicons.versions) {
+  assert.equal(
+    hash(version.file),
+    version.licenseSha256,
+    `Changed Heroicons license: ${version.file}`
+  );
+  for (const component of version.files) {
+    assert.equal(
+      hash(component.file),
+      component.sha256,
+      `Stale Heroicons component: ${component.file}`
+    );
+    const source = readFileSync(path.join(root, component.file), "utf8");
+    const paths = [...source.matchAll(/\bd="([^"]+)"/g)].map((match) => ({
+      digest: createHash("sha256").update(match[1]).digest("hex"),
+      line: source.slice(0, match.index).split("\n").length,
+    }));
+    for (const match of component.matches) {
+      assert.ok(
+        paths.some(
+          (candidate) => candidate.digest === match.pathSha256 && candidate.line === match.line
+        ),
+        `Stale Heroicons path or line: ${component.file}:${match.line}`
+      );
+    }
+  }
+}
 const dependencyRevision = populated?.dependencyRevision;
 if (dependencyRevision) {
   assert.equal(dependencyRevision.advisory, "GHSA-7589-6fvf-x4pw");
@@ -71,6 +118,7 @@ assert.deepEqual(
     ...Object.keys(inventory.testFiles),
     ...Object.keys(inventory.addedTestFiles),
     ...Object.keys(populated?.addedTestFiles ?? {}),
+    ...Object.keys(refresh?.addedTestFiles ?? {}),
   ].sort()
 );
 assert.deepEqual(Object.keys(inventory.addedTestFiles), [
@@ -356,6 +404,7 @@ const allowedScripts = new Set([
   "scripts/verify-source-only.mjs",
 ]);
 for (const file of populated?.addedScripts ?? []) allowedScripts.add(file);
+for (const file of refresh?.addedScripts ?? []) allowedScripts.add(file);
 assert.deepEqual(
   files("scripts").sort(),
   [...allowedScripts].sort(),
@@ -404,12 +453,20 @@ function configuredEndpoint(file, variable, value) {
 }
 assert.equal(
   configuredEndpoint("src/lib/elasticsearch.ts", "ELASTICSEARCH_URL"),
-  populated ? "http://localhost:59201" : "http://localhost:59200",
+  refresh
+    ? "http://localhost:59202"
+    : populated
+      ? "http://localhost:59201"
+      : "http://localhost:59200",
   "Unconfigured search must use isolated port"
 );
 assert.equal(
   configuredEndpoint("src/lib/redis.ts", "REDIS_URL"),
-  populated ? "redis://localhost:56380" : "redis://localhost:56379",
+  refresh
+    ? "redis://localhost:56381"
+    : populated
+      ? "redis://localhost:56380"
+      : "redis://localhost:56379",
   "Unconfigured cache must use isolated port"
 );
 assert.equal(

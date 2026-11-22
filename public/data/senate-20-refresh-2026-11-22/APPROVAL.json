@@ -1,0 +1,14 @@
+{
+  "status": "approved_for_integration",
+  "approvedOn": "2026-11-22",
+  "datasetId": "ph-senate-20-evidence-refresh-2026-11-22",
+  "proposalSha256": "36b8314ff2668569e9de3695dd221346e0cf23ec754690ac591c7f30709d9175",
+  "dataSha256": "f678042490fb840e31c462715716b2453975beffd56da81a9408bca3a876e058",
+  "publicationAuthorized": false,
+  "deploymentAuthorized": false,
+  "existingDatabaseAuthorized": false,
+  "scope": "Qualified elected terms, dated membership and office observations, and dated history for selected original Senate filings. Current office and original-bill current status and enactment remain unverified.",
+  "profiles": 24,
+  "filingsWithAdditions": 31,
+  "historyEvents": 41
+}

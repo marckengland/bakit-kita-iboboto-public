@@ -1,5 +1,10 @@
 # Verification record
 
+The results below describe the preceding populated candidate. This separate
+November 22 refresh adds evidence and tests; its scope and release restrictions
+are in [the current review](RELEASE_REVIEW.md). The final local check results
+for this refresh are recorded there after verification.
+
 These checks ran locally on the populated release copy on November 22, 2026, using Node.js 22.23.5 and npm 11.21.2. Neither existing copy was modified. Hosted CI has not run for this candidate.
 
 | Check                         | Recorded result                                                                                                                                                    |

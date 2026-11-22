@@ -1,3 +1,4 @@
+import { FilingRefreshEvidence } from "@/app/components/evidence/FilingRefreshEvidence";
 import type { ReleasedFilingContext } from "@/lib/release-data";
 import { formatReviewedDate } from "../../components/ReviewedMembership";
 
@@ -53,8 +54,9 @@ export function ReviewedFilingEvidence({ batch }: { batch: ReleasedFilingContext
 
   return (
     <section className="space-y-4" aria-label="Filing evidence">
+      {batch.refresh && <FilingRefreshEvidence refresh={batch.refresh} />}
       <p className="text-sm">
-        This batch was approved for integration on {batch.integrationApproval.approvedOn}.{" "}
+        The original batch was approved for integration on {batch.integrationApproval.approvedOn}.{" "}
         <SourceLink url={batch.integrationApproval.sourceUrl}>Approval and scope</SourceLink> The
         frozen source packet retains its earlier proposal labels.
       </p>

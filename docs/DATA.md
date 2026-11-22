@@ -21,7 +21,7 @@ disclosures, family relationships, and case claims outside its coverage. Unknown
 fields cannot support a score or a finding about performance.
 [Dataset and review notes](../public/data/senate-20/INDEX.md)
 
-Use the empty database named `bakit_kita_iboboto_populated` after applying the
+Use the empty database named `bakit_kita_iboboto_refreshed` after applying the
 migrations. The dry run checks the approved source bytes and displays the import
 counts without connecting to PostgreSQL.
 
@@ -144,3 +144,33 @@ BetterGov is useful for discovery and structured data; verify each proposed
 field against its exact primary evidence and identify shared origins. A successful
 import validates the approved packet, not a new factual claim. Keep disputed
 fields unknown until a reviewed correction resolves the difference.
+
+## November 22 evidence refresh
+
+The [versioned refresh](../public/data/senate-20-refresh-2026-11-22/INDEX.md) is
+approved for integration in this separate copy. It adds qualified elected terms,
+dated membership observations and selected bill history. The original batch files
+and database import plan remain unchanged. The new evidence is a static reviewed
+projection, not a database migration or a background research job.
+
+```mermaid
+flowchart LR
+  Base["Sealed starter batch"] --> Rows["Validate loaded identities and filings"]
+  Refresh["Approved versioned refresh"] --> Context["Attach qualified evidence"]
+  Rows --> Context
+  Context --> Views["Profiles, comparisons, record chat and exports"]
+```
+
+`src/lib/senate-refresh.ts` resolves the new context by the original profile and
+filing IDs. `src/lib/release-data.ts` attaches it without changing legacy terms,
+current-office fields, bill status or enactment. Public readers attach new profile evidence only after checking stored names.
+Bill lists, cached details, chat, comparisons and exports check live identities
+and filing fields before returning new history. Missing or conflicting records
+receive no new evidence; stale search-index results omit the new profile fields.
+Fourteen bills have no approved additions; they receive no invented history.
+The current legacy `BillStatus` enum does not represent these detailed events.
+
+Run `npx --no-install tsx scripts/verify-senate-refresh.ts` to check approved bytes,
+coverage, references and retained unknowns without opening a database. The usual
+`npm run data:import` still loads only the original approved batch into a fresh
+local database. No existing database is upgraded by the refresh.

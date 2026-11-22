@@ -12,6 +12,12 @@ case tests use synthetic records.
 [Senate dataset, sources, and limits](public/data/senate-20/INDEX.md) ·
 [Fixture provenance](docs/FIXTURE_REUSE.md) · [Release status](docs/RELEASE_REVIEW.md)
 
+The separate November 22 evidence refresh adds qualified elected terms for all
+24 profiles and 41 dated history entries across 31 bills. It preserves the sealed
+starter batch, missing values and source conflicts. Scheduled terms do not
+establish current office, and dated bill history does not establish current status.
+[Refresh coverage and sources](public/data/senate-20-refresh-2026-11-22/INDEX.md)
+
 ## What works
 
 | Area                          | Current behavior                                                                                             |
@@ -49,7 +55,9 @@ flowchart LR
     Services --> Review["Public case review checks"]
     DB --> Senate["Check Senate rows against the approved batch"]
     Batch --> Senate
-    Senate --> Filings["Selected filings with citations and unknowns"]
+    Refresh["Approved dated evidence refresh"] --> History["Attach evidence to matching stored records"]
+    Senate --> History
+    History --> Filings["Selected filings with citations and unknowns"]
     Filings --> App
     DB --> Review
     Review --> Records["Reviewed cases and context with citations"]
@@ -78,7 +86,7 @@ fresh local database for this copy.
    In PowerShell, use `Copy-Item .env.example .env`. To select the required npm
    version in your Node environment, run `npm install --global npm@11.21.2`.
 
-2. Start the populated copy's PostgreSQL service and apply the migrations.
+2. Start this copy's PostgreSQL service and apply the migrations.
 
    ```sh
    docker compose up -d --wait postgres
@@ -107,14 +115,14 @@ Open [localhost:3001](http://localhost:3001) and browse the Senate profiles.
 The example settings keep public case reads, background jobs, and private
 contact disabled. Browsing and reviewed-record chat require no provider key.
 
-The Compose project is `bakit-kita-iboboto-populated-release`. Its containers
+The Compose project is `bakit-kita-iboboto-refreshed-release`. Its containers
 and volumes use names separate from the original and source-only copies.
 
 | Service            | Local address     | Needed for                                        |
 | ------------------ | ----------------- | ------------------------------------------------- |
-| PostgreSQL 16      | `localhost:55433` | Required database, `bakit_kita_iboboto_populated` |
-| Redis 7            | `localhost:56380` | Optional development cache                        |
-| Elasticsearch 8.17 | `localhost:59201` | Optional full-text search                         |
+| PostgreSQL 16      | `localhost:55434` | Required database, `bakit_kita_iboboto_refreshed` |
+| Redis 7            | `localhost:56381` | Optional development cache                        |
+| Elasticsearch 8.17 | `localhost:59202` | Optional full-text search                         |
 
 To start the optional services, run `docker compose up -d --wait redis elasticsearch`.
 Set `REDIS_DISABLED=false` when using Redis. Read about index setup before

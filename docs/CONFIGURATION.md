@@ -8,11 +8,11 @@ the supplied settings; it does not contain production credentials.
 
 | Service            | Compose service | Host port | Default use                                           |
 | ------------------ | --------------- | --------- | ----------------------------------------------------- |
-| PostgreSQL 16      | `postgres`      | `55433`   | Required database, `bakit_kita_iboboto_populated`     |
-| Redis 7            | `redis`         | `56380`   | Disabled in local application settings until selected |
-| Elasticsearch 8.17 | `elasticsearch` | `59201`   | Optional full-text search                             |
+| PostgreSQL 16      | `postgres`      | `55434`   | Required database, `bakit_kita_iboboto_refreshed`     |
+| Redis 7            | `redis`         | `56381`   | Disabled in local application settings until selected |
+| Elasticsearch 8.17 | `elasticsearch` | `59202`   | Optional full-text search                             |
 
-The Compose project is `bakit-kita-iboboto-populated-release`. It uses separate
+The Compose project is `bakit-kita-iboboto-refreshed-release`. It uses separate
 container names, volumes, and loopback ports. Its named volumes retain data after
 `docker compose down`. Adding `-v` deletes those volumes and their contents.
 Use the supplied database credentials and unauthenticated Elasticsearch for local
@@ -23,8 +23,8 @@ development only.
 | Variable            | Example or default                       | Effect                                                                                            |
 | ------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | `DATABASE_URL`      | Local PostgreSQL URL in the example file | Required by runtime clients and database commands                                                 |
-| `ELASTICSEARCH_URL` | `http://localhost:59201`                 | Search index connection; the directory can fall back to name lookup                               |
-| `REDIS_URL`         | `redis://localhost:56380`                | Cache and session connection; production sessions require an explicit working URL                 |
+| `ELASTICSEARCH_URL` | `http://localhost:59202`                 | Search index connection; the directory can fall back to name lookup                               |
+| `REDIS_URL`         | `redis://localhost:56381`                | Cache and session connection; production sessions require an explicit working URL                 |
 | `REDIS_DISABLED`    | `true`                                   | Disables Redis for local development and ordinary CI checks; production sessions reject this mode |
 
 For the reviewed batch, use the fresh local database in the example file.

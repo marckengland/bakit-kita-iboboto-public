@@ -1085,10 +1085,10 @@
         },
         {
           "file": "src/app/politicians/[id]/components/ProfileHeader.tsx",
-          "sha256": "4e94b4c16ada34ae8a2bd0eec11f3ce5a5827eeed43ee4e4dd4675194bb74c65",
+          "sha256": "4771fb550c0b0e07f82adae66ff11b29c54d90e400325c879ab45f2b8bdf3ebe",
           "matches": [
             {
-              "line": 349,
+              "line": 350,
               "pathSha256": "6279fbb059a5cb1e956706970aa00ecbdb4ec240784e5e86dadb4740b9a4d5ad",
               "upstreamIcons": ["outline/download.svg"]
             }
@@ -1614,5 +1614,20 @@
         }
       ]
     }
-  ]
+  ],
+  "refreshReview": {
+    "reviewedOn": "2026-11-22",
+    "scope": "ProfileHeader component metadata refreshed after adding the qualified evidence view. The recorded SVG path and bundled license bytes are unchanged.",
+    "changedComponents": [
+      {
+        "file": "src/app/politicians/[id]/components/ProfileHeader.tsx",
+        "previousSha256": "4e94b4c16ada34ae8a2bd0eec11f3ce5a5827eeed43ee4e4dd4675194bb74c65",
+        "sha256": "4771fb550c0b0e07f82adae66ff11b29c54d90e400325c879ab45f2b8bdf3ebe",
+        "previousLines": [349],
+        "lines": [350]
+      }
+    ],
+    "licenseFilesChanged": false,
+    "recordedPathHashesChanged": false
+  }
 }

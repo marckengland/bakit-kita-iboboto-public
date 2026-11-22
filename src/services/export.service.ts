@@ -7,6 +7,8 @@ import { publicCaseReadsEnabled } from "./public-research.service";
  * Requirements: 42.1, 42.2, 42.3, 42.4, 42.5, 42.6
  */
 
+import type { FilingRefresh } from "@/lib/senate-refresh";
+import { answerFromSenateFilings } from "./senate-chat.service";
 import type { ReleasedProfileContext } from "@/lib/release-data";
 import { getPolitician, PoliticianProfile } from "./politician.service";
 import { getSALNHistory } from "./saln.service";
@@ -117,7 +119,46 @@ function escapeHtml(text: string): string {
 }
 
 function getObservedMembership(context: ReleasedProfileContext): string {
-  return `${escapeHtml(context.office)} in Congress ${context.congress} on <a href="${escapeHtml(context.sourceUrl)}">${escapeHtml(context.observedOn)}</a>`;
+  const observation = `${escapeHtml(context.office)} in Congress ${context.congress} on <a href="${escapeHtml(context.sourceUrl)}">${escapeHtml(context.observedOn)}</a>`;
+  if (!context.refresh) {
+    return observation;
+  }
+  const refresh = context.refresh;
+  const citations = refresh.sources
+    .map(
+      (source) =>
+        `<a href="${escapeHtml(source.accessUrl ?? source.url)}">${escapeHtml(source.publisher)}: ${escapeHtml(source.locator)}</a>. Source date: ${escapeHtml(source.documentDate ?? "Not established")}. Retrieved: ${escapeHtml(source.retrievedOn ?? "Not recorded")}. Evidence reviewed: ${escapeHtml(source.reviewedOn ?? "Not recorded")}. Access method: ${escapeHtml(source.accessMethod.charAt(0).toLowerCase() + source.accessMethod.slice(1))} ${escapeHtml(source.independence)}`
+    )
+    .join("<br>");
+  const offices = refresh.officeObservations
+    .map(
+      (item) => `${escapeHtml(item.office)}, ${escapeHtml(item.asOf)}. ${escapeHtml(item.scope)}`
+    )
+    .join("<br>");
+  return `${observation}<br>Elected term begins: ${escapeHtml(refresh.electedTerm.start)}.<br>Scheduled term end: ${escapeHtml(refresh.electedTerm.scheduledEnd)}.<br>These dates do not establish continuous service or current office.<br>${refresh.membershipObservations.map((item) => `Separate membership observation: ${escapeHtml(item.observedOn)}.`).join("<br>")}<br>${offices}<br>${citations}`;
+}
+
+function getFilingHistoryHtml(reference: string, refresh: FilingRefresh | undefined): string {
+  if (!refresh) {
+    return "";
+  }
+  const events = [...refresh.events]
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .map((event) => {
+      const sources = event.sourceIds
+        .map((id) => {
+          const source = refresh.sources.find((item) => item.id === id)!;
+          return `<a href="${escapeHtml(source.accessUrl ?? source.url)}">${escapeHtml(source.publisher)}: ${escapeHtml(source.locator)}</a>. Source date: ${escapeHtml(source.documentDate ?? "Not established")}. Retrieved: ${escapeHtml(source.retrievedOn ?? "Not recorded")}. Evidence reviewed: ${escapeHtml(source.reviewedOn ?? "Not recorded")}. Access method: ${escapeHtml(source.accessMethod.charAt(0).toLowerCase() + source.accessMethod.slice(1))} ${escapeHtml(source.independence)} ${escapeHtml(source.dateMeaning ?? "")}`;
+        })
+        .join("; ");
+      return `<li>${escapeHtml(event.date)}: ${escapeHtml(event.label)}<br>${sources}</li>`;
+    })
+    .join("");
+  const successor = refresh.successor;
+  const relationship = successor
+    ? `<p>${escapeHtml(reference)} to ${escapeHtml(successor.successorReference)}, a separate successor measure. ${successor.successorEnactment ? `Successor approval: ${escapeHtml(successor.successorEnactment.republicAct)} on ${escapeHtml(successor.successorEnactment.approvedOn)}.` : ""}</p>`
+    : "";
+  return `<section class="section"><h2>Dated bill history: ${escapeHtml(reference)}</h2><p>These are dated records, agendas and successor events, not a current-status certification. Original bill enactment remains unverified.</p>${relationship}<ol>${events}</ol></section>`;
 }
 
 // ============================================
@@ -388,6 +429,18 @@ export async function generateProfileExport(
     `;
   }
 
+  if (reviewedBatch) {
+    const answer = await answerFromSenateFilings({ message: "Show filings", politicianId });
+    if (answer.senate?.status === "records") {
+      html += answer.senate.filings
+        .map((filing) => getFilingHistoryHtml(filing.reference, filing.refresh))
+        .join("");
+    } else {
+      html +=
+        "<p>Reviewed filing records are unavailable or need review. This does not establish that the person filed nothing.</p>";
+    }
+  }
+
   // Position History Section
   if (politician.positions.length > 0) {
     html += `
@@ -609,6 +662,20 @@ export async function generateComparisonExport(
         </table>
       </div>
   `;
+
+  for (const [profileId, entry] of Object.entries(comparison.reviewedFilings ?? {})) {
+    const name =
+      comparison.politicians.find((person) => person.id === profileId)?.fullName ?? profileId;
+    html += `<h2>Reviewed history for ${escapeHtml(name)}</h2>`;
+    if (entry.status === "records") {
+      html += entry.filings
+        .map((filing) => getFilingHistoryHtml(filing.reference, filing.refresh))
+        .join("");
+    } else {
+      html +=
+        "<p>Reviewed filing records are unavailable or need review. This does not establish that the person filed nothing.</p>";
+    }
+  }
 
   // Group metrics by category
   const categories = ["legislative", "financial", "attendance", "promises", "experience"] as const;

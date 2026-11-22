@@ -51,7 +51,7 @@ export async function GET(request: NextRequest) {
     });
 
     const mapped = results.map((p) => {
-      const reviewedBatch = getReleasedProfile(p.id);
+      const reviewedBatch = getReleasedProfile(p.id, p.fullName);
       return {
         id: p.id,
         fullName: p.fullName,

@@ -29,6 +29,28 @@ as chat. Existing metrics and differences remain in the response; missing metric
 inputs stay null. The UI leads with the reviewed records and puts unverified
 metrics in a separate section. Counts describe selected records, not performance.
 
+## November 22 evidence context
+
+In this refreshed copy, `reviewedBatch.refresh` is optional. It adds dated
+evidence without changing the meaning of the original fields.
+
+| Context | Added fields                                                             | Limits                                                                                                  |
+| ------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| Profile | `electedTerm`, `membershipObservations`, `officeObservations`, `sources` | A scheduled term is not proof of continuous service or current office.                                  |
+| Filing  | `events`, `successor`, `sources`                                         | Historical status and a successor law do not establish the original bill's current status or enactment. |
+| Both    | `version.datasetId`, `approvedOn`, `scopeUrl`, `approvalUrl`             | Identifies the separate November 22 evidence version, not a new source retrieval.                       |
+
+Public database readers check stored identities before attaching profile evidence.
+Bill readers also check the stored title, date, authors and other approved fields;
+cached bill details must pass the same checks. Changed or unavailable records
+receive no new history. Elasticsearch results omit the new profile evidence
+because an indexed identity may be stale. This omission does not mean there is
+no evidence in the approved packet.
+
+Sources include document and access dates where established, exact locators,
+access methods and independence notes. Indexed-only evidence is identified as
+such. See the [refresh scope](../public/data/senate-20-refresh-2026-11-22/INDEX.md).
+
 ## Main routes
 
 | Method and path                           | Purpose                                                                             | Implementation                                                       |

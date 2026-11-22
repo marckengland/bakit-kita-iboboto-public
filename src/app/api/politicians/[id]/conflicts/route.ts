@@ -10,7 +10,7 @@ import { detectConflictsOfInterest } from "@/services/conflict-of-interest.servi
 
 export async function GET(_request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const reviewedBatch = getReleasedProfile(id);
+  const reviewedBatch = getReleasedProfile(id, null);
   if (reviewedBatch) {
     return NextResponse.json({
       availability: "not_reviewed",

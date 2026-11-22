@@ -249,7 +249,17 @@ export async function getPolitician(id: string): Promise<PoliticianProfile | nul
       ([field]) => !/controvers|case_?event|legal_?case|corruption|redflag/i.test(field)
     )
   );
-  const reviewedBatch = getReleasedProfile(id);
+  const approved = releaseData.profiles.find((entry) => entry.id === id);
+  const identity = approved
+    ? await prisma.politician.findUnique({
+        where: { id },
+        select: { fullName: true },
+      })
+    : null;
+  const reviewedBatch = getReleasedProfile(
+    id,
+    identity?.fullName === profile.fullName ? identity.fullName : null
+  );
   const countKnown = flags.length > 0 || !reviewedBatch;
   return {
     ...profile,
@@ -581,7 +591,7 @@ export async function listPoliticians(
   const allItems: PoliticianSummary[] = politicians.map((politician) => {
     const currentPosition = politician.Position[0];
     const currentAffiliation = politician.PartyAffiliation[0];
-    const reviewedBatch = getReleasedProfile(politician.id);
+    const reviewedBatch = getReleasedProfile(politician.id, politician.fullName);
     const hasPublishedFlags = (publicFlags.get(politician.id)?.length ?? 0) > 0;
 
     return {

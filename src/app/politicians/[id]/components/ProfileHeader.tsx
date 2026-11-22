@@ -130,6 +130,7 @@ export function ProfileHeader({
               {reviewedBatch ? (
                 <>
                   <ReviewedMembership
+                    showEvidence
                     batch={reviewedBatch}
                     className="mt-2 text-neutral-600 dark:text-neutral-400"
                   />

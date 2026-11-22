@@ -619,7 +619,7 @@
     "profile": "Open profile",
     "change": "Choose another person",
     "selected": "Selected profile: {name}",
-    "checked": "Checked {date}",
+    "checked": "Checked stored records {date}",
     "reviewed": "Reviewed {date}",
     "recordSources": "Record sources",
     "eventSources": "Event sources",
@@ -662,7 +662,7 @@
     "evidence": "Sources and date notes",
     "scope": "These are selected proposals, not complete career totals. Filing does not establish enactment. Bill status, current office and social impact remain unverified. Title and topic matches use literal words and are not exhaustive.",
     "dataset": "Dataset, sources and limits",
-    "checked": "Checked {date}",
+    "checked": "Checked stored records {date}",
     "remaining": "{count} more matching filings are in this selected sample. Consult the dataset for the full list.",
     "moreProfiles": "More profiles match. Use a fuller name to narrow the choices.",
     "combinedScope": "Answers use reviewed Senate filings or separately reviewed cases and context. Coverage can be incomplete."

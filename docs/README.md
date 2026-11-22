@@ -64,3 +64,8 @@ credentials, and operational handoffs stay outside this source tree. Public guid
 explain how the shipped code works and what its limits are.
 
 Before submitting a documentation change, follow the [documentation checks](TESTING.md#documentation-changes).
+
+The [November 22 Senate refresh](../public/data/senate-20-refresh-2026-11-22/INDEX.md)
+explains the qualified elected terms, dated histories and remaining unknowns in
+this separate copy. Its [verification procedure](TESTING.md#verify-the-senate-refresh)
+preserves all existing test assertions.

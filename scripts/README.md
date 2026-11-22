@@ -6,18 +6,20 @@ before running an import, migration, or index replacement.
 
 ## Working tools
 
-| Command                                                   | Purpose                                                     | Data or file effect                                                                                                                    |
-| --------------------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm run clean`                                           | Remove generated build and cache files                      | Removes local generated files; no database rows                                                                                        |
-| `npm run dev:start:windows`                               | Start the Windows development environment                   | Starts all Compose services, applies existing migrations, generates Prisma, and runs the dev server on its default port                |
-| `npm run es:setup`                                        | Rebuild search from local profile records                   | Replaces the configured Elasticsearch politician index                                                                                 |
-| `npm run scrape:politicians`                              | Fetch names from BetterGov                                  | Adds names to the configured development database; no complete-profile guarantee                                                       |
-| `npm run data:import`                                     | Validate the reviewed Senate batch and show the import plan | Reads and checks the approved local files. Opens no database connection.                                                               |
-| `npm run data:import -- --apply`                          | Import the reviewed Senate batch                            | Writes one transaction to a fresh migrated database. Returns `unchanged` for an exact repeat and refuses other populated destinations. |
-| `npm run data:verify`                                     | Test migrations and import behavior                         | Creates and removes its own PostgreSQL container. Tests import, repeat import, refusals, drift detection, and rollback.                |
-| `node scripts/verify-source-only.mjs --populated-release` | Check release files and pinned tests                        | Checks the original test and dependency assertions alongside populated data and script paths.                                          |
-| `npx --no-install tsx scripts/verify-case-review.ts`      | Check database and public-reader behavior                   | Creates and removes its own disposable PostgreSQL container and app/browser processes                                                  |
-| `npx --no-install tsx scripts/generate-pwa-icons.ts`      | Render project icons                                        | Replaces icon files in this copy; exact historical raster output is not guaranteed                                                     |
+| Command                                                      | Purpose                                                     | Data or file effect                                                                                                                                    |
+| ------------------------------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `npm run clean`                                              | Remove generated build and cache files                      | Removes local generated files; no database rows                                                                                                        |
+| `npm run dev:start:windows`                                  | Start the Windows development environment                   | Starts all Compose services, applies existing migrations, generates Prisma, and runs the dev server on its default port                                |
+| `npm run es:setup`                                           | Rebuild search from local profile records                   | Replaces the configured Elasticsearch politician index                                                                                                 |
+| `npm run scrape:politicians`                                 | Fetch names from BetterGov                                  | Adds names to the configured development database; no complete-profile guarantee                                                                       |
+| `npm run data:import`                                        | Validate the reviewed Senate batch and show the import plan | Reads and checks the approved local files. Opens no database connection.                                                                               |
+| `npm run data:import -- --apply`                             | Import the reviewed Senate batch                            | Writes one transaction to a fresh migrated database. Returns `unchanged` for an exact repeat and refuses other populated destinations.                 |
+| `npm run data:verify`                                        | Test migrations and import behavior                         | Creates and removes its own PostgreSQL container. Tests import, repeat import, refusals, drift detection, and rollback.                                |
+| `node scripts/verify-source-only.mjs --populated-release`    | Check release files and pinned tests                        | Checks the original test and dependency assertions alongside populated data and script paths.                                                          |
+| `node --import tsx scripts/verify-senate-refresh-browser.ts` | Verify the refreshed records in a browser                   | Creates and removes its own PostgreSQL container and localhost server, checks citations and stored-data conflicts, and tests desktop and mobile views. |
+| `npx --no-install tsx scripts/verify-senate-refresh.ts`      | Check the approved Senate refresh                           | Checks the sealed batch, qualified terms, dated bill events, citations and retained unknowns without opening a database.                               |
+| `npx --no-install tsx scripts/verify-case-review.ts`         | Check database and public-reader behavior                   | Creates and removes its own disposable PostgreSQL container and app/browser processes                                                                  |
+| `npx --no-install tsx scripts/generate-pwa-icons.ts`         | Render project icons                                        | Replaces icon files in this copy; exact historical raster output is not guaranteed                                                                     |
 
 Run `verify-source-only.mjs` in a clean prepared publication copy. Follow the
 [release-artifact procedure](../docs/TESTING.md#verify-a-prepared-release-artifact)
@@ -26,8 +28,7 @@ for its setup and checksum checks. Normal contributor commands are in the
 
 The Windows helper uses the default dev port, unlike the README's explicit port
 3001 command. Use the README procedure to import the data after initializing
-the database. Database write tools use the configured `DATABASE_URL`. Both
-disposable verification tools create their own PostgreSQL destinations.
+the database. Database write tools use the configured `DATABASE_URL`. All disposable database verification tools create their own PostgreSQL destinations.
 
 ## Database commands
 

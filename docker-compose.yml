@@ -1,4 +1,4 @@
-name: bakit-kita-iboboto-populated-release
+name: bakit-kita-iboboto-refreshed-release
 
 # Local development services for Bakit Kita Iboboto.
 #
@@ -12,13 +12,13 @@ name: bakit-kita-iboboto-populated-release
 services:
   postgres:
     image: postgres:16
-    container_name: bkib-populated-postgres
+    container_name: bkib-refreshed-postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: bakit_kita_iboboto_populated
+      POSTGRES_DB: bakit_kita_iboboto_refreshed
     ports:
-      - "127.0.0.1:55433:5432"
+      - "127.0.0.1:55434:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
@@ -29,9 +29,9 @@ services:
 
   redis:
     image: redis:7
-    container_name: bkib-populated-redis
+    container_name: bkib-refreshed-redis
     ports:
-      - "127.0.0.1:56380:6379"
+      - "127.0.0.1:56381:6379"
     volumes:
       - redis_data:/data
     healthcheck:
@@ -42,13 +42,13 @@ services:
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.17.0
-    container_name: bkib-populated-elasticsearch
+    container_name: bkib-refreshed-elasticsearch
     environment:
       discovery.type: single-node
       xpack.security.enabled: "false"
       ES_JAVA_OPTS: "-Xms512m -Xmx512m"
     ports:
-      - "127.0.0.1:59201:9200"
+      - "127.0.0.1:59202:9200"
     volumes:
       - elasticsearch_data:/usr/share/elasticsearch/data
     healthcheck:

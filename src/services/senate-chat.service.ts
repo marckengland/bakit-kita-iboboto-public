@@ -69,12 +69,25 @@ const billSelect = {
   BillAuthor: { select: { politicianId: true, role: true } },
 } satisfies Prisma.BillSelect;
 type StoredBill = Prisma.BillGetPayload<{ select: typeof billSelect }>;
-function matchesApproved(row: StoredBill, approved: (typeof releaseData.filings)[number]) {
+export function matchesApprovedSenateFiling(
+  row: Omit<StoredBill, "filingDate"> & { filingDate: Date | string | null },
+  approved: (typeof releaseData.filings)[number]
+) {
+  // Redis JSON restores timestamps as strings; malformed values fail closed.
+  const date = row.filingDate;
+  const filingDate =
+    date === null
+      ? null
+      : date instanceof Date && Number.isFinite(date.getTime())
+        ? date.toISOString().slice(0, 10)
+        : typeof date === "string" && /^\d{4}-\d{2}-\d{2}T00:00:00\.000Z$/.test(date)
+          ? date.slice(0, 10)
+          : undefined;
   return (
     row.billNumber === approved.reference &&
     row.title === approved.title &&
     row.summary === approved.summary &&
-    (row.filingDate?.toISOString().slice(0, 10) ?? null) === approved.filingDate &&
+    filingDate === approved.filingDate &&
     row.status === null &&
     row.session === null &&
     row.republicActNumber === null &&
@@ -84,6 +97,48 @@ function matchesApproved(row: StoredBill, approved: (typeof releaseData.filings)
     row.BillAuthor[0]?.politicianId === approved.introducedBy.profileId &&
     row.BillAuthor[0]?.role === "introduced_by"
   );
+}
+
+/** Attach new evidence only to matching live rows and recognized profile identities. */
+export async function getVerifiedSenateFilings(ids: string[]) {
+  const approved = releaseData.filings.filter((filing) => ids.includes(filing.id));
+  const verified = new Map<string, NonNullable<ReturnType<typeof getReleasedFiling>>>();
+  if (!approved.length) {
+    return verified;
+  }
+  try {
+    const [people, rows] = await Promise.all([
+      prisma.politician.findMany({
+        where: {
+          id: { in: [...new Set(approved.map((filing) => filing.introducedBy.profileId))] },
+          isActive: true,
+        },
+        select: { id: true, fullName: true },
+      }),
+      prisma.bill.findMany({
+        where: { id: { in: approved.map((filing) => filing.id) } },
+        select: billSelect,
+      }),
+    ]);
+    for (const filing of approved) {
+      const row = rows.find((candidate) => candidate.id === filing.id);
+      const identity = releaseData.profiles.find(
+        (profile) => profile.id === filing.introducedBy.profileId
+      );
+      if (
+        row &&
+        matchesApprovedSenateFiling(row, filing) &&
+        people.some(
+          (person) => person.id === identity?.id && person.fullName === identity.displayName
+        )
+      ) {
+        verified.set(filing.id, getReleasedFiling(filing.id)!);
+      }
+    }
+  } catch {
+    console.error("Reviewed Senate history: live evidence check unavailable");
+  }
+  return verified;
 }
 
 /** Read-only approved facts. This path never reads cases, calls a model, or stores questions. */
@@ -217,12 +272,13 @@ export async function answerFromSenateFilings(request: Request): Promise<Reviewe
     const rowById = new Map(rows.map((row) => [row.id, row]));
     const available = matching.filter((filing) => {
       const row = rowById.get(filing.id);
-      return row && matchesApproved(row, filing);
+      return row && matchesApprovedSenateFiling(row, filing);
     });
     if (available.length !== matching.length) {
       return answer(
         matching.some(
-          (filing) => rowById.has(filing.id) && !matchesApproved(rowById.get(filing.id)!, filing)
+          (filing) =>
+            rowById.has(filing.id) && !matchesApprovedSenateFiling(rowById.get(filing.id)!, filing)
         )
           ? "needs_review"
           : "not_loaded",

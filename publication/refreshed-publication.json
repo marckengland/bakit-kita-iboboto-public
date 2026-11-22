@@ -1,0 +1,22 @@
+{
+  "kind": "source_repository_update",
+  "authorizedOn": "2026-11-22",
+  "authorizedBy": "project maintainer",
+  "repository": "marckengland/bakit-kita-iboboto-public",
+  "sourceArchiveSha256": "09e8152378db219911ea3f2b526b5b91110a82d934ddd72e53c50a8129860934",
+  "precedingPublicCommit": "8972aa5a7c4876352d81a5726672e7f1b9295fb6",
+  "verifiedSourceFiles": 542,
+  "preservedTestFiles": 111,
+  "publicationAuthorized": true,
+  "deploymentAuthorized": false,
+  "existingDatabaseChangesAuthorized": false,
+  "dependencyChanges": false,
+  "scope": "Publish the verified refreshed source and approved evidence additions while retaining existing public history. Update publication-status documentation and checksums only in this separate publication checkout. Frozen integration approvals retain their historical scope.",
+  "publicationOnlyFiles": [
+    "PUBLICATION.md",
+    "docs/RELEASE_REVIEW.md",
+    "publication/refreshed-publication.json",
+    "publication/source-files.sha256"
+  ],
+  "verification": "Inspect the CI run for the exact public commit. Local verification is not hosted CI or deployment clearance."
+}

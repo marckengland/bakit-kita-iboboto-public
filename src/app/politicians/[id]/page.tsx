@@ -138,15 +138,20 @@ async function PoliticianProfileContent({ id }: { id: string }) {
           <h2 id="reviewed-coverage" className="text-xl font-semibold">
             Profile Coverage
           </h2>
+          <a href="/data/senate-20-refresh-2026-11-22/INDEX.md" className="underline">
+            November 22 evidence refresh
+          </a>
           <p>
-            Term dates, party affiliation, biographical details, family relationships, financial
-            disclosures, elections, attendance and votes were outside this review.
+            Qualified elected-term dates and dated history are described in the separate refresh.
+            Current office, actual tenure, party affiliation, biographical details, family
+            relationships, financial disclosures, elections, attendance and votes remain unverified
+            in this dataset.
           </p>
           <a
             className="text-primary-600 dark:text-primary-400 inline-block underline"
             href={reviewedBatch.datasetUrl}
           >
-            Dataset and review notes
+            Original dataset and review notes
           </a>
         </section>
         <ControversiesSection politicianId={id} initialResearch={research} showConflicts={false} />

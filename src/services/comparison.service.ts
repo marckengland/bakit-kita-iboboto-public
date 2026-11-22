@@ -1,3 +1,4 @@
+import type { FilingRefresh } from "@/lib/senate-refresh";
 /**
  * Comparison Service
  *
@@ -77,6 +78,7 @@ export interface ReviewedComparisonFilings {
     title: string;
     filingDate: string | null;
     sourceUrl: string;
+    refresh?: FilingRefresh;
   }[];
 }
 
@@ -394,7 +396,7 @@ async function getPoliticianSummary(politicianId: string): Promise<PoliticianSum
 
   const currentPosition = politician.Position[0];
   const currentParty = politician.PartyAffiliation[0]?.PoliticalParty;
-  const reviewedBatch = getReleasedProfile(politician.id);
+  const reviewedBatch = getReleasedProfile(politician.id, politician.fullName);
 
   return {
     id: politician.id,
@@ -587,6 +589,7 @@ export async function comparePoliticians(politicianIds: string[]): Promise<Compa
               title: filing.title,
               filingDate: filing.filingDate,
               sourceUrl: filing.sources[0]?.url ?? "/data/senate-20/INDEX.md",
+              ...(filing.refresh && { refresh: filing.refresh }),
             })),
           },
         ] as const;

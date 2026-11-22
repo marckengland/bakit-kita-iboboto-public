@@ -295,7 +295,7 @@ export const searchService = {
         const source = hit._source as PoliticianSearchDocument;
         const highlights = hit.highlight || {};
         const matchedFields = Object.keys(highlights);
-        const reviewedBatch = getReleasedProfile(source.id);
+        const reviewedBatch = getReleasedProfile(source.id, null);
         const hasPublishedFlags = (publicFlags.get(source.id)?.length ?? 0) > 0;
 
         return {

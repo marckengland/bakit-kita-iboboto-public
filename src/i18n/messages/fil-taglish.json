@@ -619,7 +619,7 @@
     "profile": "Buksan ang profile",
     "change": "Pumili ng ibang tao",
     "selected": "Selected profile: {name}",
-    "checked": "Chineck noong {date}",
+    "checked": "Chineck ang nakaimbak na records noong {date}",
     "reviewed": "Reviewed noong {date}",
     "recordSources": "Record sources",
     "eventSources": "Event sources",
@@ -662,7 +662,7 @@
     "evidence": "Sources at paliwanag sa petsa",
     "scope": "Mga piling panukala ito, hindi kumpletong tala ng karera. Hindi patunay ng pagsasabatas ang paghahain. Hindi pa napatunayan ang katayuan, kasalukuyang puwesto at epekto sa lipunan. Literal na mga salita ang ginagamit sa paghahanap at hindi ito kumpleto.",
     "dataset": "Dataset, sources at limits",
-    "checked": "Sinuri noong {date}",
+    "checked": "Chineck ang nakaimbak na records noong {date}",
     "remaining": "May {count} pang tumugmang panukala sa piling sample. Tingnan ang dataset para sa buong listahan.",
     "moreProfiles": "Maraming profile ang tumugma. Gumamit ng mas buong pangalan.",
     "combinedScope": "Reviewed Senate filings o hiwalay na reviewed cases at context ang ginagamit. Maaaring hindi kumpleto ang coverage."
