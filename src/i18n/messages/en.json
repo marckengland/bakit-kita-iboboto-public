@@ -1,0 +1,682 @@
+{
+  "common": {
+    "appName": "Bakit Kita Iboboto?",
+    "appTagline": "Political Transparency for Filipino Voters",
+    "login": "Login",
+    "logout": "Logout",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "reset": "Reset",
+    "all": "All",
+    "none": "None",
+    "yes": "Yes",
+    "no": "No",
+    "or": "or",
+    "and": "and",
+    "copyright": "© 2026 Bakit Kita Iboboto? All rights reserved.",
+    "dataSource": "Check each record for its sources and coverage."
+  },
+  "nav": {
+    "home": "Home",
+    "politicians": "Politicians",
+    "compare": "Compare",
+    "elections": "Elections",
+    "learn": "Learn",
+    "bookmarks": "Bookmarks",
+    "votingList": "Voting List",
+    "notifications": "Notifications",
+    "profile": "Profile",
+    "settings": "Settings",
+    "report": "Report",
+    "primaryNavigation": "Main navigation",
+    "menu": "Menu",
+    "browse": "Browse",
+    "saved": "Saved"
+  },
+  "home": {
+    "hero": {
+      "badge": "For the Filipino People",
+      "title": "Alam mo ba kung sino ang",
+      "titleHighlight": "iboboto mo?",
+      "titleEnd": "",
+      "description": "A transparent platform providing comprehensive information about Philippine politicians — from their track record to their assets and legislative work."
+    },
+    "rotatingTaglines": {
+      "line1": "iboboto mo?",
+      "line2": "kinakatawan ka?",
+      "line3": "nangako sa'yo?",
+      "line4": "pinagkakatiwalaan mo?"
+    },
+    "heroSearch": {
+      "placeholder": "Search a politician's name...",
+      "button": "Search"
+    },
+    "countdown": {
+      "label": "Official election information",
+      "electionName": "Official election information",
+      "ariaLabel": "Official election information",
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Min",
+      "seconds": "Sec"
+    },
+    "trust": {
+      "label": "Data from official government sources",
+      "verifiedLabel": "Cross-referenced with trusted news & legal sources"
+    },
+    "trending": {
+      "title": "Trending Politicians",
+      "subtitle": "Who people are watching right now and why",
+      "bills": "new bills",
+      "reviewedCases": "Reviewed cases",
+      "newIssues": "new issues",
+      "bookmarks": "watching",
+      "viewAll": "View All Politicians",
+      "previous": "Previous",
+      "next": "Next",
+      "reasons": {
+        "mostBookmarked": "Most Watched",
+        "newBills": "New Bills Filed",
+        "billPassed": "Bill Passed Into Law",
+        "billVetoed": "Bill Vetoed",
+        "newControversy": "New Controversy",
+        "reviewedCaseUpdate": "Reviewed case update",
+        "criticalRedFlag": "Critical Red Flag",
+        "salnAnomaly": "Wealth Anomaly",
+        "brokenPromise": "Broken Promise",
+        "salnUpdated": "SALN Updated",
+        "highMentions": "High Mentions",
+        "mostSearched": "Most Searched"
+      }
+    },
+    "comparison": {
+      "title": "2028 Presidential Race",
+      "subtitle": "Compare the frontrunners side by side",
+      "billsFiled": "Bills Filed",
+      "netWorth": "Net Worth",
+      "attendance": "Attendance",
+      "reviewedCases": "Reviewed cases",
+      "redFlags": "Indicators currently shown",
+      "promisesKept": "Promises Kept",
+      "cta": "Compare More Politicians"
+    },
+    "cta": {
+      "browsePoliticians": "Browse All Politicians",
+      "howItWorks": "How Does It Work?"
+    },
+    "features": {
+      "trackRecord": {
+        "title": "Track Record",
+        "description": "View the projects, laws, and accomplishments of each politician during their term."
+      },
+      "saln": {
+        "title": "SALN & Assets",
+        "description": "Know the declared assets, liabilities, and net worth of public officials."
+      },
+      "electionHistory": {
+        "title": "Election History",
+        "description": "Review the election results and voting records of candidates."
+      },
+      "legalCases": {
+        "title": "Legal Cases",
+        "description": "See documented controversies and legal cases from official sources."
+      },
+      "dynasty": {
+        "title": "Political Dynasty",
+        "description": "Know the family connections and political relationships of politicians."
+      },
+      "aiFactChecker": {
+        "title": "AI Fact-Checker",
+        "description": "Use the AI chatbot to verify claims about politicians."
+      }
+    },
+    "research": {
+      "eyebrow": "For Filipino voters",
+      "title": "Know the people behind your vote.",
+      "intro": "Ask questions, explore public records, and compare profiles. Read the sources and make up your own mind.",
+      "browse": "Browse profiles",
+      "browseHint": "Look up a name or filter by office and area.",
+      "compare": "Compare records",
+      "compareHint": "Put profiles side by side. Check the dates and sources behind each record.",
+      "saved": "Saved profiles",
+      "savedHint": "Keep profiles close while you research. Guest bookmarks stay in this browser.",
+      "coverageLink": "What the data can tell you",
+      "start": "Start your research",
+      "coverage": "Data coverage",
+      "coverageHint": "Coverage varies by profile, office, and reporting period. This is not a complete candidate list or an official ballot.",
+      "missingHint": "Missing records do not establish good or bad performance. Case details remain withheld until their review requirements are met.",
+      "method": "How to read the records",
+      "correction": "Report a correction",
+      "electionLink": "Official election information",
+      "recent": "Explore profiles",
+      "updateHint": "Profiles are shown alphabetically. Edit dates show when a profile changed, not when every record was verified.",
+      "profileCount": "{count, plural, one {# active profile in this database} other {# active profiles in this database}}",
+      "unavailable": "Profiles are temporarily unavailable. Try again later.",
+      "empty": "No profiles available yet. Load the reviewed dataset to start browsing.",
+      "updated": "Profile updated",
+      "officeUnknown": "Current office not recorded",
+      "readProfile": "Read profile and sources",
+      "researchUnavailable": "Reviewed research is temporarily unavailable. Profiles remain available; case details cannot be checked right now.",
+      "compareTitle": "Compare two people",
+      "comparePrompt": "Choose whose records you want to read side by side. Start with the coverage and sources.",
+      "firstPerson": "First person",
+      "secondPerson": "Second person",
+      "choosePerson": "Choose a profile",
+      "compareUnavailable": "At least two profiles need to be available before you can compare.",
+      "compareScope": "Selected records are a starting point, not a score or a complete career record.",
+      "filingExamples": "Read a filing",
+      "filingExamplesHint": "These examples are the first three reviewed filings in bill-number order. They are not ranked by social impact. A filing does not establish enactment.",
+      "filingDate": "Filing date",
+      "filingDateUnknown": "Not verified",
+      "introducedBy": "Introducer",
+      "filedDocument": "Source document",
+      "readFiling": "Read profile and filing sources",
+      "searchPerson": "Type a name",
+      "selectedPerson": "Selected: {name}",
+      "searchingPeople": "Searching profiles…",
+      "peopleUnavailable": "Profile search is temporarily unavailable. Try again.",
+      "noPeople": "No matching profile. Try a fuller name or a surname.",
+      "coverageDefinition": "Coverage means which people, record types and dates this release has checked. It does not mean a complete record of each person’s career."
+    }
+  },
+  "politicians": {
+    "title": "Politician Directory",
+    "description": "Browse and filter Philippine politicians at all government levels",
+    "searchPlaceholder": "Search politicians by name, position, or location...",
+    "filters": {
+      "level": "Government Level",
+      "region": "Region",
+      "province": "Province",
+      "city": "City/Municipality",
+      "party": "Political Party",
+      "position": "Position",
+      "hasRedFlags": "Has Red Flags"
+    },
+    "levels": {
+      "all": "All Levels",
+      "national": "National",
+      "regional": "Regional",
+      "provincial": "Provincial",
+      "city": "City",
+      "municipal": "Municipal",
+      "barangay": "Barangay"
+    },
+    "noResults": "No politicians found matching your criteria.",
+    "viewProfile": "View Profile",
+    "redFlagIndicator": "Has documented issues"
+  },
+  "profile": {
+    "tabs": {
+      "overview": "Overview",
+      "legislative": "Legislative Work",
+      "financial": "Financial",
+      "elections": "Elections",
+      "controversies": "Controversies",
+      "family": "Family Network",
+      "projects": "Projects & Promises"
+    },
+    "sections": {
+      "personalInfo": "Personal Information",
+      "positionHistory": "Position History",
+      "partyAffiliation": "Party Affiliation",
+      "endorsements": "Endorsements",
+      "bills": "Bills Authored",
+      "votingRecord": "Voting Record",
+      "attendance": "Session Attendance",
+      "saln": "SALN History",
+      "campaignFinance": "Campaign Finance",
+      "electionHistory": "Election History",
+      "termLimit": "Term Limit Status",
+      "controversies": "Controversies & Legal Cases",
+      "conflictOfInterest": "Conflict of Interest",
+      "familyNetwork": "Family Network",
+      "projects": "Projects",
+      "promises": "Campaign Promises"
+    },
+    "labels": {
+      "birthday": "Birthday",
+      "birthplace": "Birthplace",
+      "education": "Education",
+      "currentPosition": "Current Position",
+      "currentParty": "Current Party",
+      "netWorth": "Net Worth",
+      "totalAssets": "Total Assets",
+      "totalLiabilities": "Total Liabilities",
+      "source": "Source",
+      "lastUpdated": "Last Updated"
+    }
+  },
+  "compare": {
+    "title": "Compare Politicians",
+    "description": "Compare up to 4 politicians side-by-side",
+    "selectPoliticians": "Select Politicians to Compare",
+    "addPolitician": "Add Politician",
+    "removePolitician": "Remove",
+    "minRequired": "Select at least 2 politicians to compare",
+    "maxReached": "Maximum of 4 politicians can be compared",
+    "compareNow": "Compare Now",
+    "metrics": {
+      "experience": "Experience",
+      "legislative": "Legislative Work",
+      "financial": "Financial",
+      "attendance": "Attendance",
+      "promises": "Promise Fulfillment"
+    }
+  },
+  "elections": {
+    "title": "Upcoming Elections",
+    "description": "View upcoming elections and filed candidates",
+    "upcomingElections": "Upcoming Elections",
+    "filedCandidates": "Filed Candidates",
+    "electionDeadlines": "Important Deadlines",
+    "voterRegistration": "Voter Registration",
+    "filingPeriod": "Filing Period",
+    "campaignPeriod": "Campaign Period",
+    "electionDay": "Election Day"
+  },
+  "learn": {
+    "title": "Civic Education",
+    "description": "Learn how Philippine government works",
+    "sections": {
+      "governmentStructure": "Government Structure",
+      "legislativeProcess": "Legislative Process",
+      "electionProcess": "Election Process",
+      "glossary": "Political Glossary"
+    },
+    "governmentStructure": {
+      "title": "Structure of Philippine Government",
+      "description": "Learn about the three branches of government and their roles."
+    },
+    "legislativeProcess": {
+      "title": "How a Bill Becomes a Law",
+      "description": "Understand the step-by-step process of legislation in the Philippines."
+    },
+    "electionProcess": {
+      "title": "Election Process",
+      "description": "Know the requirements and process for voting in Philippine elections."
+    },
+    "glossary": {
+      "title": "Political Glossary",
+      "description": "Definitions of political and legal terms in Filipino and English."
+    }
+  },
+  "bookmarks": {
+    "title": "My Bookmarks",
+    "description": "Politicians you've saved for quick access",
+    "empty": "You haven't bookmarked any politicians yet.",
+    "emptyHint": "Browse politicians and click the bookmark icon to save them here.",
+    "addBookmark": "Add Bookmark",
+    "removeBookmark": "Remove Bookmark"
+  },
+  "votingList": {
+    "title": "My Voting List",
+    "description": "Politicians you plan to vote for",
+    "empty": "Your voting list is empty.",
+    "emptyHint": "Add politicians to your voting list to organize your choices before election day.",
+    "addToList": "Add to Voting List",
+    "removeFromList": "Remove from List",
+    "export": "Export List",
+    "share": "Share List",
+    "positions": {
+      "president": "President",
+      "vicePresident": "Vice President",
+      "senator": "Senator",
+      "partyList": "Party-List",
+      "congressman": "Congressman",
+      "governor": "Governor",
+      "viceGovernor": "Vice Governor",
+      "mayor": "Mayor",
+      "viceMayor": "Vice Mayor",
+      "councilor": "Councilor",
+      "barangayCaptain": "Barangay Captain",
+      "barangayCouncilor": "Barangay Councilor"
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "description": "Updates about politicians you follow",
+    "empty": "No notifications yet.",
+    "markAllRead": "Mark All as Read",
+    "settings": "Notification Settings",
+    "types": {
+      "newControversy": "New Controversy",
+      "newBill": "New Bill Filed",
+      "billPassed": "Bill Passed",
+      "redFlag": "Red Flag Alert",
+      "electionReminder": "Election Reminder"
+    }
+  },
+  "chatbot": {
+    "title": "AI Assistant",
+    "subtitle": "Bakit Kita Iboboto?",
+    "welcome": {
+      "greeting": "Hello! I'm the AI Assistant",
+      "description": "I can help you find information about Philippine politicians.",
+      "exampleQuestions": "Example questions:",
+      "examples": {
+        "senators": "Who are the senators of the Philippines?",
+        "bills": "What bills has [name] filed?",
+        "saln": "What is [name]'s SALN?"
+      }
+    },
+    "input": {
+      "placeholder": "Ask about politicians...",
+      "send": "Send"
+    },
+    "rateLimit": {
+      "remaining": "Remaining questions:",
+      "exhausted": "You've used all your questions. Try again later.",
+      "resetIn": "Resets in"
+    },
+    "verification": {
+      "verified": "Verified",
+      "unverified": "Not yet verified",
+      "confidence": "confidence"
+    },
+    "sources": "sources",
+    "newConversation": "New conversation",
+    "disclaimer": "Answers are generated by AI, not an independent verification of the records.",
+    "page": {
+      "title": "AI Fact-Checker",
+      "heading": "Ask the AI about Politicians",
+      "description": "Get verified information from official government sources. All answers include citations.",
+      "queriesRemaining": "{remaining} / {limit} queries remaining",
+      "emptyState": {
+        "title": "Ask about politicians",
+        "description": "Type your question below or choose from the suggested questions."
+      },
+      "suggestedQuestions": {
+        "pendingCases": "Who are the senators with pending cases?",
+        "trackRecord": "What is the track record of [Politician Name]?",
+        "dynasty": "Is it true there's a political dynasty in [Province]?",
+        "netWorth": "How much is [Politician Name]'s net worth based on SALN?"
+      },
+      "loading": "Searching for information...",
+      "error": "Sorry, there was a connection problem. Please try again later.",
+      "inputPlaceholder": "Ask about politicians...",
+      "aiDisclaimer": "The AI only uses official government sources. It does not provide personal opinions."
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "description": "Login to access personalized features",
+      "nationalId": "Philippine National ID",
+      "passport": "Philippine Passport",
+      "selectMethod": "Select verification method"
+    },
+    "profile": {
+      "title": "My Profile",
+      "verified": "Verified",
+      "notVerified": "Not Verified",
+      "verificationMethod": "Verification Method"
+    }
+  },
+  "report": {
+    "title": "Submit a Report",
+    "description": "Help improve transparency by submitting verified information",
+    "types": {
+      "newInfo": "New Information",
+      "correction": "Data Correction",
+      "controversy": "Controversy Report"
+    },
+    "form": {
+      "politician": "Select Politician",
+      "type": "Report Type",
+      "content": "Report Content",
+      "evidence": "Supporting Evidence",
+      "submit": "Submit Report"
+    },
+    "status": {
+      "pending": "Pending Review",
+      "verified": "Verified",
+      "rejected": "Rejected"
+    }
+  },
+  "feedback": {
+    "title": "Send Feedback",
+    "description": "Help us improve the platform",
+    "categories": {
+      "bug": "Bug Report",
+      "feature": "Feature Suggestion",
+      "dataCorrection": "Data Correction",
+      "general": "General Feedback"
+    },
+    "form": {
+      "category": "Category",
+      "message": "Your Message",
+      "attachment": "Attach File (optional)",
+      "submit": "Send Feedback"
+    },
+    "success": "Thank you for your feedback!"
+  },
+  "redFlags": {
+    "legalCase": "Legal Case",
+    "corruption": "Corruption Case",
+    "dynasty": "Political Dynasty",
+    "salnAnomaly": "SALN Anomaly",
+    "attendance": "Low Attendance"
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "serverError": "Something went wrong",
+    "networkError": "Network error. Please check your connection.",
+    "unauthorized": "Please login to access this feature",
+    "forbidden": "You don't have permission to access this"
+  },
+  "language": {
+    "select": "Select Language",
+    "current": "Current Language"
+  },
+  "tts": {
+    "title": "Text-to-Speech",
+    "controls": "Text-to-speech controls",
+    "play": "Read aloud",
+    "pause": "Pause",
+    "resume": "Resume",
+    "stop": "Stop",
+    "playing": "Reading...",
+    "paused": "Paused",
+    "settings": "Speech settings",
+    "voice": "Voice",
+    "voiceHint": "★ indicates Filipino voices",
+    "rate": "Speed",
+    "slower": "Slower",
+    "faster": "Faster",
+    "volume": "Volume",
+    "readingContent": "Reading {content}",
+    "notSupported": "Text-to-speech is not supported in this browser"
+  },
+  "accessibility": {
+    "title": "Accessibility Settings",
+    "close": "Close",
+    "reset": "Reset to Defaults",
+    "skipToContent": "Skip to main content",
+    "textSize": {
+      "label": "Text Size",
+      "small": "S",
+      "medium": "M",
+      "large": "L",
+      "extraLarge": "XL"
+    },
+    "highContrast": {
+      "label": "High Contrast",
+      "description": "Increase color contrast for better visibility"
+    },
+    "simplifiedView": {
+      "label": "Simplified View",
+      "description": "Reduce visual complexity"
+    },
+    "reducedMotion": {
+      "label": "Reduced Motion",
+      "description": "Minimize animations and transitions"
+    }
+  },
+  "offline": {
+    "youAreOffline": "You are offline",
+    "viewingCachedData": "Viewing {count} downloaded profiles",
+    "limitedFunctionality": "Some features may be limited",
+    "downloadedProfiles": "Downloaded profiles",
+    "storageUsed": "Storage used",
+    "backOnline": "You're back online!",
+    "syncAvailable": "Would you like to sync your downloaded profiles?",
+    "syncNow": "Sync Now",
+    "syncing": "Syncing...",
+    "dismiss": "Dismiss",
+    "offline": "Offline",
+    "offlineMode": "Offline mode",
+    "downloadForOffline": "Download {name} for offline viewing",
+    "removeFromOffline": "Remove {name} from offline storage",
+    "downloadedOn": "Downloaded on",
+    "downloaded": "Downloaded",
+    "download": "Download",
+    "downloading": "Downloading...",
+    "removing": "Removing...",
+    "removeDownload": "Remove Download",
+    "downloadForOfflineViewing": "Download for Offline Viewing",
+    "connectToDownload": "Connect to internet to download",
+    "viewingOfflineData": "Viewing offline data",
+    "lastUpdated": "Last updated",
+    "offlinePage": {
+      "title": "You're Offline",
+      "description": "It looks like you've lost your internet connection.",
+      "downloadedProfiles": "Your Downloaded Profiles",
+      "noDownloads": "No profiles downloaded yet",
+      "noDownloadsHint": "When you're online, download politician profiles to view them offline.",
+      "tryAgain": "Try Again",
+      "goHome": "Go to Home"
+    },
+    "downloadedProfilesPage": {
+      "title": "Downloaded Profiles",
+      "description": "Politician profiles available for offline viewing",
+      "empty": "No profiles downloaded",
+      "emptyHint": "Download politician profiles to view them without internet connection.",
+      "storageUsage": "Storage Usage",
+      "clearAll": "Clear All Downloads"
+    }
+  },
+  "dataStates": {
+    "attendanceEmpty": "No attendance records available",
+    "attendanceHint": "An attendance rate cannot be calculated without recorded sessions.",
+    "unavailable": "This information is temporarily unavailable. Try again later.",
+    "familyEmpty": "No family connections recorded",
+    "familyHint": "This database does not establish whether other political family connections exist.",
+    "conflictsInsufficient": "Not enough records to assess conflicts",
+    "conflictsHint": "Business interests and relevant legislative records are needed. Missing data is not a finding of no conflict.",
+    "conflictsNoMatches": "No matches in the analyzed records",
+    "conflictsLimited": "This automated check covers only the records listed here. It does not establish that no conflicts exist."
+  },
+  "chatDock": {
+    "title": "Civic assistant",
+    "label": "Ask about public records",
+    "placeholder": "Start with a person's name",
+    "hint": "AI can make mistakes. Here, answers come directly from reviewed records. Do not share sensitive information.",
+    "browse": "Browse profiles",
+    "generated": "Directly from reviewed records. No AI-generated summary.",
+    "unavailable": "The assistant is temporarily unavailable. Your question is kept below. Try again or browse profiles.",
+    "close": "Close conversation",
+    "reopen": "Open conversation",
+    "conversation": "Conversation",
+    "welcomeTitle": "Find reviewed records",
+    "welcomeHint": "Try a name, one bill number such as SBN-142, or a short filing title. Choose the person when several profiles match. Answers show reviewed records and their limits."
+  },
+  "languageWelcome": {
+    "title": "Choose your language",
+    "description": "Piliin ang wikang komportable ka. You can change this any time.",
+    "continue": "Continue",
+    "keep": "Use the current language",
+    "later": "Change your language later from the menu."
+  },
+  "reviewedChat": {
+    "status": {
+      "choose_profile": "Choose a profile before viewing reviewed records.",
+      "no_profile": "I could not match that to a profile. Try just the person's name, or browse profiles.",
+      "records": "These are the reviewed cases and context records for the selected profile.",
+      "no_reviewed_records": "No reviewed records are available for this profile. This does not mean no cases exist, or establish guilt or innocence.",
+      "withheld": "Research is being reviewed. Case and context records are currently withheld.",
+      "unavailable": "Reviewed research is temporarily unavailable. Try again later; this does not mean records are absent.",
+      "profile_not_found": "That profile is no longer available. Choose another profile."
+    },
+    "scope": "I show reviewed cases and context, not answers to open-ended questions. I cannot establish guilt, innocence, or who you should vote for. Other profile fields are outside this reviewed-record view.",
+    "moreProfiles": "More profiles match. Enter a fuller name to narrow the choices.",
+    "moreRecords": "{count} more reviewed records are available on the profile.",
+    "profile": "Open profile",
+    "change": "Choose another person",
+    "selected": "Selected profile: {name}",
+    "checked": "Checked {date}",
+    "reviewed": "Reviewed {date}",
+    "recordSources": "Record sources",
+    "eventSources": "Event sources",
+    "document": "Document date",
+    "retrieved": "Retrieved",
+    "unknown": "Date unknown",
+    "datePrecision": "{date} ({precision} only)",
+    "primary": "Primary document",
+    "reported": "Reported by the cited source",
+    "finality": "Finality: {value}",
+    "eventOrder": "Events follow record ID order. Partial or unknown dates do not establish chronology.",
+    "refresh": "Previous answers were cleared. Send again to check current reviewed records.",
+    "show": "Show reviewed records",
+    "sourceMissing": "No separate source is attached to this event. Consult the record sources.",
+    "coverage": "This view shows reviewed cases and context. Coverage can be incomplete.",
+    "profileId": "Profile ID: {id}"
+  },
+  "senateChat": {
+    "status": {
+      "records": "Here are matching filings from the reviewed 20th Congress sample.",
+      "choose_profile": "Choose a profile before viewing its reviewed Senate filings.",
+      "no_profile": "I could not match that to a loaded reviewed Senate profile or filing title. Try a surname, one SBN number, or a short title.",
+      "no_matching_filings": "No matching filing is available in this reviewed sample. This does not mean no filings exist.",
+      "outside_coverage": "This reviewed batch cannot establish that. It covers selected 20th Congress proposals. Try one bill number, a name, or a short title. It does not provide voting advice or impact ratings.",
+      "not_loaded": "Matching reviewed records are not available in this installation. This does not establish that the person filed nothing.",
+      "needs_review": "Matching stored records differ from the approved batch and are withheld pending review.",
+      "unavailable": "Reviewed Senate filings are temporarily unavailable. Try again later; this does not mean records are absent.",
+      "profile_not_found": "That profile is no longer available. Choose another person."
+    },
+    "recordType": "Records to search",
+    "automatic": "Match the question",
+    "filings": "Senate filings",
+    "cases": "Cases and context",
+    "congressSuffix": "th Congress",
+    "introducer": "Introducer on the filed document",
+    "filed": "Filing date",
+    "unknown": "Not verified",
+    "statusUnknown": "Status unknown",
+    "enactmentUnknown": "Enactment is not verified in this batch.",
+    "evidence": "Sources and date notes",
+    "scope": "These are selected proposals, not complete career totals. Filing does not establish enactment. Bill status, current office and social impact remain unverified. Title and topic matches use literal words and are not exhaustive.",
+    "dataset": "Dataset, sources and limits",
+    "checked": "Checked {date}",
+    "remaining": "{count} more matching filings are in this selected sample. Consult the dataset for the full list.",
+    "moreProfiles": "More profiles match. Use a fuller name to narrow the choices.",
+    "combinedScope": "Answers use reviewed Senate filings or separately reviewed cases and context. Coverage can be incomplete."
+  },
+  "reviewedComparison": {
+    "title": "Compare the reviewed records",
+    "scope": "These are selected filings in the same 20th Congress batch. The list is incomplete. A larger sample count does not establish better performance, exclusive authorship, or enactment.",
+    "selected": "{count, plural, one {# selected filing in this batch} other {# selected filings in this batch}}",
+    "filed": "Filing date",
+    "unknown": "Not verified",
+    "source": "Source document",
+    "evidence": "Profile and evidence notes",
+    "unavailable": "Reviewed filing details are unavailable or need review. This does not mean the person filed nothing.",
+    "missing": "Bill status, enacted outcomes, finances, attendance, votes and full career totals have not been verified in this batch. Missing information is not zero.",
+    "otherFields": "Other comparison fields: not yet verified"
+  }
+}

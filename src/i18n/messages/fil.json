@@ -1,0 +1,682 @@
+{
+  "common": {
+    "appName": "Bakit Kita Iboboto?",
+    "appTagline": "Transparency sa Pulitika para sa mga Pilipinong Botante",
+    "login": "Mag-login",
+    "logout": "Mag-logout",
+    "getStarted": "Magsimula",
+    "learnMore": "Alamin Pa",
+    "search": "Maghanap",
+    "filter": "I-filter",
+    "sort": "Ayusin",
+    "loading": "Naglo-load...",
+    "error": "May Error",
+    "success": "Matagumpay",
+    "cancel": "Kanselahin",
+    "save": "I-save",
+    "delete": "Burahin",
+    "edit": "I-edit",
+    "view": "Tingnan",
+    "close": "Isara",
+    "back": "Bumalik",
+    "next": "Susunod",
+    "previous": "Nakaraan",
+    "submit": "Isumite",
+    "reset": "I-reset",
+    "all": "Lahat",
+    "none": "Wala",
+    "yes": "Oo",
+    "no": "Hindi",
+    "or": "o",
+    "and": "at",
+    "copyright": "© 2026 Bakit Kita Iboboto? Lahat ng karapatan ay nakalaan.",
+    "dataSource": "Suriin ang sanggunian at saklaw ng bawat tala."
+  },
+  "nav": {
+    "home": "Home",
+    "politicians": "Mga Pulitiko",
+    "compare": "Ikumpara",
+    "elections": "Eleksyon",
+    "learn": "Matuto",
+    "bookmarks": "Mga Bookmark",
+    "votingList": "Listahan ng Iboboto",
+    "notifications": "Mga Abiso",
+    "profile": "Profile",
+    "settings": "Mga Setting",
+    "report": "Mag-report",
+    "primaryNavigation": "Pangunahing nabigasyon",
+    "menu": "Menu",
+    "browse": "Mga profile",
+    "saved": "Mga na-save"
+  },
+  "home": {
+    "hero": {
+      "badge": "Para sa Mamamayang Pilipino",
+      "title": "Alam mo ba kung sino ang",
+      "titleHighlight": "iboboto mo?",
+      "titleEnd": "",
+      "description": "Isang transparent na platform na nagbibigay ng komprehensibong impormasyon tungkol sa mga pulitiko sa Pilipinas — mula sa kanilang track record hanggang sa kanilang mga assets at legislative work."
+    },
+    "rotatingTaglines": {
+      "line1": "iboboto mo?",
+      "line2": "kumakatawan sa'yo?",
+      "line3": "nangako sa'yo?",
+      "line4": "pinagkakatiwalaan mo?"
+    },
+    "heroSearch": {
+      "placeholder": "Maghanap ng pangalan ng pulitiko...",
+      "button": "Hanapin"
+    },
+    "countdown": {
+      "label": "Opisyal na impormasyon sa halalan",
+      "electionName": "Opisyal na impormasyon sa halalan",
+      "ariaLabel": "Opisyal na impormasyon sa halalan",
+      "days": "Araw",
+      "hours": "Oras",
+      "minutes": "Min",
+      "seconds": "Seg"
+    },
+    "trust": {
+      "label": "Datos mula sa opisyal na mga source ng gobyerno",
+      "verifiedLabel": "Na-cross-reference sa mga mapagkakatiwalaang balita at legal na source"
+    },
+    "trending": {
+      "title": "Mga Trending na Pulitiko",
+      "subtitle": "Sino ang pinapanood ng mga tao ngayon at bakit",
+      "bills": "bagong bills",
+      "reviewedCases": "Mga kasong nasuri",
+      "newIssues": "bagong isyu",
+      "bookmarks": "nagmamasid",
+      "viewAll": "Tingnan Lahat ng Pulitiko",
+      "previous": "Nakaraan",
+      "next": "Susunod",
+      "reasons": {
+        "mostBookmarked": "Pinaka-minamasdan",
+        "newBills": "Bagong Bills",
+        "billPassed": "Naging Batas",
+        "billVetoed": "Na-veto ang Bill",
+        "newControversy": "Bagong Kontrobersya",
+        "reviewedCaseUpdate": "Update sa kasong nasuri",
+        "criticalRedFlag": "Kritikal na Red Flag",
+        "salnAnomaly": "May Anomalya sa Yaman",
+        "brokenPromise": "Sirang Pangako",
+        "salnUpdated": "SALN Na-update",
+        "highMentions": "Maraming Binabanggit",
+        "mostSearched": "Pinaka-hinahanap"
+      }
+    },
+    "comparison": {
+      "title": "2028 Presidential Race",
+      "subtitle": "Ikumpara ang mga nangunguna nang magkatabi",
+      "billsFiled": "Bills na In-file",
+      "netWorth": "Net Worth",
+      "attendance": "Attendance",
+      "reviewedCases": "Mga kasong nasuri",
+      "redFlags": "Mga ipinapakitang indicator",
+      "promisesKept": "Pangakong Tinupad",
+      "cta": "Mag-compare ng Iba Pang Pulitiko"
+    },
+    "cta": {
+      "browsePoliticians": "Tingnan Lahat ng Pulitiko",
+      "howItWorks": "Paano Ito Gumagana?"
+    },
+    "features": {
+      "trackRecord": {
+        "title": "Track Record",
+        "description": "Tingnan ang mga proyekto, batas, at accomplishments ng bawat pulitiko sa kanilang termino."
+      },
+      "saln": {
+        "title": "SALN at Assets",
+        "description": "Alamin ang declared assets, liabilities, at net worth ng mga public officials."
+      },
+      "electionHistory": {
+        "title": "Kasaysayan ng Eleksyon",
+        "description": "Suriin ang election results at voting records ng mga kandidato."
+      },
+      "legalCases": {
+        "title": "Mga Legal na Kaso",
+        "description": "Makita ang mga documented controversies at legal cases mula sa official sources."
+      },
+      "dynasty": {
+        "title": "Political Dynasty",
+        "description": "Alamin ang family connections at political relationships ng mga pulitiko."
+      },
+      "aiFactChecker": {
+        "title": "AI Fact-Checker",
+        "description": "Gamitin ang AI chatbot para i-verify ang mga claims tungkol sa mga pulitiko."
+      }
+    },
+    "research": {
+      "eyebrow": "Para sa mga botanteng Pilipino",
+      "title": "Kilalanin bago bumoto.",
+      "intro": "Magtanong, suriin ang mga pampublikong tala, at paghambingin ang mga profile. Basahin ang mga sanggunian at ikaw ang magpasya.",
+      "browse": "Tingnan ang mga profile",
+      "browseHint": "Maghanap ng pangalan o salain ayon sa tungkulin at lugar.",
+      "compare": "Paghambingin ang mga tala",
+      "compareHint": "Pagtapatin ang mga profile. Suriin ang petsa at sanggunian ng bawat tala.",
+      "saved": "Mga na-save na profile",
+      "savedHint": "Balikan ang mga profile habang nagsasaliksik. Dito sa browser naka-save ang mga bookmark ng bisita.",
+      "coverageLink": "Alamin ang saklaw ng datos",
+      "start": "Simulan ang pagsasaliksik",
+      "coverage": "Saklaw ng datos",
+      "coverageHint": "Nag-iiba ang saklaw ayon sa profile, tungkulin, at panahon. Hindi ito kumpletong listahan ng mga kandidato o opisyal na balota.",
+      "missingHint": "Ang kawalan ng tala ay hindi patunay ng mabuti o masamang pagganap. Hindi ipinapakita ang detalye ng kaso hangga't hindi natutugunan ang mga kinakailangan sa pagsusuri.",
+      "method": "Paano basahin ang mga tala",
+      "correction": "Mag-ulat ng pagwawasto",
+      "electionLink": "Opisyal na impormasyon sa halalan",
+      "recent": "Tingnan ang mga profile",
+      "updateHint": "Nakaayos ayon sa pangalan. Petsa ng pag-edit ang ipinapakita, hindi petsa ng pagpapatunay ng bawat tala.",
+      "profileCount": "{count} aktibong profile sa database na ito",
+      "unavailable": "Pansamantalang hindi makuha ang mga profile. Subukan muli mamaya.",
+      "empty": "Wala pang profile. I-load ang sinuring dataset para makapagsimula.",
+      "updated": "Binago ang profile",
+      "officeUnknown": "Walang naitalang kasalukuyang tungkulin",
+      "readProfile": "Basahin ang profile at mga sanggunian",
+      "researchUnavailable": "Pansamantalang hindi makuha ang nasuring pananaliksik. Makikita pa rin ang mga profile, ngunit hindi masuri ang detalye ng kaso sa ngayon.",
+      "compareTitle": "Paghambingin ang dalawang tao",
+      "comparePrompt": "Piliin kung kaninong mga tala ang gusto mong tingnan nang magkatabi. Unahin ang saklaw at mga sanggunian.",
+      "firstPerson": "Unang tao",
+      "secondPerson": "Ikalawang tao",
+      "choosePerson": "Pumili ng profile",
+      "compareUnavailable": "Kailangan ng hindi bababa sa dalawang profile para makapaghambing.",
+      "compareScope": "Panimula lamang ang mga piling tala. Hindi ito marka o kumpletong tala ng karera.",
+      "filingExamples": "Basahin ang isang panukala",
+      "filingExamplesHint": "Ito ang unang tatlong sinuring panukala ayon sa bill number. Hindi ito ranggo ng epekto sa lipunan. Hindi patunay ng pagsasabatas ang paghahain.",
+      "filingDate": "Petsa ng paghahain",
+      "filingDateUnknown": "Hindi pa napatunayan",
+      "introducedBy": "Naghain",
+      "filedDocument": "Dokumentong sanggunian",
+      "readFiling": "Basahin ang profile at mga sanggunian",
+      "searchPerson": "Mag-type ng pangalan",
+      "selectedPerson": "Napili: {name}",
+      "searchingPeople": "Naghahanap ng mga profile…",
+      "peopleUnavailable": "Pansamantalang hindi available ang paghahanap. Subukan muli.",
+      "noPeople": "Walang tumugmang profile. Subukan ang buong pangalan o apelyido.",
+      "coverageDefinition": "Ang saklaw ay ang mga tao, uri ng tala at petsang nasuri sa release na ito. Hindi ito kumpletong tala ng karera ng bawat tao."
+    }
+  },
+  "politicians": {
+    "title": "Direktoryo ng mga Pulitiko",
+    "description": "Mag-browse at mag-filter ng mga pulitiko sa Pilipinas sa lahat ng antas ng gobyerno",
+    "searchPlaceholder": "Maghanap ng pulitiko ayon sa pangalan, posisyon, o lokasyon...",
+    "filters": {
+      "level": "Antas ng Gobyerno",
+      "region": "Rehiyon",
+      "province": "Lalawigan",
+      "city": "Lungsod/Munisipalidad",
+      "party": "Partidong Politikal",
+      "position": "Posisyon",
+      "hasRedFlags": "May Red Flags"
+    },
+    "levels": {
+      "all": "Lahat ng Antas",
+      "national": "Pambansa",
+      "regional": "Panrehiyon",
+      "provincial": "Panlalawigan",
+      "city": "Panlungsod",
+      "municipal": "Pambayan",
+      "barangay": "Barangay"
+    },
+    "noResults": "Walang nahanap na pulitiko na tumutugma sa iyong mga criteria.",
+    "viewProfile": "Tingnan ang Profile",
+    "redFlagIndicator": "May mga documented issues"
+  },
+  "profile": {
+    "tabs": {
+      "overview": "Pangkalahatang-tanaw",
+      "legislative": "Gawaing Lehislatura",
+      "financial": "Pinansyal",
+      "elections": "Eleksyon",
+      "controversies": "Mga Kontrobersya",
+      "family": "Family Network",
+      "projects": "Mga Proyekto at Pangako"
+    },
+    "sections": {
+      "personalInfo": "Personal na Impormasyon",
+      "positionHistory": "Kasaysayan ng Posisyon",
+      "partyAffiliation": "Kaanib na Partido",
+      "endorsements": "Mga Endorsement",
+      "bills": "Mga Bill na Inakda",
+      "votingRecord": "Rekord ng Pagboto",
+      "attendance": "Attendance sa Session",
+      "saln": "Kasaysayan ng SALN",
+      "campaignFinance": "Pinansya ng Kampanya",
+      "electionHistory": "Kasaysayan ng Eleksyon",
+      "termLimit": "Status ng Term Limit",
+      "controversies": "Mga Kontrobersya at Legal na Kaso",
+      "conflictOfInterest": "Conflict of Interest",
+      "familyNetwork": "Family Network",
+      "projects": "Mga Proyekto",
+      "promises": "Mga Pangako sa Kampanya"
+    },
+    "labels": {
+      "birthday": "Kaarawan",
+      "birthplace": "Lugar ng Kapanganakan",
+      "education": "Edukasyon",
+      "currentPosition": "Kasalukuyang Posisyon",
+      "currentParty": "Kasalukuyang Partido",
+      "netWorth": "Net Worth",
+      "totalAssets": "Kabuuang Assets",
+      "totalLiabilities": "Kabuuang Liabilities",
+      "source": "Pinagmulan",
+      "lastUpdated": "Huling Na-update"
+    }
+  },
+  "compare": {
+    "title": "Ikumpara ang mga Pulitiko",
+    "description": "Ikumpara ang hanggang 4 na pulitiko nang magkatabi",
+    "selectPoliticians": "Pumili ng mga Pulitiko na Ikukumpara",
+    "addPolitician": "Magdagdag ng Pulitiko",
+    "removePolitician": "Alisin",
+    "minRequired": "Pumili ng hindi bababa sa 2 pulitiko para ikumpara",
+    "maxReached": "Maximum na 4 na pulitiko ang maaaring ikumpara",
+    "compareNow": "Ikumpara Ngayon",
+    "metrics": {
+      "experience": "Karanasan",
+      "legislative": "Gawaing Lehislatura",
+      "financial": "Pinansyal",
+      "attendance": "Attendance",
+      "promises": "Katuparan ng Pangako"
+    }
+  },
+  "elections": {
+    "title": "Mga Paparating na Eleksyon",
+    "description": "Tingnan ang mga paparating na eleksyon at mga nag-file na kandidato",
+    "upcomingElections": "Mga Paparating na Eleksyon",
+    "filedCandidates": "Mga Nag-file na Kandidato",
+    "electionDeadlines": "Mahahalagang Deadline",
+    "voterRegistration": "Pagpaparehistro ng Botante",
+    "filingPeriod": "Panahon ng Pag-file",
+    "campaignPeriod": "Panahon ng Kampanya",
+    "electionDay": "Araw ng Eleksyon"
+  },
+  "learn": {
+    "title": "Civic Education",
+    "description": "Alamin kung paano gumagana ang gobyerno ng Pilipinas",
+    "sections": {
+      "governmentStructure": "Istruktura ng Gobyerno",
+      "legislativeProcess": "Proseso ng Lehislatura",
+      "electionProcess": "Proseso ng Eleksyon",
+      "glossary": "Glossary ng Pulitika"
+    },
+    "governmentStructure": {
+      "title": "Istruktura ng Gobyerno ng Pilipinas",
+      "description": "Alamin ang tungkol sa tatlong sangay ng gobyerno at ang kanilang mga tungkulin."
+    },
+    "legislativeProcess": {
+      "title": "Paano Nagiging Batas ang isang Bill",
+      "description": "Unawain ang hakbang-hakbang na proseso ng lehislasyon sa Pilipinas."
+    },
+    "electionProcess": {
+      "title": "Proseso ng Eleksyon",
+      "description": "Alamin ang mga kinakailangan at proseso para sa pagboto sa mga eleksyon sa Pilipinas."
+    },
+    "glossary": {
+      "title": "Glossary ng Pulitika",
+      "description": "Mga kahulugan ng mga terminong politikal at legal sa Filipino at Ingles."
+    }
+  },
+  "bookmarks": {
+    "title": "Aking mga Bookmark",
+    "description": "Mga pulitiko na iyong na-save para sa mabilis na access",
+    "empty": "Wala ka pang na-bookmark na pulitiko.",
+    "emptyHint": "Mag-browse ng mga pulitiko at i-click ang bookmark icon para i-save sila dito.",
+    "addBookmark": "Magdagdag ng Bookmark",
+    "removeBookmark": "Alisin ang Bookmark"
+  },
+  "votingList": {
+    "title": "Aking Listahan ng Iboboto",
+    "description": "Mga pulitiko na plano mong iboto",
+    "empty": "Walang laman ang iyong listahan ng iboboto.",
+    "emptyHint": "Magdagdag ng mga pulitiko sa iyong listahan ng iboboto para ayusin ang iyong mga pagpipilian bago ang araw ng eleksyon.",
+    "addToList": "Idagdag sa Listahan ng Iboboto",
+    "removeFromList": "Alisin sa Listahan",
+    "export": "I-export ang Listahan",
+    "share": "Ibahagi ang Listahan",
+    "positions": {
+      "president": "Pangulo",
+      "vicePresident": "Bise Pangulo",
+      "senator": "Senador",
+      "partyList": "Party-List",
+      "congressman": "Kongresista",
+      "governor": "Gobernador",
+      "viceGovernor": "Bise Gobernador",
+      "mayor": "Alkalde",
+      "viceMayor": "Bise Alkalde",
+      "councilor": "Konsehal",
+      "barangayCaptain": "Kapitan ng Barangay",
+      "barangayCouncilor": "Kagawad ng Barangay"
+    }
+  },
+  "notifications": {
+    "title": "Mga Abiso",
+    "description": "Mga update tungkol sa mga pulitiko na iyong sinusundan",
+    "empty": "Wala pang mga abiso.",
+    "markAllRead": "Markahan Lahat Bilang Nabasa",
+    "settings": "Mga Setting ng Abiso",
+    "types": {
+      "newControversy": "Bagong Kontrobersya",
+      "newBill": "Bagong Bill na Inihain",
+      "billPassed": "Naaprubahang Bill",
+      "redFlag": "Red Flag Alert",
+      "electionReminder": "Paalala sa Eleksyon"
+    }
+  },
+  "chatbot": {
+    "title": "AI Assistant",
+    "subtitle": "Bakit Kita Iboboto?",
+    "welcome": {
+      "greeting": "Kumusta! Ako ang AI Assistant",
+      "description": "Makakatulong ako sa iyo na malaman ang mga impormasyon tungkol sa mga pulitiko ng Pilipinas.",
+      "exampleQuestions": "Mga halimbawang tanong:",
+      "examples": {
+        "senators": "Sino ang mga senador ng Pilipinas?",
+        "bills": "Ano ang mga bill na inihain ni [pangalan]?",
+        "saln": "Ano ang SALN ni [pangalan]?"
+      }
+    },
+    "input": {
+      "placeholder": "Magtanong tungkol sa mga pulitiko...",
+      "send": "Ipadala"
+    },
+    "rateLimit": {
+      "remaining": "Natitirang tanong:",
+      "exhausted": "Naubos na ang iyong mga tanong. Subukan ulit mamaya.",
+      "resetIn": "Mag-reset sa"
+    },
+    "verification": {
+      "verified": "Na-verify",
+      "unverified": "Hindi pa na-verify",
+      "confidence": "confidence"
+    },
+    "sources": "mga pinagkukunan",
+    "newConversation": "Bagong usapan",
+    "disclaimer": "Mula sa AI ang mga sagot. Hindi ito hiwalay na pagpapatunay ng mga tala.",
+    "page": {
+      "title": "AI Fact-Checker",
+      "heading": "Tanungin ang AI tungkol sa mga Pulitiko",
+      "description": "Makakuha ng verified information mula sa official government sources. Lahat ng sagot ay may citation.",
+      "queriesRemaining": "{remaining} / {limit} natitirang tanong",
+      "emptyState": {
+        "title": "Magtanong tungkol sa mga pulitiko",
+        "description": "I-type ang iyong tanong sa ibaba o pumili mula sa mga suggested questions."
+      },
+      "suggestedQuestions": {
+        "pendingCases": "Sino ang mga senador na may pending cases?",
+        "trackRecord": "Ano ang track record ni [Pangalan ng Pulitiko]?",
+        "dynasty": "Totoo ba na may political dynasty sa [Lalawigan]?",
+        "netWorth": "Magkano ang net worth ni [Pangalan ng Pulitiko] base sa SALN?"
+      },
+      "loading": "Naghahanap ng impormasyon...",
+      "error": "Pasensya na, may problema sa connection. Subukan muli mamaya.",
+      "inputPlaceholder": "Magtanong tungkol sa mga pulitiko...",
+      "aiDisclaimer": "Ang AI ay gumagamit lamang ng official government sources. Hindi ito nagbibigay ng personal na opinyon."
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Mag-login",
+      "description": "Mag-login para ma-access ang mga personalized na feature",
+      "nationalId": "Philippine National ID",
+      "passport": "Philippine Passport",
+      "selectMethod": "Pumili ng paraan ng verification"
+    },
+    "profile": {
+      "title": "Aking Profile",
+      "verified": "Na-verify",
+      "notVerified": "Hindi Na-verify",
+      "verificationMethod": "Paraan ng Verification"
+    }
+  },
+  "report": {
+    "title": "Magsumite ng Report",
+    "description": "Tumulong na mapabuti ang transparency sa pamamagitan ng pagsusumite ng verified na impormasyon",
+    "types": {
+      "newInfo": "Bagong Impormasyon",
+      "correction": "Pagwawasto ng Data",
+      "controversy": "Report ng Kontrobersya"
+    },
+    "form": {
+      "politician": "Pumili ng Pulitiko",
+      "type": "Uri ng Report",
+      "content": "Nilalaman ng Report",
+      "evidence": "Mga Ebidensya",
+      "submit": "Isumite ang Report"
+    },
+    "status": {
+      "pending": "Naghihintay ng Review",
+      "verified": "Na-verify",
+      "rejected": "Tinanggihan"
+    }
+  },
+  "feedback": {
+    "title": "Magpadala ng Feedback",
+    "description": "Tulungan kaming mapabuti ang platform",
+    "categories": {
+      "bug": "Bug Report",
+      "feature": "Mungkahi ng Feature",
+      "dataCorrection": "Pagwawasto ng Data",
+      "general": "Pangkalahatang Feedback"
+    },
+    "form": {
+      "category": "Kategorya",
+      "message": "Iyong Mensahe",
+      "attachment": "Mag-attach ng File (opsyonal)",
+      "submit": "Ipadala ang Feedback"
+    },
+    "success": "Salamat sa iyong feedback!"
+  },
+  "redFlags": {
+    "legalCase": "Legal na Kaso",
+    "corruption": "Kaso ng Korupsyon",
+    "dynasty": "Political Dynasty",
+    "salnAnomaly": "SALN Anomaly",
+    "attendance": "Mababang Attendance"
+  },
+  "errors": {
+    "notFound": "Hindi nahanap ang pahina",
+    "serverError": "May nangyaring problema",
+    "networkError": "Network error. Pakisuri ang iyong koneksyon.",
+    "unauthorized": "Mangyaring mag-login para ma-access ang feature na ito",
+    "forbidden": "Wala kang pahintulot na ma-access ito"
+  },
+  "language": {
+    "select": "Pumili ng Wika",
+    "current": "Kasalukuyang Wika"
+  },
+  "tts": {
+    "title": "Text-to-Speech",
+    "controls": "Mga kontrol ng text-to-speech",
+    "play": "Basahin nang malakas",
+    "pause": "I-pause",
+    "resume": "Ituloy",
+    "stop": "Itigil",
+    "playing": "Binabasa...",
+    "paused": "Naka-pause",
+    "settings": "Mga setting ng pagsasalita",
+    "voice": "Boses",
+    "voiceHint": "★ ay nagpapahiwatig ng mga boses na Filipino",
+    "rate": "Bilis",
+    "slower": "Mas mabagal",
+    "faster": "Mas mabilis",
+    "volume": "Volume",
+    "readingContent": "Binabasa ang {content}",
+    "notSupported": "Hindi sinusuportahan ang text-to-speech sa browser na ito"
+  },
+  "accessibility": {
+    "title": "Mga Setting ng Accessibility",
+    "close": "Isara",
+    "reset": "I-reset sa Default",
+    "skipToContent": "Lumaktaw sa pangunahing nilalaman",
+    "textSize": {
+      "label": "Laki ng Teksto",
+      "small": "S",
+      "medium": "M",
+      "large": "L",
+      "extraLarge": "XL"
+    },
+    "highContrast": {
+      "label": "Mataas na Contrast",
+      "description": "Dagdagan ang contrast ng kulay para mas makita"
+    },
+    "simplifiedView": {
+      "label": "Pinasimpleng View",
+      "description": "Bawasan ang visual complexity"
+    },
+    "reducedMotion": {
+      "label": "Bawasan ang Motion",
+      "description": "I-minimize ang mga animation at transition"
+    }
+  },
+  "offline": {
+    "youAreOffline": "Ikaw ay offline",
+    "viewingCachedData": "Tinitingnan ang {count} na na-download na profile",
+    "limitedFunctionality": "Ang ilang mga feature ay maaaring limitado",
+    "downloadedProfiles": "Mga na-download na profile",
+    "storageUsed": "Storage na ginamit",
+    "backOnline": "Bumalik ka na online!",
+    "syncAvailable": "Gusto mo bang i-sync ang iyong mga na-download na profile?",
+    "syncNow": "I-sync Ngayon",
+    "syncing": "Nagsi-sync...",
+    "dismiss": "I-dismiss",
+    "offline": "Offline",
+    "offlineMode": "Offline mode",
+    "downloadForOffline": "I-download si {name} para sa offline viewing",
+    "removeFromOffline": "Alisin si {name} sa offline storage",
+    "downloadedOn": "Na-download noong",
+    "downloaded": "Na-download",
+    "download": "I-download",
+    "downloading": "Nagda-download...",
+    "removing": "Inaalis...",
+    "removeDownload": "Alisin ang Download",
+    "downloadForOfflineViewing": "I-download para sa Offline Viewing",
+    "connectToDownload": "Kumonekta sa internet para mag-download",
+    "viewingOfflineData": "Tinitingnan ang offline data",
+    "lastUpdated": "Huling na-update",
+    "offlinePage": {
+      "title": "Ikaw ay Offline",
+      "description": "Mukhang nawala ang iyong koneksyon sa internet.",
+      "downloadedProfiles": "Ang Iyong mga Na-download na Profile",
+      "noDownloads": "Wala pang na-download na profile",
+      "noDownloadsHint": "Kapag online ka, mag-download ng mga profile ng pulitiko para tingnan sila offline.",
+      "tryAgain": "Subukan Muli",
+      "goHome": "Pumunta sa Home"
+    },
+    "downloadedProfilesPage": {
+      "title": "Mga Na-download na Profile",
+      "description": "Mga profile ng pulitiko na available para sa offline viewing",
+      "empty": "Walang na-download na profile",
+      "emptyHint": "Mag-download ng mga profile ng pulitiko para tingnan sila kahit walang internet connection.",
+      "storageUsage": "Paggamit ng Storage",
+      "clearAll": "Burahin Lahat ng Downloads"
+    }
+  },
+  "dataStates": {
+    "attendanceEmpty": "Walang makukuhang tala ng pagdalo",
+    "attendanceHint": "Hindi makukuwenta ang porsiyento ng pagdalo kung walang naitalang mga sesyon.",
+    "unavailable": "Pansamantalang hindi makuha ang impormasyong ito. Subukan muli mamaya.",
+    "familyEmpty": "Walang naitalang ugnayang pampamilya",
+    "familyHint": "Hindi pinatutunayan ng database na ito kung may iba pang ugnayang pampamilya sa politika.",
+    "conflictsInsufficient": "Kulang ang mga tala upang masuri ang conflict of interest",
+    "conflictsHint": "Kailangan ang mga interes sa negosyo at kaugnay na tala ng lehislatura. Ang kawalan ng datos ay hindi patunay na walang conflict.",
+    "conflictsNoMatches": "Walang pagtutugma sa mga talang nasuri",
+    "conflictsLimited": "Saklaw lamang ng awtomatikong pagsusuri ang mga talang nakalista rito. Hindi nito pinatutunayang walang conflict of interest."
+  },
+  "chatDock": {
+    "title": "Katulong sa pagsasaliksik",
+    "label": "Magtanong tungkol sa mga pampublikong tala",
+    "placeholder": "Pangalan muna ang ilagay",
+    "hint": "Maaaring magkamali ang AI. Dito, mula mismo sa mga rekord na nasuri ang sagot. Huwag magbahagi ng sensitibong impormasyon.",
+    "browse": "Tingnan ang mga profile",
+    "generated": "Mula mismo sa mga rekord na nasuri. Walang buod mula sa AI.",
+    "unavailable": "Pansamantalang hindi magamit ang katulong. Nananatili sa ibaba ang iyong tanong. Subukan muli o tingnan ang mga profile.",
+    "close": "Isara ang usapan",
+    "reopen": "Buksan ang usapan",
+    "conversation": "Usapan",
+    "welcomeTitle": "Hanapin ang mga rekord na nasuri",
+    "welcomeHint": "Subukan ang pangalan, isang bill number gaya ng SBN-142, o maikling pamagat ng panukala. Pumili ng tao kapag maraming profile ang tumugma. Mga sinuring tala at limitasyon ang ipinapakita."
+  },
+  "languageWelcome": {
+    "title": "Piliin ang iyong wika",
+    "description": "Choose the language you are comfortable with. Maaari mo itong palitan anumang oras.",
+    "continue": "Magpatuloy",
+    "keep": "Gamitin ang kasalukuyang wika",
+    "later": "Maaari mong palitan ang wika sa menu."
+  },
+  "reviewedChat": {
+    "status": {
+      "choose_profile": "Pumili ng profile bago tingnan ang mga rekord na nasuri.",
+      "no_profile": "Walang tumugmang profile. Pangalan lang muna ang ilagay, o tingnan ang mga profile.",
+      "records": "Ito ang mga kaso at kontekstong nasuri para sa napiling profile.",
+      "no_reviewed_records": "Walang rekord na nasuri para sa profile na ito. Hindi ito patunay na walang kaso, may sala, o walang sala ang tao.",
+      "withheld": "Sinusuri pa ang pananaliksik. Hindi muna ipinapakita ang mga kaso at konteksto.",
+      "unavailable": "Pansamantalang hindi makuha ang mga rekord na nasuri. Subukan muli mamaya; hindi ito nangangahulugang walang rekord.",
+      "profile_not_found": "Hindi na makuha ang profile na iyon. Pumili ng ibang profile."
+    },
+    "scope": "Mga kaso at kontekstong nasuri lang ang ipinapakita ko. Hindi ako sumasagot sa malawak na tanong, nagpapasya sa pagkakasala, o nagsasabi kung sino ang iboboto. Hindi kasama rito ang ibang detalye sa profile.",
+    "moreProfiles": "May iba pang tumugmang profile. Ilagay ang mas buong pangalan.",
+    "moreRecords": "May {count} pang rekord na nasuri sa profile.",
+    "profile": "Buksan ang profile",
+    "change": "Pumili ng ibang tao",
+    "selected": "Napiling profile: {name}",
+    "checked": "Tiningnan noong {date}",
+    "reviewed": "Nasuri noong {date}",
+    "recordSources": "Mga sanggunian ng rekord",
+    "eventSources": "Mga sanggunian ng pangyayari",
+    "document": "Petsa ng dokumento",
+    "retrieved": "Nakuha noong",
+    "unknown": "Hindi alam ang petsa",
+    "datePrecision": "{date} ({precision} lang)",
+    "primary": "Pangunahing dokumento",
+    "reported": "Iniulat ng binanggit na sanggunian",
+    "finality": "Pagiging pinal: {value}",
+    "eventOrder": "Nakaayos ayon sa ID ng rekord ang mga pangyayari. Hindi matitiyak ang pagkakasunod-sunod mula sa kulang o hindi alam na petsa.",
+    "refresh": "Inalis ang mga naunang sagot. Ipadala muli para tingnan ang kasalukuyang mga rekord na nasuri.",
+    "show": "Ipakita ang mga rekord na nasuri",
+    "sourceMissing": "Walang hiwalay na sanggunian ang pangyayaring ito. Tingnan ang mga sanggunian ng rekord.",
+    "coverage": "Mga kaso at kontekstong nasuri lang ang nasa view na ito. Maaaring kulang ang saklaw.",
+    "profileId": "ID ng profile: {id}"
+  },
+  "senateChat": {
+    "status": {
+      "records": "Narito ang mga tumugmang panukala sa sinuring sample ng ika-20 Kongreso.",
+      "choose_profile": "Pumili ng profile bago tingnan ang mga sinuring panukala nito sa Senado.",
+      "no_profile": "Walang tumugmang sinuring profile o pamagat ng panukala. Subukan ang apelyido, isang SBN number, o maikling pamagat.",
+      "no_matching_filings": "Walang tumugmang panukala sa sinuring sample. Hindi ito nangangahulugang walang ibang panukala.",
+      "outside_coverage": "Hindi ito mapatutunayan ng sinuring batch. Sakop nito ang piling panukala ng ika-20 Kongreso. Subukan ang isang SBN number, pangalan, o maikling pamagat. Hindi ito nagbibigay ng payo sa pagboto o marka ng epekto.",
+      "not_loaded": "Hindi available sa instalasyong ito ang tumugmang sinuring tala. Hindi ito patunay na walang inihain ang taong iyon.",
+      "needs_review": "May pagkakaiba ang nakaimbak na tala at ang aprubadong batch. Hindi muna ito ipinapakita habang sinusuri.",
+      "unavailable": "Pansamantalang hindi available ang sinuring panukala sa Senado. Subukan muli mamaya. Hindi ito nangangahulugang walang tala.",
+      "profile_not_found": "Hindi na available ang profile na ito. Pumili ng ibang tao."
+    },
+    "recordType": "Mga talang hahanapin",
+    "automatic": "Iayon sa tanong",
+    "filings": "Mga panukala sa Senado",
+    "cases": "Mga kaso at konteksto",
+    "congressSuffix": " na Kongreso",
+    "introducer": "Naghain ayon sa dokumento",
+    "filed": "Petsa ng paghahain",
+    "unknown": "Hindi pa napatunayan",
+    "statusUnknown": "Hindi pa napatunayan ang katayuan",
+    "enactmentUnknown": "Hindi pa napatunayan sa batch kung naging batas ito.",
+    "evidence": "Mga sanggunian at tala sa petsa",
+    "scope": "Mga piling panukala ito, hindi kumpletong tala ng karera. Hindi patunay ng pagsasabatas ang paghahain. Hindi pa napatunayan ang katayuan, kasalukuyang puwesto at epekto sa lipunan. Literal na mga salita ang ginagamit sa paghahanap at hindi ito kumpleto.",
+    "dataset": "Dataset, mga sanggunian at limitasyon",
+    "checked": "Sinuri noong {date}",
+    "remaining": "May {count} pang tumugmang panukala sa piling sample. Tingnan ang dataset para sa buong listahan.",
+    "moreProfiles": "Maraming profile ang tumugma. Gumamit ng mas buong pangalan.",
+    "combinedScope": "Sinuring panukala sa Senado o hiwalay na sinuring kaso at konteksto ang ginagamit. Maaaring hindi kumpleto ang saklaw."
+  },
+  "reviewedComparison": {
+    "title": "Ihambing ang mga sinuring tala",
+    "scope": "Mga piling panukala ito mula sa parehong batch ng ika-20 Kongreso. Hindi kumpleto ang listahan. Hindi patunay ng mas mahusay na pagganap, nag-iisang may-akda, o pagsasabatas ang mas malaking bilang sa sample.",
+    "selected": "{count, plural, one {# piling panukala sa batch} other {# piling panukala sa batch}}",
+    "filed": "Petsa ng paghahain",
+    "unknown": "Hindi pa napatunayan",
+    "source": "Dokumentong sanggunian",
+    "evidence": "Profile at tala ng ebidensiya",
+    "unavailable": "Hindi available o kailangan pang suriin ang detalye ng mga panukala. Hindi ito nangangahulugang walang inihain ang tao.",
+    "missing": "Hindi pa napatunayan sa batch ang katayuan, pagsasabatas, pananalapi, pagdalo, boto at buong tala ng karera. Hindi sero ang nawawalang impormasyon.",
+    "otherFields": "Iba pang ihahambing: hindi pa napatunayan"
+  }
+}

@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: postgresql://build_fixture:build_fixture@127.0.0.1:1/build_fixture?connect_timeout=1
+      REDIS_DISABLED: "true"
+      PUBLIC_CASE_RECORDS_ENABLED: "false"
+      DATA_PIPELINE_ENABLED: "false"
+      AI_RESEARCH_ENABLED: "false"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Setup npm
+        run: |
+          npm install --global npm@11.21.2
+          node --version
+          npm --version
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify release scope and approved test bytes
+        run: node scripts/verify-source-only.mjs --populated-release --allow-git-checkout
+
+      # Prisma Client types are required for type-check and tests to compile.
+      - name: Generate Prisma client
+        run: npx prisma generate
+
+      - name: Verify reviewed batch on disposable PostgreSQL
+        run: npm run data:verify
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Type check
+        run: npm run type-check
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+        env:
+          DATABASE_URL: postgresql://build_fixture:build_fixture@127.0.0.1:1/build_fixture?connect_timeout=1
+          REDIS_DISABLED: "true"
+          PUBLIC_CASE_RECORDS_ENABLED: "false"
+          DATA_PIPELINE_ENABLED: "false"
+          AI_RESEARCH_ENABLED: "false"
+
+      - name: Install pinned verification browser
+        run: npx --no-install puppeteer browsers install chrome
+
+      - name: Verify case review on disposable PostgreSQL and browser
+        run: |
+          docker version
+          node --input-type=module -e 'import fs from "node:fs"; import puppeteer from "puppeteer"; fs.accessSync(await puppeteer.executablePath(), fs.constants.X_OK);'
+          npx --no-install tsx scripts/verify-case-review.ts
+        env:
+          DOTENV_CONFIG_PATH: /dev/null
+          __NEXT_PROCESSED_ENV: "true"
+          DATA_PIPELINE_ENABLED: "false"
+          AI_RESEARCH_ENABLED: "false"
+          REDIS_DISABLED: "true"

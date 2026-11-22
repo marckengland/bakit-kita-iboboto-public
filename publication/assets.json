@@ -1,0 +1,158 @@
+{
+  "reviewDate": "2026-11-16",
+  "rightsBasis": "Maintainer confirmed ownership or redistribution permission for project code, retained fixture wording, and icon artwork in this conversation. This is a maintainer attestation, not an independent rights adjudication.",
+  "icons": [
+    {
+      "file": "public/icons/icon-128x128.png",
+      "sha256": "c2b03ff4f35a8adced15b6dabb65f1b25de3f38eec191d548703f6749e5aae88",
+      "matchesOriginalCommit": true
+    },
+    {
+      "file": "public/icons/icon-144x144.png",
+      "sha256": "6e6141fb3d7305f147742f8e2a6788d381ec0df01fbe647fe4d3393a6f94ccef",
+      "matchesOriginalCommit": true
+    },
+    {
+      "file": "public/icons/icon-152x152.png",
+      "sha256": "b1e5e0d266842278813050f78c99d8e92ad4de2e13c543c1fda79254c196f85f",
+      "matchesOriginalCommit": true
+    },
+    {
+      "file": "public/icons/icon-192x192.png",
+      "sha256": "f8531724c6bd95258534f4cdc23e12fd4bbeab51c551a2364ffae97de573d7cf",
+      "matchesOriginalCommit": true
+    },
+    {
+      "file": "public/icons/icon-384x384.png",
+      "sha256": "ff9884fd085b5790850a68c60aacda75303e240e727ad36a950ec06a19c7195e",
+      "matchesOriginalCommit": true
+    },
+    {
+      "file": "public/icons/icon-512x512.png",
+      "sha256": "379e534b025ef9fcb4443604921b6b9859421b1d81e455036e038731b8f220bc",
+      "matchesOriginalCommit": true
+    },
+    {
+      "file": "public/icons/icon-72x72.png",
+      "sha256": "2ca1dc8e0877e5cd94c6b010eaa5673cbd7e4780cfbc2aac412c7680f55f81e5",
+      "matchesOriginalCommit": true
+    },
+    {
+      "file": "public/icons/icon-96x96.png",
+      "sha256": "2204920e47cef65adc55f537b7cda88da0e849c4ab0eb82c5ef2f02641267051",
+      "matchesOriginalCommit": true
+    }
+  ],
+  "favicon": {
+    "file": "src/app/favicon.ico",
+    "sha256": "dcde1735974ac973324140c4111b231d11fa62b04f5051ce9a808c6e460ae27a",
+    "frames": [
+      {
+        "size": 72,
+        "source": "public/icons/icon-72x72.png",
+        "bytes": 2861
+      },
+      {
+        "size": 96,
+        "source": "public/icons/icon-96x96.png",
+        "bytes": 3947
+      },
+      {
+        "size": 128,
+        "source": "public/icons/icon-128x128.png",
+        "bytes": 5354
+      },
+      {
+        "size": 144,
+        "source": "public/icons/icon-144x144.png",
+        "bytes": 6023
+      },
+      {
+        "size": 152,
+        "source": "public/icons/icon-152x152.png",
+        "bytes": 6467
+      },
+      {
+        "size": 192,
+        "source": "public/icons/icon-192x192.png",
+        "bytes": 8371
+      }
+    ],
+    "basis": "ICO container of six existing project PNGs; frame payloads unchanged"
+  },
+  "fonts": {
+    "fonts": [
+      {
+        "file": "src/app/fonts/GeistVF.woff",
+        "sha256": "296fafafd41304f7c992079054b8af914dbbd865f32de97c66d0f613b55755d6",
+        "names": [
+          {
+            "nameId": 1,
+            "value": "Geist"
+          },
+          {
+            "nameId": 5,
+            "value": "Version 1.200;Glyphs 3.2 (3249)"
+          },
+          {
+            "nameId": 6,
+            "value": "Geist-Regular"
+          }
+        ],
+        "matchesIntroducingCommit": true
+      },
+      {
+        "file": "src/app/fonts/GeistMonoVF.woff",
+        "sha256": "e8b65928f551b17e3d67c3f709721b952c39842d14b00701f9232057fde73608",
+        "names": [
+          {
+            "nameId": 1,
+            "value": "Geist Mono"
+          },
+          {
+            "nameId": 5,
+            "value": "Version 1.200;Glyphs 3.2 (3249)"
+          },
+          {
+            "nameId": 6,
+            "value": "GeistMono-Regular"
+          }
+        ],
+        "matchesIntroducingCommit": true
+      }
+    ],
+    "noticeSha256": "930853ee1daa68554d9e35c8a9175affb74f699fad9a5da6ee5ebe76379d9137",
+    "upstreamNoticeBytesMatch": true
+  },
+  "generator": {
+    "file": "scripts/generate-pwa-icons.ts",
+    "sha256": "7ab5373110baf9ff3d6e888766995978cf875ac38322dac437b48f6e5e3177d8",
+    "reproduction": "Current local rendering is not pixel-identical to the retained PNGs; rendering depends on fonts and rasterizer. Historical file equality and maintainer rights confirmation are recorded separately."
+  },
+  "heroicons": {
+    "inventory": "publication/heroicons.json",
+    "scope": "Confirmed inline Heroicons SVG matches; separate upstream MIT copyright and permission notices accompany source and hosted copies.",
+    "versions": [
+      {
+        "version": "v1.0.6",
+        "file": "public/notices/heroicons-v1-MIT.txt",
+        "upstream": "https://github.com/tailwindlabs/heroicons/blob/v1.0.6/LICENSE",
+        "upstreamGitBlobSha": "64c0816664e700d5b552261937493f6e93c2a411",
+        "licenseSha256": "75523ddd65d9620bea09f84e89d0c373b4205a3708b8a1e9f9598a5438a3e641",
+        "matchedFiles": 63,
+        "matchedPaths": 238
+      },
+      {
+        "version": "v2.2.0",
+        "file": "public/notices/heroicons-v2-MIT.txt",
+        "upstream": "https://github.com/tailwindlabs/heroicons/blob/v2.2.0/LICENSE",
+        "upstreamGitBlobSha": "d6a82290738a9f78946cbcb4594535d6984086dd",
+        "licenseSha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985",
+        "matchedFiles": 2,
+        "matchedPaths": 2
+      }
+    ],
+    "inventorySha256": "a1aa3091f63fab56af4f10789ff0539167798da977c536f7e225f4e2b67a2454",
+    "inventoryReviewedOn": "2026-11-19"
+  }
+}

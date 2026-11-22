@@ -1,0 +1,102 @@
+{
+  "name": "bakit-kita-iboboto",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "npm@11.21.2",
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "version": "11.21.2",
+      "onFail": "error"
+    }
+  },
+  "license": "MIT",
+  "description": "Political transparency web application for Filipino voters",
+  "scripts": {
+    "dev": "next dev",
+    "dev:start:windows": "powershell -ExecutionPolicy Bypass -File scripts/start-dev.ps1",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src --max-warnings 0",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "docs:check": "prettier --check README.md CONTRIBUTING.md SECURITY.md THIRD_PARTY_NOTICES.md DATA-MIGRATION-GUIDE.md \"docs/**/*.md\" \"scripts/README*.md\" scripts/maintenance/README.md",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:jest": "jest",
+    "clean": "node scripts/clean.mjs",
+    "check": "npm run lint && npm run type-check && npm test",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio",
+    "es:setup": "tsx -r dotenv/config scripts/setup-elasticsearch.ts",
+    "scrape:politicians": "tsx -r dotenv/config scripts/import-politicians.ts",
+    "politicians:update": "tsx -r dotenv/config scripts/update-politician-data.ts",
+    "politicians:families": "tsx -r dotenv/config scripts/update-family-relationships.ts",
+    "senate:import": "tsx -r dotenv/config scripts/import-senate-history.ts",
+    "data:import": "tsx -r dotenv/config scripts/import-reviewed-batch.ts",
+    "data:verify": "tsx scripts/verify-populated-batch.ts"
+  },
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.17.0",
+    "@prisma/client": "7.10.1",
+    "@types/node-fetch": "^2.6.13",
+    "cheerio": "^1.2.0",
+    "ioredis": "^5.9.3",
+    "next": "^16.4.6",
+    "next-intl": "^4.15.1",
+    "next-themes": "^0.4.6",
+    "node-fetch": "^2.7.0",
+    "playwright": "^1.58.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-markdown": "^10.1.0",
+    "@prisma/adapter-pg": "7.10.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.3",
+    "@next/eslint-plugin-next": "^16.4.6",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/ioredis": "^4.28.10",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.2.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitest/coverage-v8": "^4.1.12",
+    "dotenv": "^17.3.1",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.4.6",
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "jest": "^30.4.2",
+    "jest-environment-node": "^30.2.0",
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "prisma": "7.10.1",
+    "puppeteer": "25.17.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "tailwindcss": "^4.1.18",
+    "ts-jest": "^29.4.6",
+    "tsx": "^4.23.15",
+    "typescript": "^5",
+    "typescript-eslint": "^8.56.0",
+    "vitest": "^4.1.12",
+    "vite": "^7.3.8"
+  },
+  "overrides": {
+    "glob@>=9.0.0 <14.0.2": "14.0.6",
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "11.0.8"
+    },
+    "@prisma/config@7.10.1": {
+      "effect": "3.22.1"
+    }
+  }
+}

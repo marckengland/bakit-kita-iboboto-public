@@ -1,0 +1,10 @@
+{
+  "approvedFor": "integration into a separate populated release copy",
+  "approvalRecordedOn": "2026-11-19",
+  "approvedBy": "project maintainer",
+  "approvedArchiveSha256": "b8fbb6053bce3aa2a284d612fab490b85663abc52bb4fdfb7fda549075dc1faa",
+  "structuredFactsLicense": "CC0-1.0",
+  "importToExistingDatabaseAuthorized": false,
+  "publicationAuthorized": false,
+  "note": "The eight reviewed files are preserved unchanged, including their earlier proposal labels. This record documents the subsequent approval to integrate them."
+}

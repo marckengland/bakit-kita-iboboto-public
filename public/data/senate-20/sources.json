@@ -1,0 +1,962 @@
+{
+  "retrievedOn": "2026-11-18",
+  "relationships": "The source publisher, the underlying document, and the retrieval method are separate concepts. The Senate index and a Senate PDF are separate records from one institution. BetterGov uses those original sources. A mirror or search-engine rendering does not create another independent source.",
+  "sources": [
+    {
+      "id": "senate-opening-roster-20",
+      "url": "https://legacy.senate.gov.ph/photo_release/2025/0728_13.asp",
+      "publisher": "Senate of the Philippines",
+      "documentType": "dated_roster_photo_caption",
+      "documentDate": "2025-07-28",
+      "retrievedOn": "2026-11-18",
+      "method": "Search-indexed text of the official Senate photo release; direct legacy retrieval returned HTTP 403.",
+      "locator": "Caption identifying the senators at the opening of the 20th Congress.",
+      "supports": ["publicly_used_names", "membership_observed_2025-07-28"],
+      "relationship": "One dated institutional roster. BetterGov membership and selected bill records corroborate identities and Congress, not a second independent observation of attendance on this date."
+    },
+    {
+      "id": "sbn-1-filed",
+      "url": "https://senate.gov.ph/legacy/lis_bills/4647542480%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "HTTPS retrieval of PDF bytes in memory; text extraction with Poppler",
+      "locator": "Opening identification block: Congress, bill number and introducer; measure heading immediately below",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document.",
+      "sha256": "8f640524a26e5ea2cdb7cbb4fe8bfcb15d37eae2c92b8f3f3011d3bdc6a51318"
+    },
+    {
+      "id": "sbn-1-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Indexed text of the Senate's own legislative record; direct legacy host returned HTTP 403 when retried",
+      "locator": "20th Congress > Senate Bill No. 1 > title and “Filed on … by” fields",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-6-filed",
+      "url": "https://senate.gov.ph/legacy/lis_bills/4648042483%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "HTTPS retrieval of PDF bytes in memory; text extraction with Poppler",
+      "locator": "Opening identification block: Congress, bill number and introducer; measure heading immediately below",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document.",
+      "sha256": "4c8195e88ded27fefcc0139818ecec9a46ae7d6f015e2944ff3353bcb536d03d"
+    },
+    {
+      "id": "sbn-6-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-6",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Web retrieval of indexed Senate HTML with the bill overview fields visible",
+      "locator": "20th Congress > Senate Bill No. 6 > title and “Filed on … by” fields",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-11-filed",
+      "url": "https://web.senate.gov.ph/lisdata/4648542939%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "indexed official PDF, cover and bill text §§1–4",
+      "locator": "cover/header, Introduced by line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-11-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-11",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "official Senate legacy LIS indexed search result and row/header",
+      "locator": "Overview, header and Filed on line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-12-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4648642489%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "indexed official PDF, cover and bill text §§1–3",
+      "locator": "cover/header, Introduced by line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-12-index",
+      "url": "https://legacy.senate.gov.ph/lis/leg_sys.aspx?congress=20&p=4&senator=PROBI&type=bill",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "official Senate legacy LIS indexed search result and row/header",
+      "locator": "Bills (20th Congress), SBN-12 row and Filed on line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-21-filed",
+      "url": "https://senate.gov.ph/legacy/lis_bills/4649542498%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "HTTPS retrieval of PDF bytes in memory; text extraction with Poppler",
+      "locator": "Opening identification block: Congress, bill number and introducer; measure heading immediately below",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document.",
+      "sha256": "9e653fce89c2510dc219689cfe980db53bbe3ae6f3006d0f74f8d78f6c1697cd"
+    },
+    {
+      "id": "sbn-21-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-21",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Indexed text of the Senate's own legislative record; direct legacy host returned HTTP 403 when retried",
+      "locator": "20th Congress > Senate Bill No. 21 > title and “Filed on … by” fields",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-22-filed",
+      "url": "https://senate.gov.ph/legacy/lis_bills/4649642499%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "HTTPS retrieval of PDF bytes in memory; text extraction with Poppler",
+      "locator": "Opening identification block: Congress, bill number and introducer; measure heading immediately below",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document.",
+      "sha256": "1f72e50749b0a78d6d28bf8b717f745f3b529a2085fce1d236673933d84b9380"
+    },
+    {
+      "id": "sbn-22-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-22",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Web retrieval of indexed Senate HTML with the bill overview fields visible",
+      "locator": "20th Congress > Senate Bill No. 22 > title and “Filed on … by” fields",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-31-filed",
+      "url": "https://web.senate.gov.ph/lisdata/4650542509%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "indexed official PDF text, bill header and §1",
+      "locator": "cover/header, Introduced by line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-31-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-31",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "official Senate legacy LIS indexed search result and row/header",
+      "locator": "Overview, header and Filed on line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-32-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4650642510%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "indexed official PDF, cover and bill text §§1–2",
+      "locator": "cover/header, Introduced by line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-32-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-32",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "official Senate legacy LIS parsed html",
+      "locator": "Overview, header and Filed on line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-41-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4651542519%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "Web index text of official as-filed PDF",
+      "locator": "First-page Congress, bill number, introducer and long title, and bill proper short title or explanatory note.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-41-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-41",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Indexed text of official LIS overview",
+      "locator": "20th Congress heading, bill number and title, and Filed on line in Overview.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-42-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4651642520%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "Web index text of official as-filed PDF",
+      "locator": "First-page Congress, bill number, introducer and long title, and bill proper short title or explanatory note.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-42-index",
+      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-42",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Official LIS overview via web tool",
+      "locator": "20th Congress heading, bill number and title, and Filed on line in Overview.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-51-filed",
+      "url": "https://senate.gov.ph/legacy/lis_bills/4652542529%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "HTTPS retrieval of PDF bytes in memory; text extraction with Poppler",
+      "locator": "Opening identification block: Congress, bill number and introducer; measure heading immediately below",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document.",
+      "sha256": "46cfd7aa927e2f37c2493d3f63cf934c7f894c5e7b548b3b597aa0c77688ddc7"
+    },
+    {
+      "id": "sbn-51-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-51",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Indexed text of the Senate's own legislative record; direct legacy host returned HTTP 403 when retried",
+      "locator": "20th Congress > Senate Bill No. 51 > title and “Filed on … by” fields",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-52-filed",
+      "url": "https://senate.gov.ph/legacy/lis_bills/4652642530%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "HTTPS retrieval of PDF bytes in memory; text extraction with Poppler",
+      "locator": "Opening identification block: Congress, bill number and introducer; measure heading immediately below",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document.",
+      "sha256": "f2b7fd4eb7477d1de3b2d66c17d7c5406af0b2dd28e17d4d07a00fb0c7952a4b"
+    },
+    {
+      "id": "sbn-52-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-52",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Web retrieval of indexed Senate HTML with the bill overview fields visible",
+      "locator": "20th Congress > Senate Bill No. 52 > title and “Filed on … by” fields",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-61-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4653542754!.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "indexed official PDF, scan pp. 1–2",
+      "locator": "cover/header, Introduced by line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-61-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-61",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "official Senate legacy LIS indexed search result and row/header",
+      "locator": "Overview, header and Filed on line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-62-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4653642755!.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "indexed official PDF, scan pp. 1–2",
+      "locator": "cover/header, Introduced by line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-62-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-62",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "official Senate legacy LIS indexed search result and row/header",
+      "locator": "Overview, header and Filed on line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-71-filed",
+      "url": "https://senate.gov.ph/legacy/lis_bills/4654542549%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "HTTPS retrieval of PDF bytes in memory; text extraction with Poppler",
+      "locator": "Opening identification block: Congress, bill number and introducer; measure heading immediately below",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document.",
+      "sha256": "76e90d140671323cae1dbeba6db53d88e6672db42fbebcaac4156e177384f90f"
+    },
+    {
+      "id": "sbn-71-index",
+      "url": "https://legacy.senate.gov.ph/lis/leg_sys.aspx?congress=20&p=84&type=bill",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Indexed text of the Senate's own legislative record; direct legacy host returned HTTP 403 when retried",
+      "locator": "Senate list, Congress 20, row SBN-71; short title, then “Filed on” in that row",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-72-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4654642550%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "Indexed PDF text of official as-filed Senate document, no local PDF bytes",
+      "locator": "Opening identification block: Congress, bill number and introducer; measure heading immediately below",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-72-index",
+      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-72",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Web retrieval of indexed Senate HTML with the bill overview fields visible",
+      "locator": "20th Congress > Senate Bill No. 72 > title and “Filed on … by” fields",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-81-filed",
+      "url": "https://web.senate.gov.ph/lisdata/4655542559%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "Web index text of official as-filed PDF",
+      "locator": "First-page Congress, bill number, introducer and long title, and bill proper short title or explanatory note.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-81-index",
+      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-81",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Official LIS overview via web tool",
+      "locator": "20th Congress heading, bill number and title, and Filed on line in Overview.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-82-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4655642560%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "Web index text of official as-filed PDF",
+      "locator": "First-page Congress, bill number, introducer and long title, and bill proper short title or explanatory note.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-82-index",
+      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-82",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Official LIS overview via web tool",
+      "locator": "20th Congress heading, bill number and title, and Filed on line in Overview.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-82-additional-index",
+      "url": "https://legacy.senate.gov.ph/lis/leg_sys.aspx?congress=20&p=5&senator=TRAFF&type=bill",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Search-indexed official Senate bill listing",
+      "locator": "SBN-82 listing",
+      "relationship": "Same publisher, later-indexed LIS listing. Lists Raffy T. Tulfo and Joel Villanueva."
+    },
+    {
+      "id": "sbn-91-filed",
+      "url": "https://web.senate.gov.ph/lisdata/4656542569%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "Web index text of official as-filed PDF",
+      "locator": "First-page Congress, bill number, introducer and long title, and bill proper short title or explanatory note.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-91-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-91",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Official LIS overview via web tool",
+      "locator": "20th Congress heading, bill number and title, and Filed on line in Overview.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-92-filed",
+      "url": "https://web.senate.gov.ph/lisdata/4656642570%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "Web index text of official as-filed PDF",
+      "locator": "First-page Congress, bill number, introducer and long title, and bill proper short title or explanatory note.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-92-index",
+      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-92",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Official LIS overview via web tool",
+      "locator": "20th Congress heading, bill number and title, and Filed on line in Overview.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-101-filed",
+      "url": "https://senate.gov.ph/legacy/lis_bills/4657542579%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "HTTPS retrieval of PDF bytes in memory; text extraction with Poppler",
+      "locator": "Opening identification block: Congress, bill number and introducer; measure heading immediately below",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document.",
+      "sha256": "11066f68442f92ccff6637aea8346d8861c2fe49da3a753187761f472d531a46"
+    },
+    {
+      "id": "sbn-101-index",
+      "url": "https://legacy.senate.gov.ph/lis/leg_sys.aspx?congress=20&p=83&type=bill",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Indexed text of the Senate's own legislative record; direct legacy host returned HTTP 403 when retried",
+      "locator": "Senate list, Congress 20, row SBN-101; short title, then “Filed on” in that row",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-111-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4658842592%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "indexed official PDF, cover and bill text §§1–4",
+      "locator": "cover/header, Introduced by line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-111-index",
+      "url": "https://legacy.senate.gov.ph/lis/leg_sys.aspx?congress=20&p=83&type=bill",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "official Senate legacy LIS indexed search result and row/header",
+      "locator": "Bills (20th Congress), SBN-111 row and Filed on line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-112-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4658942593%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "indexed official PDF, bill header and §§1–2",
+      "locator": "cover/header, Introduced by line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-112-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-112",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "official Senate legacy LIS parsed html",
+      "locator": "Overview, header and Filed on line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-122-filed",
+      "url": "https://senate.gov.ph/legacy/lis_bills/4659942603%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "HTTPS retrieval of PDF bytes in memory; text extraction with Poppler",
+      "locator": "Opening identification block: Congress, bill number and introducer; measure heading immediately below",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document.",
+      "sha256": "7a2bb9e5d60ee4cf3f309f0aec4a74f3ede6cbe467f8b715bdda76fba48950ea"
+    },
+    {
+      "id": "sbn-122-index",
+      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-122",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Web retrieval of indexed Senate HTML with the bill overview fields visible",
+      "locator": "20th Congress > Senate Bill No. 122 > title and “Filed on … by” fields",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-123-filed",
+      "url": "https://senate.gov.ph/legacy/lis_bills/4660042604%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "HTTPS retrieval of PDF bytes in memory; text extraction with Poppler",
+      "locator": "Opening identification block: Congress, bill number and introducer; measure heading immediately below",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document.",
+      "sha256": "c12435ae35116880e468dd06294cf5c2d5a9a9ba3b5ad773ca9710d47806b9af"
+    },
+    {
+      "id": "sbn-123-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-123",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Indexed text of the Senate's own legislative record; direct legacy host returned HTTP 403 when retried",
+      "locator": "20th Congress > Senate Bill No. 123 > title and “Filed on … by” fields",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-131-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4660842612!.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "indexed official PDF, scan pp. 1–2 and §1 title",
+      "locator": "cover/header, Introduced by line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-131-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-131",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "official Senate legacy LIS parsed html",
+      "locator": "Overview, header and Filed on line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-132-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4660942613%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "indexed official PDF, cover and bill text §1",
+      "locator": "cover/header, Introduced by line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-132-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-132",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "official Senate legacy LIS parsed html",
+      "locator": "Overview, header and Filed on line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-142-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4661942623%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "Indexed official filed PDF text, including alternate rendering of the repeated header",
+      "locator": "Filed document cover, bill proper, and repeated header with July 7 received stamp",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document.",
+      "alternateAccessUrls": ["https://web.senate.gov.ph/lisdata/4661942623%21.pdf"]
+    },
+    {
+      "id": "sbn-142-index",
+      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-142",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Official LIS overview via web tool",
+      "locator": "20th Congress heading, bill number and title, and Filed on line in Overview.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-142-current-entry",
+      "url": "https://senate.gov.ph/legislative-documents/bills/595179",
+      "publisher": "Senate of the Philippines",
+      "documentType": "migrated_legislative_record",
+      "retrievedOn": "2026-11-18",
+      "method": "Current Senate page observations recorded in the independent review; fetched HTML is a client-rendered shell",
+      "locator": "Header and Documents panel",
+      "relationship": "Same-publisher migration of the record confirms bill number, title, author and header filing date. Documents panel separately displays July 14."
+    },
+    {
+      "id": "sbn-151-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4662842632%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "Web index text of official as-filed PDF",
+      "locator": "First-page Congress, bill number, introducer and long title, and bill proper short title or explanatory note.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-151-index",
+      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-151",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Official LIS overview via web tool",
+      "locator": "20th Congress heading, bill number and title, and Filed on line in Overview.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-152-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4662942633%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "Web index text of official as-filed PDF",
+      "locator": "First-page Congress, bill number, introducer and long title, and bill proper short title or explanatory note.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-152-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-152",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Indexed text of official LIS overview",
+      "locator": "20th Congress heading, bill number and title, and Filed on line in Overview.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-159-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4663642640!.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "indexed official PDF, scan pp. 1–2",
+      "locator": "cover/header, Introduced by line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-159-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-159",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "official Senate legacy LIS parsed html",
+      "locator": "Overview, header and Filed on line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-160-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4663742641%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "indexed official PDF, cover and bill text §1",
+      "locator": "cover/header, Introduced by line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-160-index",
+      "url": "https://legacy.senate.gov.ph/lis/leg_sys.aspx?congress=20&p=81&type=bill",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "official Senate legacy LIS indexed search result and row/header",
+      "locator": "Bills (20th Congress), SBN-160 row and Filed on line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-169-filed",
+      "url": "https://senate.gov.ph/legacy/lis_bills/4664642651%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "direct official PDF download, scan pp. 1–2 (Poppler extract)",
+      "locator": "cover/header, Introduced by line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-169-index",
+      "url": "https://legacy.senate.gov.ph/lis/leg_sys.aspx?congress=20&p=81&type=bill",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "official Senate legacy LIS indexed search result and row/header",
+      "locator": "Bills (20th Congress), SBN-169 row and Filed on line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-170-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4664743832%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "indexed official PDF, cover and bill text §§1–3",
+      "locator": "cover/header, Introduced by line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-170-index",
+      "url": "https://legacy.senate.gov.ph/lis/leg_sys.aspx?congress=20&p=81&type=bill",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "official Senate legacy LIS indexed search result and row/header",
+      "locator": "Bills (20th Congress), SBN-170 row and Filed on line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-180-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4665742662%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "Web index text of official as-filed PDF",
+      "locator": "First-page Congress, bill number, introducer and long title, and bill proper short title or explanatory note.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-180-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-180",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Indexed text of official LIS overview",
+      "locator": "20th Congress heading, bill number and title, and Filed on line in Overview.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-189-filed",
+      "url": "https://legacy.senate.gov.ph/lisdata/4666642671%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "Web index text of official as-filed PDF",
+      "locator": "First-page Congress, bill number, introducer and long title, and bill proper short title or explanatory note.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-189-index",
+      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-189",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Official LIS overview via web tool",
+      "locator": "20th Congress heading, bill number and title, and Filed on line in Overview.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-190-filed",
+      "url": "https://web.senate.gov.ph/lisdata/4666742672%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "Web index text of official as-filed PDF",
+      "locator": "First-page Congress, bill number, introducer and long title, and bill proper short title or explanatory note.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-190-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-190",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Official LIS overview via web tool",
+      "locator": "20th Congress heading, bill number and title, and Filed on line in Overview.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-199-filed",
+      "url": "https://senate.gov.ph/legacy/lis_bills/4667642681%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "HTTPS retrieval of PDF bytes in memory; text extraction with Poppler",
+      "locator": "Opening identification block: Congress, bill number and introducer; measure heading immediately below",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document.",
+      "sha256": "d22605705ff44c9ff5fab42a45d400477e8ff6bc5f39fa6b24aca0dc15416362"
+    },
+    {
+      "id": "sbn-199-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-199",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Indexed text of the Senate's own legislative record; direct legacy host returned HTTP 403 when retried",
+      "locator": "20th Congress > Senate Bill No. 199 > title and “Filed on … by” fields",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-200-filed",
+      "url": "https://senate.gov.ph/legacy/lis_bills/4667742682%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "Indexed PDF text of official as-filed Senate document, no local PDF bytes",
+      "locator": "Opening identification block: Congress, bill number and introducer; measure heading immediately below",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-200-index",
+      "url": "https://legacy.senate.gov.ph/Lis/bill_res.aspx?congress=20&q=SBN-200",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Indexed text of the Senate's own legislative record; direct legacy host returned HTTP 403 when retried",
+      "locator": "20th Congress > Senate Bill No. 200 > title and “Filed on … by” fields",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-209-filed",
+      "url": "https://web.senate.gov.ph/lisdata/4668642691!.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "indexed official PDF, scan pp. 1–2",
+      "locator": "cover/header, Introduced by line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-209-index",
+      "url": "https://legacy.senate.gov.ph/lis/leg_sys.aspx?congress=20&p=79&type=bill",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "official Senate legacy LIS indexed search result and row/header",
+      "locator": "Bills (20th Congress), SBN-209 row and Filed on line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-210-filed",
+      "url": "https://web.senate.gov.ph/lisdata/4668742692%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "indexed official PDF, cover, explanatory note, and §1 title",
+      "locator": "cover/header, Introduced by line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-210-index",
+      "url": "https://legacy.senate.gov.ph/lis/leg_sys.aspx?congress=20&p=79&type=bill",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "official Senate legacy LIS indexed search result and row/header",
+      "locator": "Bills (20th Congress), SBN-210 row and Filed on line",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-219-filed",
+      "url": "https://web.senate.gov.ph/lisdata/4669642701%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "Web index text of official as-filed PDF",
+      "locator": "First-page Congress, bill number, introducer and long title, and bill proper short title or explanatory note.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-219-index",
+      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-219",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Official LIS overview via web tool",
+      "locator": "20th Congress heading, bill number and title, and Filed on line in Overview.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "pangilinan-first-ten-announcement",
+      "url": "https://kikopangilinan.com/pangilinan-files-first-10-measures-to-end-hunger-boost-food-security-and-uplift-agri-sector/",
+      "publisher": "Francis Pangilinan website",
+      "documentType": "office_announcement",
+      "documentDate": "2025-07-03",
+      "retrievedOn": "2026-11-18",
+      "method": "Independent review of the dated office release",
+      "locator": "Opening date and filing statement; selected-measure list items 1 and 2",
+      "relationship": "Office statement cross-referenced by person, date, Congress context and measure titles with Senate records. This is not a second Senate receipt stamp."
+    },
+    {
+      "id": "sbn-220-filed",
+      "url": "https://web.senate.gov.ph/lisdata/4669742702%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "Web index text of official as-filed PDF",
+      "locator": "First-page Congress, bill number, introducer and long title, and bill proper short title or explanatory note.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-220-index",
+      "url": "https://legacy.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-220",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Official LIS overview via web tool",
+      "locator": "20th Congress heading, bill number and title, and Filed on line in Overview.",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-228-filed",
+      "url": "https://chizescudero.com/wp-content/uploads/2025/10/SB-228-NTA-and-Local-Revenue-Utilization.pdf",
+      "publisher": "Copy hosted at chizescudero.com",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "HTTPS retrieval of PDF bytes in memory; text extraction with Poppler",
+      "locator": "Opening identification block: Congress, bill number and introducer; measure heading immediately below",
+      "relationship": "Copy carrying Senate receiving marks, cross-checked against the Senate catalog. Byte equality with the Senate-hosted file is unverified.",
+      "sha256": "5e5e69ad7f29400b9024accbe8f2f7e3b27e4cec9e0ca3539d7455f30005796e"
+    },
+    {
+      "id": "sbn-228-index",
+      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-228",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Web retrieval of indexed Senate HTML with the bill overview fields visible",
+      "locator": "20th Congress > Senate Bill No. 228 > title and “Filed on … by” fields",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-229-filed",
+      "url": "https://web.senate.gov.ph/lisdata/4670642711%21.pdf",
+      "publisher": "Senate of the Philippines",
+      "documentType": "as_filed_bill",
+      "retrievedOn": "2026-11-18",
+      "method": "Indexed PDF text of official as-filed Senate document, no local PDF bytes",
+      "locator": "Opening identification block: Congress, bill number and introducer; measure heading immediately below",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    },
+    {
+      "id": "sbn-229-index",
+      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-229",
+      "publisher": "Senate of the Philippines",
+      "documentType": "legislative_index",
+      "retrievedOn": "2026-11-18",
+      "method": "Web retrieval of indexed Senate HTML with the bill overview fields visible",
+      "locator": "20th Congress > Senate Bill No. 229 > title and “Filed on … by” fields",
+      "relationship": "The filed document and index are separate records from the Senate. A PDF mirror is the same underlying document."
+    }
+  ]
+}

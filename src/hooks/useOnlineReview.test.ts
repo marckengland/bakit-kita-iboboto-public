@@ -1,0 +1,20 @@
+import { expect, it, vi } from "vitest";
+import { createReviewConnectionStore } from "./useOnlineReview";
+it("holds a previously checked view after disconnect until a fresh page check", () => {
+  const events = new EventTarget();
+  const navigator = { onLine: true };
+  vi.stubGlobal("window", events);
+  vi.stubGlobal("navigator", navigator);
+  const store = createReviewConnectionStore();
+  const listener = vi.fn();
+  const stop = store.subscribe(listener);
+  expect(store.getSnapshot()).toBe(true);
+  navigator.onLine = false;
+  events.dispatchEvent(new Event("offline"));
+  expect(store.getSnapshot()).toBe(false);
+  navigator.onLine = true;
+  expect(store.getSnapshot()).toBe(false);
+  expect(listener).toHaveBeenCalledTimes(1);
+  stop();
+  vi.unstubAllGlobals();
+});

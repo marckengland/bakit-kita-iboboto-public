@@ -1,0 +1,1618 @@
+{
+  "reviewDate": "2026-11-19",
+  "method": "Exact inline SVG path matches against optimized icons in the upstream tags. Each location pins the local component bytes and path-value digest. The version tags identify comparison sources, not proof of the first copied release. Unmatched or modified paths are outside this exact-match inventory.",
+  "versions": [
+    {
+      "version": "v1.0.6",
+      "file": "public/notices/heroicons-v1-MIT.txt",
+      "upstream": "https://github.com/tailwindlabs/heroicons/blob/v1.0.6/LICENSE",
+      "upstreamGitBlobSha": "64c0816664e700d5b552261937493f6e93c2a411",
+      "licenseSha256": "75523ddd65d9620bea09f84e89d0c373b4205a3708b8a1e9f9598a5438a3e641",
+      "matchedFiles": 63,
+      "matchedPaths": 238,
+      "files": [
+        {
+          "file": "src/app/admin/audit-log/components/AuditLogViewer.tsx",
+          "sha256": "c0795e72f2308b4e7ab94eef5b02f9647c5be7962765ac8a47aaebb4de0f339c",
+          "matches": [
+            {
+              "line": 1099,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            },
+            {
+              "line": 1124,
+              "pathSha256": "bcfb8568a4ca9dc11db3fe3fa62eb61869d60ef66806e75d8aa06080951f6e3d",
+              "upstreamIcons": ["outline/document-text.svg"]
+            },
+            {
+              "line": 1137,
+              "pathSha256": "e278ec5334c15d7fa15bb380d832ef0d75cbd830bc20b0bd7377af787c5543f2",
+              "upstreamIcons": ["outline/shield-check.svg"]
+            },
+            {
+              "line": 1150,
+              "pathSha256": "7bad55def82ff7d77e8fa0026bd30a76f4434fc341b82fefe44e8972f4e3cd2f",
+              "upstreamIcons": ["outline/check-circle.svg"]
+            },
+            {
+              "line": 1163,
+              "pathSha256": "ef8a44f69e3b29d27db7672a7fb368fe669411dcec8b45633d34ed7845996a48",
+              "upstreamIcons": ["outline/x-circle.svg"]
+            },
+            {
+              "line": 1172,
+              "pathSha256": "3d3a345015ea3648d7879eb9d6b5329cf473213720fde20c1743013b14fd6c33",
+              "upstreamIcons": ["outline/plus.svg"]
+            },
+            {
+              "line": 1184,
+              "pathSha256": "da693aeb4e8e8f4aa133fea9aa026c24ba6426dd78a3156a214943c88cc49ee8",
+              "upstreamIcons": ["outline/pencil.svg"]
+            },
+            {
+              "line": 1197,
+              "pathSha256": "5a429f09a47396d31d8f270bebb55a01b7a7d9d7ca4371605ba2da64a4a823f0",
+              "upstreamIcons": ["outline/trash.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/admin/data-freshness/components/DataFreshnessDashboard.tsx",
+          "sha256": "23c1bb4dc54f6e789f16e24e1d46c5e0fa4262255fcf5f5f3a18b741a4483ac4",
+          "matches": [
+            {
+              "line": 826,
+              "pathSha256": "6623cc24770c3149f6dc7f04dd322bf1e7197b628f31c19eb1230b1d764a73a9",
+              "upstreamIcons": ["outline/refresh.svg"]
+            },
+            {
+              "line": 839,
+              "pathSha256": "ea9a6a934c384daf6b39e04ba6267d2d96ca97d6afe1c8181afcc4c46de5ebe7",
+              "upstreamIcons": ["outline/exclamation.svg"]
+            },
+            {
+              "line": 848,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            },
+            {
+              "line": 860,
+              "pathSha256": "6fad26a371a2d4b4172e5b7e92c1dbf76d1fc434eb9b9fc01507c79f6b020c57",
+              "upstreamIcons": ["outline/database.svg"]
+            },
+            {
+              "line": 873,
+              "pathSha256": "7bad55def82ff7d77e8fa0026bd30a76f4434fc341b82fefe44e8972f4e3cd2f",
+              "upstreamIcons": ["outline/check-circle.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/admin/data-review/components/DataReviewDashboard.tsx",
+          "sha256": "9cc15f5dcaf0724611a303c489dbe09247090056c079f3e3965accce2b7ceac9",
+          "matches": [
+            {
+              "line": 702,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            },
+            {
+              "line": 710,
+              "pathSha256": "2e530cd456544e2deb07434c3b8c9385238d85059eb571f8644aea45b550967c",
+              "upstreamIcons": ["outline/check.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/admin/feedback/components/FeedbackDashboard.tsx",
+          "sha256": "16b3ba96f5fbe7fc9f37016ef7de464fc213082e94862cc8fb2be2a7970eb740",
+          "matches": [
+            {
+              "line": 526,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            },
+            {
+              "line": 538,
+              "pathSha256": "bcfb8568a4ca9dc11db3fe3fa62eb61869d60ef66806e75d8aa06080951f6e3d",
+              "upstreamIcons": ["outline/document-text.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/admin/reports/components/ReportModerationDashboard.tsx",
+          "sha256": "67a84f05ad101b16623afe0de9f8407b8774486dadc6de54dd4a7f665a391ab7",
+          "matches": [
+            {
+              "line": 790,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            },
+            {
+              "line": 798,
+              "pathSha256": "2e530cd456544e2deb07434c3b8c9385238d85059eb571f8644aea45b550967c",
+              "upstreamIcons": ["outline/check.svg"]
+            },
+            {
+              "line": 823,
+              "pathSha256": "ed0df6a43054bf96d22a7d82801045cfef1d1d635da10dcb0b41f161948e622d",
+              "upstreamIcons": ["outline/user.svg"]
+            },
+            {
+              "line": 836,
+              "pathSha256": "35db02fba0e10b48b927a69a960457e05d6184040a6fc8b7fca2a80b1b77f9fd",
+              "upstreamIcons": ["outline/external-link.svg"]
+            },
+            {
+              "line": 849,
+              "pathSha256": "ea9a6a934c384daf6b39e04ba6267d2d96ca97d6afe1c8181afcc4c46de5ebe7",
+              "upstreamIcons": ["outline/exclamation.svg"]
+            },
+            {
+              "line": 862,
+              "pathSha256": "7bad55def82ff7d77e8fa0026bd30a76f4434fc341b82fefe44e8972f4e3cd2f",
+              "upstreamIcons": ["outline/check-circle.svg"]
+            },
+            {
+              "line": 875,
+              "pathSha256": "ef8a44f69e3b29d27db7672a7fb368fe669411dcec8b45633d34ed7845996a48",
+              "upstreamIcons": ["outline/x-circle.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/auth/components/LoginForm.tsx",
+          "sha256": "bb27187db4739575eb8fe83de173ebf2e9b56670796ab9bfdd89ae42eef12ab6",
+          "matches": [
+            {
+              "line": 399,
+              "pathSha256": "af0f5023afb940f575df50adfca16f62289ce7c6aa56e27114c661b6f57fdbd1",
+              "upstreamIcons": ["outline/chevron-right.svg"]
+            },
+            {
+              "line": 413,
+              "pathSha256": "646fde552734fecc370ad189efaf8d818915f97cede5147943396b64692fed5d",
+              "upstreamIcons": ["outline/chevron-left.svg"]
+            },
+            {
+              "line": 427,
+              "pathSha256": "2e530cd456544e2deb07434c3b8c9385238d85059eb571f8644aea45b550967c",
+              "upstreamIcons": ["outline/check.svg"]
+            },
+            {
+              "line": 441,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/auth/components/ProfileContent.tsx",
+          "sha256": "c4c054555e01d1c38b59d671062637db3be75f6b815e8e310311ef2b16a5e511",
+          "matches": [
+            {
+              "line": 658,
+              "pathSha256": "2e530cd456544e2deb07434c3b8c9385238d85059eb571f8644aea45b550967c",
+              "upstreamIcons": ["outline/check.svg"]
+            },
+            {
+              "line": 675,
+              "pathSha256": "ea9a6a934c384daf6b39e04ba6267d2d96ca97d6afe1c8181afcc4c46de5ebe7",
+              "upstreamIcons": ["outline/exclamation.svg"]
+            },
+            {
+              "line": 693,
+              "pathSha256": "268d2d282f69237a305f38bc5513c9fd67f9e7fccda7cd7c89c992f2de9a8a62",
+              "upstreamIcons": ["outline/logout.svg"]
+            },
+            {
+              "line": 711,
+              "pathSha256": "79ca0ade366ad4430649b3539776effbaae926f224bd32f7638aeb2d0e9b59ef",
+              "upstreamIcons": ["outline/bookmark.svg"]
+            },
+            {
+              "line": 729,
+              "pathSha256": "b01c88c7baa22697acce8d6c2b38678a8f4521bdbd7eee7005ccaa91d99b664d",
+              "upstreamIcons": ["outline/clipboard-check.svg"]
+            },
+            {
+              "line": 747,
+              "pathSha256": "b7c52e1ba1e22549d796715471b337861895e0d7e258d3d2ef2bc2838567d005",
+              "upstreamIcons": ["outline/bell.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/auth/login/page.tsx",
+          "sha256": "a3efa631b16f288f6c4222a0fca1f1fd43e722ce2c092f1a477b19f885331c30",
+          "matches": [
+            {
+              "line": 110,
+              "pathSha256": "817431ebc99cf009cd2c3927494beb29bb8aae54f93a70fabe4f86e85d223c87",
+              "upstreamIcons": ["outline/information-circle.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/bookmarks/components/BookmarksContent.tsx",
+          "sha256": "56bbca0acb7dcf1f0a5f13236da1ad6e91f70a41494e9b4b28782378d24eb9ed",
+          "matches": [
+            {
+              "line": 348,
+              "pathSha256": "79ca0ade366ad4430649b3539776effbaae926f224bd32f7638aeb2d0e9b59ef",
+              "upstreamIcons": ["outline/bookmark.svg"]
+            },
+            {
+              "line": 363,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/compare/components/ComparisonTool.tsx",
+          "sha256": "7be68705df2cc71b8ad4e9ea8614679bc250a8a8f96ce05e8a0b12797283cd8f",
+          "matches": [
+            {
+              "line": 325,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            },
+            {
+              "line": 391,
+              "pathSha256": "6279fbb059a5cb1e956706970aa00ecbdb4ec240784e5e86dadb4740b9a4d5ad",
+              "upstreamIcons": ["outline/download.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/compare/components/MobileComparisonView.tsx",
+          "sha256": "e7df73400f89412c28d596ae50281696c66bccfb762fb150533add2f1576be28",
+          "matches": [
+            {
+              "line": 461,
+              "pathSha256": "646fde552734fecc370ad189efaf8d818915f97cede5147943396b64692fed5d",
+              "upstreamIcons": ["outline/chevron-left.svg"]
+            },
+            {
+              "line": 475,
+              "pathSha256": "af0f5023afb940f575df50adfca16f62289ce7c6aa56e27114c661b6f57fdbd1",
+              "upstreamIcons": ["outline/chevron-right.svg"]
+            },
+            {
+              "line": 489,
+              "pathSha256": "ccb4cfdd343da6c613a4b2ac8daeed0d238567db2fdca02c89912345f35f0c5a",
+              "upstreamIcons": ["outline/chevron-down.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/compare/components/PoliticianSelector.tsx",
+          "sha256": "52be259f13f6398764a084ae2650fd963c19e3f7b113fcd670231fe65fc6eafe",
+          "matches": [
+            {
+              "line": 300,
+              "pathSha256": "8aef776469b7146b1e67fe470f0390b2f05cc52014da5f1a95ab102ac422cef6",
+              "upstreamIcons": ["outline/search.svg"]
+            },
+            {
+              "line": 315,
+              "pathSha256": "3d3a345015ea3648d7879eb9d6b5329cf473213720fde20c1743013b14fd6c33",
+              "upstreamIcons": ["outline/plus.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/components/AIChatbot.tsx",
+          "sha256": "315fbb7bf4883615ac44735e27c6695d4d2caed1546e158f1f15adce9a926970",
+          "matches": [
+            {
+              "line": 749,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            },
+            {
+              "line": 816,
+              "pathSha256": "bcfb8568a4ca9dc11db3fe3fa62eb61869d60ef66806e75d8aa06080951f6e3d",
+              "upstreamIcons": ["outline/document-text.svg"]
+            },
+            {
+              "line": 831,
+              "pathSha256": "ccb4cfdd343da6c613a4b2ac8daeed0d238567db2fdca02c89912345f35f0c5a",
+              "upstreamIcons": ["outline/chevron-down.svg"]
+            },
+            {
+              "line": 848,
+              "pathSha256": "2e52daa7215f27a3ef7f365a53608c83a875ad7e41e201215b49c2094d39aed9",
+              "upstreamIcons": ["outline/link.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/components/BookmarkButton.tsx",
+          "sha256": "3fd6cd2a871fef3c009df424908ea65afbfd910be61b7b241b34e8b1e86bb1d7",
+          "matches": [
+            {
+              "line": 207,
+              "pathSha256": "79ca0ade366ad4430649b3539776effbaae926f224bd32f7638aeb2d0e9b59ef",
+              "upstreamIcons": ["outline/bookmark.svg"]
+            },
+            {
+              "line": 222,
+              "pathSha256": "79ca0ade366ad4430649b3539776effbaae926f224bd32f7638aeb2d0e9b59ef",
+              "upstreamIcons": ["outline/bookmark.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/components/DownloadForOffline.tsx",
+          "sha256": "16ebda2be66f21616d8d2180e18c4b2726c3f551157f4e1f45a38f645fa76438",
+          "matches": [
+            {
+              "line": 132,
+              "pathSha256": "2e530cd456544e2deb07434c3b8c9385238d85059eb571f8644aea45b550967c",
+              "upstreamIcons": ["outline/check.svg"]
+            },
+            {
+              "line": 140,
+              "pathSha256": "6279fbb059a5cb1e956706970aa00ecbdb4ec240784e5e86dadb4740b9a4d5ad",
+              "upstreamIcons": ["outline/download.svg"]
+            },
+            {
+              "line": 183,
+              "pathSha256": "2e530cd456544e2deb07434c3b8c9385238d85059eb571f8644aea45b550967c",
+              "upstreamIcons": ["outline/check.svg"]
+            },
+            {
+              "line": 195,
+              "pathSha256": "6279fbb059a5cb1e956706970aa00ecbdb4ec240784e5e86dadb4740b9a4d5ad",
+              "upstreamIcons": ["outline/download.svg"]
+            },
+            {
+              "line": 243,
+              "pathSha256": "5a429f09a47396d31d8f270bebb55a01b7a7d9d7ca4371605ba2da64a4a823f0",
+              "upstreamIcons": ["outline/trash.svg"]
+            },
+            {
+              "line": 255,
+              "pathSha256": "6279fbb059a5cb1e956706970aa00ecbdb4ec240784e5e86dadb4740b9a4d5ad",
+              "upstreamIcons": ["outline/download.svg"]
+            },
+            {
+              "line": 319,
+              "pathSha256": "ea9a6a934c384daf6b39e04ba6267d2d96ca97d6afe1c8181afcc4c46de5ebe7",
+              "upstreamIcons": ["outline/exclamation.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/components/FeedbackButton.tsx",
+          "sha256": "3d8a1634b8950b16a6be3e9616d3e8afb2cac37c885c4a8c70c271529541ff5a",
+          "matches": [
+            {
+              "line": 553,
+              "pathSha256": "1415e102c7699878478a2593b0f938aa038cd9bdaaa844c445f2d0377be8e23e",
+              "upstreamIcons": ["outline/chat-alt.svg"]
+            },
+            {
+              "line": 562,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            },
+            {
+              "line": 570,
+              "pathSha256": "2e530cd456544e2deb07434c3b8c9385238d85059eb571f8644aea45b550967c",
+              "upstreamIcons": ["outline/check.svg"]
+            },
+            {
+              "line": 578,
+              "pathSha256": "3d3a345015ea3648d7879eb9d6b5329cf473213720fde20c1743013b14fd6c33",
+              "upstreamIcons": ["outline/plus.svg"]
+            },
+            {
+              "line": 590,
+              "pathSha256": "da293ea6f0174222a93eb2f8a91d528641a2b5127d9b7dbc1af6274c9599f640",
+              "upstreamIcons": ["outline/paper-airplane.svg"]
+            },
+            {
+              "line": 603,
+              "pathSha256": "5b53b78543c6bf506ce6bcdd52238421cbbc41d82355d934b55238c7a2e2e4f2",
+              "upstreamIcons": ["outline/paper-clip.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/components/LanguageSwitcher.tsx",
+          "sha256": "f708392960f3d058c5af9444ee1b4494c8a0afbaead817534c0068ee475490f1",
+          "matches": [
+            {
+              "line": 202,
+              "pathSha256": "ccb4cfdd343da6c613a4b2ac8daeed0d238567db2fdca02c89912345f35f0c5a",
+              "upstreamIcons": ["outline/chevron-down.svg"]
+            },
+            {
+              "line": 216,
+              "pathSha256": "2e530cd456544e2deb07434c3b8c9385238d85059eb571f8644aea45b550967c",
+              "upstreamIcons": ["outline/check.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/components/NotificationBell.tsx",
+          "sha256": "185bf03bbf4eee6f53242e03063d42f6fdb08e9cc04b549a5014c46d98d758f2",
+          "matches": [
+            {
+              "line": 304,
+              "pathSha256": "b7c52e1ba1e22549d796715471b337861895e0d7e258d3d2ef2bc2838567d005",
+              "upstreamIcons": ["outline/bell.svg"]
+            },
+            {
+              "line": 340,
+              "pathSha256": "ea9a6a934c384daf6b39e04ba6267d2d96ca97d6afe1c8181afcc4c46de5ebe7",
+              "upstreamIcons": ["outline/exclamation.svg"]
+            },
+            {
+              "line": 358,
+              "pathSha256": "bcfb8568a4ca9dc11db3fe3fa62eb61869d60ef66806e75d8aa06080951f6e3d",
+              "upstreamIcons": ["outline/document-text.svg"]
+            },
+            {
+              "line": 376,
+              "pathSha256": "7bad55def82ff7d77e8fa0026bd30a76f4434fc341b82fefe44e8972f4e3cd2f",
+              "upstreamIcons": ["outline/check-circle.svg"]
+            },
+            {
+              "line": 394,
+              "pathSha256": "a1a1c3351932631e4c663f822c13c632a2afdc4ff8f3dbe5da3deca61c2bd338",
+              "upstreamIcons": ["outline/flag.svg"]
+            },
+            {
+              "line": 412,
+              "pathSha256": "ae6699dfd875c32f049457297058b897a569710dc9b3f57c15c774ffb7ef8c57",
+              "upstreamIcons": ["outline/calendar.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/components/OfflineIndicator.tsx",
+          "sha256": "4518ad24eb9b21b6fe9cdd8b5b8d055ba456c1bb93820fb5ca99b49a2e8e9cb3",
+          "matches": [
+            {
+              "line": 76,
+              "pathSha256": "c5067cab269b840919c6f14ff26d480070b74508a477b3b07bc15c59ae72c02d",
+              "upstreamIcons": ["outline/status-offline.svg"]
+            },
+            {
+              "line": 123,
+              "pathSha256": "c31b79a753eb0593380c47175d6ef9bdc8b746bdf5a1d2d1fcb5a7e37892de7a",
+              "upstreamIcons": ["outline/wifi.svg"]
+            },
+            {
+              "line": 175,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            },
+            {
+              "line": 215,
+              "pathSha256": "c5067cab269b840919c6f14ff26d480070b74508a477b3b07bc15c59ae72c02d",
+              "upstreamIcons": ["outline/status-offline.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/components/SocialShareButtons.tsx",
+          "sha256": "1a3f458a6884155e4dcf08b64a43239f493f4a3fc60d51447685afbc06a357a9",
+          "matches": [
+            {
+              "line": 266,
+              "pathSha256": "ea9c568f23900aa556761603e99efe31aa971f15a1cf7eeb1c4dce2110db8de1",
+              "upstreamIcons": ["outline/duplicate.svg"]
+            },
+            {
+              "line": 281,
+              "pathSha256": "2e530cd456544e2deb07434c3b8c9385238d85059eb571f8644aea45b550967c",
+              "upstreamIcons": ["outline/check.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/components/TextToSpeech.tsx",
+          "sha256": "efad4f9b050d709ca327dc28d464b2a36ee3dbf8912054754e9aa807e7ad4142",
+          "matches": [
+            {
+              "line": 432,
+              "pathSha256": "f486c19ceaad6a1a543cbd8474719c95417b4b304b8c40dfbfa02186d4c95b97",
+              "upstreamIcons": ["outline/volume-up.svg"]
+            },
+            {
+              "line": 451,
+              "pathSha256": "ec1847835bf8dbc22658db9acb0ad642153afcd4ad53e27cfee10349bdcc5574",
+              "upstreamIcons": ["outline/cog.svg"]
+            },
+            {
+              "line": 453,
+              "pathSha256": "9b5183703f9ab8582ffea263238f386c559ece8c5a863e047421279b24464431",
+              "upstreamIcons": ["outline/cog.svg", "outline/eye.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/components/ThemeToggle.tsx",
+          "sha256": "d986343a79184bba80773c03bab3c96f6d85162f19767df5cc5f5d4458f4cb24",
+          "matches": [
+            {
+              "line": 57,
+              "pathSha256": "655e1d2f5f5cd0460b474067846e92d27a2dc9ad3a7bb4ccb30760b0ebf63d04",
+              "upstreamIcons": ["outline/sun.svg"]
+            },
+            {
+              "line": 75,
+              "pathSha256": "47e2bb431643204ff750ace4620a48999cb9820a397c2903df55b81104aff7e9",
+              "upstreamIcons": ["outline/moon.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/components/landing/ComparisonTeaser.tsx",
+          "sha256": "f528fea4a2743d7a349d8f2084f7e74e8bbc23e49bafb9974a03453369531029",
+          "matches": [
+            {
+              "line": 130,
+              "pathSha256": "fc27777667e60deaf226059cef47d928bca9888252212f5dd44d55e472894ca8",
+              "upstreamIcons": ["outline/arrow-sm-right.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/components/landing/HeroSearch.tsx",
+          "sha256": "6a281659a4d0617e231a4c3375d20d3e4485e2339d4d9964987f63dd2378e0b9",
+          "matches": [
+            {
+              "line": 169,
+              "pathSha256": "8aef776469b7146b1e67fe470f0390b2f05cc52014da5f1a95ab102ac422cef6",
+              "upstreamIcons": ["outline/search.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/downloads/page.tsx",
+          "sha256": "1494f13a4e6766397d87c152aded2ed0d4f8fe0edc7c2b156c26d49a8921c48b",
+          "matches": [
+            {
+              "line": 131,
+              "pathSha256": "6279fbb059a5cb1e956706970aa00ecbdb4ec240784e5e86dadb4740b9a4d5ad",
+              "upstreamIcons": ["outline/download.svg"]
+            },
+            {
+              "line": 246,
+              "pathSha256": "5a429f09a47396d31d8f270bebb55a01b7a7d9d7ca4371605ba2da64a4a823f0",
+              "upstreamIcons": ["outline/trash.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/learn/components/ElectionProcess.tsx",
+          "sha256": "310702c1ae3dabe7e357f018690c9ccfe27f3a500d458ece726b3309164ebbeb",
+          "matches": [
+            {
+              "line": 451,
+              "pathSha256": "2e530cd456544e2deb07434c3b8c9385238d85059eb571f8644aea45b550967c",
+              "upstreamIcons": ["outline/check.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/learn/components/GovernmentStructure.tsx",
+          "sha256": "01cdbccf67ab654abd57be404042bf18f5985b0b85116f208838823b9e88baf3",
+          "matches": [
+            {
+              "line": 518,
+              "pathSha256": "ccb4cfdd343da6c613a4b2ac8daeed0d238567db2fdca02c89912345f35f0c5a",
+              "upstreamIcons": ["outline/chevron-down.svg"]
+            },
+            {
+              "line": 532,
+              "pathSha256": "2e530cd456544e2deb07434c3b8c9385238d85059eb571f8644aea45b550967c",
+              "upstreamIcons": ["outline/check.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/learn/components/LegislativeProcess.tsx",
+          "sha256": "2d705ec8d62c566481f76d1976e9ec8c9a2b0f3ff5025493eea7955bf9c78b2f",
+          "matches": [
+            {
+              "line": 433,
+              "pathSha256": "fc27777667e60deaf226059cef47d928bca9888252212f5dd44d55e472894ca8",
+              "upstreamIcons": ["outline/arrow-sm-right.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/learn/components/PoliticalGlossary.tsx",
+          "sha256": "9546646e7abfa8446e3433ba06585a266fdfc25ba906d7c7eff867be740aa9bb",
+          "matches": [
+            {
+              "line": 558,
+              "pathSha256": "ccb4cfdd343da6c613a4b2ac8daeed0d238567db2fdca02c89912345f35f0c5a",
+              "upstreamIcons": ["outline/chevron-down.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/notifications/components/NotificationsContent.tsx",
+          "sha256": "601ae9227d1c69949a5e867ccecb0612160b1192518750ca1db572a8fbcbe4f6",
+          "matches": [
+            {
+              "line": 393,
+              "pathSha256": "b7c52e1ba1e22549d796715471b337861895e0d7e258d3d2ef2bc2838567d005",
+              "upstreamIcons": ["outline/bell.svg"]
+            },
+            {
+              "line": 429,
+              "pathSha256": "ea9a6a934c384daf6b39e04ba6267d2d96ca97d6afe1c8181afcc4c46de5ebe7",
+              "upstreamIcons": ["outline/exclamation.svg"]
+            },
+            {
+              "line": 447,
+              "pathSha256": "bcfb8568a4ca9dc11db3fe3fa62eb61869d60ef66806e75d8aa06080951f6e3d",
+              "upstreamIcons": ["outline/document-text.svg"]
+            },
+            {
+              "line": 465,
+              "pathSha256": "7bad55def82ff7d77e8fa0026bd30a76f4434fc341b82fefe44e8972f4e3cd2f",
+              "upstreamIcons": ["outline/check-circle.svg"]
+            },
+            {
+              "line": 483,
+              "pathSha256": "a1a1c3351932631e4c663f822c13c632a2afdc4ff8f3dbe5da3deca61c2bd338",
+              "upstreamIcons": ["outline/flag.svg"]
+            },
+            {
+              "line": 501,
+              "pathSha256": "ae6699dfd875c32f049457297058b897a569710dc9b3f57c15c774ffb7ef8c57",
+              "upstreamIcons": ["outline/calendar.svg"]
+            },
+            {
+              "line": 519,
+              "pathSha256": "ec1847835bf8dbc22658db9acb0ad642153afcd4ad53e27cfee10349bdcc5574",
+              "upstreamIcons": ["outline/cog.svg"]
+            },
+            {
+              "line": 521,
+              "pathSha256": "9b5183703f9ab8582ffea263238f386c559ece8c5a863e047421279b24464431",
+              "upstreamIcons": ["outline/cog.svg", "outline/eye.svg"]
+            },
+            {
+              "line": 538,
+              "pathSha256": "5a429f09a47396d31d8f270bebb55a01b7a7d9d7ca4371605ba2da64a4a823f0",
+              "upstreamIcons": ["outline/trash.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/notifications/settings/components/NotificationSettingsContent.tsx",
+          "sha256": "abd6f5973c8fa0447443bf6d3f15ab943caebd42a24de7c549736d7a427c984c",
+          "matches": [
+            {
+              "line": 449,
+              "pathSha256": "2e530cd456544e2deb07434c3b8c9385238d85059eb571f8644aea45b550967c",
+              "upstreamIcons": ["outline/check.svg"]
+            },
+            {
+              "line": 466,
+              "pathSha256": "ea9a6a934c384daf6b39e04ba6267d2d96ca97d6afe1c8181afcc4c46de5ebe7",
+              "upstreamIcons": ["outline/exclamation.svg"]
+            },
+            {
+              "line": 484,
+              "pathSha256": "ea9a6a934c384daf6b39e04ba6267d2d96ca97d6afe1c8181afcc4c46de5ebe7",
+              "upstreamIcons": ["outline/exclamation.svg"]
+            },
+            {
+              "line": 502,
+              "pathSha256": "bcfb8568a4ca9dc11db3fe3fa62eb61869d60ef66806e75d8aa06080951f6e3d",
+              "upstreamIcons": ["outline/document-text.svg"]
+            },
+            {
+              "line": 520,
+              "pathSha256": "7bad55def82ff7d77e8fa0026bd30a76f4434fc341b82fefe44e8972f4e3cd2f",
+              "upstreamIcons": ["outline/check-circle.svg"]
+            },
+            {
+              "line": 538,
+              "pathSha256": "a1a1c3351932631e4c663f822c13c632a2afdc4ff8f3dbe5da3deca61c2bd338",
+              "upstreamIcons": ["outline/flag.svg"]
+            },
+            {
+              "line": 556,
+              "pathSha256": "ae6699dfd875c32f049457297058b897a569710dc9b3f57c15c774ffb7ef8c57",
+              "upstreamIcons": ["outline/calendar.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/offline/page.tsx",
+          "sha256": "31eefd7706a254891e5756519548f4adb2a6ba6188a0e43992cb6d68484be12c",
+          "matches": [
+            {
+              "line": 58,
+              "pathSha256": "c5067cab269b840919c6f14ff26d480070b74508a477b3b07bc15c59ae72c02d",
+              "upstreamIcons": ["outline/status-offline.svg"]
+            },
+            {
+              "line": 140,
+              "pathSha256": "2e530cd456544e2deb07434c3b8c9385238d85059eb571f8644aea45b550967c",
+              "upstreamIcons": ["outline/check.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/AttendanceSection.tsx",
+          "sha256": "7d1584690cd3c6f38be9dac2bdd0b18fc93f1e15c159ba38cdf7cf7c04653255",
+          "matches": [
+            {
+              "line": 178,
+              "pathSha256": "ccb4cfdd343da6c613a4b2ac8daeed0d238567db2fdca02c89912345f35f0c5a",
+              "upstreamIcons": ["outline/chevron-down.svg"]
+            },
+            {
+              "line": 466,
+              "pathSha256": "03b42d2a04d477441f6f2bd99f07b6b14ccba1ef7679d42a6849c832b65a691d",
+              "upstreamIcons": ["solid/check.svg"]
+            },
+            {
+              "line": 479,
+              "pathSha256": "751d8f0bce7d257b85b8c824f8369324b286dc12f49229fa84a8ee2079244bfd",
+              "upstreamIcons": ["solid/exclamation-circle.svg"]
+            },
+            {
+              "line": 492,
+              "pathSha256": "6090dbac82eda3a7f9915da85ce53dd68ca9a3b4144daa4d1c97ac2cbb10221f",
+              "upstreamIcons": ["solid/x.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/BillDetailsModal.tsx",
+          "sha256": "d21bf5daf420b13affda82aa09ee432d37703c7d18bcd83304b1754d1b1c53cf",
+          "matches": [
+            {
+              "line": 93,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            },
+            {
+              "line": 262,
+              "pathSha256": "af2f78cf286e3c2452a45fc2b41d682da7e4604be2e2c87d2d51307308049c89",
+              "upstreamIcons": ["solid/information-circle.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/BillsSection.tsx",
+          "sha256": "1d5a949cf76371de44a70b8ef8d89701f686216cff3754a62757197dffb0b35b",
+          "matches": [
+            {
+              "line": 177,
+              "pathSha256": "bcfb8568a4ca9dc11db3fe3fa62eb61869d60ef66806e75d8aa06080951f6e3d",
+              "upstreamIcons": ["outline/document-text.svg"]
+            },
+            {
+              "line": 303,
+              "pathSha256": "b9ee33bbbf9dc67059c7d21253e70086440e40240c8ab38b88232570bc58c360",
+              "upstreamIcons": ["solid/chevron-up.svg"]
+            },
+            {
+              "line": 309,
+              "pathSha256": "4514cbbda12ae71c949cb351850d44d8e8390e2c0b566722c4a07321e3ae1156",
+              "upstreamIcons": ["solid/chevron-down.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/CampaignFinanceSection.tsx",
+          "sha256": "538d36b7eca5da8cc84662ff54c02267e4cc6fed0394e300e7640ac1bd15a3fe",
+          "matches": [
+            {
+              "line": 73,
+              "pathSha256": "3a91a391b33ee3c5f698d5d53ab944f8709bb324804818a2486f0b0049dc15b0",
+              "upstreamIcons": ["solid/cash.svg"]
+            },
+            {
+              "line": 98,
+              "pathSha256": "bcfb8568a4ca9dc11db3fe3fa62eb61869d60ef66806e75d8aa06080951f6e3d",
+              "upstreamIcons": ["outline/document-text.svg"]
+            },
+            {
+              "line": 125,
+              "pathSha256": "3a91a391b33ee3c5f698d5d53ab944f8709bb324804818a2486f0b0049dc15b0",
+              "upstreamIcons": ["solid/cash.svg"]
+            },
+            {
+              "line": 169,
+              "pathSha256": "d82f82d3d5a321073866a6f93424a4353cbd9a3e34b4f577e1aff8ff07e999bc",
+              "upstreamIcons": ["solid/arrow-circle-up.svg"]
+            },
+            {
+              "line": 182,
+              "pathSha256": "baa57ee5cf514f3359be2032bcf6c3de1f5a38eb47369e9924f95d461fa2729c",
+              "upstreamIcons": ["solid/arrow-circle-down.svg"]
+            },
+            {
+              "line": 195,
+              "pathSha256": "64b3635aef9e46e5997b50ad0566a15a47c4daa877ff03647e99984891971701",
+              "upstreamIcons": ["solid/flag.svg"]
+            },
+            {
+              "line": 211,
+              "pathSha256": "71e5b0086dae91f40adc0d1639a63d0bbdc008a31c32ab7db22ac046af234796",
+              "upstreamIcons": ["solid/check-circle.svg"]
+            },
+            {
+              "line": 219,
+              "pathSha256": "9eb6ce84ea7a749e67c83c7b770d932791616a83b0403c710d4af5d0d431f52f",
+              "upstreamIcons": ["solid/x-circle.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/ControversiesSection.tsx",
+          "sha256": "8d8825f65ffda49f0611d17dc98fbeeeb3d4cc370cbdf13dd8adcacab1376138",
+          "matches": [
+            {
+              "line": 250,
+              "pathSha256": "16f9f70b4f754267123fe2240214815605c35d9236a0867a307311c9f0b08903",
+              "upstreamIcons": ["solid/clipboard-check.svg", "solid/clipboard-list.svg"]
+            },
+            {
+              "line": 290,
+              "pathSha256": "4a4e3f6b8b922aef1e20e76fbcb63d734b5d28ae32bc8433a6f7fa9539bbceb8",
+              "upstreamIcons": ["solid/users.svg"]
+            },
+            {
+              "line": 364,
+              "pathSha256": "ccb4cfdd343da6c613a4b2ac8daeed0d238567db2fdca02c89912345f35f0c5a",
+              "upstreamIcons": ["outline/chevron-down.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/EducationSection.tsx",
+          "sha256": "f8ce4a0521775160f6b39de1f4d12871de1e1e3955cc311858e35dbee471d79b",
+          "matches": [
+            {
+              "line": 86,
+              "pathSha256": "ad533d0dde305d8a8e0662188ff45d08c837fcfc9e8b5e81312698297de10276",
+              "upstreamIcons": ["outline/academic-cap.svg"]
+            },
+            {
+              "line": 87,
+              "pathSha256": "058bb284de91052ff23a3f85343e4a477dc72a00d1b84a04ebfd054daee9fc79",
+              "upstreamIcons": ["outline/academic-cap.svg"]
+            },
+            {
+              "line": 91,
+              "pathSha256": "f47b80f95cf63f628cd6484a712745eef2661b81d1d182db40149c2c5d73bed3",
+              "upstreamIcons": ["outline/academic-cap.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/ElectionHistorySection.tsx",
+          "sha256": "e751e1dbc9a668482d118201f3ea3fd3f189c8f2fdcfa6a6da14cb9d5fcc53f6",
+          "matches": [
+            {
+              "line": 77,
+              "pathSha256": "71e5b0086dae91f40adc0d1639a63d0bbdc008a31c32ab7db22ac046af234796",
+              "upstreamIcons": ["solid/check-circle.svg"]
+            },
+            {
+              "line": 100,
+              "pathSha256": "40d937f8f116cc377b27deec461a7dafea8e6171015bdb5df8bf0ef62613cc5f",
+              "upstreamIcons": ["outline/clipboard.svg"]
+            },
+            {
+              "line": 127,
+              "pathSha256": "71e5b0086dae91f40adc0d1639a63d0bbdc008a31c32ab7db22ac046af234796",
+              "upstreamIcons": ["solid/check-circle.svg"]
+            },
+            {
+              "line": 155,
+              "pathSha256": "16f9f70b4f754267123fe2240214815605c35d9236a0867a307311c9f0b08903",
+              "upstreamIcons": ["solid/clipboard-check.svg", "solid/clipboard-list.svg"]
+            },
+            {
+              "line": 158,
+              "pathSha256": "d107cc8fe5610ea4a6c88fa9e4225f0e423a4b10c2755e2f6c714ff8f59613a0",
+              "upstreamIcons": ["solid/clipboard-list.svg"]
+            },
+            {
+              "line": 172,
+              "pathSha256": "71e5b0086dae91f40adc0d1639a63d0bbdc008a31c32ab7db22ac046af234796",
+              "upstreamIcons": ["solid/check-circle.svg"]
+            },
+            {
+              "line": 186,
+              "pathSha256": "9eb6ce84ea7a749e67c83c7b770d932791616a83b0403c710d4af5d0d431f52f",
+              "upstreamIcons": ["solid/x-circle.svg"]
+            },
+            {
+              "line": 314,
+              "pathSha256": "17140fc2e356972576e8c39cafffc76101d3a8ab14686a188d9891995df765e7",
+              "upstreamIcons": ["solid/clock.svg"]
+            },
+            {
+              "line": 423,
+              "pathSha256": "bd4257983fd5af91e6eaf4d3968fd21291d74046b75ccd00e462a35a8ed4b7cf",
+              "upstreamIcons": ["solid/exclamation.svg"]
+            },
+            {
+              "line": 479,
+              "pathSha256": "03b42d2a04d477441f6f2bd99f07b6b14ccba1ef7679d42a6849c832b65a691d",
+              "upstreamIcons": ["solid/check.svg"]
+            },
+            {
+              "line": 491,
+              "pathSha256": "6090dbac82eda3a7f9915da85ce53dd68ca9a3b4144daa4d1c97ac2cbb10221f",
+              "upstreamIcons": ["solid/x.svg"]
+            },
+            {
+              "line": 586,
+              "pathSha256": "4514cbbda12ae71c949cb351850d44d8e8390e2c0b566722c4a07321e3ae1156",
+              "upstreamIcons": ["solid/chevron-down.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/FamilyNetworkSection.tsx",
+          "sha256": "e34fe24dd115d5a01649987a752dc0e5362ff7ddbd10236eb253823b17457b95",
+          "matches": [
+            {
+              "line": 130,
+              "pathSha256": "aaf2dc4d30ee36d749067f1db2540f14190b383ec6c118cf4b7714d5f1d68640",
+              "upstreamIcons": ["solid/heart.svg"]
+            },
+            {
+              "line": 141,
+              "pathSha256": "0c98aedce2228d1dda02f69c2e13c9b69d0b3eab73d920e3b78429dc81a790cf",
+              "upstreamIcons": ["solid/arrow-narrow-up.svg"]
+            },
+            {
+              "line": 152,
+              "pathSha256": "791646b082901f6632b14f71a5578333882c0fb690f4b3f6186b63267e55c7fd",
+              "upstreamIcons": ["solid/arrow-narrow-down.svg"]
+            },
+            {
+              "line": 160,
+              "pathSha256": "4a4e3f6b8b922aef1e20e76fbcb63d734b5d28ae32bc8433a6f7fa9539bbceb8",
+              "upstreamIcons": ["solid/users.svg"]
+            },
+            {
+              "line": 166,
+              "pathSha256": "adf15f04a01a2b14a375405e72bae6f9d7148bc481ad0d7ff1008ceeddd6ba13",
+              "upstreamIcons": ["solid/user-group.svg"]
+            },
+            {
+              "line": 226,
+              "pathSha256": "adf15f04a01a2b14a375405e72bae6f9d7148bc481ad0d7ff1008ceeddd6ba13",
+              "upstreamIcons": ["solid/user-group.svg"]
+            },
+            {
+              "line": 270,
+              "pathSha256": "adf15f04a01a2b14a375405e72bae6f9d7148bc481ad0d7ff1008ceeddd6ba13",
+              "upstreamIcons": ["solid/user-group.svg"]
+            },
+            {
+              "line": 315,
+              "pathSha256": "17140fc2e356972576e8c39cafffc76101d3a8ab14686a188d9891995df765e7",
+              "upstreamIcons": ["solid/clock.svg"]
+            },
+            {
+              "line": 329,
+              "pathSha256": "ceb2f2128f60225a6176ff8446b6b700df45b81a59c4285b8de9bcd4ccbfbc10",
+              "upstreamIcons": ["solid/presentation-chart-line.svg"]
+            },
+            {
+              "line": 343,
+              "pathSha256": "bf92987af7c4ed3fd3e1280a4a2e2e0ee9bcca6f9c84afd8c3568ccceb32d9a2",
+              "upstreamIcons": ["solid/sparkles.svg"]
+            },
+            {
+              "line": 365,
+              "pathSha256": "59a076870d2de808250910c5e2bdb7fa86d18b602ebf676df89481b9136d77a5",
+              "upstreamIcons": ["solid/chevron-right.svg"]
+            },
+            {
+              "line": 452,
+              "pathSha256": "bf92987af7c4ed3fd3e1280a4a2e2e0ee9bcca6f9c84afd8c3568ccceb32d9a2",
+              "upstreamIcons": ["solid/sparkles.svg"]
+            },
+            {
+              "line": 604,
+              "pathSha256": "711049514451602678da158d81e0188fc5307921c86196cdb3b53241608ca9e7",
+              "upstreamIcons": ["solid/user.svg"]
+            },
+            {
+              "line": 631,
+              "pathSha256": "35db02fba0e10b48b927a69a960457e05d6184040a6fc8b7fca2a80b1b77f9fd",
+              "upstreamIcons": ["outline/external-link.svg"]
+            },
+            {
+              "line": 658,
+              "pathSha256": "ccb4cfdd343da6c613a4b2ac8daeed0d238567db2fdca02c89912345f35f0c5a",
+              "upstreamIcons": ["outline/chevron-down.svg"]
+            },
+            {
+              "line": 751,
+              "pathSha256": "17140fc2e356972576e8c39cafffc76101d3a8ab14686a188d9891995df765e7",
+              "upstreamIcons": ["solid/clock.svg"]
+            },
+            {
+              "line": 778,
+              "pathSha256": "ceb2f2128f60225a6176ff8446b6b700df45b81a59c4285b8de9bcd4ccbfbc10",
+              "upstreamIcons": ["solid/presentation-chart-line.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/PersonalInfoSection.tsx",
+          "sha256": "bb4c7f3dc5a091d72485bffa4da6f75ab1ce7b5c3dc8c80201533006d5512822",
+          "matches": [
+            {
+              "line": 158,
+              "pathSha256": "af2f78cf286e3c2452a45fc2b41d682da7e4604be2e2c87d2d51307308049c89",
+              "upstreamIcons": ["solid/information-circle.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/PositionHistoryTimeline.tsx",
+          "sha256": "e42cf313ee495a1c4dc8e31decdc48eec1b5a94159fc20baad70d20224b97947",
+          "matches": [
+            {
+              "line": 93,
+              "pathSha256": "03b42d2a04d477441f6f2bd99f07b6b14ccba1ef7679d42a6849c832b65a691d",
+              "upstreamIcons": ["solid/check.svg"]
+            },
+            {
+              "line": 164,
+              "pathSha256": "af2f78cf286e3c2452a45fc2b41d682da7e4604be2e2c87d2d51307308049c89",
+              "upstreamIcons": ["solid/information-circle.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/ProfileHeader.tsx",
+          "sha256": "4e94b4c16ada34ae8a2bd0eec11f3ce5a5827eeed43ee4e4dd4675194bb74c65",
+          "matches": [
+            {
+              "line": 349,
+              "pathSha256": "6279fbb059a5cb1e956706970aa00ecbdb4ec240784e5e86dadb4740b9a4d5ad",
+              "upstreamIcons": ["outline/download.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/ProjectsSection.tsx",
+          "sha256": "0299a4e2c67449008f28db2e04b5f8c4a96ea54b1818b7031f222ea9d5b645c2",
+          "matches": [
+            {
+              "line": 130,
+              "pathSha256": "f454e419eba0e93bbf7a230c116c2b8150ff74db222f16b2769f2e24cde5b7d4",
+              "upstreamIcons": ["outline/office-building.svg"]
+            },
+            {
+              "line": 255,
+              "pathSha256": "9e7bd72a9a5360927e3ef1962f4ef1875232c5cf5bdb8851ade75736a1393a9e",
+              "upstreamIcons": ["solid/currency-dollar.svg"]
+            },
+            {
+              "line": 258,
+              "pathSha256": "b073a8e067a4a48a2a820e2e40f4eca78f572fbb5669ad33853b8a307bab0e18",
+              "upstreamIcons": ["solid/currency-dollar.svg"]
+            },
+            {
+              "line": 272,
+              "pathSha256": "71e5b0086dae91f40adc0d1639a63d0bbdc008a31c32ab7db22ac046af234796",
+              "upstreamIcons": ["solid/check-circle.svg"]
+            },
+            {
+              "line": 296,
+              "pathSha256": "bd4257983fd5af91e6eaf4d3968fd21291d74046b75ccd00e462a35a8ed4b7cf",
+              "upstreamIcons": ["solid/exclamation.svg"]
+            },
+            {
+              "line": 461,
+              "pathSha256": "505a158423eeae32c1a046151dd0ebcaaaf5b7620625063b11573ddd4d157a7c",
+              "upstreamIcons": ["solid/location-marker.svg"]
+            },
+            {
+              "line": 492,
+              "pathSha256": "4514cbbda12ae71c949cb351850d44d8e8390e2c0b566722c4a07321e3ae1156",
+              "upstreamIcons": ["solid/chevron-down.svg"]
+            },
+            {
+              "line": 559,
+              "pathSha256": "bd4257983fd5af91e6eaf4d3968fd21291d74046b75ccd00e462a35a8ed4b7cf",
+              "upstreamIcons": ["solid/exclamation.svg"]
+            },
+            {
+              "line": 583,
+              "pathSha256": "35db02fba0e10b48b927a69a960457e05d6184040a6fc8b7fca2a80b1b77f9fd",
+              "upstreamIcons": ["outline/external-link.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/PromiseTrackerSection.tsx",
+          "sha256": "c653ee2b4bc7d14162671f3c4a8f8b946b15aed6db2d777f24b7f497910d9d4a",
+          "matches": [
+            {
+              "line": 123,
+              "pathSha256": "71e5b0086dae91f40adc0d1639a63d0bbdc008a31c32ab7db22ac046af234796",
+              "upstreamIcons": ["solid/check-circle.svg"]
+            },
+            {
+              "line": 146,
+              "pathSha256": "7bad55def82ff7d77e8fa0026bd30a76f4434fc341b82fefe44e8972f4e3cd2f",
+              "upstreamIcons": ["outline/check-circle.svg"]
+            },
+            {
+              "line": 173,
+              "pathSha256": "71e5b0086dae91f40adc0d1639a63d0bbdc008a31c32ab7db22ac046af234796",
+              "upstreamIcons": ["solid/check-circle.svg"]
+            },
+            {
+              "line": 587,
+              "pathSha256": "4514cbbda12ae71c949cb351850d44d8e8390e2c0b566722c4a07321e3ae1156",
+              "upstreamIcons": ["solid/chevron-down.svg"]
+            },
+            {
+              "line": 661,
+              "pathSha256": "35db02fba0e10b48b927a69a960457e05d6184040a6fc8b7fca2a80b1b77f9fd",
+              "upstreamIcons": ["outline/external-link.svg"]
+            },
+            {
+              "line": 749,
+              "pathSha256": "03b42d2a04d477441f6f2bd99f07b6b14ccba1ef7679d42a6849c832b65a691d",
+              "upstreamIcons": ["solid/check.svg"]
+            },
+            {
+              "line": 762,
+              "pathSha256": "03b42d2a04d477441f6f2bd99f07b6b14ccba1ef7679d42a6849c832b65a691d",
+              "upstreamIcons": ["solid/check.svg"]
+            },
+            {
+              "line": 776,
+              "pathSha256": "5cae7dba49337839618765422c9b2377245548056d50ad12c228fe1b01946a54",
+              "upstreamIcons": ["solid/minus.svg"]
+            },
+            {
+              "line": 789,
+              "pathSha256": "5cae7dba49337839618765422c9b2377245548056d50ad12c228fe1b01946a54",
+              "upstreamIcons": ["solid/minus.svg"]
+            },
+            {
+              "line": 803,
+              "pathSha256": "6090dbac82eda3a7f9915da85ce53dd68ca9a3b4144daa4d1c97ac2cbb10221f",
+              "upstreamIcons": ["solid/x.svg"]
+            },
+            {
+              "line": 816,
+              "pathSha256": "6090dbac82eda3a7f9915da85ce53dd68ca9a3b4144daa4d1c97ac2cbb10221f",
+              "upstreamIcons": ["solid/x.svg"]
+            },
+            {
+              "line": 851,
+              "pathSha256": "17140fc2e356972576e8c39cafffc76101d3a8ab14686a188d9891995df765e7",
+              "upstreamIcons": ["solid/clock.svg"]
+            },
+            {
+              "line": 865,
+              "pathSha256": "17140fc2e356972576e8c39cafffc76101d3a8ab14686a188d9891995df765e7",
+              "upstreamIcons": ["solid/clock.svg"]
+            },
+            {
+              "line": 874,
+              "pathSha256": "17140fc2e356972576e8c39cafffc76101d3a8ab14686a188d9891995df765e7",
+              "upstreamIcons": ["solid/clock.svg"]
+            },
+            {
+              "line": 995,
+              "pathSha256": "7d6705cbf7f8fd7f92fa06c5c1311cf0269492d1b56aa70f7a47474934b97530",
+              "upstreamIcons": ["solid/briefcase.svg"]
+            },
+            {
+              "line": 998,
+              "pathSha256": "08627248376bb94ac1a02c97da5925135e4c4f97f30899969e7b4f1d417e9137",
+              "upstreamIcons": ["solid/briefcase.svg"]
+            },
+            {
+              "line": 1015,
+              "pathSha256": "8e39cb3e04a67c69e94f9ffb7a4c36eb15a8c74ec767525a869c3e995e340ea7",
+              "upstreamIcons": ["solid/identification.svg"]
+            },
+            {
+              "line": 1033,
+              "pathSha256": "43d06b57f18c223114503b2114b4699a490989cf1ffcba6780e6bad936a61d95",
+              "upstreamIcons": ["solid/chat-alt.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/RedFlagsSection.tsx",
+          "sha256": "dde59a6d32b0231bf5b7f1891eab07a8f4fc04205910a0d9f5dc2e74040b9c97",
+          "matches": [
+            {
+              "line": 41,
+              "pathSha256": "64b3635aef9e46e5997b50ad0566a15a47c4daa877ff03647e99984891971701",
+              "upstreamIcons": ["solid/flag.svg"]
+            },
+            {
+              "line": 148,
+              "pathSha256": "ccb4cfdd343da6c613a4b2ac8daeed0d238567db2fdca02c89912345f35f0c5a",
+              "upstreamIcons": ["outline/chevron-down.svg"]
+            },
+            {
+              "line": 221,
+              "pathSha256": "bd4257983fd5af91e6eaf4d3968fd21291d74046b75ccd00e462a35a8ed4b7cf",
+              "upstreamIcons": ["solid/exclamation.svg"]
+            },
+            {
+              "line": 233,
+              "pathSha256": "4a4e3f6b8b922aef1e20e76fbcb63d734b5d28ae32bc8433a6f7fa9539bbceb8",
+              "upstreamIcons": ["solid/users.svg"]
+            },
+            {
+              "line": 243,
+              "pathSha256": "3a91a391b33ee3c5f698d5d53ab944f8709bb324804818a2486f0b0049dc15b0",
+              "upstreamIcons": ["solid/cash.svg"]
+            },
+            {
+              "line": 255,
+              "pathSha256": "17140fc2e356972576e8c39cafffc76101d3a8ab14686a188d9891995df765e7",
+              "upstreamIcons": ["solid/clock.svg"]
+            },
+            {
+              "line": 272,
+              "pathSha256": "af2f78cf286e3c2452a45fc2b41d682da7e4604be2e2c87d2d51307308049c89",
+              "upstreamIcons": ["solid/information-circle.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/SALNDetailModal.tsx",
+          "sha256": "379b0c009758e35a63a10e6ff3da52f075739ae08fc825aa8661aeabde5f9951",
+          "matches": [
+            {
+              "line": 81,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            },
+            {
+              "line": 106,
+              "pathSha256": "3a91a391b33ee3c5f698d5d53ab944f8709bb324804818a2486f0b0049dc15b0",
+              "upstreamIcons": ["solid/cash.svg"]
+            },
+            {
+              "line": 119,
+              "pathSha256": "3a91a391b33ee3c5f698d5d53ab944f8709bb324804818a2486f0b0049dc15b0",
+              "upstreamIcons": ["solid/cash.svg"]
+            },
+            {
+              "line": 135,
+              "pathSha256": "9e7bd72a9a5360927e3ef1962f4ef1875232c5cf5bdb8851ade75736a1393a9e",
+              "upstreamIcons": ["solid/currency-dollar.svg"]
+            },
+            {
+              "line": 138,
+              "pathSha256": "b073a8e067a4a48a2a820e2e40f4eca78f572fbb5669ad33853b8a307bab0e18",
+              "upstreamIcons": ["solid/currency-dollar.svg"]
+            },
+            {
+              "line": 157,
+              "pathSha256": "bd4257983fd5af91e6eaf4d3968fd21291d74046b75ccd00e462a35a8ed4b7cf",
+              "upstreamIcons": ["solid/exclamation.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/SALNSection.tsx",
+          "sha256": "19faec7100a7efb34230093bc7bff1c606da234ac882ea86c857a78f195133c1",
+          "matches": [
+            {
+              "line": 73,
+              "pathSha256": "3a91a391b33ee3c5f698d5d53ab944f8709bb324804818a2486f0b0049dc15b0",
+              "upstreamIcons": ["solid/cash.svg"]
+            },
+            {
+              "line": 94,
+              "pathSha256": "bcfb8568a4ca9dc11db3fe3fa62eb61869d60ef66806e75d8aa06080951f6e3d",
+              "upstreamIcons": ["outline/document-text.svg"]
+            },
+            {
+              "line": 115,
+              "pathSha256": "3a91a391b33ee3c5f698d5d53ab944f8709bb324804818a2486f0b0049dc15b0",
+              "upstreamIcons": ["solid/cash.svg"]
+            },
+            {
+              "line": 313,
+              "pathSha256": "bd4257983fd5af91e6eaf4d3968fd21291d74046b75ccd00e462a35a8ed4b7cf",
+              "upstreamIcons": ["solid/exclamation.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/SourceTooltip.tsx",
+          "sha256": "43d1099ec367a829cfd61b3fd4d18d85044195c237a4b74944f75149d4f9906f",
+          "matches": [
+            {
+              "line": 125,
+              "pathSha256": "35db02fba0e10b48b927a69a960457e05d6184040a6fc8b7fca2a80b1b77f9fd",
+              "upstreamIcons": ["outline/external-link.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/SourcesAccordion.tsx",
+          "sha256": "6ec921dac881dc6c96fcddf30126835af055e70af3fca546c16c9e3e81d14dac",
+          "matches": [
+            {
+              "line": 71,
+              "pathSha256": "2e52daa7215f27a3ef7f365a53608c83a875ad7e41e201215b49c2094d39aed9",
+              "upstreamIcons": ["outline/link.svg"]
+            },
+            {
+              "line": 82,
+              "pathSha256": "ccb4cfdd343da6c613a4b2ac8daeed0d238567db2fdca02c89912345f35f0c5a",
+              "upstreamIcons": ["outline/chevron-down.svg"]
+            },
+            {
+              "line": 125,
+              "pathSha256": "35db02fba0e10b48b927a69a960457e05d6184040a6fc8b7fca2a80b1b77f9fd",
+              "upstreamIcons": ["outline/external-link.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/[id]/components/VotingRecordSection.tsx",
+          "sha256": "0bd8debdb2850dc0167922ffb5fe76772eb1a3e4175faa880349f192d2004cd9",
+          "matches": [
+            {
+              "line": 113,
+              "pathSha256": "b01c88c7baa22697acce8d6c2b38678a8f4521bdbd7eee7005ccaa91d99b664d",
+              "upstreamIcons": ["outline/clipboard-check.svg"]
+            },
+            {
+              "line": 295,
+              "pathSha256": "03b42d2a04d477441f6f2bd99f07b6b14ccba1ef7679d42a6849c832b65a691d",
+              "upstreamIcons": ["solid/check.svg"]
+            },
+            {
+              "line": 308,
+              "pathSha256": "6090dbac82eda3a7f9915da85ce53dd68ca9a3b4144daa4d1c97ac2cbb10221f",
+              "upstreamIcons": ["solid/x.svg"]
+            },
+            {
+              "line": 321,
+              "pathSha256": "5cae7dba49337839618765422c9b2377245548056d50ad12c228fe1b01946a54",
+              "upstreamIcons": ["solid/minus.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/components/MobileFilterDrawer.tsx",
+          "sha256": "b8cc0d9af62c8d37ce77ba83098ddc8b7cea3e03cf805e47d1f943a938eb811d",
+          "matches": [
+            {
+              "line": 34,
+              "pathSha256": "c1528757d217a60297ba33326d149e48af74bb9272ab5c068581f7df0ef95abc",
+              "upstreamIcons": ["outline/filter.svg"]
+            },
+            {
+              "line": 72,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/components/Pagination.tsx",
+          "sha256": "468e816af6cbe6e5f30b5d750bbb7cd4c31e8a6be615fa18f6e883eb385529b6",
+          "matches": [
+            {
+              "line": 38,
+              "pathSha256": "646fde552734fecc370ad189efaf8d818915f97cede5147943396b64692fed5d",
+              "upstreamIcons": ["outline/chevron-left.svg"]
+            },
+            {
+              "line": 73,
+              "pathSha256": "af0f5023afb940f575df50adfca16f62289ce7c6aa56e27114c661b6f57fdbd1",
+              "upstreamIcons": ["outline/chevron-right.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/components/PoliticianDirectory.tsx",
+          "sha256": "88494f883865e452b899192fa4fba3af17ee9407663ee77e0cbe2f7d784314c2",
+          "matches": [
+            {
+              "line": 588,
+              "pathSha256": "da609db7ae7ad4ba3bf14d8c3cc544eeec577bfc8737a8f239206df8e62b7d99",
+              "upstreamIcons": ["outline/sort-ascending.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/components/RedFlagIndicator.tsx",
+          "sha256": "154844c88c1b743bd1f98eba3d8fa3ed34f76a66377efb4ab94e090b064e3dcc",
+          "matches": [
+            {
+              "line": 39,
+              "pathSha256": "64b3635aef9e46e5997b50ad0566a15a47c4daa877ff03647e99984891971701",
+              "upstreamIcons": ["solid/flag.svg"]
+            },
+            {
+              "line": 63,
+              "pathSha256": "64b3635aef9e46e5997b50ad0566a15a47c4daa877ff03647e99984891971701",
+              "upstreamIcons": ["solid/flag.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/components/SearchBar.tsx",
+          "sha256": "162ad8f58b4294aca51ec055bf8fc7e8865c96413f9f3fd03e1d6d008ba4023c",
+          "matches": [
+            {
+              "line": 298,
+              "pathSha256": "8aef776469b7146b1e67fe470f0390b2f05cc52014da5f1a95ab102ac422cef6",
+              "upstreamIcons": ["outline/search.svg"]
+            },
+            {
+              "line": 313,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            },
+            {
+              "line": 327,
+              "pathSha256": "c7d250cdce3f0c16e40ff53b03c0b0aab797b889e8d2c93d3b8c7e11184e0a00",
+              "upstreamIcons": ["outline/arrow-right.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/politicians/components/SearchResults.tsx",
+          "sha256": "7f3502731e4678b8631f8e9f3866ad1fc1f897b705d143ff3e6bf74edfdd5fd3",
+          "matches": [
+            {
+              "line": 286,
+              "pathSha256": "da609db7ae7ad4ba3bf14d8c3cc544eeec577bfc8737a8f239206df8e62b7d99",
+              "upstreamIcons": ["outline/sort-ascending.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/report/components/EvidenceUpload.tsx",
+          "sha256": "4eea04deda25d90cbc290b0118cefe9b7b74a32fd0e5b01bf0c571f8e4462668",
+          "matches": [
+            {
+              "line": 396,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/report/components/MyReportsSection.tsx",
+          "sha256": "d95f34fb9173794524966dc618ee5d3a77bff919b78d1fb46c471ba8d9ef0ebb",
+          "matches": [
+            {
+              "line": 292,
+              "pathSha256": "2e530cd456544e2deb07434c3b8c9385238d85059eb571f8644aea45b550967c",
+              "upstreamIcons": ["outline/check.svg"]
+            },
+            {
+              "line": 306,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            },
+            {
+              "line": 323,
+              "pathSha256": "43b5b49aab4a0ca1bbd226ca751456931d64ba6747140ad141dd3d9ac3d6f59c",
+              "upstreamIcons": ["outline/clock.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/report/components/PoliticianSearchSelect.tsx",
+          "sha256": "3470aab1830c1304d7aa88f4a88c727edf3afc1dad3122c9d6607d8ac0ffe83e",
+          "matches": [
+            {
+              "line": 256,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/report/components/ReportSubmissionForm.tsx",
+          "sha256": "0ccd44fb7eeb271e2b273275a83d48620f89b2b9e00343a42a6c3f6c10258acf",
+          "matches": [
+            {
+              "line": 323,
+              "pathSha256": "2e530cd456544e2deb07434c3b8c9385238d85059eb571f8644aea45b550967c",
+              "upstreamIcons": ["outline/check.svg"]
+            },
+            {
+              "line": 337,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/report/components/VerificationStatusBadge.tsx",
+          "sha256": "a86d68d526cbcfb55e0e03fa843d82110c7b8d8faaa25a511e2b150d481c7742",
+          "matches": [
+            {
+              "line": 155,
+              "pathSha256": "43b5b49aab4a0ca1bbd226ca751456931d64ba6747140ad141dd3d9ac3d6f59c",
+              "upstreamIcons": ["outline/clock.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/voting-list/components/VotingListContent.tsx",
+          "sha256": "64981e188a5f611f209164e4063700aeac41131a1240da528d115078268f9980",
+          "matches": [
+            {
+              "line": 587,
+              "pathSha256": "6279fbb059a5cb1e956706970aa00ecbdb4ec240784e5e86dadb4740b9a4d5ad",
+              "upstreamIcons": ["outline/download.svg"]
+            },
+            {
+              "line": 674,
+              "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
+              "upstreamIcons": ["outline/x.svg"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "version": "v2.2.0",
+      "file": "public/notices/heroicons-v2-MIT.txt",
+      "upstream": "https://github.com/tailwindlabs/heroicons/blob/v2.2.0/LICENSE",
+      "upstreamGitBlobSha": "d6a82290738a9f78946cbcb4594535d6984086dd",
+      "licenseSha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985",
+      "matchedFiles": 2,
+      "matchedPaths": 2,
+      "files": [
+        {
+          "file": "src/app/components/AIChatbot.tsx",
+          "sha256": "315fbb7bf4883615ac44735e27c6695d4d2caed1546e158f1f15adce9a926970",
+          "matches": [
+            {
+              "line": 781,
+              "pathSha256": "4e7cdd12bfbed434db4e85c65bb01f52454833512d5d55bd9edb9d13371a0a1b",
+              "upstreamIcons": ["24/outline/plus.svg"]
+            }
+          ]
+        },
+        {
+          "file": "src/app/report/components/EvidenceUpload.tsx",
+          "sha256": "4eea04deda25d90cbc290b0118cefe9b7b74a32fd0e5b01bf0c571f8e4462668",
+          "matches": [
+            {
+              "line": 364,
+              "pathSha256": "4e7cdd12bfbed434db4e85c65bb01f52454833512d5d55bd9edb9d13371a0a1b",
+              "upstreamIcons": ["24/outline/plus.svg"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1282 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model AdminAction {
+  id                                          String     @id
+  adminId                                     String
+  adminRole                                   AdminRole
+  action                                      String
+  targetType                                  String
+  targetId                                    String
+  details                                     Json?
+  requiresApproval                            Boolean    @default(false)
+  approvedBy                                  String?
+  approvedAt                                  DateTime?
+  blockchainEntryHash                         String?
+  createdAt                                   DateTime   @default(now())
+  AdminUser_AdminAction_adminIdToAdminUser    AdminUser  @relation("AdminAction_adminIdToAdminUser", fields: [adminId], references: [id], onDelete: Cascade)
+  AdminUser_AdminAction_approvedByToAdminUser AdminUser? @relation("AdminAction_approvedByToAdminUser", fields: [approvedBy], references: [id])
+
+  @@index([action])
+  @@index([adminId])
+  @@index([createdAt])
+  @@index([requiresApproval])
+  @@index([targetId])
+  @@index([targetType])
+}
+
+model AdminUser {
+  id                                            String        @id
+  email                                         String        @unique
+  passwordHash                                  String
+  role                                          AdminRole
+  isActive                                      Boolean       @default(true)
+  mfaEnabled                                    Boolean       @default(false)
+  mfaSecret                                     String?
+  createdAt                                     DateTime      @default(now())
+  updatedAt                                     DateTime
+  lastLoginAt                                   DateTime?
+  AdminAction_AdminAction_adminIdToAdminUser    AdminAction[] @relation("AdminAction_adminIdToAdminUser")
+  AdminAction_AdminAction_approvedByToAdminUser AdminAction[] @relation("AdminAction_approvedByToAdminUser")
+
+  @@index([email])
+  @@index([isActive])
+  @@index([role])
+}
+
+model ApiKey {
+  id          String    @id
+  key         String    @unique
+  name        String
+  description String?
+  isActive    Boolean   @default(true)
+  rateLimit   Int       @default(1000)
+  createdAt   DateTime  @default(now())
+  expiresAt   DateTime?
+  lastUsedAt  DateTime?
+
+  @@index([isActive])
+  @@index([key])
+}
+
+model Bill {
+  id                String              @id
+  billNumber        String
+  title             String
+  summary           String?
+  fullText          String?
+  filingDate        DateTime?
+  status            BillStatus?
+  republicActNumber String?
+  chamber           Chamber
+  congress          Int
+  session           Int?
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime
+  BillAuthor        BillAuthor[]
+  SourceAttribution SourceAttribution[]
+  VotingRecord      VotingRecord[]
+
+  @@unique([billNumber, congress])
+  @@index([billNumber])
+  @@index([chamber])
+  @@index([filingDate])
+  @@index([status])
+}
+
+model BillAuthor {
+  id           String         @id
+  billId       String
+  politicianId String
+  role         BillAuthorRole
+  createdAt    DateTime       @default(now())
+  Bill         Bill           @relation(fields: [billId], references: [id], onDelete: Cascade)
+  Politician   Politician     @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+
+  @@unique([billId, politicianId])
+  @@index([billId])
+  @@index([politicianId])
+}
+
+model BlockchainAuditEntry {
+  id                    String      @id
+  blockNumber           Int         @unique @default(autoincrement())
+  entryHash             String      @unique
+  previousHash          String
+  timestamp             DateTime    @default(now())
+  actorId               String
+  actorType             ActorType
+  actorRole             AdminRole?
+  action                AuditAction
+  dataType              String
+  dataId                String
+  previousValue         Json?
+  newValue              Json?
+  reason                String?
+  aiVerificationResult  Json?
+  publicChainId         String?
+  publicTransactionHash String?
+  publicBlockNumber     Int?
+  anchoredAt            DateTime?
+
+  @@index([action])
+  @@index([actorId])
+  @@index([actorType])
+  @@index([dataId])
+  @@index([dataType])
+  @@index([timestamp])
+}
+
+model Bookmark {
+  id           String     @id
+  userId       String
+  politicianId String
+  createdAt    DateTime   @default(now())
+  Politician   Politician @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+  User         User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, politicianId])
+  @@index([politicianId])
+  @@index([userId])
+}
+
+model COAFinding {
+  id        String             @id
+  projectId String
+  year      Int
+  finding   String
+  severity  COAFindingSeverity
+  status    COAFindingStatus   @default(open)
+  createdAt DateTime           @default(now())
+  updatedAt DateTime
+  Project   Project            @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+  @@index([severity])
+  @@index([status])
+}
+
+model CampaignContribution {
+  id                String           @id
+  campaignFinanceId String
+  donorName         String
+  donorType         DonorType
+  amount            Decimal          @db.Decimal(20, 2)
+  type              ContributionType
+  date              DateTime
+  isNotableDonor    Boolean          @default(false)
+  createdAt         DateTime         @default(now())
+  CampaignFinance   CampaignFinance  @relation(fields: [campaignFinanceId], references: [id], onDelete: Cascade)
+
+  @@index([campaignFinanceId])
+  @@index([donorType])
+  @@index([isNotableDonor])
+}
+
+model CampaignExpenditure {
+  id                String              @id
+  campaignFinanceId String
+  category          ExpenditureCategory
+  description       String
+  amount            Decimal             @db.Decimal(20, 2)
+  date              DateTime
+  createdAt         DateTime            @default(now())
+  CampaignFinance   CampaignFinance     @relation(fields: [campaignFinanceId], references: [id], onDelete: Cascade)
+
+  @@index([campaignFinanceId])
+  @@index([category])
+}
+
+model CampaignFinance {
+  id                   String                 @id
+  politicianId         String
+  electionYear         Int
+  totalContributions   Decimal                @db.Decimal(20, 2)
+  totalExpenditures    Decimal                @db.Decimal(20, 2)
+  spendingLimit        Decimal                @db.Decimal(20, 2)
+  withinLimit          Boolean                @default(true)
+  createdAt            DateTime               @default(now())
+  updatedAt            DateTime
+  CampaignContribution CampaignContribution[]
+  CampaignExpenditure  CampaignExpenditure[]
+  Politician           Politician             @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+  SourceAttribution    SourceAttribution[]
+
+  @@unique([politicianId, electionYear])
+  @@index([electionYear])
+  @@index([politicianId])
+}
+
+model CampaignPromise {
+  id                String               @id
+  politicianId      String
+  electionYear      Int
+  promiseText       String
+  category          String
+  status            PromiseStatus        @default(not_yet_due)
+  significance      PromiseSignificance?
+  attribution       PromiseAttribution?
+  inheritedFrom     String?
+  analysisNotes     String?
+  createdAt         DateTime             @default(now())
+  updatedAt         DateTime
+  Politician        Politician           @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+  PromiseEvidence   PromiseEvidence[]
+  SourceAttribution SourceAttribution[]
+
+  @@index([electionYear])
+  @@index([politicianId])
+  @@index([status])
+}
+
+model ChatConversation {
+  id          String        @id
+  userId      String
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime
+  User        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  ChatMessage ChatMessage[]
+
+  @@index([userId])
+}
+
+model ChatMessage {
+  id               String           @id
+  conversationId   String
+  role             String
+  content          String
+  sources          Json?
+  confidence       Decimal?         @db.Decimal(3, 2)
+  isVerified       Boolean          @default(false)
+  createdAt        DateTime         @default(now())
+  ChatConversation ChatConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@index([conversationId])
+  @@index([createdAt])
+}
+
+model CommunityReport {
+  id                 String              @id
+  submitterId        String?
+  politicianId       String
+  reportType         ReportType
+  content            String
+  status             ReportStatus        @default(pending)
+  reviewedBy         String?
+  reviewedAt         DateTime?
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime
+  Politician         Politician          @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+  User               User?               @relation(fields: [submitterId], references: [id])
+  ReportEvidence     ReportEvidence[]
+  VerificationResult VerificationResult?
+
+  @@index([politicianId])
+  @@index([status])
+  @@index([submitterId])
+}
+
+model Controversy {
+  id                String              @id
+  politicianId      String
+  title             String
+  description       String
+  category          ControversyCategory
+  status            ControversyStatus?
+  filingDate        DateTime?
+  resolutionDate    DateTime?
+  court             String?
+  caseNumber        String?
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime
+  Politician        Politician          @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+  SourceAttribution SourceAttribution[]
+
+  recordKind ResearchRecordKind?
+  subjectRole ResearchSubjectRole?
+  reviewState ResearchReviewState @default(pending)
+  reviewedBy String?
+  reviewNote String?
+  reviewedAt DateTime?
+  approvedContentHash String? @db.Char(64)
+  approvedSourceIds String[] @default([])
+  independentSourceIds String[] @default([])
+  outcomeEventId String?
+  CaseEvent CaseEvent[] @relation("CaseRecordEvents")
+  OutcomeEvent CaseEvent? @relation("SelectedCaseOutcome", fields: [outcomeEventId, id], references: [id, controversyId], onDelete: Restrict, onUpdate: Restrict, map: "case_review_outcome_owner_fk")
+
+  @@index([politicianId, reviewState])
+  @@index([category])
+  @@index([politicianId])
+  @@index([status])
+}
+
+model DataFreshness {
+  id           String   @id
+  dataCategory String   @unique
+  lastUpdated  DateTime
+  recordCount  Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime
+
+  @@index([dataCategory])
+  @@index([lastUpdated])
+}
+
+model ElectionOpponent {
+  id                     String               @id
+  electionResultRecordId String
+  name                   String
+  party                  String?
+  voteCount              Int
+  votePercentage         Decimal              @db.Decimal(5, 2)
+  createdAt              DateTime             @default(now())
+  ElectionResultRecord   ElectionResultRecord @relation(fields: [electionResultRecordId], references: [id], onDelete: Cascade)
+
+  @@index([electionResultRecordId])
+}
+
+model ElectionResultRecord {
+  id                String              @id
+  politicianId      String
+  electionYear      Int
+  electionType      ElectionType
+  positionSought    String
+  jurisdiction      String
+  result            ElectionResult
+  voteCount         Int
+  totalVotes        Int
+  votePercentage    Decimal             @db.Decimal(5, 2)
+  rank              Int?
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime
+  ElectionOpponent  ElectionOpponent[]
+  Politician        Politician          @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+  SourceAttribution SourceAttribution[]
+
+  @@index([electionType])
+  @@index([electionYear])
+  @@index([politicianId])
+}
+
+model Education {
+  id           String          @id
+  politicianId String
+  institution  String
+  degree       String?
+  field        String?
+  level        EducationLevel
+  yearStart    Int?
+  yearEnd      Int?
+  isCompleted  Boolean         @default(true)
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime
+  Politician   Politician      @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+  SourceAttribution SourceAttribution[]
+
+  @@index([politicianId])
+}
+
+model FactCheck {
+  id           String     @id
+  politicianId String
+  organization String
+  title        String
+  summary      String?
+  claim        String?
+  verdict      String?
+  articleUrl   String     @unique
+  publishedAt  DateTime
+  retrievedAt  DateTime   @default(now())
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime
+  Politician   Politician @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+
+  @@index([organization])
+  @@index([politicianId])
+  @@index([publishedAt])
+  @@index([verdict])
+}
+
+model FamilyRelationship {
+  id                                                            String              @id
+  politicianId                                                  String
+  relatedPoliticianId                                           String
+  relationshipType                                              RelationshipType
+  createdAt                                                     DateTime            @default(now())
+  updatedAt                                                     DateTime
+  Politician_FamilyRelationship_politicianIdToPolitician        Politician          @relation("FamilyRelationship_politicianIdToPolitician", fields: [politicianId], references: [id], onDelete: Cascade)
+  Politician_FamilyRelationship_relatedPoliticianIdToPolitician Politician          @relation("FamilyRelationship_relatedPoliticianIdToPolitician", fields: [relatedPoliticianId], references: [id], onDelete: Cascade)
+  SourceAttribution                                             SourceAttribution[]
+
+  @@unique([politicianId, relatedPoliticianId])
+  @@index([politicianId])
+  @@index([relatedPoliticianId])
+}
+
+model Feedback {
+  id          String           @id
+  category    FeedbackCategory
+  subject     String
+  description String
+  attachments Json?
+  isAnonymous Boolean          @default(false)
+  email       String?
+  userId      String?
+  userAgent   String?
+  ipAddress   String?
+  status      FeedbackStatus   @default(pending)
+  reviewedBy  String?
+  reviewedAt  DateTime?
+  adminNotes  String?
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime
+
+  @@index([category])
+  @@index([createdAt])
+  @@index([status])
+  @@index([userId])
+}
+
+model Notification {
+  id             String           @id
+  userId         String
+  type           NotificationType
+  politicianId   String?
+  politicianName String?
+  title          String
+  message        String
+  link           String?
+  isRead         Boolean          @default(false)
+  createdAt      DateTime         @default(now())
+  User           User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([createdAt])
+  @@index([isRead])
+  @@index([type])
+  @@index([userId])
+}
+
+model NotificationPreferences {
+  id               String   @id
+  userId           String   @unique
+  email            Boolean  @default(true)
+  inApp            Boolean  @default(true)
+  newControversy   Boolean  @default(true)
+  newBill          Boolean  @default(true)
+  billPassed       Boolean  @default(true)
+  redFlag          Boolean  @default(true)
+  electionReminder Boolean  @default(true)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime
+  User             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model PartyAffiliation {
+  id                String              @id
+  politicianId      String
+  partyId           String
+  startDate         DateTime
+  endDate           DateTime?
+  isCurrent         Boolean             @default(false)
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime
+  PoliticalParty    PoliticalParty      @relation(fields: [partyId], references: [id], onDelete: Cascade)
+  Politician        Politician          @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+  SourceAttribution SourceAttribution[]
+
+  @@index([isCurrent])
+  @@index([partyId])
+  @@index([politicianId])
+}
+
+model PoliticalParty {
+  id               String             @id
+  name             String             @unique
+  abbreviation     String?
+  foundedDate      DateTime?
+  isActive         Boolean            @default(true)
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime
+  PartyAffiliation PartyAffiliation[]
+
+  @@index([name])
+}
+
+model AIResearchProposal {
+  id           String     @id
+  politicianId String
+  fieldName    String
+  value        String
+  sources      Json
+  confidence   Decimal    @db.Decimal(3, 2)
+  reasoning    String
+  status       String     @default("pending")
+  createdAt    DateTime   @default(now())
+  Politician   Politician @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+
+  @@index([politicianId])
+  @@index([status, createdAt])
+}
+
+model Politician {
+  AIResearchProposal                                                    AIResearchProposal[]
+  id                                                                    String                 @id
+  fullName                                                              String
+  legalName                                                             String?
+  firstName                                                             String
+  middleName                                                            String?
+  lastName                                                              String
+  suffix                                                                String?
+  nickname                                                              String?
+  birthday                                                              DateTime?
+  birthplace                                                            String?
+  photo                                                                 String?
+  isActive                                                              Boolean                @default(true)
+  createdAt                                                             DateTime               @default(now())
+  updatedAt                                                             DateTime
+  BillAuthor                                                            BillAuthor[]
+  Bookmark                                                              Bookmark[]
+  CampaignFinance                                                       CampaignFinance[]
+  CampaignPromise                                                       CampaignPromise[]
+  CommunityReport                                                       CommunityReport[]
+  Controversy                                                           Controversy[]
+  Education                                                             Education[]
+  ElectionResultRecord                                                  ElectionResultRecord[]
+  FactCheck                                                             FactCheck[]
+  FamilyRelationship_FamilyRelationship_politicianIdToPolitician        FamilyRelationship[]   @relation("FamilyRelationship_politicianIdToPolitician")
+  FamilyRelationship_FamilyRelationship_relatedPoliticianIdToPolitician FamilyRelationship[]   @relation("FamilyRelationship_relatedPoliticianIdToPolitician")
+  PartyAffiliation                                                      PartyAffiliation[]
+  Position                                                              Position[]
+  Project                                                               Project[]
+  RedFlag                                                               RedFlag[]
+  SALNRecord                                                            SALNRecord[]
+  SessionAttendance                                                     SessionAttendance[]
+  SourceAttribution                                                     SourceAttribution[]
+  VotingListItem                                                        VotingListItem[]
+  VotingRecord                                                          VotingRecord[]
+
+  @@index([fullName])
+  @@index([isActive])
+  @@index([lastName])
+}
+
+model Position {
+  id                String              @id
+  politicianId      String
+  title             String
+  level             GovernmentLevel
+  jurisdiction      String
+  startDate         DateTime
+  endDate           DateTime?
+  termNumber        Int                 @default(1)
+  isConsecutive     Boolean             @default(true)
+  isCurrent         Boolean             @default(false)
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime
+  Politician        Politician          @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+  Project           Project[]
+  SourceAttribution SourceAttribution[]
+
+  @@index([isCurrent])
+  @@index([level])
+  @@index([politicianId])
+}
+
+model Project {
+  id                 String              @id
+  politicianId       String
+  positionId         String
+  name               String
+  description        String?
+  budget             Decimal?            @db.Decimal(20, 2)
+  startDate          DateTime
+  endDate            DateTime?
+  status             ProjectStatus       @default(planned)
+  implementingAgency String?
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime
+  COAFinding         COAFinding[]
+  Politician         Politician          @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+  Position           Position            @relation(fields: [positionId], references: [id], onDelete: Cascade)
+  ProjectLocation    ProjectLocation?
+  ProjectOutcome     ProjectOutcome[]
+  SourceAttribution  SourceAttribution[]
+
+  @@index([politicianId])
+  @@index([positionId])
+  @@index([status])
+}
+
+model ProjectLocation {
+  id        String   @id
+  projectId String   @unique
+  region    String
+  province  String?
+  city      String?
+  barangay  String?
+  latitude  Decimal? @db.Decimal(10, 8)
+  longitude Decimal? @db.Decimal(11, 8)
+  createdAt DateTime @default(now())
+  Project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+}
+
+model ProjectOutcome {
+  id        String   @id
+  projectId String
+  metric    String
+  value     String
+  date      DateTime
+  createdAt DateTime @default(now())
+  Project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+}
+
+model PromiseEvidence {
+  id                String              @id
+  campaignPromiseId String
+  type              PromiseEvidenceType
+  description       String
+  url               String?
+  date              DateTime
+  createdAt         DateTime            @default(now())
+  CampaignPromise   CampaignPromise     @relation(fields: [campaignPromiseId], references: [id], onDelete: Cascade)
+
+  @@index([campaignPromiseId])
+}
+
+model RateLimitEntry {
+  id          String   @id
+  userId      String?
+  ipAddress   String?
+  endpoint    String
+  count       Int      @default(1)
+  windowStart DateTime @default(now())
+  createdAt   DateTime @default(now())
+
+  @@unique([ipAddress, endpoint, windowStart])
+  @@unique([userId, endpoint, windowStart])
+  @@index([endpoint])
+  @@index([ipAddress])
+  @@index([userId])
+  @@index([windowStart])
+}
+
+model RedFlag {
+  id                String              @id
+  politicianId      String
+  type              RedFlagType
+  severity          RedFlagSeverity
+  title             String
+  description       String
+  relatedEntityId   String?
+  relatedEntityType String?
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime
+  Politician        Politician          @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+  SourceAttribution SourceAttribution[]
+
+  @@index([politicianId])
+  @@index([severity])
+  @@index([type])
+}
+
+model ReportEvidence {
+  id                String             @id
+  communityReportId String
+  type              ReportEvidenceType
+  url               String
+  description       String?
+  createdAt         DateTime           @default(now())
+  CommunityReport   CommunityReport    @relation(fields: [communityReportId], references: [id], onDelete: Cascade)
+
+  @@index([communityReportId])
+}
+
+model SALNAnomaly {
+  id                 String     @id
+  salnRecordId       String     @unique
+  yearOverYearChange Decimal    @db.Decimal(10, 4)
+  expectedMaxChange  Decimal    @db.Decimal(10, 4)
+  anomalyRatio       Decimal    @db.Decimal(10, 4)
+  explanation        String
+  createdAt          DateTime   @default(now())
+  SALNRecord         SALNRecord @relation(fields: [salnRecordId], references: [id], onDelete: Cascade)
+}
+
+model SALNInvestment {
+  id           String     @id
+  salnRecordId String
+  description  String
+  value        Decimal    @db.Decimal(20, 2)
+  createdAt    DateTime   @default(now())
+  SALNRecord   SALNRecord @relation(fields: [salnRecordId], references: [id], onDelete: Cascade)
+
+  @@index([salnRecordId])
+}
+
+model SALNProperty {
+  id              String     @id
+  salnRecordId    String
+  description     String
+  location        String?
+  assessedValue   Decimal    @db.Decimal(20, 2)
+  acquisitionDate DateTime?
+  acquisitionMode String?
+  isRealProperty  Boolean    @default(true)
+  createdAt       DateTime   @default(now())
+  SALNRecord      SALNRecord @relation(fields: [salnRecordId], references: [id], onDelete: Cascade, map: "SALNProperty_personal_fkey")
+
+  @@index([salnRecordId])
+}
+
+model SALNRecord {
+  id                String              @id
+  politicianId      String
+  year              Int
+  totalAssets       Decimal             @db.Decimal(20, 2)
+  totalLiabilities  Decimal             @db.Decimal(20, 2)
+  netWorth          Decimal             @db.Decimal(20, 2)
+  declaredSalary    Decimal?            @db.Decimal(20, 2)
+  anomalyDetected   Boolean             @default(false)
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime
+  SALNAnomaly       SALNAnomaly?
+  SALNInvestment    SALNInvestment[]
+  SALNProperty      SALNProperty[]
+  Politician        Politician          @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+  SourceAttribution SourceAttribution[]
+
+  @@unique([politicianId, year])
+  @@index([anomalyDetected])
+  @@index([politicianId])
+  @@index([year])
+}
+
+model ScrapeJob {
+  id               String    @id
+  source           String
+  status           String    @default("pending")
+  recordsProcessed Int       @default(0)
+  recordsAdded     Int       @default(0)
+  recordsUpdated   Int       @default(0)
+  errors           Json?
+  startedAt        DateTime?
+  completedAt      DateTime?
+  createdAt        DateTime  @default(now())
+
+  @@index([createdAt])
+  @@index([source])
+  @@index([status])
+}
+
+model SentimentData {
+  id             String   @id
+  politicianId   String
+  date           DateTime
+  positiveCount  Int      @default(0)
+  negativeCount  Int      @default(0)
+  neutralCount   Int      @default(0)
+  totalMentions  Int      @default(0)
+  trendingTopics Json?
+  samplePosts    Json?
+  createdAt      DateTime @default(now())
+
+  @@unique([politicianId, date])
+  @@index([date])
+  @@index([politicianId])
+}
+
+model SessionAttendance {
+  id                String              @id
+  politicianId      String
+  sessionDate       DateTime
+  chamber           Chamber
+  status            AttendanceStatus
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime
+  Politician        Politician          @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+  SourceAttribution SourceAttribution[]
+
+  @@unique([politicianId, sessionDate, chamber])
+  @@index([chamber])
+  @@index([politicianId])
+  @@index([sessionDate])
+}
+
+model SourceAttribution {
+  id                     String                @id
+  sourceType             SourceType
+  sourceName             String
+  sourceUrl              String?
+  documentDate           DateTime?
+  retrievedAt            DateTime              @default(now())
+  confidence             Decimal?              @db.Decimal(3, 2)
+  isAIProcessed          Boolean               @default(false)
+  originalDocumentId     String?
+  fieldName              String
+  createdAt              DateTime              @default(now())
+  politicianId           String?
+  positionId             String?
+  partyAffiliationId     String?
+  billId                 String?
+  votingRecordId         String?
+  sessionAttendanceId    String?
+  salnRecordId           String?
+  electionResultRecordId String?
+  controversyId          String?
+  campaignFinanceId      String?
+  projectId              String?
+  campaignPromiseId      String?
+  familyRelationshipId   String?
+  redFlagId              String?
+  educationId            String?
+  Bill                   Bill?                 @relation(fields: [billId], references: [id], onDelete: Cascade)
+  CampaignFinance        CampaignFinance?      @relation(fields: [campaignFinanceId], references: [id], onDelete: Cascade)
+  CampaignPromise        CampaignPromise?      @relation(fields: [campaignPromiseId], references: [id], onDelete: Cascade)
+  Controversy            Controversy?          @relation(fields: [controversyId], references: [id], onDelete: Cascade)
+  ElectionResultRecord   ElectionResultRecord? @relation(fields: [electionResultRecordId], references: [id], onDelete: Cascade)
+  Education              Education?            @relation(fields: [educationId], references: [id], onDelete: Cascade)
+  FamilyRelationship     FamilyRelationship?   @relation(fields: [familyRelationshipId], references: [id], onDelete: Cascade)
+  PartyAffiliation       PartyAffiliation?     @relation(fields: [partyAffiliationId], references: [id], onDelete: Cascade)
+  Politician             Politician?           @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+  Position               Position?             @relation(fields: [positionId], references: [id], onDelete: Cascade)
+  Project                Project?              @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  RedFlag                RedFlag?              @relation(fields: [redFlagId], references: [id], onDelete: Cascade)
+  SALNRecord             SALNRecord?           @relation(fields: [salnRecordId], references: [id], onDelete: Cascade)
+  SessionAttendance      SessionAttendance?    @relation(fields: [sessionAttendanceId], references: [id], onDelete: Cascade)
+  VotingRecord           VotingRecord?         @relation(fields: [votingRecordId], references: [id], onDelete: Cascade)
+
+  caseEventId String?
+  evidenceLocator String?
+  reviewState ResearchReviewState @default(pending)
+  reviewedBy String?
+  reviewedAt DateTime?
+  CaseEvent CaseEvent? @relation("CaseEventSources", fields: [caseEventId, controversyId], references: [id, controversyId], onDelete: Restrict, onUpdate: Restrict, map: "case_review_source_owner_fk")
+
+  @@index([fieldName])
+  @@index([politicianId])
+  @@index([sourceType])
+}
+
+model User {
+  id                      String                   @id
+  isVerified              Boolean                  @default(false)
+  verificationMethod      VerificationMethod?
+  verifiedAt              DateTime?
+  language                String                   @default("en")
+  createdAt               DateTime                 @default(now())
+  lastLoginAt             DateTime                 @default(now())
+  updatedAt               DateTime
+  Bookmark                Bookmark[]
+  ChatConversation        ChatConversation[]
+  CommunityReport         CommunityReport[]
+  Notification            Notification[]
+  NotificationPreferences NotificationPreferences?
+  VotingList              VotingList[]
+
+  @@index([isVerified])
+}
+
+model VerificationResult {
+  id                String          @id
+  communityReportId String          @unique
+  status            String
+  confidence        Decimal         @db.Decimal(3, 2)
+  reasoning         String
+  createdAt         DateTime        @default(now())
+  CommunityReport   CommunityReport @relation(fields: [communityReportId], references: [id], onDelete: Cascade)
+}
+
+model VotingList {
+  id             String           @id
+  userId         String
+  electionYear   Int
+  name           String?
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime
+  User           User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  VotingListItem VotingListItem[]
+
+  @@unique([userId, electionYear])
+  @@index([electionYear])
+  @@index([userId])
+}
+
+model VotingListItem {
+  id           String     @id
+  votingListId String
+  politicianId String
+  position     String
+  addedAt      DateTime   @default(now())
+  Politician   Politician @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+  VotingList   VotingList @relation(fields: [votingListId], references: [id], onDelete: Cascade)
+
+  @@unique([votingListId, politicianId])
+  @@index([politicianId])
+  @@index([votingListId])
+}
+
+model VotingRecord {
+  id                String              @id
+  politicianId      String
+  billId            String
+  vote              VoteType
+  voteDate          DateTime
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime
+  SourceAttribution SourceAttribution[]
+  Bill              Bill                @relation(fields: [billId], references: [id], onDelete: Cascade)
+  Politician        Politician          @relation(fields: [politicianId], references: [id], onDelete: Cascade)
+
+  @@unique([politicianId, billId])
+  @@index([billId])
+  @@index([politicianId])
+  @@index([voteDate])
+}
+
+enum ActorType {
+  user
+  admin
+  system
+  ai
+}
+
+enum AdminRole {
+  super_admin
+  content_moderator
+  data_reviewer
+  auditor
+}
+
+enum AttendanceStatus {
+  present
+  absent_excused
+  absent_unexcused
+}
+
+enum AuditAction {
+  create
+  update
+  delete
+  verify
+  reject
+}
+
+enum BillAuthorRole {
+  principal_author
+  co_author
+  introduced_by
+}
+
+enum BillStatus {
+  pending
+  passed
+  vetoed
+  lapsed
+  withdrawn
+}
+
+enum COAFindingSeverity {
+  observation
+  deficiency
+  irregularity
+}
+
+enum COAFindingStatus {
+  open
+  resolved
+}
+
+enum Chamber {
+  senate
+  house
+}
+
+enum ContributionType {
+  cash
+  in_kind
+}
+
+enum ControversyCategory {
+  legal_case
+  corruption
+  ethics_violation
+  other
+}
+
+enum ControversyStatus {
+  ongoing
+  dismissed
+  convicted
+  acquitted
+  settled
+}
+
+enum DonorType {
+  individual
+  corporation
+  organization
+}
+
+enum EducationLevel {
+  elementary
+  high_school
+  vocational
+  bachelors
+  masters
+  doctorate
+  law
+  medicine
+  other
+}
+
+enum ElectionResult {
+  won
+  lost
+}
+
+enum ElectionType {
+  national
+  local
+  barangay
+  special
+}
+
+enum ExpenditureCategory {
+  advertising
+  rallies
+  materials
+  personnel
+  travel
+  other
+}
+
+enum FeedbackCategory {
+  bug_report
+  feature_suggestion
+  data_correction
+  general_feedback
+}
+
+enum FeedbackStatus {
+  pending
+  reviewed
+  resolved
+  dismissed
+}
+
+enum GovernmentLevel {
+  national
+  regional
+  provincial
+  city
+  municipal
+  barangay
+}
+
+enum NotificationType {
+  new_controversy
+  new_bill
+  bill_passed
+  red_flag
+  election_reminder
+}
+
+enum ProjectStatus {
+  planned
+  ongoing
+  completed
+  cancelled
+}
+
+enum PromiseEvidenceType {
+  legislation
+  project
+  policy
+  statement
+}
+
+enum PromiseStatus {
+  kept
+  partially_kept
+  broken
+  in_progress
+  not_yet_due
+}
+
+enum PromiseSignificance {
+  high
+  medium
+  low
+  trivial
+}
+
+enum PromiseAttribution {
+  direct_action
+  partial_contribution
+  inherited_program
+  inevitable_trend
+  unverified
+}
+
+enum RedFlagSeverity {
+  info
+  warning
+  critical
+}
+
+enum RedFlagType {
+  legal_case
+  corruption
+  dynasty
+  saln_anomaly
+  attendance
+}
+
+enum RelationshipType {
+  spouse
+  parent
+  child
+  sibling
+  in_law
+  cousin
+  second_cousin
+  grandparent
+  grandchild
+}
+
+enum ReportEvidenceType {
+  document
+  link
+  image
+}
+
+enum ReportStatus {
+  pending
+  verified
+  rejected
+}
+
+enum ReportType {
+  new_info
+  correction
+  controversy
+}
+
+enum SourceType {
+  official_government
+  court_document
+  comelec_filing
+  legislative_record
+  coa_report
+  third_party_verified
+  ai_extracted
+}
+
+enum VerificationMethod {
+  national_id
+  passport
+}
+
+enum VoteType {
+  yes
+  no
+  abstain
+}
+
+model CaseEvent {
+  id String @id
+  controversyId String
+  kind CaseEventKind
+  outcome ReviewedCaseOutcome?
+  relief CaseReliefType?
+  evidenceBasis CaseEvidenceBasis?
+  finality CaseFinality @default(unknown)
+  eventDate String?
+  jurisdiction String?
+  court String?
+  caseNumber String?
+  summary String
+  selectedRelief Boolean @default(false)
+  appliesToEventId String?
+  reviewState ResearchReviewState @default(pending)
+  reviewedBy String?
+  reviewedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  Controversy Controversy @relation("CaseRecordEvents", fields: [controversyId], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "case_review_event_parent_fk")
+  SelectedBy Controversy[] @relation("SelectedCaseOutcome")
+  AppliesTo CaseEvent? @relation("CaseEventRelief", fields: [appliesToEventId, controversyId], references: [id, controversyId], onDelete: Restrict, onUpdate: Restrict, map: "case_review_relief_owner_fk")
+  ReliefEvents CaseEvent[] @relation("CaseEventRelief")
+  SourceAttribution SourceAttribution[] @relation("CaseEventSources")
+  @@unique([id, controversyId])
+  @@index([controversyId])
+}
+
+enum ResearchRecordKind {
+  criminal_case
+  civil_case
+  administrative_case
+  public_context
+}
+
+enum ResearchSubjectRole {
+  accused
+  civil_defendant
+  administrative_respondent
+  claimant
+  misinformation_target
+  relative_or_associate
+  commentator
+}
+
+enum ResearchReviewState {
+  pending
+  approved
+  held
+}
+
+enum CaseEventKind {
+  filing
+  status_report
+  judgment
+  appeal
+  clemency
+  enforcement
+}
+
+enum ReviewedCaseOutcome {
+  pending
+  convicted
+  acquitted
+  dismissed
+  settled
+  civil_liability
+  civil_no_liability
+  administrative_liability
+  administrative_no_liability
+}
+
+enum CaseReliefType {
+  absolute_pardon
+  conditional_pardon
+  commutation
+}
+
+enum CaseEvidenceBasis {
+  primary_document
+  attributed_reporting
+}
+
+enum CaseFinality {
+  unknown
+  non_final
+  final
+}

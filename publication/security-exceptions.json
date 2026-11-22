@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "exceptions": [
+    {
+      "id": "GHSA-fc5q-39xc-vjpf",
+      "package": "picomatch",
+      "status": "accepted_for_source_release_only",
+      "approvedOn": "2026-11-18",
+      "approvedBy": "project maintainer",
+      "approval": "Explicit approval of the limited exception in this preparation session.",
+      "expiresAt": "2026-12-02T00:00:00+08:00",
+      "timezone": "Asia/Manila",
+      "patched": false,
+      "auditSuppressed": false,
+      "hostingApproved": false,
+      "publicationAuthorized": false,
+      "scope": "The reviewed source-only candidate with unchanged executable source, tests, dependency versions, and configuration. Documentation and release-record edits do not expand this scope.",
+      "reviewedSourceArchiveSha256": "5765ea42a8e4c5f609ed1ea409641d0151d86fa90c538567be9f129d3f3b71b6",
+      "runtimeSnapshot": {
+        "algorithm": "sha256",
+        "digest": "66f4570eb28aab531c1abc489faeddd030a804889b94f825ecd08b8ed1347e05",
+        "fileCount": 446,
+        "definition": "SHA-256 of sorted lines <file sha256><two spaces><relative path><LF> for preceding source-archive files that are not Markdown and are not under publication/. This binds executable source, tests, dependency/configuration files, migrations, and bundled assets; added executable/configuration files also require re-review."
+      },
+      "criticalFiles": [
+        {
+          "path": "package.json",
+          "sha256": "6c09141382c74b7780bc5cc95eb39883e31689a450297a278a7d578ef0e088d6"
+        },
+        {
+          "path": "package-lock.json",
+          "sha256": "a59cdf72dfb4e3ee8d4ee1d9c3596e3da5d0fa51bb808bd68a3660a4821435ce"
+        },
+        {
+          "path": "next.config.mjs",
+          "sha256": "b10f3d5c08073d2b438208b57a88653fc4d3d9215d6d577109fc7a21f5e1c6bf"
+        },
+        {
+          "path": "vitest.config.ts",
+          "sha256": "460a3ab24d36a874118e82036d0088deff012b66242e885c30e1d0af42fcef47"
+        },
+        {
+          "path": "eslint.config.mjs",
+          "sha256": "fb59fb9ed9d003ce9cdf57d92e01e39b1f590ea3992f9a0cd349b9cbdd22654e"
+        },
+        {
+          "path": ".env.example",
+          "sha256": "edc45347cf88e1e9aaac94c5e8eae62997686a3fcb17bce2e087a74ed218aafd"
+        }
+      ],
+      "evidence": {
+        "assessment": "docs/DEPENDENCY_SECURITY.md",
+        "rawAudit": "publication/dependency-audit.json",
+        "rawProductionAudit": "publication/dependency-audit-production.json",
+        "auditedOn": "2026-11-18",
+        "reviewedNpmVersions": ["2.3.2", "4.0.7"],
+        "nextBundledCopyReviewed": true
+      },
+      "conditions": [
+        "Keep the advisory and raw audit results visible without rule exclusions or severity filtering.",
+        "Keep glob patterns in trusted source or configuration; do not accept user-defined glob patterns.",
+        "Reassess on dependency, executable-source, configuration, image-pattern, watcher/extractor, or glob-feature changes and new upstream/advisory information.",
+        "Apply and verify a suitable upstream fix when available.",
+        "Reopen the release blocker at expiry or when a condition no longer holds.",
+        "Do not claim the package is patched or that this exception approves hosting, named fixtures, reporting, hosted CI, Git actions, or publication."
+      ],
+      "enforcement": "Maintainer release decision; the current CI does not automatically evaluate this record or its expiry. No reminder or recurring monitor was created.",
+      "scopeReassessments": [
+        {
+          "reviewedOn": "2026-11-18",
+          "authorization": "Maintainer-approved synthetic fixture replacement and focused exception re-review.",
+          "status": "accepted_for_source_release_only",
+          "precedingCandidateArchiveSha256": "6ec5a6c6dc47196d755e4e580f421dda3c46904465db0ec3014bdb6f6609441d",
+          "expiresAt": "2026-12-02T00:00:00+08:00",
+          "patched": false,
+          "hostingApproved": false,
+          "publicationAuthorized": false,
+          "scope": "Approved synthetic fixture and integrity-verifier revisions only; dependency versions, configuration, production callers, image rules, and watcher settings unchanged. Original acceptance and conditions remain in force.",
+          "runtimeSnapshot": {
+            "algorithm": "sha256",
+            "digest": "919ad44ce1b27a3b9c0a94f78f38e08cad25d1b4bfefcadadf78d6d51582f85a",
+            "fileCount": 446,
+            "definition": "Sort preceding source-archive relative paths lexicographically, excluding Markdown and publication/. For each path emit <file sha256><two spaces><relative path><LF>, concatenate those lines, and compute SHA-256. This binds executable source, tests, configuration, migrations, and bundled assets; added executable/configuration files also require re-review."
+          },
+          "changedRuntimeFiles": [
+            {
+              "path": "scripts/lib/reviewed-controversies.ts",
+              "previousSha256": "4c6f9aefee5daba71a9f8505a3156393579f58ee5ae53407ac6c672b3b50c4a2",
+              "sha256": "09ace512dae7b4f5e21a654ff5424af6593c03cdaa86934a82f5d6a04caad122"
+            },
+            {
+              "path": "scripts/maintenance/add-controversies-batch2.ts",
+              "previousSha256": "e1c5a0ca9c997552736a88a075dd5aa330bead9e6531f57d248fdad6de071728",
+              "sha256": "7a03d92779f5ba2b1c74a41fc5313030f8e2ce6ca4480aa14d83aed6e28f98b9"
+            },
+            {
+              "path": "scripts/maintenance/add-controversies.ts",
+              "previousSha256": "ad58462bf29f23838cb425dad923bbc0dc3eccadaece872116ec69495fb8fc47",
+              "sha256": "f63dbb3c56d84fb6c988d1e337d7bdeb0b6eec34f98ce79affb7b4f2359d368e"
+            },
+            {
+              "path": "scripts/maintenance/fix-bbm-controversy.ts",
+              "previousSha256": "85a8ca36afe54134b2d01f5027fdbc59483e9fd3b49d47672f712e3a9bbde91e",
+              "sha256": "501e4c0568fa7cb4257d9750291931e07edbc3d4866238d601e41cd5a9d76cd4"
+            },
+            {
+              "path": "scripts/maintenance/fix-reviewed-controversies.ts",
+              "previousSha256": "a50d566b4d9232c7c2f841c1c2e1086cc3af3a7b143c4f7910b3e06c9f5930aa",
+              "sha256": "9a6bb872d2bd807cb04b0fffcdb3c4978ac1dca1bf3ede552c6f0a635d8091e0"
+            },
+            {
+              "path": "scripts/verify-source-only.mjs",
+              "previousSha256": "131c017d46a100691f5b988b89ee7ff39521f080582c07d9459fa7c985f6f420",
+              "sha256": "665259cb4333ea4aa8ec0832df822bc171b2f0875a33dc75222e5d17c1ba3aad"
+            },
+            {
+              "path": "src/test/reviewed-controversies.test.ts",
+              "previousSha256": "e6a7eb1a046c7bf91b4e0f70db0ebe2e87ddc90d0d80073f4c500c0bfe7afa02",
+              "sha256": "0ea57d9d6041ff27df372762d792ccf492dd06dc19d7e13663d7f023bf889235"
+            }
+          ],
+          "findings": [
+            "All dependency files, production application source, glob configuration, image rules, and watcher settings are byte-identical to the preceding candidate.",
+            "The changed helper and four commands retain their database boundary; production imports remain prohibited and placeholder citations make no network requests.",
+            "The verifier traverses only fixed source directories and invokes fixed local command paths. No new glob parser or user-controlled pattern input is introduced.",
+            "Test discovery paths and configuration are unchanged; all 98 existing test files were selected by the full test run.",
+            "Raw audit evidence, advisory visibility, original acceptance binding, and December 2 expiry are preserved. No dependency patch or hosting clearance is claimed."
+          ]
+        }
+      ]
+    }
+  ],
+  "currentReview": {
+    "reviewedOn": "2026-11-22",
+    "candidate": "populated release copy",
+    "advisory": "GHSA-fc5q-39xc-vjpf",
+    "advisoryStatus": "withdrawn",
+    "withdrawnOn": "2026-11-18",
+    "advisoryUrl": "https://github.com/advisories/GHSA-fc5q-39xc-vjpf",
+    "upstreamResponse": "https://github.com/micromatch/picomatch/pull/235#issuecomment-6315749381",
+    "fullAudit": {
+      "file": "publication/dependency-audit.json",
+      "exitCode": 0,
+      "vulnerabilities": 0
+    },
+    "productionAudit": {
+      "file": "publication/dependency-audit-production.json",
+      "exitCode": 0,
+      "vulnerabilities": 0
+    },
+    "dependenciesChanged": true,
+    "lockfileSha256": "26d5340fa5e155c1f6d7f54542f0a21f7cc683cabaa91a8307b675794fd7f897",
+    "patchedByThisWork": false,
+    "newExceptionRequiredForWithdrawnAdvisory": false,
+    "historicalExceptionExtended": false,
+    "technicalAssessment": "The importer reads fixed paths. Reviewed-name search uses database or search-engine strings. No new caller-defined glob, filesystem matcher, watcher, or image-pattern input was introduced. Keep glob configuration trusted. Withdrawal is not a package patch.",
+    "historicalEvidence": [
+      "publication/dependency-audit-2026-11-18.json",
+      "publication/dependency-audit-production-2026-11-18.json"
+    ],
+    "historicalExceptionExpiryUnchanged": "2026-12-02T00:00:00+08:00",
+    "runtimeSnapshot": {
+      "algorithm": "sha256",
+      "digest": "62a9f8c8ecdd55e32f52d68ee0d1b6497c29e09bb2d32125d16e21ec41981041",
+      "fileCount": 477,
+      "definition": "Sorted lines <file sha256><two spaces><relative path><LF> for candidate files excluding Markdown and publication/; installed dependencies, generated files and local instructions are excluded."
+    },
+    "hostingApproved": false,
+    "publicationAuthorized": false,
+    "uiFollowup": {
+      "reviewedOn": "2026-11-19",
+      "dependencyAndLockfileChanges": false,
+      "matcherConfigurationChanges": false,
+      "assessment": "Homepage receives fixed approved records and loaded profile IDs. Native selectors submit only listed distinct IDs. No glob or watcher input is added. Existing advisory withdrawal and historical expiry remain unchanged."
+    },
+    "senateChatFollowup": {
+      "reviewedOn": "2026-11-22",
+      "assessment": "New chat reads fixed approved JSON and exact database fields; autocomplete sends strings to existing name lookup. No user-defined glob, watcher, file path or image pattern added. Public chat makes no model call. Effect advisory newly reported and unaccepted.",
+      "dependenciesChanged": false
+    },
+    "effectRemediation": {
+      "advisory": "GHSA-7589-6fvf-x4pw",
+      "reviewedOn": "2026-11-22",
+      "status": "fixed_in_candidate",
+      "previousFinding": {
+        "id": "GHSA-7589-6fvf-x4pw",
+        "url": "https://github.com/advisories/GHSA-7589-6fvf-x4pw",
+        "package": "effect",
+        "installedVersion": "3.20.0",
+        "patchedVersion": "3.22.1",
+        "severity": "high",
+        "packageEntries": ["effect", "@prisma/config", "prisma"],
+        "releaseBlocker": true,
+        "publicReachabilityVerified": false,
+        "exceptionApproved": false,
+        "dependencyChangeApproved": false
+      },
+      "installedVersion": "3.22.1",
+      "previousVersion": "3.20.0",
+      "override": {
+        "@prisma/config@7.10.1": {
+          "effect": "3.22.1"
+        }
+      },
+      "parentVersionsChanged": false,
+      "otherPackageVersionsChanged": false,
+      "upstreamFix": "https://github.com/Effect-TS/effect/pull/6761",
+      "releaseBlocker": false,
+      "exceptionUsed": false,
+      "testsModified": false,
+      "publicExploitabilityBeforeFixDemonstrated": false,
+      "boundedProbe": "Six supported/rejected cases passed; 5000-character rejection completed in about 0.3 ms versus a two-second terminated baseline process. This is package-level evidence, not a live exploit.",
+      "cleanNpm11InstallPassed": true,
+      "integrityRevision": "publication/populated-release.json#dependencyRevision",
+      "failedAuditEvidence": [
+        "publication/dependency-audit-2026-11-22-before-effect.json",
+        "publication/dependency-audit-production-2026-11-22-before-effect.json"
+      ]
+    },
+    "effectFixDoesNotPatchPicomatch": true
+  }
+}

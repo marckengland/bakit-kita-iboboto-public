@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 1,
+  "verifiedOn": "2026-11-22",
+  "timezone": "Asia/Manila",
+  "candidate": "separate populated release copy",
+  "publicationAuthorized": false,
+  "published": false,
+  "runtime": {
+    "node": "22.23.5",
+    "npm": "11.21.2"
+  },
+  "data": {
+    "profiles": 24,
+    "selectedFilings": 45,
+    "filingsWithCanonicalDate": 44,
+    "fieldCitations": 460,
+    "sourceReferences": 94,
+    "membershipObservedOn": "2025-07-28",
+    "guide": "public/data/senate-20/INDEX.md",
+    "integrationApproval": "public/data/senate-20/APPROVAL.json",
+    "approvedArchiveSha256": "b8fbb6053bce3aa2a284d612fab490b85663abc52bb4fdfb7fda549075dc1faa",
+    "originalEightFilesByteIdentical": true,
+    "existingDatabaseWritesAuthorized": false
+  },
+  "checks": [
+    {
+      "command": "npm run check",
+      "exitCode": 0,
+      "testFiles": 107,
+      "tests": 2140,
+      "lintWarnings": 0,
+      "verifiedOn": "2026-11-22"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "verifiedOn": "2026-11-22"
+    },
+    {
+      "command": "npm run format:check",
+      "exitCode": 0,
+      "verifiedOn": "2026-11-22"
+    },
+    {
+      "command": "npm run docs:check",
+      "exitCode": 0,
+      "verifiedOn": "2026-11-22"
+    },
+    {
+      "command": "npm run data:verify",
+      "exitCode": 0,
+      "coverage": [
+        "approved byte integrity",
+        "fresh disposable PostgreSQL migrations",
+        "import counts and unknowns",
+        "exact repeat",
+        "explicit and implicit field drift refusal",
+        "sibling-schema and nonempty database refusal",
+        "atomic rollback"
+      ],
+      "verifiedOn": "2026-11-22"
+    },
+    {
+      "command": "npm exec --no -- tsx scripts/verify-case-review.ts",
+      "exitCode": 0,
+      "coverage": [
+        "schema ownership",
+        "review gate",
+        "transactions",
+        "HTTP",
+        "reviewed chat",
+        "mobile navigation",
+        "browser offline",
+        "feature rollback"
+      ],
+      "verifiedOn": "2026-11-22"
+    },
+    {
+      "command": "node scripts/verify-source-only.mjs --populated-release",
+      "exitCode": 0,
+      "verifiedOn": "2026-11-22"
+    },
+    {
+      "command": "npm audit --json",
+      "exitCode": 0,
+      "vulnerabilities": 0,
+      "verifiedOn": "2026-11-22",
+      "high": 0,
+      "advisories": []
+    },
+    {
+      "command": "npm audit --omit=dev --json",
+      "exitCode": 0,
+      "vulnerabilities": 0,
+      "verifiedOn": "2026-11-22",
+      "high": 0,
+      "advisories": []
+    },
+    {
+      "command": "npm ci (populated copy)",
+      "exitCode": 0,
+      "verifiedOn": "2026-11-22"
+    },
+    {
+      "command": "npm ci; npm run db:generate; npm exec --no -- prisma validate; npm ls effect --all (disposable install)",
+      "exitCode": 0,
+      "verifiedOn": "2026-11-22",
+      "lockUnchanged": true
+    }
+  ],
+  "browser": {
+    "passed": true,
+    "mode": "local production server and owned disposable database",
+    "checks": [
+      "queryless National/Senator browse: 24",
+      "named reviewed lookup and unknown current office",
+      "autocomplete dated membership",
+      "bill142 date/status/session/confidence unknown and separate approval",
+      "comparison coverage and null unsupported metrics",
+      "attendance/conflict unknown, not zero/clearance",
+      "integrated data landing page",
+      "browser filing dialog and exact field citations",
+      "browser competing date observations, no false former/zero labels",
+      "browser filtered directory result",
+      "mobile profile without document overflow",
+      "mobile filing details and date-source access",
+      "no browser exceptions, hydration errors or duplicate citation keys"
+    ],
+    "observedWarnings": [
+      "Existing apple-mobile-web-app-capable deprecation",
+      "Expected unauthenticated profile endpoint 401"
+    ],
+    "exceptionsHydrationErrorsAndDuplicateKeys": 0
+  },
+  "preservation": {
+    "sourceOnlyBaselineFilesUnchanged": 480,
+    "inheritedTestFilesByteIdentical": 98,
+    "newTestFiles": 9,
+    "newTests": 96,
+    "originalGitHeadIndexAndStatusUnchanged": true,
+    "dependencyDeclarationsAndLockfileUnchanged": false,
+    "precedingPopulatedTestFilesByteIdentical": 102,
+    "routineSelectorCorrectedTestFiles": 1,
+    "originalEarlierPreservation": {
+      "verifiedOn": "2026-11-19",
+      "baselineFiles": 745,
+      "historical": true
+    },
+    "originalCurrentSnapshot": {
+      "capturedOn": "2026-11-22",
+      "files": 1018,
+      "unchangedDuringFinalPackaging": true,
+      "limitation": "Earlier temporary per-file baseline is no longer available; the original November19 preservation result remains historical. Current snapshot comparison and no original-repository edits or Git mutations are recorded privately."
+    },
+    "approvedDependencyRevision": "publication/populated-release.json#dependencyRevision",
+    "all107TestsByteIdenticalDuringEffectFix": true,
+    "directDependencyVersionsAndExistingOverridesUnchanged": true
+  },
+  "archive": {
+    "filename": "bakit-kita-iboboto-populated-release-unpublished.tar.gz",
+    "checksum": "separate .sha256 sidecar",
+    "memberChecksums": "publication/source-files.sha256",
+    "excluded": [
+      "Git history",
+      "installed dependencies",
+      "build outputs",
+      "private environment/configuration",
+      "private review packets",
+      "generated local agent instructions"
+    ]
+  },
+  "notVerified": [
+    "Hosted CI for this populated candidate",
+    "Public deployment",
+    "Resend delivery",
+    "Live authenticated v1 access with an account credential",
+    "Current office or term dates",
+    "Every upstream URL downloadable at integration time",
+    "Impact ratings and independent impact evidence",
+    "Current legislative status and enacted outcomes",
+    "Live application exploitability before the Effect fix"
+  ],
+  "notPerformed": [
+    "Existing-database migration or import",
+    "Commit",
+    "Push",
+    "Publication",
+    "Deployment",
+    "Dependency changes beyond the approved scoped Effect fix"
+  ],
+  "uiRevision": {
+    "approvedOn": "2026-11-19",
+    "features": [
+      "comparison form using loaded profiles with no preset matchup",
+      "up to three approved filing examples gated by loaded profiles",
+      "exactly one comparison header per selected person",
+      "grouped footer reporting controls",
+      "closed chat composer in page flow for short viewports"
+    ],
+    "zoomMethod": "Responsive CSS-pixel viewport checks; the in-app browser did not respond to native zoom shortcuts. Actual browser zoom remains unverified.",
+    "priorChecksRemainHistorical": true,
+    "verifiedChecks": [
+      "No preset matchup; submit initially disabled",
+      "Same person disabled in other selector",
+      "Distinct loaded profiles enable compare",
+      "Two selected profiles produce exactly two header cells with no empty corner",
+      "Comparison has no page overflow at 1440\u00d71000",
+      "Comparison has no page overflow at 1024\u00d7768",
+      "Comparison has no page overflow at 768\u00d7600",
+      "Comparison has no page overflow at 375\u00d7812",
+      "Comparison has no page overflow at 320\u00d7640",
+      "3 selected profiles render exactly 3 header cells",
+      "4 selected profiles render exactly 4 header cells",
+      "Homepage has no page overflow at 1440\u00d71000",
+      "Homepage comparison entry remains available",
+      "Decorative 01/02/03 steps removed",
+      "Homepage has no page overflow at 1024\u00d7768",
+      "Homepage comparison entry remains available",
+      "Decorative 01/02/03 steps removed",
+      "Homepage has no page overflow at 768\u00d7600",
+      "Homepage comparison entry remains available",
+      "Decorative 01/02/03 steps removed",
+      "Homepage has no page overflow at 375\u00d7812",
+      "Homepage comparison entry remains available",
+      "Decorative 01/02/03 steps removed",
+      "Homepage has no page overflow at 320\u00d7640",
+      "Homepage comparison entry remains available",
+      "Decorative 01/02/03 steps removed",
+      "Feedback close control remains in view at 320px",
+      "Keyboard can reach private contact without the dock covering it",
+      "Short-viewport composer reflow has no transition or horizontal overflow after fix",
+      "Footer private-contact keyboard focus is visible after native smooth scrolling settles",
+      "Homepage filing link reaches the profile filing section",
+      "Homepage form submits via keyboard",
+      "Final comparison reflow 1440\u00d71000",
+      "Final comparison reflow 1024\u00d7768",
+      "Final comparison reflow 768\u00d7600",
+      "Final comparison reflow 375\u00d7812",
+      "Final comparison reflow 320\u00d7640",
+      "Final comparison reflow 320\u00d7256",
+      "Final short comparison composer is in page flow",
+      "Reduced motion preference is applied",
+      "Reduced-motion global style limits dock transitions to 0.01ms",
+      "Comparison reflows with the largest existing text setting at phone width",
+      "Four-person mobile comparison has no page overflow",
+      "Closing chat restores the in-flow composer in a short viewport"
+    ],
+    "finalComparisonReflow": [
+      {
+        "page": "comparison",
+        "dockPosition": "fixed",
+        "documentWidth": 1440,
+        "height": 1000,
+        "width": 1440
+      },
+      {
+        "page": "comparison",
+        "dockPosition": "fixed",
+        "documentWidth": 1024,
+        "height": 768,
+        "width": 1024
+      },
+      {
+        "page": "comparison",
+        "dockPosition": "fixed",
+        "documentWidth": 768,
+        "height": 600,
+        "width": 768
+      },
+      {
+        "page": "comparison",
+        "dockPosition": "fixed",
+        "documentWidth": 375,
+        "height": 812,
+        "width": 375
+      },
+      {
+        "page": "comparison",
+        "dockPosition": "fixed",
+        "documentWidth": 320,
+        "height": 640,
+        "width": 320
+      },
+      {
+        "page": "comparison",
+        "dockPosition": "relative",
+        "documentWidth": 320,
+        "height": 256,
+        "width": 320
+      }
+    ],
+    "review": {
+      "independentStaticReview": "No actionable issues found",
+      "existing102TestsByteIdentical": true
+    }
+  },
+  "senateChatRevision": {
+    "verifiedOn": "2026-11-22",
+    "addedTestFiles": 4,
+    "addedTests": 48,
+    "independentReview": "Earlier routing/identity issues corrected; follow-up found no actionable issues.",
+    "browser": {
+      "verifiedOn": "2026-11-22",
+      "url": "http://localhost:3115/",
+      "checks": [
+        "Latest production build loaded",
+        "Homepage autocomplete filters names",
+        "ArrowDown and Enter choose a profile",
+        "Duplicate profile excluded from other input",
+        "Editing a selection clears its ID and disables submit",
+        "Two-profile form navigates with distinct selected IDs",
+        "Comparison leads with exact reviewed titles, source links, counts and unknown SBN-142 date",
+        "SBN-142 answer contains exact title, summary, introducer, citations, unknown status and conflicting dates",
+        "Automatic transition from Senate to case question remains withheld at default gate",
+        "Topic-plus-author query asks for profile then preserves original query when selected",
+        "New conversation clears selected profile and answer",
+        "Congress19 query returns outside-coverage explanation",
+        "Mobile panel inspected at390x844",
+        "Comparison no horizontal page overflow at320x568",
+        "Short viewport320x256 leaves feedback and contact visible without dock overlap",
+        "Closing chat clears the answer",
+        "No browser console error captured"
+      ],
+      "viewportRestored": true,
+      "actualBrowserZoomVerified": false,
+      "screenshots": ["chat-desktop.png", "short-footer.png"]
+    },
+    "routineSelectorRevision": {
+      "file": "src/test/homepage-workspace.test.ts",
+      "previousSha256": "909e270a7db518631f14be2a9fa4a49ce4003b19cad79c9a05dcb3112a7d97c4",
+      "sha256": "fd3bcb97601623bf7a0a85a30263fe490e869d1c9436222180a42070d5864073",
+      "authorization": "Standing maintainer rule permits routine selector corrections when behavioral assertions remain intact.",
+      "scope": "Three structural selectors for the approved native-select to autocomplete replacement. Existing assertions, matchers, negation, test count and disabled/no-preselection expectations remain intact.",
+      "exactReplacementVerified": true,
+      "other102PrecedingTestFilesByteIdentical": true
+    },
+    "privateImpactDraftsExcluded": true,
+    "publicModelCalls": false,
+    "newPublicDataAdded": false
+  },
+  "effectRevision": {
+    "approvedOn": "2026-11-22",
+    "installedEffect": "3.22.1",
+    "changedLockPackageEntries": ["node_modules/effect"],
+    "lockTextChanges": "Only version, resolved URL and integrity for Effect",
+    "testsChanged": false,
+    "cleanInstallPassed": true,
+    "guardCases": "Approved revision accepted; unauthorized dependency, override, baseline and lock changes rejected, including rehashed unrelated lock edits.",
+    "databaseVerifiersPassed": true,
+    "publicModelCalls": false,
+    "publicationAuthorized": false,
+    "independentReview": "One lock-guard issue corrected; follow-up found no remaining actionable findings.",
+    "guardChecks": {
+      "positiveAccepted": 1,
+      "negativeRefusals": 6,
+      "rehashedUnrelatedLockRefused": true
+    },
+    "httpChecks": {
+      "senateFilingWithCitationsAndNullUnknowns": true,
+      "caseGateWithheld": true,
+      "reviewedComparisonRead": true,
+      "postgresNameLookup": true,
+      "privateModelOrEmailCalled": false,
+      "existingDatabaseWritesPerformed": false
+    }
+  },
+  "documentationRevision": {
+    "verifiedOn": "2026-11-22",
+    "scope": "Documentation and release records only",
+    "securitySummaryCurrent": true,
+    "licenseLinkCorrected": true,
+    "normalContributorChecksSeparatedFromReleaseGuard": true,
+    "configuredCheckoutCheck": {
+      "testFiles": 107,
+      "tests": 2140,
+      "typecheckPassed": true,
+      "lintWarnings": 0,
+      "formattingPassed": true
+    },
+    "cleanExportProcedurePassed": true,
+    "guardRefusalsPreserved": true,
+    "all107TestsByteIdentical": true,
+    "runtimeAndDependencyFilesUnchanged": true,
+    "buildAndDatabaseChecks": "Fresh preceding readiness results retained; not repeated for documentation-only changes.",
+    "publicationAuthorized": false
+  }
+}
