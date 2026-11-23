@@ -11,6 +11,7 @@ import {
 } from "node:fs";
 import path from "node:path";
 import { randomUUID } from "node:crypto";
+import { OwnedVerificationRedis } from "./lib/verification-redis";
 
 const root = process.cwd();
 const migration = "20261116090000_case_review";
@@ -57,6 +58,7 @@ function deploy(): void {
     }
   );
 }
+const ownedRedis = new OwnedVerificationRedis();
 let server: import("node:child_process").ChildProcess | undefined;
 let appPrisma: Awaited<typeof import("../src/lib/prisma")>["default"] | undefined;
 let secondPrisma: typeof appPrisma;
@@ -84,6 +86,7 @@ async function stopServer() {
 async function startServer(enabled: boolean): Promise<string> {
   await stopServer();
   const port = await freePort();
+  const redisUrl = await ownedRedis.start();
   server = spawn(
     process.execPath,
     [
@@ -105,7 +108,8 @@ async function startServer(enabled: boolean): Promise<string> {
         DATA_PIPELINE_ENABLED: "false",
         AI_RESEARCH_ENABLED: "false",
         PUBLIC_CASE_RECORDS_ENABLED: String(enabled),
-        REDIS_DISABLED: "true",
+        REDIS_DISABLED: "false",
+        REDIS_URL: redisUrl,
       },
       stdio: ["ignore", "pipe", "pipe"],
     }
@@ -888,13 +892,33 @@ async function main(): Promise<void> {
     process.stdout.write("Case-review schema and ownership verification passed\n");
     await checkApplication();
   } finally {
-    await stopServer();
-    await secondPrisma?.$disconnect();
-    await appPrisma?.$disconnect();
-    if (container) docker(["rm", "-f", container]);
-    rmSync(temp, { recursive: true, force: true });
+    await cleanup();
   }
 }
+
+let cleanupPromise: Promise<void> | undefined;
+function cleanup(): Promise<void> {
+  return (cleanupPromise ??= (async () => {
+    try {
+      ownedRedis.cleanup();
+    } finally {
+      await stopServer();
+      await secondPrisma?.$disconnect();
+      await appPrisma?.$disconnect();
+      if (container) docker(["rm", "-f", container]);
+      rmSync(temp, { recursive: true, force: true });
+    }
+  })());
+}
+
+for (const signal of ["SIGINT", "SIGTERM", "SIGHUP"] as const) {
+  process.once(signal, () => {
+    void cleanup().finally(() => {
+      process.exit(signal === "SIGINT" ? 130 : signal === "SIGTERM" ? 143 : 129);
+    });
+  });
+}
+
 main().catch((error: unknown) => {
   // Child-process failures can carry SQL and connection settings; report no raw output.
   process.stderr.write(

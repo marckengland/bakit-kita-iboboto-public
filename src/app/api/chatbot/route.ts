@@ -17,6 +17,7 @@ import {
 } from "@/services/ai-chatbot.service";
 import { checkRateLimit, recordRequest, getRateLimitStatus } from "@/services/rate-limit.service";
 import { getAPIKeyEnvVar, getChatbotModelConfig } from "@/services/ai-config.service";
+import { readBoundedJson, RequestBodyError } from "@/lib/request-body";
 
 /**
  * Helper to get client IP
@@ -68,8 +69,11 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const body = await request.json();
-    const { message, conversationId } = body;
+    const body = await readBoundedJson(request, 16 * 1024);
+    if (!body || typeof body !== "object" || Array.isArray(body)) {
+      return NextResponse.json({ error: "Message is required" }, { status: 400 });
+    }
+    const { message, conversationId } = body as { message?: unknown; conversationId?: string };
 
     if (!message || typeof message !== "string") {
       return NextResponse.json({ error: "Message is required" }, { status: 400 });
@@ -125,6 +129,9 @@ export async function POST(request: NextRequest) {
       },
     });
   } catch (error) {
+    if (error instanceof RequestBodyError) {
+      return NextResponse.json({ error: "Invalid request body" }, { status: error.status });
+    }
     if (error instanceof ChatbotError) {
       const statusMap: Record<string, number> = {
         USER_NOT_FOUND: 404,

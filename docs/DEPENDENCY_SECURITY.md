@@ -1,5 +1,12 @@
 # Dependency review
 
+The November 23 launch-preparation full and production audits both exit 0 with
+zero findings against the unchanged lockfile. The raw
+[full audit](../publication/dependency-audit-2026-11-23.json) and
+[production audit](../publication/dependency-audit-production-2026-11-23.json)
+are retained separately. No dependency changed for this preparation. These results
+do not certify hosted security or replace a fresh audit before deployment.
+
 The approved November 22, 2026 fix updates Effect from 3.20.0 to 3.22.1 through
 one scoped override. Both unfiltered audits now exit 0 with zero findings.
 

@@ -59,7 +59,7 @@ const CATEGORIES: { value: FeedbackCategory; label: string; description: string 
   { value: "general_feedback", label: "General Feedback", description: "Share your thoughts" },
 ];
 
-const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+const MAX_FILE_SIZE = 256 * 1024;
 const ALLOWED_FILE_TYPES = ["image/png", "image/jpeg", "image/gif", "application/pdf"];
 
 // ============================================
@@ -100,6 +100,10 @@ export function FeedbackButton({ className = "", variant = "floating" }: Feedbac
       if (!file) {
         continue;
       }
+      if (formData.attachments.length + newAttachments.length >= 5) {
+        setFileError("Attach up to five files.");
+        break;
+      }
 
       if (!ALLOWED_FILE_TYPES.includes(file.type)) {
         setFileError(`File type not allowed: ${file.name}. Use PNG, JPEG, GIF, or PDF.`);
@@ -107,7 +111,7 @@ export function FeedbackButton({ className = "", variant = "floating" }: Feedbac
       }
 
       if (file.size > MAX_FILE_SIZE) {
-        setFileError(`File too large: ${file.name}. Maximum size is 5MB.`);
+        setFileError(`File too large: ${file.name}. Maximum size is 256 KiB.`);
         continue;
       }
 

@@ -43,6 +43,20 @@ Their placeholder citations require no network access; see the
 
 ## Source release and hosting
 
+The production guest pilot denies unused account, community-report, cron and
+general-AI routes at the request boundary. Its reviewed-record chat and feedback
+use shared Redis request budgets and fail closed when those budgets are unavailable.
+Feedback account attribution comes from a validated session, not a caller's
+user-ID header. Body and attachment limits are enforced server-side. The
+[configuration reference](docs/CONFIGURATION.md#shared-public-request-budgets)
+documents limits and trusted-header requirements. A shared budget does not replace
+verified ingress protection or prove that a hosted system is secure.
+
+The app serves `/privacy` and keeps the private-contact delivery status explicit.
+Operator identity, report access and retention arrangements still need approval.
+Read [privacy information](docs/PRIVACY.md) and the
+[operations runbook](docs/OPERATIONS.md) before hosting.
+
 Before source release, verify the exact candidate, secrets scan, dependency
 advisories, and applicable licenses. Enable private vulnerability reporting when
 the repository becomes public. Run the existing CI workflow on that public

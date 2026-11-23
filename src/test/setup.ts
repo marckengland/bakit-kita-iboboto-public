@@ -2,7 +2,7 @@
  * Vitest setup file - runs before any tests
  * Mocks Prisma and Redis to prevent initialization errors
  */
-import { vi, beforeAll, afterAll, afterEach } from "vitest";
+import { vi, beforeAll, beforeEach, afterAll, afterEach } from "vitest";
 
 // Create mock Prisma client instance
 const createMockPrismaClient = () => ({
@@ -131,6 +131,16 @@ const createMockPrismaClient = () => ({
 
 // Create mock Redis instance
 const createMockRedis = () => ({
+  // Production route fixtures use the same bounded-budget reply as Redis Lua.
+  eval: vi.fn(async (_script: string, keyCount: number, ...args: (string | number)[]) => {
+    const reserve = Number(args[keyCount]);
+    const caps = args.slice(keyCount + 1).map(Number);
+    const cap = Math.min(...caps);
+    const index = caps.indexOf(cap);
+    const windowMs = index === 0 ? 60_000 : 3_600_000;
+    const now = Date.now();
+    return [1, cap - reserve, (Math.floor(now / windowMs) + 1) * windowMs, cap, windowMs, 0, now];
+  }),
   get: vi.fn().mockResolvedValue(null),
   set: vi.fn().mockResolvedValue("OK"),
   setex: vi.fn().mockResolvedValue("OK"),
@@ -247,6 +257,12 @@ beforeAll(() => {
   // ("only accepts a configurable, writable, and enumerable data descriptor")
   // on current Node/Vitest.
   vi.stubEnv("NODE_ENV", "test");
+});
+
+beforeEach(() => {
+  // These fixture settings never reach a real Redis connection: the module is mocked above.
+  vi.stubEnv("REDIS_URL", "redis://127.0.0.1:1/test_fixture");
+  vi.stubEnv("REDIS_DISABLED", "false");
 });
 
 afterEach(() => {

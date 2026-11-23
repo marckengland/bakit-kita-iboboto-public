@@ -388,39 +388,41 @@
         },
         {
           "file": "src/app/components/FeedbackButton.tsx",
-          "sha256": "3d8a1634b8950b16a6be3e9616d3e8afb2cac37c885c4a8c70c271529541ff5a",
+          "sha256": "e7ff6586e2487d5b7628661ca3cdee39ab8e197b6e342826b8c5a10e6e0e7719",
           "matches": [
             {
-              "line": 553,
+              "line": 557,
               "pathSha256": "1415e102c7699878478a2593b0f938aa038cd9bdaaa844c445f2d0377be8e23e",
               "upstreamIcons": ["outline/chat-alt.svg"]
             },
             {
-              "line": 562,
+              "line": 566,
               "pathSha256": "d82cbf27106c95b3e1936858325c36d1351fa4052013022ee8e2bea4ba77ce3f",
               "upstreamIcons": ["outline/x.svg"]
             },
             {
-              "line": 570,
+              "line": 574,
               "pathSha256": "2e530cd456544e2deb07434c3b8c9385238d85059eb571f8644aea45b550967c",
               "upstreamIcons": ["outline/check.svg"]
             },
             {
-              "line": 578,
+              "line": 582,
               "pathSha256": "3d3a345015ea3648d7879eb9d6b5329cf473213720fde20c1743013b14fd6c33",
               "upstreamIcons": ["outline/plus.svg"]
             },
             {
-              "line": 590,
+              "line": 594,
               "pathSha256": "da293ea6f0174222a93eb2f8a91d528641a2b5127d9b7dbc1af6274c9599f640",
               "upstreamIcons": ["outline/paper-airplane.svg"]
             },
             {
-              "line": 603,
+              "line": 607,
               "pathSha256": "5b53b78543c6bf506ce6bcdd52238421cbbc41d82355d934b55238c7a2e2e4f2",
               "upstreamIcons": ["outline/paper-clip.svg"]
             }
-          ]
+          ],
+          "previousSha256": "3d8a1634b8950b16a6be3e9616d3e8afb2cac37c885c4a8c70c271529541ff5a",
+          "revisionOn": "2026-11-23"
         },
         {
           "file": "src/app/components/LanguageSwitcher.tsx",

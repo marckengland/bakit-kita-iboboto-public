@@ -32,6 +32,18 @@ the database. Database write tools use the configured `DATABASE_URL`. All dispos
 
 ## Database commands
 
+The following verifiers accept no external database or Redis destination. They
+create uniquely owned containers, run their checks, and remove those containers.
+
+| Command                                              | Proof                                                                                            |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `node --import tsx scripts/verify-backup-restore.ts` | Real PostgreSQL dump/restore, all-row equality, citations, refusal controls and cleanup.         |
+| `node --import tsx scripts/verify-request-budget.ts` | Two production processes sharing actual Redis budgets, concurrency, expiry, outages and cleanup. |
+
+Production browser verification now supplies its own disposable Redis as well as
+PostgreSQL. No existing services or live reporting configuration are used.
+[Operations and recovery](../docs/OPERATIONS.md)
+
 | Command               | Use                                                            |
 | --------------------- | -------------------------------------------------------------- |
 | `npm run db:generate` | Regenerate Prisma types after installation or a schema change  |

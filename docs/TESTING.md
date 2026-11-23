@@ -1,5 +1,25 @@
 # Test and verify a change
 
+## Launch preparation checks
+
+Use Docker and the locked local dependencies. These commands use only newly owned
+disposable services, not a configured application database or Redis destination.
+
+```sh
+node --import tsx scripts/verify-request-budget.ts
+node --import tsx scripts/verify-backup-restore.ts
+```
+
+The first checks actual shared Redis limits using two independent production
+workers, including atomicity, expiration and outages. The second performs a real
+PostgreSQL dump and restore and compares every row, including citations and
+synthetic metadata. Read the [operations guide](OPERATIONS.md) for limits and
+hosted checks that these local commands cannot establish.
+
+The production browser verifiers now create their own Redis service. Keep their
+fixtures separate from real services. They preserve the original content,
+citation, missing-data and rollback assertions.
+
 Use the locked Node/npm setup in the [README](../README.md#run-locally). Copy the
 example configuration privately and generate Prisma types before checks. Keep
 background jobs and public case reads disabled for ordinary local checks.

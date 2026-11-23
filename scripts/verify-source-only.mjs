@@ -29,6 +29,30 @@ if (populated) {
 const refresh = existsSync(path.join(root, "publication/senate-refresh.json"))
   ? JSON.parse(readFileSync(path.join(root, "publication/senate-refresh.json"), "utf8"))
   : null;
+const launch = existsSync(path.join(root, "publication/launch-preparation.json"))
+  ? JSON.parse(readFileSync(path.join(root, "publication/launch-preparation.json"), "utf8"))
+  : null;
+if (launch) {
+  assert.equal(launch.baselineCommit, "8abe705a26c165e375b3775d7e8874adb793c198");
+  assert.equal(launch.deploymentAuthorized, false);
+  assert.equal(launch.paidResourcesAuthorized, false);
+  assert.equal(launch.mailDeliveryAuthorized, false);
+  assert.equal(Object.keys(launch.existingTestFiles).length, 111);
+  assert.equal(Object.keys(launch.addedTestFiles).length, 8);
+  for (const [file, digest] of Object.entries({
+    ...launch.existingTestFiles,
+    ...launch.addedTestFiles,
+  })) {
+    assert.equal(hash(file), digest, `Changed launch test: ${file}`);
+  }
+  assert.equal(launch.testFixtureRevision.file, "src/test/setup.ts");
+  assert.equal(hash(launch.testFixtureRevision.file), launch.testFixtureRevision.sha256);
+  assert.deepEqual(launch.addedScripts, [
+    "scripts/lib/verification-redis.ts",
+    "scripts/verify-backup-restore.ts",
+    "scripts/verify-request-budget.ts",
+  ]);
+}
 if (refresh) {
   assert.equal(
     refresh.proposalSha256,
@@ -119,6 +143,7 @@ assert.deepEqual(
     ...Object.keys(inventory.addedTestFiles),
     ...Object.keys(populated?.addedTestFiles ?? {}),
     ...Object.keys(refresh?.addedTestFiles ?? {}),
+    ...Object.keys(launch?.addedTestFiles ?? {}),
   ].sort()
 );
 assert.deepEqual(Object.keys(inventory.addedTestFiles), [
@@ -405,6 +430,7 @@ const allowedScripts = new Set([
 ]);
 for (const file of populated?.addedScripts ?? []) allowedScripts.add(file);
 for (const file of refresh?.addedScripts ?? []) allowedScripts.add(file);
+for (const file of launch?.addedScripts ?? []) allowedScripts.add(file);
 assert.deepEqual(
   files("scripts").sort(),
   [...allowedScripts].sort(),

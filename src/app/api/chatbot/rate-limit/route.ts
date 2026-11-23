@@ -9,6 +9,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { validateSession } from "@/services/auth.service";
 import { getRateLimitStatus, RATE_LIMITS } from "@/services/rate-limit.service";
+import { getPublicRequestBudget, PublicBudgetUnavailableError } from "@/lib/public-request-budget";
 
 /**
  * Helper to get client IP
@@ -43,16 +44,31 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  const status = getRateLimitStatus(userId, ip, isAuthenticated);
+  let shared;
+  try {
+    shared = await getPublicRequestBudget(request, "records", userId);
+  } catch (error) {
+    if (error instanceof PublicBudgetUnavailableError) {
+      return NextResponse.json(
+        { error: "Request budget temporarily unavailable" },
+        { status: 503, headers: { "Cache-Control": "no-store" } }
+      );
+    }
+    throw error;
+  }
+  const status = shared ?? getRateLimitStatus(userId, ip, isAuthenticated);
   const config = isAuthenticated ? RATE_LIMITS.authenticated : RATE_LIMITS.anonymous;
 
-  return NextResponse.json({
-    rateLimitStatus: {
-      remaining: status.remaining,
-      resetAt: status.resetAt.toISOString(),
-      isBlocked: status.isBlocked,
-      maxRequests: config?.maxRequests || 20,
-      windowMs: config?.windowMs || 3600000,
+  return NextResponse.json(
+    {
+      rateLimitStatus: {
+        remaining: status.remaining,
+        resetAt: status.resetAt.toISOString(),
+        isBlocked: status.isBlocked,
+        maxRequests: shared?.maxRequests ?? config?.maxRequests ?? 20,
+        windowMs: shared?.windowMs ?? config?.windowMs ?? 3600000,
+      },
     },
-  });
+    { headers: { "Cache-Control": "no-store" } }
+  );
 }

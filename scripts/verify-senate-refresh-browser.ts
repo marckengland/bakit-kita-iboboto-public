@@ -12,6 +12,7 @@ import {
 } from "./lib/reviewed-browser";
 import path from "node:path";
 import { verificationEnv, stopOwnedProcess } from "./lib/verification-runtime";
+import { OwnedVerificationRedis } from "./lib/verification-redis";
 
 const app = process.cwd();
 assert.ok(
@@ -30,6 +31,7 @@ mkdirSync(evidence, { recursive: true });
 const ownershipToken = randomUUID();
 const containerName = `bkib-refresh-browser-${ownershipToken}`;
 const databaseName = `bkib_refresh_${ownershipToken.replaceAll("-", "")}`;
+const ownedRedis = new OwnedVerificationRedis();
 let owned = "";
 let containerRequested = false;
 let ownedUrl = "";
@@ -192,11 +194,13 @@ async function main() {
   const port = await freePort();
   const origin = `http://127.0.0.1:${port}`;
   stage = "local production server";
+  const redisUrl = await ownedRedis.start();
   const serverEnv = {
     ...verificationEnv(ownedUrl),
     NODE_ENV: "production",
     __NEXT_PROCESSED_ENV: "true",
-    REDIS_DISABLED: "true",
+    REDIS_DISABLED: "false",
+    REDIS_URL: redisUrl,
     ELASTICSEARCH_URL: "http://127.0.0.1:1",
     PUBLIC_CASE_RECORDS_ENABLED: "false",
     PRIVATE_CONTACT_ENABLED: "false",
@@ -237,6 +241,43 @@ async function main() {
     await new Promise((r) => setTimeout(r, 200));
   }
   assert.ok(ready);
+  stage = "production guest and reporting boundary";
+  for (const endpoint of [
+    "/api/auth/verify",
+    "/api/reports/inaccuracy",
+    "/api/chatbot",
+    "/api/cron/data-freshness",
+  ]) {
+    const response = await fetchLocal(origin + endpoint, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: "{}",
+    });
+    assert.equal(response.status, 404, `Unsupported production endpoint: ${endpoint}`);
+  }
+  const disabledContact = await fetchLocal(origin + "/api/contact", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: "{}",
+  });
+  assert.equal(disabledContact.status, 503);
+  const oversizedFeedback = await fetchLocal(origin + "/api/feedback", {
+    method: "POST",
+    headers: { "content-type": "application/json", "x-user-id": "forged" },
+    body: JSON.stringify({ padding: "x".repeat(2 * 1024 * 1024 + 1) }),
+  });
+  assert.equal(oversizedFeedback.status, 413);
+  const privacy = await fetchLocal(origin + "/privacy");
+  assert.equal(privacy.status, 200);
+  const privacyText = await privacy.text();
+  assert.ok(privacyText.includes("Private report delivery is unavailable"));
+  assert.ok(privacyText.includes("ordinary feedback"));
+  observations.guestBoundary = {
+    unusedEndpointsClosed: true,
+    contactDisabled: true,
+    oversizedFeedbackRejected: true,
+    privacyServed: true,
+  };
   stage = "real APIs";
   const profile = (await (await fetchLocal(origin + `/api/politicians/${first}`)).json()) as any;
   assert.ok(profile.politician.reviewedBatch.refresh.electedTerm.start);
@@ -462,6 +503,9 @@ function cleanup(): Promise<string[]> {
         await stopOwnedProcess(server);
       },
       async () => {
+        ownedRedis.cleanup();
+      },
+      async () => {
         // A generated name and matching owner label also cover interrupted startup.
         if (!containerRequested) return;
         const found = spawnSync(
@@ -520,7 +564,14 @@ function finish(failure: string | null): Promise<void> {
     );
     if (finalFailure) {
       console.error(`Refresh browser verification failed during ${stage}: ${finalFailure}`);
-      process.exitCode = interrupted === "SIGINT" ? 130 : interrupted === "SIGTERM" ? 143 : interrupted === "SIGHUP" ? 129 : 1;
+      process.exitCode =
+        interrupted === "SIGINT"
+          ? 130
+          : interrupted === "SIGTERM"
+            ? 143
+            : interrupted === "SIGHUP"
+              ? 129
+              : 1;
     } else {
       console.log(
         process.argv.includes("--self-test")

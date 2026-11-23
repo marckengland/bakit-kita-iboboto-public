@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { privateContactAvailable } from "@/lib/private-contact";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
@@ -14,8 +15,17 @@ export default function ContactPage() {
       <div className="container-wide max-w-2xl py-10">
         <h1 className="text-3xl font-bold text-neutral-900 dark:text-white">Private contact</h1>
         <p className="mt-3 text-neutral-600 dark:text-neutral-400">
-          Send a profile correction, privacy request, security report, or question to the project
-          maintainer. Reports are reviewed privately and never added to profiles automatically.
+          This form is intended for profile corrections, privacy requests, security reports, and
+          questions to the project maintainer. A submitted report never updates profiles
+          automatically.
+        </p>
+        <p className="mt-3 text-neutral-600 dark:text-neutral-400">
+          Private delivery is unavailable for this pilot while sender setup and delivery checks are
+          incomplete. There is no promised response time. Read the{" "}
+          <Link href="/privacy" className="underline underline-offset-4">
+            Privacy and corrections
+          </Link>{" "}
+          information before sharing any details.
         </p>
         <ContactForm available={privateContactAvailable()} />
       </div>

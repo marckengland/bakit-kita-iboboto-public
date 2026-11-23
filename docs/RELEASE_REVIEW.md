@@ -1,5 +1,38 @@
 # Release status
 
+## November 23 launch preparation
+
+The public source remains separate from a hosted launch. The owner requested
+completion of local launch work, chose a hosting plan without paid resources,
+and confirmed that Resend delivery must remain disabled.
+
+The production guest boundary now closes unsupported account mutations,
+community reports, notifications, bookmarks, voting lists, cron and general-AI
+routes. The authenticated session probe remains. Record chat and feedback have
+shared Redis budgets, bounded JSON reads and fail-closed behavior. Feedback
+account attribution uses a validated session; attachment size/type/encoding
+checks match the upload hints. Shared session commands have bounded deadlines.
+
+The app serves `/privacy`, linked from `/contact`. The
+[privacy information](PRIVACY.md), [correction guide](CORRECTIONS.md), and
+[operations runbook](OPERATIONS.md) describe actual behavior, unapproved operator
+decisions and hosted acceptance limits. Private delivery is still unavailable.
+
+New disposable verifiers test actual cross-process Redis limits and a real
+PostgreSQL dump/restore. Existing case and Senate browser checks keep their
+assertions and now own their required Redis service. All 111 inherited test
+files, dependencies, approved datasets and migrations remain unchanged.
+[Launch integrity record](../publication/launch-preparation.json)
+
+Before public traffic, select and approve infrastructure and spending, verify
+hosted backups/restore and ingress controls, finish a monitored private reporting
+route and operator-approved privacy arrangements, then authorize and verify a
+hosted candidate. No hosted resources, real mail delivery or site deployment are
+approved or claimed by this preparation. Public CI results are available in
+[GitHub Actions](https://github.com/marckengland/bakit-kita-iboboto-public/actions).
+
+The dated November 22 source and verification record below remains as history.
+
 Updated November 22, 2026. This source version includes the approved Senate
 evidence refresh. The maintainer authorized the public repository update in the
 [publication record](../publication/refreshed-publication.json). Every earlier

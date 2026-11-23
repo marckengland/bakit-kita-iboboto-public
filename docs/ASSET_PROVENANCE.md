@@ -1,5 +1,10 @@
 # Asset provenance
 
+The November 23 feedback upload-limit change also refreshes the FeedbackButton
+component digest and SVG line locations in `publication/heroicons.json`. Its
+previous digest is retained. The icon paths and required license files did not
+change; no new artwork or font is introduced by launch preparation.
+
 Reviewed November 16, 2026. The maintainer confirmed ownership or redistribution
 permission for the project code, retained fixture wording, and icon artwork.
 This records that attestation; Git history alone cannot establish ownership.

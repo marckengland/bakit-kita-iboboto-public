@@ -1,5 +1,20 @@
 # Research API reference
 
+## Production guest boundary
+
+The production pilot exposes reviewed record reads, reviewed chat, ordinary
+feedback and the configured private-contact route. Unused account mutations,
+bookmarks, voting lists, notifications, community reports, cron and general-AI
+routes return 404 at the request boundary. The authenticated read-only
+`GET /api/auth/profile` probe remains available and rejects anonymous requests.
+
+Record chat and feedback require shared production Redis budgets. Exhaustion
+returns 429; unavailable budgets return 503. The rate-status endpoint reads the
+same shared budget without consuming it and uses `Cache-Control: no-store`.
+Body limits can return 408, 413 or 415 before normal field validation.
+Read [configuration](CONFIGURATION.md#shared-public-request-budgets) for the exact
+limits and [privacy information](PRIVACY.md) before sending ordinary feedback.
+
 These are the unversioned routes used by the main research screens. They are not
 an exhaustive list of account, admin, or versioned API routes. Paths below use a
 profile's stored ID. A fresh database has no sample profile IDs.
@@ -167,7 +182,8 @@ These answer states use HTTP 200, including research unavailability handled by
 the record service. Malformed input uses 400, exhausted quota uses 429, and an
 unexpected request-layer failure uses 503. All responses set `Cache-Control: no-store`.
 The route creates no conversation messages and retains no query text in its
-rate-limit history. The current chat counters are local to each server process.
+rate-limit history. Production uses shared Redis counters; development retains
+the existing process-local limiter. No forwarded IP header is trusted by default.
 
 ## Other response boundaries
 

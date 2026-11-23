@@ -89,6 +89,53 @@ None of these values belongs in a `NEXT_PUBLIC_` variable.
 
 ## Before hosting
 
+### Shared public request budgets
+
+In production, `POST /api/chatbot/records`, its rate-status endpoint and
+`POST /api/feedback` require explicit protected Redis configuration. Missing,
+disabled, unavailable or malformed Redis state returns HTTP 503. There is no
+production fallback to process-local counters. A status read does not consume a
+reservation. A timed-out command can still execute later and consume a reservation.
+Shared session reads, writes and revocations each have a separate three-second
+deadline. A request with an optional session can therefore wait for session
+validation and then the request budget; these are separate bounded operations.
+
+| Route             | Global minute cap | Global hour cap | Optional per-client hour cap        |
+| ----------------- | ----------------- | --------------- | ----------------------------------- |
+| Reviewed chat     | 120               | 1,200           | 20 anonymous; 100 validated account |
+| Ordinary feedback | 5                 | 20              | 5                                   |
+
+These fixed windows use Redis time and reset at UTC minute/hour boundaries. A
+boundary can permit two consecutive window budgets close together. A global
+budget can be exhausted by one sender; configure and verify ingress abuse controls
+on the eventual host. Limits bound accepted application work, not incoming bytes
+before the server runs. The budget keys expire within an hour and contain no
+question text. Client keys use hashed identifiers, which are not a promise of anonymity.
+
+`PUBLIC_CLIENT_IP_HEADER` is empty by default. It can name
+`x-vercel-forwarded-for`, `cf-connecting-ip` or `x-real-ip` only after you verify
+that the ingress overwrites that header and direct origin access cannot bypass it.
+Only one valid IP is accepted; comma-separated and malformed values are ignored.
+Untrusted forwarded headers never create a production client bucket. Without a
+trusted IP or a validated account, only global budgets apply. Ordinary feedback
+likewise stores no client IP by default.
+
+The production guest boundary closes account mutations, bookmarks, voting lists,
+notifications, community reports, cron and general-AI routes. The read-only
+`GET /api/auth/profile` session probe keeps its existing authentication checks.
+No environment flag enables the closed routes in production; completing a future
+account feature requires an explicit implementation and review.
+
+Feedback accepts JSON up to 2 MiB and five PNG, JPEG, GIF or PDF attachments of
+256 KiB each. The server checks declared type, base64 encoding and size; it does
+not perform malware scanning or establish that an attachment's claims are true.
+Chat JSON is limited to 16 KiB and its message remains limited to 2,000 characters.
+Both readers impose a five-second body deadline. Invalid fields return 400,
+oversized bodies 413, unsupported media types 415 and body deadlines 408.
+
+Production admin and private mail remain disabled for this pilot. Read the
+[operations runbook](OPERATIONS.md) for the hosted acceptance work.
+
 Local defaults are not a hosting configuration. Resolve the current
 [release blockers](RELEASE_REVIEW.md), use protected services and server secrets,
 and verify sessions, reporting, backups, and deployment-specific controls. The

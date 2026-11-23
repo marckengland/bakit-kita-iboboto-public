@@ -48,6 +48,12 @@ jobs:
       - name: Verify reviewed batch on disposable PostgreSQL
         run: npm run data:verify
 
+      - name: Verify shared production budgets on disposable Redis
+        run: node --import tsx scripts/verify-request-budget.ts
+
+      - name: Verify owned database backup and restore
+        run: node --import tsx scripts/verify-backup-restore.ts
+
       - name: Lint
         run: npm run lint
 

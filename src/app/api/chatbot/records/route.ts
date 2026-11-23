@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { validateSession } from "@/services/auth.service";
+import { readBoundedJson, RequestBodyError } from "@/lib/request-body";
+import { reservePublicRequest } from "@/lib/public-request-budget";
 import { checkRateLimit, getRateLimitStatus, recordRequest } from "@/services/rate-limit.service";
 import { answerFromReviewedRecords } from "@/services/reviewed-chat.service";
 import {
@@ -15,11 +17,15 @@ export async function POST(request: NextRequest) {
       status,
       headers: { "Cache-Control": "no-store" },
     });
-  let body;
+  let body: Record<string, unknown>;
   try {
-    body = await request.json();
-  } catch {
-    return json({ error: "Invalid JSON" }, 400);
+    const value = await readBoundedJson(request, 16 * 1024);
+    if (!value || typeof value !== "object" || Array.isArray(value)) {
+      throw new RequestBodyError(400);
+    }
+    body = value as Record<string, unknown>;
+  } catch (error) {
+    return json({ error: "Invalid JSON" }, error instanceof RequestBodyError ? error.status : 400);
   }
   if (
     !body ||
@@ -28,8 +34,11 @@ export async function POST(request: NextRequest) {
     !body.message.trim() ||
     body.message.length > 2000 ||
     (body.selectionScope !== undefined &&
-      !["cases", "senate_filings"].includes(body.selectionScope)) ||
-    (body.scope !== undefined && !["auto", "cases", "senate_filings"].includes(body.scope)) ||
+      (typeof body.selectionScope !== "string" ||
+        !["cases", "senate_filings"].includes(body.selectionScope))) ||
+    (body.scope !== undefined &&
+      (typeof body.scope !== "string" ||
+        !["auto", "cases", "senate_filings"].includes(body.scope))) ||
     (body.politicianId !== undefined &&
       (typeof body.politicianId !== "string" ||
         !body.politicianId.trim() ||
@@ -55,7 +64,8 @@ export async function POST(request: NextRequest) {
       request.headers.get("x-real-ip") ||
       "unknown";
     const authenticated = userId !== null;
-    const limit = checkRateLimit(userId, ip, authenticated);
+    const sharedBudget = await reservePublicRequest(request, "records", userId);
+    const limit = sharedBudget ?? checkRateLimit(userId, ip, authenticated);
     const serializeLimit = (value: ReturnType<typeof getRateLimitStatus>) => ({
       remaining: value.remaining,
       resetAt: value.resetAt.toISOString(),
@@ -65,7 +75,9 @@ export async function POST(request: NextRequest) {
       return json({ error: "Rate limit exceeded", rateLimitStatus: serializeLimit(limit) }, 429);
     }
     // Count requests without retaining query text or creating conversation messages.
-    recordRequest(userId, ip, authenticated);
+    if (!sharedBudget) {
+      recordRequest(userId, ip, authenticated);
+    }
     const query = { message: body.message.trim(), politicianId: body.politicianId?.trim() };
     const automatic = body.scope !== "cases" && body.scope !== "senate_filings";
     const senateScope =
@@ -87,7 +99,9 @@ export async function POST(request: NextRequest) {
       : answerFromReviewedRecords(query));
     return json({
       answer,
-      rateLimitStatus: serializeLimit(getRateLimitStatus(userId, ip, authenticated)),
+      rateLimitStatus: serializeLimit(
+        sharedBudget ?? getRateLimitStatus(userId, ip, authenticated)
+      ),
     });
   } catch {
     console.error("Reviewed chat: request unavailable");

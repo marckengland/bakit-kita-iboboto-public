@@ -19,11 +19,32 @@ import type { NextRequest } from "next/server";
 import { isLocalAdminEnabled } from "@/lib/admin-access";
 
 export function proxy(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+  const admin =
+    pathname === "/admin" ||
+    pathname.startsWith("/admin/") ||
+    pathname === "/api/admin" ||
+    pathname.startsWith("/api/admin/");
+  if (!admin) {
+    const unsupported = ["auth", "bookmarks", "voting-list", "notifications", "reports", "cron"];
+    const sessionProbe = pathname === "/api/auth/profile" && request.method === "GET";
+    const denied =
+      !sessionProbe &&
+      (pathname === "/api/chatbot" ||
+        unsupported.some(
+          (part) => pathname === `/api/${part}` || pathname.startsWith(`/api/${part}/`)
+        ));
+    if (process.env.NODE_ENV === "production" && denied) {
+      return NextResponse.json(
+        { error: "Not found" },
+        { status: 404, headers: { "Cache-Control": "no-store" } }
+      );
+    }
+    return NextResponse.next();
+  }
   if (isLocalAdminEnabled()) {
     return NextResponse.next();
   }
-
-  const { pathname } = request.nextUrl;
 
   // API routes: return a JSON 404.
   if (pathname.startsWith("/api/admin")) {
@@ -38,5 +59,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*", "/api/admin/:path*"],
+  matcher: ["/admin/:path*", "/api/:path*"],
 };

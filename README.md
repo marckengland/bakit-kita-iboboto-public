@@ -43,6 +43,13 @@ The app is a prototype. Production admin access is disabled, new offline profile
 downloads are unfinished, and the contact form needs private service configuration.
 [Current limits and release status](docs/RELEASE_REVIEW.md)
 
+The production pilot keeps unused account, community-report, cron and general-AI
+endpoints closed. Record chat and ordinary feedback require working Redis budgets;
+local development can use the existing in-memory chat limits. Private reporting
+remains disabled until sending-domain setup and inbox delivery are verified.
+[Operations](docs/OPERATIONS.md) · [Privacy](docs/PRIVACY.md) ·
+[Corrections](docs/CORRECTIONS.md)
+
 ## How it fits together
 
 ```mermaid

@@ -25,6 +25,10 @@ index to find the guide for the job you are doing.
 
 ## Follow the data
 
+Before hosting, use the [operations runbook](OPERATIONS.md),
+[privacy information](PRIVACY.md), and [correction guide](CORRECTIONS.md).
+These describe the production pilot and the decisions still needed for a hosted service.
+
 ```mermaid
 flowchart TD
     Batch["Approved Senate files"] --> Import["Validate and run the local importer"]

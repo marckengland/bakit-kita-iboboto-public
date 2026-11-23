@@ -22,13 +22,25 @@ function requireRedis() {
   return redis;
 }
 
+async function boundedSessionCommand<T>(command: Promise<T>): Promise<T> {
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  try {
+    return await Promise.race([
+      command,
+      new Promise<never>((_resolve, reject) => {
+        timer = setTimeout(() => reject(new SessionStoreUnavailableError()), 3000);
+      }),
+    ]);
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 /** Store a token digest and session for 24 hours; reads never renew the TTL. */
 export async function writeSharedSession(token: string, session: Session): Promise<void> {
   try {
-    const result = await requireRedis().setex(
-      sessionKey(token),
-      SESSION_TTL_SECONDS,
-      JSON.stringify(session)
+    const result = await boundedSessionCommand(
+      requireRedis().setex(sessionKey(token), SESSION_TTL_SECONDS, JSON.stringify(session))
     );
     if (result !== "OK") {
       throw new SessionStoreUnavailableError();
@@ -85,7 +97,7 @@ function parseSession(value: string): Session {
 
 export async function readSharedSession(token: string): Promise<Session | null> {
   try {
-    const value = await requireRedis().get(sessionKey(token));
+    const value = await boundedSessionCommand(requireRedis().get(sessionKey(token)));
     return value === null ? null : parseSession(value);
   } catch {
     throw new SessionStoreUnavailableError();
@@ -94,7 +106,7 @@ export async function readSharedSession(token: string): Promise<Session | null> 
 
 export async function revokeSharedSession(token: string): Promise<boolean> {
   try {
-    return (await requireRedis().del(sessionKey(token))) > 0;
+    return (await boundedSessionCommand(requireRedis().del(sessionKey(token)))) > 0;
   } catch {
     throw new SessionStoreUnavailableError();
   }

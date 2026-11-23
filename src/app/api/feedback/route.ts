@@ -10,6 +10,19 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { isLocalAdminEnabled } from "@/lib/admin-access";
+import { validateSession } from "@/services/auth.service";
+import { readBoundedJson, RequestBodyError } from "@/lib/request-body";
+import {
+  reservePublicRequest,
+  trustedClientIp,
+  PublicBudgetUnavailableError,
+} from "@/lib/public-request-budget";
+import {
+  FEEDBACK_ATTACHMENT_BYTES,
+  FEEDBACK_ATTACHMENT_COUNT,
+  FEEDBACK_BODY_BYTES,
+  FEEDBACK_FILE_TYPES,
+} from "@/lib/feedback-limits";
 
 // ============================================
 // Types
@@ -53,11 +66,23 @@ function validateFeedback(data: unknown): {
   error?: string;
   data?: FeedbackSubmission;
 } {
-  if (!data || typeof data !== "object") {
+  if (!data || typeof data !== "object" || Array.isArray(data)) {
     return { valid: false, error: "Invalid request body" };
   }
 
   const submission = data as Record<string, unknown>;
+  if (
+    submission.email !== undefined &&
+    (typeof submission.email !== "string" || submission.email.length > 254)
+  ) {
+    return { valid: false, error: "Invalid email address" };
+  }
+  if (
+    submission.sourceUrl !== undefined &&
+    (typeof submission.sourceUrl !== "string" || submission.sourceUrl.length > 2000)
+  ) {
+    return { valid: false, error: "Invalid source URL" };
+  }
 
   // Validate category
   if (!submission.category || !VALID_CATEGORIES.includes(submission.category as FeedbackCategory)) {
@@ -112,7 +137,9 @@ function validateFeedback(data: unknown): {
       return { valid: false, error: "Source URL is required for data corrections" };
     }
     try {
-      new URL(submission.sourceUrl as string);
+      if (!["http:", "https:"].includes(new URL(submission.sourceUrl as string).protocol)) {
+        return { valid: false, error: "Invalid source URL" };
+      }
     } catch {
       return { valid: false, error: "Invalid source URL" };
     }
@@ -124,13 +151,41 @@ function validateFeedback(data: unknown): {
       return { valid: false, error: "Attachments must be an array" };
     }
 
-    if (submission.attachments.length > 5) {
+    if (submission.attachments.length > FEEDBACK_ATTACHMENT_COUNT) {
       return { valid: false, error: "Maximum 5 attachments allowed" };
     }
 
     for (const attachment of submission.attachments) {
-      if (!attachment.name || !attachment.type || !attachment.dataUrl) {
+      if (
+        !attachment ||
+        typeof attachment !== "object" ||
+        typeof attachment.name !== "string" ||
+        !attachment.name.trim() ||
+        attachment.name.length > 200 ||
+        typeof attachment.type !== "string" ||
+        !FEEDBACK_FILE_TYPES.includes(attachment.type) ||
+        typeof attachment.dataUrl !== "string"
+      ) {
         return { valid: false, error: "Invalid attachment format" };
+      }
+      const prefix = `data:${attachment.type};base64,`;
+      if (!attachment.dataUrl.startsWith(prefix)) {
+        return { valid: false, error: "Invalid attachment format" };
+      }
+      const encoded = attachment.dataUrl.slice(prefix.length);
+      if (
+        !/^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/.test(encoded) ||
+        encoded.length > Math.ceil(FEEDBACK_ATTACHMENT_BYTES / 3) * 4
+      ) {
+        return { valid: false, error: "Invalid or oversized attachment" };
+      }
+      const decoded = Buffer.from(encoded, "base64");
+      if (
+        decoded.length === 0 ||
+        decoded.length > FEEDBACK_ATTACHMENT_BYTES ||
+        decoded.toString("base64") !== encoded
+      ) {
+        return { valid: false, error: "Invalid or oversized attachment" };
       }
     }
   }
@@ -155,7 +210,7 @@ function validateFeedback(data: unknown): {
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    const body = await readBoundedJson(request, FEEDBACK_BODY_BYTES);
     const validation = validateFeedback(body);
 
     if (!validation.valid || !validation.data) {
@@ -165,13 +220,32 @@ export async function POST(request: NextRequest) {
     const { category, subject, description, sourceUrl, attachments, isAnonymous, email } =
       validation.data;
 
-    // Get user info from headers if available (set by auth middleware)
-    const userId = request.headers.get("x-user-id");
-    const userAgent = request.headers.get("user-agent") || "Unknown";
-    const ipAddress =
-      request.headers.get("x-forwarded-for")?.split(",")[0] ||
-      request.headers.get("x-real-ip") ||
-      "Unknown";
+    let userId: string | null = null;
+    const token = request.cookies.get("auth_token")?.value;
+    if (token) {
+      try {
+        userId = (await validateSession(token)).userId;
+      } catch {
+        /* Invalid sessions remain anonymous. */
+      }
+    }
+    const budget = await reservePublicRequest(request, "feedback", userId);
+    if (budget && !budget.allowed) {
+      return NextResponse.json(
+        { error: "Too many feedback submissions. Try again later." },
+        {
+          status: 429,
+          headers: {
+            "Cache-Control": "no-store",
+            "Retry-After": String(
+              Math.max(1, Math.ceil((budget.resetAt.getTime() - Date.now()) / 1000))
+            ),
+          },
+        }
+      );
+    }
+    const userAgent = request.headers.get("user-agent")?.slice(0, 512) || "Unknown";
+    const ipAddress = trustedClientIp(request);
 
     // Append source URL to description for data corrections (no dedicated column)
     const finalDescription = sourceUrl ? `${description}\n\nSource: ${sourceUrl}` : description;
@@ -200,7 +274,20 @@ export async function POST(request: NextRequest) {
       feedbackId: feedback.id,
     });
   } catch (error) {
-    console.error("Feedback submission error:", error);
+    if (error instanceof RequestBodyError) {
+      return NextResponse.json(
+        { error: "Invalid feedback request." },
+        { status: error.status, headers: { "Cache-Control": "no-store" } }
+      );
+    }
+    if (error instanceof PublicBudgetUnavailableError) {
+      console.error("Feedback request budget unavailable");
+      return NextResponse.json(
+        { error: "Feedback is temporarily unavailable." },
+        { status: 503, headers: { "Cache-Control": "no-store" } }
+      );
+    }
+    console.error("Feedback submission failed");
     return NextResponse.json(
       { error: "Failed to submit feedback. Please try again." },
       { status: 500 }
